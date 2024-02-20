@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Npgsql">
+      <HintPath>Npgsql2.0.11.91-bin-ms.net4.0\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +57,189 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Видео-лекции.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Видео-лекции.Designer.cs">
+      <DependentUpon>Видео-лекции.cs</DependentUpon>
+    </Compile>
+    <Compile Include="все видеоролики админ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="все видеоролики админ.Designer.cs">
+      <DependentUpon>все видеоролики админ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="все видеоролики.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="все видеоролики.Designer.cs">
+      <DependentUpon>все видеоролики.cs</DependentUpon>
+    </Compile>
+    <Compile Include="все курсы.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="все курсы.Designer.cs">
+      <DependentUpon>все курсы.cs</DependentUpon>
+    </Compile>
+    <Compile Include="все текстовые лекции админ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="все текстовые лекции админ.Designer.cs">
+      <DependentUpon>все текстовые лекции админ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Все текстовые лекции.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Все текстовые лекции.Designer.cs">
+      <DependentUpon>Все текстовые лекции.cs</DependentUpon>
+    </Compile>
+    <Compile Include="все тесты и экзамены админ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="все тесты и экзамены админ.Designer.cs">
+      <DependentUpon>все тесты и экзамены админ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="все тесты и экзамены.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="все тесты и экзамены.Designer.cs">
+      <DependentUpon>все тесты и экзамены.cs</DependentUpon>
+    </Compile>
+    <Compile Include="вход или регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="вход или регистрация.Designer.cs">
+      <DependentUpon>вход или регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="вход.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="вход.Designer.cs">
+      <DependentUpon>вход.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Главная.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Главная.Designer.cs">
+      <DependentUpon>Главная.cs</DependentUpon>
+    </Compile>
+    <Compile Include="добавить видеоролик.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="добавить видеоролик.Designer.cs">
+      <DependentUpon>добавить видеоролик.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавить курс.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить курс.Designer.cs">
+      <DependentUpon>Добавить курс.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавить лекцию.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить лекцию.Designer.cs">
+      <DependentUpon>Добавить лекцию.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавить свой центр.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить свой центр.Designer.cs">
+      <DependentUpon>Добавить свой центр.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавить сотрудника.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить сотрудника.Designer.cs">
+      <DependentUpon>Добавить сотрудника.cs</DependentUpon>
+    </Compile>
+    <Compile Include="добавить тест экзамен.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="добавить тест экзамен.Designer.cs">
+      <DependentUpon>добавить тест экзамен.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Журнал материала.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Журнал материала.Designer.cs">
+      <DependentUpon>Журнал материала.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Записаться на курс.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Записаться на курс.Designer.cs">
+      <DependentUpon>Записаться на курс.cs</DependentUpon>
+    </Compile>
+    <Compile Include="курсы.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="курсы.Designer.cs">
+      <DependentUpon>курсы.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Личный кабинет.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Личный кабинет.Designer.cs">
+      <DependentUpon>Личный кабинет.cs</DependentUpon>
+    </Compile>
+    <Compile Include="меню.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="меню.Designer.cs">
+      <DependentUpon>меню.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Мои занятия.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Мои занятия.Designer.cs">
+      <DependentUpon>Мои занятия.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Мои курсы.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Мои курсы.Designer.cs">
+      <DependentUpon>Мои курсы.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Посещаемость.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Посещаемость.Designer.cs">
+      <DependentUpon>Посещаемость.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Расписание занятий.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Расписание занятий.Designer.cs">
+      <DependentUpon>Расписание занятий.cs</DependentUpon>
+    </Compile>
+    <Compile Include="регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="регистрация.Designer.cs">
+      <DependentUpon>регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Сотрудники.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Сотрудники.Designer.cs">
+      <DependentUpon>Сотрудники.cs</DependentUpon>
+    </Compile>
+    <Compile Include="текстовая лекция.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="текстовая лекция.Designer.cs">
+      <DependentUpon>текстовая лекция.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Успеваемость.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Успеваемость.Designer.cs">
+      <DependentUpon>Успеваемость.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +249,96 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Видео-лекции.resx">
+      <DependentUpon>Видео-лекции.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="все видеоролики админ.resx">
+      <DependentUpon>все видеоролики админ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="все видеоролики.resx">
+      <DependentUpon>все видеоролики.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="все курсы.resx">
+      <DependentUpon>все курсы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="все текстовые лекции админ.resx">
+      <DependentUpon>все текстовые лекции админ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Все текстовые лекции.resx">
+      <DependentUpon>Все текстовые лекции.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="все тесты и экзамены админ.resx">
+      <DependentUpon>все тесты и экзамены админ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="все тесты и экзамены.resx">
+      <DependentUpon>все тесты и экзамены.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="вход или регистрация.resx">
+      <DependentUpon>вход или регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="вход.resx">
+      <DependentUpon>вход.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Главная.resx">
+      <DependentUpon>Главная.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="добавить видеоролик.resx">
+      <DependentUpon>добавить видеоролик.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавить курс.resx">
+      <DependentUpon>Добавить курс.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавить лекцию.resx">
+      <DependentUpon>Добавить лекцию.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавить свой центр.resx">
+      <DependentUpon>Добавить свой центр.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавить сотрудника.resx">
+      <DependentUpon>Добавить сотрудника.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="добавить тест экзамен.resx">
+      <DependentUpon>добавить тест экзамен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Журнал материала.resx">
+      <DependentUpon>Журнал материала.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Записаться на курс.resx">
+      <DependentUpon>Записаться на курс.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="курсы.resx">
+      <DependentUpon>курсы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Личный кабинет.resx">
+      <DependentUpon>Личный кабинет.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="меню.resx">
+      <DependentUpon>меню.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои занятия.resx">
+      <DependentUpon>Мои занятия.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои курсы.resx">
+      <DependentUpon>Мои курсы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Посещаемость.resx">
+      <DependentUpon>Посещаемость.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Расписание занятий.resx">
+      <DependentUpon>Расписание занятий.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="регистрация.resx">
+      <DependentUpon>регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Сотрудники.resx">
+      <DependentUpon>Сотрудники.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="текстовая лекция.resx">
+      <DependentUpon>текстовая лекция.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Успеваемость.resx">
+      <DependentUpon>Успеваемость.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
