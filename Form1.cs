@@ -18,7 +18,7 @@ namespace Centr
             InitializeComponent();
         }
         public static NpgsqlConnection connection = new NpgsqlConnection("Server=localhost;Port=5433;User Id=postgres;" +
-            "Password=;Database=obraz_centr;");
+            "Password=toor;Database=obraz_center;");
         public static DataSet cdt = new DataSet();
         public static TabControl tabControl1 = new TabControl();
         public static void Table_Fill(string name, string sql)
@@ -42,20 +42,22 @@ namespace Centr
             }
             catch (NpgsqlException)
             {
-                MessageBox.Show("Обновление базы данных не было выполнено либо из-за некорректно указанных"
-                    + " обновляемых данных либо отсутствующих, но при этом обязательных!!!", "Ошибка");
+                MessageBox.Show("Обновление базы данных не было выполнено либо из-за некорректно указанных" + " обновляемых данных либо отсутствующих, но при этом обязательных!!!", "Ошибка");
                 connection.Close();
                 return false;
             }
             connection.Close();
             return true;
         }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             tabControl1.Size = new Size(1276, 562);
             this.Controls.Add(tabControl1);
             Главная главная = new Главная();
             tabControl1.Controls.Add(главная.tabControl1.TabPages[0]);
+
         }
     }
 }

@@ -156,6 +156,7 @@ namespace Centr
             this.лекцииToolStripMenuItem.Name = "лекцииToolStripMenuItem";
             this.лекцииToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.лекцииToolStripMenuItem.Text = "Лекции";
+            this.лекцииToolStripMenuItem.Click += new System.EventHandler(this.лекцииToolStripMenuItem_Click);
             // 
             // текстовыеЛекцииToolStripMenuItem
             // 
@@ -221,14 +222,14 @@ namespace Centr
             // записатьсяToolStripMenuItem
             // 
             this.записатьсяToolStripMenuItem.Name = "записатьсяToolStripMenuItem";
-            this.записатьсяToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.записатьсяToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.записатьсяToolStripMenuItem.Text = "Записаться";
             this.записатьсяToolStripMenuItem.Click += new System.EventHandler(this.записатьсяToolStripMenuItem_Click);
             // 
             // моиКурсыToolStripMenuItem
             // 
             this.моиКурсыToolStripMenuItem.Name = "моиКурсыToolStripMenuItem";
-            this.моиКурсыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.моиКурсыToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.моиКурсыToolStripMenuItem.Text = "Мои курсы";
             this.моиКурсыToolStripMenuItem.Click += new System.EventHandler(this.моиКурсыToolStripMenuItem_Click);
             // 

@@ -34,15 +34,16 @@ namespace Centr
             this.Удалить_лекцию_button5 = new System.Windows.Forms.Button();
             this.Выход_button4 = new System.Windows.Forms.Button();
             this.Сохранить_button3 = new System.Windows.Forms.Button();
-            this.Добавить_лекцию_button2 = new System.Windows.Forms.Button();
             this.Добавить_лекцию_button1 = new System.Windows.Forms.Button();
             this.Всего_лекций_textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -56,13 +57,11 @@ namespace Centr
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.Удалить_лекцию_button5);
             this.tabPage1.Controls.Add(this.Выход_button4);
             this.tabPage1.Controls.Add(this.Сохранить_button3);
-            this.tabPage1.Controls.Add(this.Добавить_лекцию_button2);
             this.tabPage1.Controls.Add(this.Добавить_лекцию_button1);
-            this.tabPage1.Controls.Add(this.Всего_лекций_textBox1);
-            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -72,6 +71,7 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Все текстовые лекции и их добавление";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // Удалить_лекцию_button5
             // 
@@ -81,6 +81,7 @@ namespace Centr
             this.Удалить_лекцию_button5.TabIndex = 41;
             this.Удалить_лекцию_button5.Text = "Удалить лекцию";
             this.Удалить_лекцию_button5.UseVisualStyleBackColor = true;
+            this.Удалить_лекцию_button5.Click += new System.EventHandler(this.Удалить_лекцию_button5_Click);
             // 
             // Выход_button4
             // 
@@ -94,42 +95,35 @@ namespace Centr
             // 
             // Сохранить_button3
             // 
-            this.Сохранить_button3.Location = new System.Drawing.Point(358, 250);
+            this.Сохранить_button3.Location = new System.Drawing.Point(573, 269);
             this.Сохранить_button3.Name = "Сохранить_button3";
-            this.Сохранить_button3.Size = new System.Drawing.Size(419, 39);
+            this.Сохранить_button3.Size = new System.Drawing.Size(203, 49);
             this.Сохранить_button3.TabIndex = 39;
             this.Сохранить_button3.Text = "Сохранить";
             this.Сохранить_button3.UseVisualStyleBackColor = true;
             // 
-            // Добавить_лекцию_button2
-            // 
-            this.Добавить_лекцию_button2.Location = new System.Drawing.Point(359, 187);
-            this.Добавить_лекцию_button2.Name = "Добавить_лекцию_button2";
-            this.Добавить_лекцию_button2.Size = new System.Drawing.Size(204, 31);
-            this.Добавить_лекцию_button2.TabIndex = 38;
-            this.Добавить_лекцию_button2.Text = "Добавить лекцию";
-            this.Добавить_лекцию_button2.UseVisualStyleBackColor = true;
-            // 
             // Добавить_лекцию_button1
             // 
-            this.Добавить_лекцию_button1.Location = new System.Drawing.Point(360, 135);
+            this.Добавить_лекцию_button1.Location = new System.Drawing.Point(573, 135);
             this.Добавить_лекцию_button1.Name = "Добавить_лекцию_button1";
-            this.Добавить_лекцию_button1.Size = new System.Drawing.Size(418, 31);
+            this.Добавить_лекцию_button1.Size = new System.Drawing.Size(205, 31);
             this.Добавить_лекцию_button1.TabIndex = 37;
             this.Добавить_лекцию_button1.Text = "Добавить лекцию";
             this.Добавить_лекцию_button1.UseVisualStyleBackColor = true;
             // 
             // Всего_лекций_textBox1
             // 
-            this.Всего_лекций_textBox1.Location = new System.Drawing.Point(476, 40);
+            this.Всего_лекций_textBox1.Location = new System.Drawing.Point(109, 23);
             this.Всего_лекций_textBox1.Name = "Всего_лекций_textBox1";
             this.Всего_лекций_textBox1.Size = new System.Drawing.Size(87, 22);
             this.Всего_лекций_textBox1.TabIndex = 36;
+            this.Всего_лекций_textBox1.TextChanged += new System.EventHandler(this.Всего_лекций_textBox1_TextChanged);
+            this.Всего_лекций_textBox1.Enter += new System.EventHandler(this.Всего_лекций_textBox1_Enter);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(357, 43);
+            this.label2.Location = new System.Drawing.Point(3, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 35;
@@ -151,8 +145,20 @@ namespace Centr
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(316, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(526, 381);
             this.dataGridView1.TabIndex = 33;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Всего_лекций_textBox1);
+            this.panel1.Location = new System.Drawing.Point(572, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(204, 86);
+            this.panel1.TabIndex = 42;
+            this.panel1.Enter += new System.EventHandler(this.panel1_Enter);
             // 
             // все_текстовые_лекции_админ
             // 
@@ -166,6 +172,8 @@ namespace Centr
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -177,11 +185,11 @@ namespace Centr
         private System.Windows.Forms.Button Удалить_лекцию_button5;
         private System.Windows.Forms.Button Выход_button4;
         private System.Windows.Forms.Button Сохранить_button3;
-        private System.Windows.Forms.Button Добавить_лекцию_button2;
         private System.Windows.Forms.Button Добавить_лекцию_button1;
         private System.Windows.Forms.TextBox Всего_лекций_textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -93,6 +93,7 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Регистрация";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // Выход_button4
             // 
@@ -151,6 +152,8 @@ namespace Centr
             this.Пароль_textBox5.Name = "Пароль_textBox5";
             this.Пароль_textBox5.Size = new System.Drawing.Size(217, 22);
             this.Пароль_textBox5.TabIndex = 39;
+            this.Пароль_textBox5.Enter += new System.EventHandler(this.Пароль_textBox5_Enter);
+            this.Пароль_textBox5.Leave += new System.EventHandler(this.Пароль_textBox5_Leave);
             // 
             // label7
             // 
@@ -197,6 +200,8 @@ namespace Centr
             this.Логин_textBox4.Name = "Логин_textBox4";
             this.Логин_textBox4.Size = new System.Drawing.Size(217, 22);
             this.Логин_textBox4.TabIndex = 34;
+            this.Логин_textBox4.Enter += new System.EventHandler(this.Логин_textBox4_Enter);
+            this.Логин_textBox4.Leave += new System.EventHandler(this.Логин_textBox4_Leave);
             // 
             // Имя_textBox3
             // 
@@ -204,6 +209,8 @@ namespace Centr
             this.Имя_textBox3.Name = "Имя_textBox3";
             this.Имя_textBox3.Size = new System.Drawing.Size(217, 22);
             this.Имя_textBox3.TabIndex = 33;
+            this.Имя_textBox3.Enter += new System.EventHandler(this.Имя_textBox3_Enter);
+            this.Имя_textBox3.Leave += new System.EventHandler(this.Имя_textBox3_Leave);
             // 
             // Отчество_textBox2
             // 
@@ -211,6 +218,8 @@ namespace Centr
             this.Отчество_textBox2.Name = "Отчество_textBox2";
             this.Отчество_textBox2.Size = new System.Drawing.Size(217, 22);
             this.Отчество_textBox2.TabIndex = 32;
+            this.Отчество_textBox2.Enter += new System.EventHandler(this.Отчество_textBox2_Enter);
+            this.Отчество_textBox2.Leave += new System.EventHandler(this.Отчество_textBox2_Leave);
             // 
             // label4
             // 
@@ -258,13 +267,15 @@ namespace Centr
             this.Фамилия_textBox1.Name = "Фамилия_textBox1";
             this.Фамилия_textBox1.Size = new System.Drawing.Size(217, 22);
             this.Фамилия_textBox1.TabIndex = 27;
+            this.Фамилия_textBox1.Enter += new System.EventHandler(this.Фамилия_textBox1_Enter);
+            this.Фамилия_textBox1.Leave += new System.EventHandler(this.Фамилия_textBox1_Leave);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-4, -25);
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 44);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(810, 450);
+            this.pictureBox2.Size = new System.Drawing.Size(810, 381);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 45;
             this.pictureBox2.TabStop = false;

@@ -42,6 +42,7 @@ namespace Centr
             this.label1 = new System.Windows.Forms.Label();
             this.Логин_textbox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Показать_пароль_checkBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,6 +59,7 @@ namespace Centr
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Показать_пароль_checkBox);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.Зарегистрироваться_button);
@@ -111,7 +113,7 @@ namespace Centr
             // Войти_button
             // 
             this.Войти_button.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Войти_button.Location = new System.Drawing.Point(326, 231);
+            this.Войти_button.Location = new System.Drawing.Point(336, 266);
             this.Войти_button.Name = "Войти_button";
             this.Войти_button.Size = new System.Drawing.Size(145, 47);
             this.Войти_button.TabIndex = 31;
@@ -145,6 +147,7 @@ namespace Centr
             this.Пароль_textBox.Name = "Пароль_textBox";
             this.Пароль_textBox.Size = new System.Drawing.Size(189, 22);
             this.Пароль_textBox.TabIndex = 28;
+            this.Пароль_textBox.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -172,6 +175,18 @@ namespace Centr
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 35;
             this.pictureBox2.TabStop = false;
+            // 
+            // Показать_пароль_checkBox
+            // 
+            this.Показать_пароль_checkBox.AutoSize = true;
+            this.Показать_пароль_checkBox.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Показать_пароль_checkBox.Location = new System.Drawing.Point(336, 225);
+            this.Показать_пароль_checkBox.Name = "Показать_пароль_checkBox";
+            this.Показать_пароль_checkBox.Size = new System.Drawing.Size(173, 26);
+            this.Показать_пароль_checkBox.TabIndex = 36;
+            this.Показать_пароль_checkBox.Text = "Показать пароль";
+            this.Показать_пароль_checkBox.UseVisualStyleBackColor = true;
+            this.Показать_пароль_checkBox.CheckedChanged += new System.EventHandler(this.Показать_пароль_checkBox_CheckedChanged);
             // 
             // вход
             // 
@@ -203,5 +218,6 @@ namespace Centr
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Логин_textbox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.CheckBox Показать_пароль_checkBox;
     }
 }

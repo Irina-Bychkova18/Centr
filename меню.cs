@@ -27,8 +27,9 @@ namespace Centr
         private void текстовыеЛекцииToolStripMenuItem_Click(object sender, EventArgs e)
         {
             все_текстовые_лекции_админ все_Текстовые_Лекции_Админ = new все_текстовые_лекции_админ();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(все_Текстовые_Лекции_Админ.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+            
         }
 
         private void видеороликиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,6 +112,11 @@ namespace Centr
             Личный_кабинет личный_Кабинет = new Личный_кабинет();
             Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(личный_Кабинет.tabControl1.TabPages[0]);
+        }
+
+        private void лекцииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
