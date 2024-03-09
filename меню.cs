@@ -49,8 +49,8 @@ namespace Centr
         private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Сотрудники сотрудники = new Сотрудники();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(сотрудники.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
         private void расписаниеЗанятийToolStripMenuItem_Click(object sender, EventArgs e)

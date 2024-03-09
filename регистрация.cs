@@ -45,8 +45,8 @@ namespace Centr
 
         private void Зарегистрироваться_button1_Click(object sender, EventArgs e)
         {
-            string kod = Form1.cdt.Tables["Центры"].DefaultView[Центр_comboBox1.SelectedIndex]["id_centra"].ToString();
-            string kod_1 = Form1.cdt.Tables["Пользователи"].DefaultView[Должность_comboBox2.SelectedIndex]["id_usera"].ToString();
+            string kod = Form1.cdt.Tables["Центры"].DefaultView[Центр_comboBox1.SelectedIndex]["Код_центра"].ToString();
+            string kod_1 = Form1.cdt.Tables["Пользователи"].DefaultView[Должность_comboBox2.SelectedIndex]["Код_пользователя"].ToString();
             string sql = "INSERT INTO new_users (fam, name, otch, id_centra, id_usera, login, parol) VALUES (" + Фамилия_textBox1.Text + ",'" + Имя_textBox3.Text + "','" + Отчество_textBox2 + "','" + kod + "'," + kod_1 + "'," + Логин_textBox4.Text + "'," + Пароль_textBox5.Text + ")";
             if (!Form1.Modification_Execute(sql))
                 return;

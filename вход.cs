@@ -38,6 +38,12 @@ namespace Centr
                 if (Пароль_textBox.Text == "Admin")
                 {
                     Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
+                    Form1.Table_Fill("Возраст", "SELECT id_vozr AS \"Код возраста\", name AS \"Наименование возраста\" FROM vozrast" + " ORDER BY \"Код возраста\"");
+                    Form1.Table_Fill("Опыт", "SELECT id_opita AS \"Код опыта\", name AS \"Наименование опыта\" FROM opit" + " ORDER BY \"Код опыта\"");
+                    Form1.Table_Fill("Сотрудники", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
+               + " opit.name AS \"Опыт\", telephon AS \"Телефон\", doljnosti.name AS \"Должность\", login AS \"Логин\", parol AS \"Пароль\" FROM (((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
+               + "left join opit on opit.id_opita = sotrudniki.id_opita) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and doljnosti.id_dolj = sotrudniki.id_dolj" +
+               " GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, doljnosti.name, login, parol ORDER BY \"Код сотрудника\"");
                     меню Меню = new меню();
                     Form1.tabControl1.TabPages.RemoveAt(0);
                     Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);

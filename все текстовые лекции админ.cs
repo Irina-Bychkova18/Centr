@@ -75,7 +75,20 @@ namespace Centr
                     return;
                 }
         }
+        private void AddLinkColumn()
+        {
+            DataGridViewLinkColumn links = new DataGridViewLinkColumn();
 
+            links.UseColumnTextForLinkValue = true;
+            
+            links.ActiveLinkColor = Color.White;
+            links.LinkBehavior = LinkBehavior.SystemDefault;
+            links.LinkColor = Color.Blue;
+            links.TrackVisitedState = true;
+            links.VisitedLinkColor = Color.YellowGreen;
+
+            dataGridView1.Columns.Add(links);
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -31,19 +31,19 @@ namespace Centr
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Всего_лекций_textBox1 = new System.Windows.Forms.TextBox();
             this.Удалить_лекцию_button5 = new System.Windows.Forms.Button();
             this.Выход_button4 = new System.Windows.Forms.Button();
             this.Сохранить_button3 = new System.Windows.Forms.Button();
             this.Добавить_лекцию_button1 = new System.Windows.Forms.Button();
-            this.Всего_лекций_textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -72,6 +72,34 @@ namespace Centr
             this.tabPage1.Text = "Все текстовые лекции и их добавление";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Всего_лекций_textBox1);
+            this.panel1.Location = new System.Drawing.Point(572, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(204, 86);
+            this.panel1.TabIndex = 42;
+            this.panel1.Enter += new System.EventHandler(this.panel1_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 17);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Всего лекций:";
+            // 
+            // Всего_лекций_textBox1
+            // 
+            this.Всего_лекций_textBox1.Location = new System.Drawing.Point(109, 23);
+            this.Всего_лекций_textBox1.Name = "Всего_лекций_textBox1";
+            this.Всего_лекций_textBox1.Size = new System.Drawing.Size(87, 22);
+            this.Всего_лекций_textBox1.TabIndex = 36;
+            this.Всего_лекций_textBox1.TextChanged += new System.EventHandler(this.Всего_лекций_textBox1_TextChanged);
+            this.Всего_лекций_textBox1.Enter += new System.EventHandler(this.Всего_лекций_textBox1_Enter);
             // 
             // Удалить_лекцию_button5
             // 
@@ -111,24 +139,6 @@ namespace Centr
             this.Добавить_лекцию_button1.Text = "Добавить лекцию";
             this.Добавить_лекцию_button1.UseVisualStyleBackColor = true;
             // 
-            // Всего_лекций_textBox1
-            // 
-            this.Всего_лекций_textBox1.Location = new System.Drawing.Point(109, 23);
-            this.Всего_лекций_textBox1.Name = "Всего_лекций_textBox1";
-            this.Всего_лекций_textBox1.Size = new System.Drawing.Size(87, 22);
-            this.Всего_лекций_textBox1.TabIndex = 36;
-            this.Всего_лекций_textBox1.TextChanged += new System.EventHandler(this.Всего_лекций_textBox1_TextChanged);
-            this.Всего_лекций_textBox1.Enter += new System.EventHandler(this.Всего_лекций_textBox1_Enter);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 17);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Всего лекций:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -150,16 +160,6 @@ namespace Centr
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.Всего_лекций_textBox1);
-            this.panel1.Location = new System.Drawing.Point(572, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(204, 86);
-            this.panel1.TabIndex = 42;
-            this.panel1.Enter += new System.EventHandler(this.panel1_Enter);
-            // 
             // все_текстовые_лекции_админ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,9 +171,9 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

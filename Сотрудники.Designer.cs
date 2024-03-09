@@ -52,10 +52,10 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-2, -1);
+            this.tabControl1.Location = new System.Drawing.Point(-2, -5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(804, 452);
+            this.tabControl1.Size = new System.Drawing.Size(804, 456);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -76,10 +76,11 @@ namespace Centr
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(796, 423);
+            this.tabPage1.Size = new System.Drawing.Size(796, 427);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Сотрудники и их добавление";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // Ведет_курсы_textBox2
             // 
@@ -114,6 +115,7 @@ namespace Centr
             this.Удалить_button3.TabIndex = 59;
             this.Удалить_button3.Text = "Удалить";
             this.Удалить_button3.UseVisualStyleBackColor = true;
+            this.Удалить_button3.Click += new System.EventHandler(this.Удалить_button3_Click);
             // 
             // Изменить_button1
             // 
@@ -184,6 +186,7 @@ namespace Centr
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(355, 385);
             this.dataGridView1.TabIndex = 51;
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
             // Выход_button4
             // 
