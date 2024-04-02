@@ -48,6 +48,10 @@ namespace Centr
                     Form1.tabControl1.TabPages.RemoveAt(0);
                     Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
                     Form1.Table_Fill("Центры", "SELECT id_centra AS \"Код_центра\", name AS \"Название_центра\",  rukovoditeli.fio AS \"fio\" FROM centr left join rukovoditeli on centr.id_ruk = rukovoditeli.id_ruk ORDER BY \"Код_центра\"");
+                    //Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\",  kolvo_mest_vsego AS \"Количество мест всего\"," +
+                    //    " mest_ostav AS \"Количество мест оставшихся\", centr.name AS \"Название центра\", information AS \"Информация о курсе\" FROM kursi left join centr on kursi.id_centra = centr.id_centra ORDER BY \"Код курса\"");
+                    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
+                    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
                     Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
                 }
                 else

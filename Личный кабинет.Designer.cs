@@ -72,6 +72,7 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Личный кабинет";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // Завершить_настоящий_курс_button6
             // 

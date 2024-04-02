@@ -19,9 +19,12 @@ namespace Centr
 
         private void Выход_button4_Click(object sender, EventArgs e)
         {
-            меню Меню = new меню();
-            Form1.tabControl1.TabPages.RemoveAt(0);
-            Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
+
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

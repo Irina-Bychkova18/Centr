@@ -32,7 +32,6 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(регистрация));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Выход_button4 = new System.Windows.Forms.Button();
             this.Должность_comboBox2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Отменить_регистрацию_button2 = new System.Windows.Forms.Button();
@@ -50,24 +49,27 @@ namespace Centr
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Фамилия_textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Выход_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-8, 0);
+            this.tabControl1.Location = new System.Drawing.Point(-8, -25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(817, 450);
+            this.tabControl1.Size = new System.Drawing.Size(817, 480);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Выход_button4);
+            this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Должность_comboBox2);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.Отменить_регистрацию_button2);
@@ -85,26 +87,13 @@ namespace Centr
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Фамилия_textBox1);
-            this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(809, 421);
+            this.tabPage1.Size = new System.Drawing.Size(809, 451);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Регистрация";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
-            // 
-            // Выход_button4
-            // 
-            this.Выход_button4.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Выход_button4.Location = new System.Drawing.Point(580, 6);
-            this.Выход_button4.Name = "Выход_button4";
-            this.Выход_button4.Size = new System.Drawing.Size(204, 32);
-            this.Выход_button4.TabIndex = 44;
-            this.Выход_button4.Text = "Выход";
-            this.Выход_button4.UseVisualStyleBackColor = true;
-            this.Выход_button4.Click += new System.EventHandler(this.Выход_button4_Click);
             // 
             // Должность_comboBox2
             // 
@@ -126,24 +115,28 @@ namespace Centr
             // 
             // Отменить_регистрацию_button2
             // 
+            this.Отменить_регистрацию_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Отменить_регистрацию_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Отменить_регистрацию_button2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Отменить_регистрацию_button2.Location = new System.Drawing.Point(180, 368);
+            this.Отменить_регистрацию_button2.Location = new System.Drawing.Point(158, 368);
             this.Отменить_регистрацию_button2.Name = "Отменить_регистрацию_button2";
-            this.Отменить_регистрацию_button2.Size = new System.Drawing.Size(195, 33);
+            this.Отменить_регистрацию_button2.Size = new System.Drawing.Size(217, 33);
             this.Отменить_регистрацию_button2.TabIndex = 41;
             this.Отменить_регистрацию_button2.Text = "Отменить регистрацию";
-            this.Отменить_регистрацию_button2.UseVisualStyleBackColor = true;
+            this.Отменить_регистрацию_button2.UseVisualStyleBackColor = false;
             this.Отменить_регистрацию_button2.Click += new System.EventHandler(this.Отменить_регистрацию_button2_Click);
             // 
             // Зарегистрироваться_button1
             // 
+            this.Зарегистрироваться_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Зарегистрироваться_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Зарегистрироваться_button1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.Зарегистрироваться_button1.Location = new System.Drawing.Point(395, 368);
             this.Зарегистрироваться_button1.Name = "Зарегистрироваться_button1";
-            this.Зарегистрироваться_button1.Size = new System.Drawing.Size(208, 33);
+            this.Зарегистрироваться_button1.Size = new System.Drawing.Size(217, 33);
             this.Зарегистрироваться_button1.TabIndex = 40;
             this.Зарегистрироваться_button1.Text = "Зарегистрироваться";
-            this.Зарегистрироваться_button1.UseVisualStyleBackColor = true;
+            this.Зарегистрироваться_button1.UseVisualStyleBackColor = false;
             this.Зарегистрироваться_button1.Click += new System.EventHandler(this.Зарегистрироваться_button1_Click);
             // 
             // Пароль_textBox5
@@ -255,7 +248,7 @@ namespace Centr
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label1.Location = new System.Drawing.Point(312, 58);
+            this.label1.Location = new System.Drawing.Point(331, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 22);
             this.label1.TabIndex = 28;
@@ -270,20 +263,33 @@ namespace Centr
             this.Фамилия_textBox1.Enter += new System.EventHandler(this.Фамилия_textBox1_Enter);
             this.Фамилия_textBox1.Leave += new System.EventHandler(this.Фамилия_textBox1_Leave);
             // 
-            // pictureBox2
+            // Выход_button
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 44);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(810, 381);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Выход_button.Location = new System.Drawing.Point(6, 6);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(121, 38);
+            this.Выход_button.TabIndex = 45;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(683, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
             // 
             // регистрация
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "регистрация";
@@ -291,7 +297,7 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -300,7 +306,6 @@ namespace Centr
 
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button Выход_button4;
         private System.Windows.Forms.ComboBox Должность_comboBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Отменить_регистрацию_button2;
@@ -318,6 +323,7 @@ namespace Centr
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Фамилия_textBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

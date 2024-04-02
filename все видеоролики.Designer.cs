@@ -29,85 +29,102 @@ namespace Centr
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(все_видеоролики));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Выход_button = new System.Windows.Forms.Button();
+            this.Всего_видеороликов_textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(0, -1);
+            this.tabControl1.Location = new System.Drawing.Point(-4, -25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 452);
-            this.tabControl1.TabIndex = 2;
+            this.tabControl1.Size = new System.Drawing.Size(809, 479);
+            this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.Выход_button);
+            this.tabPage1.Controls.Add(this.Всего_видеороликов_textBox1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 423);
+            this.tabPage1.Size = new System.Drawing.Size(801, 450);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Все видеоролики";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Text = "Все видеоролики и их добавление";
             // 
-            // button4
+            // pictureBox1
             // 
-            this.button4.Location = new System.Drawing.Point(574, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(204, 32);
-            this.button4.TabIndex = 58;
-            this.button4.Text = "Выход";
-            this.button4.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(676, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // Выход_button
             // 
-            this.textBox1.Location = new System.Drawing.Point(510, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 22);
-            this.textBox1.TabIndex = 54;
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Выход_button.Location = new System.Drawing.Point(12, 11);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(121, 38);
+            this.Выход_button.TabIndex = 51;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
+            // 
+            // Всего_видеороликов_textBox1
+            // 
+            this.Всего_видеороликов_textBox1.Location = new System.Drawing.Point(698, 88);
+            this.Всего_видеороликов_textBox1.Name = "Всего_видеороликов_textBox1";
+            this.Всего_видеороликов_textBox1.Size = new System.Drawing.Size(87, 22);
+            this.Всего_видеороликов_textBox1.TabIndex = 45;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(358, 46);
+            this.label2.Location = new System.Drawing.Point(546, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 17);
-            this.label2.TabIndex = 53;
+            this.label2.TabIndex = 44;
             this.label2.Text = "Всего видеороликов:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 6);
+            this.label1.Location = new System.Drawing.Point(6, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 17);
-            this.label1.TabIndex = 52;
+            this.label1.TabIndex = 43;
             this.label1.Text = "Видеоматериал центра";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(316, 381);
-            this.dataGridView1.TabIndex = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(531, 349);
+            this.dataGridView1.TabIndex = 42;
             // 
             // все_видеоролики
             // 
@@ -120,6 +137,7 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -127,10 +145,11 @@ namespace Centr
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.TextBox Всего_видеороликов_textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;

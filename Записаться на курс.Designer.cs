@@ -85,6 +85,7 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Записаться на курс";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // Записаться_button1
             // 
@@ -94,6 +95,7 @@ namespace Centr
             this.Записаться_button1.TabIndex = 48;
             this.Записаться_button1.Text = "Записаться";
             this.Записаться_button1.UseVisualStyleBackColor = true;
+            this.Записаться_button1.Click += new System.EventHandler(this.Записаться_button1_Click);
             // 
             // Время_занятий_comboBox4
             // 
@@ -179,6 +181,8 @@ namespace Centr
             this.Имя_textBox3.Name = "Имя_textBox3";
             this.Имя_textBox3.Size = new System.Drawing.Size(413, 22);
             this.Имя_textBox3.TabIndex = 38;
+            this.Имя_textBox3.Enter += new System.EventHandler(this.Имя_textBox3_Enter);
+            this.Имя_textBox3.Leave += new System.EventHandler(this.Имя_textBox3_Leave);
             // 
             // Отчество_textBox2
             // 
@@ -186,6 +190,8 @@ namespace Centr
             this.Отчество_textBox2.Name = "Отчество_textBox2";
             this.Отчество_textBox2.Size = new System.Drawing.Size(413, 22);
             this.Отчество_textBox2.TabIndex = 37;
+            this.Отчество_textBox2.Enter += new System.EventHandler(this.Отчество_textBox2_Enter);
+            this.Отчество_textBox2.Leave += new System.EventHandler(this.Отчество_textBox2_Leave);
             // 
             // label4
             // 
@@ -220,6 +226,8 @@ namespace Centr
             this.Фамилия_textBox1.Name = "Фамилия_textBox1";
             this.Фамилия_textBox1.Size = new System.Drawing.Size(413, 22);
             this.Фамилия_textBox1.TabIndex = 33;
+            this.Фамилия_textBox1.Enter += new System.EventHandler(this.Фамилия_textBox1_Enter);
+            this.Фамилия_textBox1.Leave += new System.EventHandler(this.Фамилия_textBox1_Leave);
             // 
             // Записаться_на_курс
             // 

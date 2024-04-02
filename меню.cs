@@ -75,8 +75,8 @@ namespace Centr
         private void записатьсяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Записаться_на_курс записаться_На_Курс = new Записаться_на_курс();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(записаться_На_Курс.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
         private void моиКурсыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,6 +115,11 @@ namespace Centr
         }
 
         private void лекцииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
