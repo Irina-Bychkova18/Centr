@@ -161,18 +161,6 @@ namespace Centr
         {
             Form1.Table_Fill("Пользователи", "Select * from users");
             
-            
-            //string sql = "SELECT new_users.id_new_usera AS \"Код\", " +
-            //    "new_users.fam AS \"Фамилия\", new_users.name  AS \"Имя\", new_users.otch AS \"Отчество\", " +
-            //    "centr.name AS \"name\", users.name AS \"name\", " +
-            //    "new_users.login AS \"Логин\", new_users.parol AS \"Пароль\" " +
-            //    "FROM ((new_users inner join centr on centr.id_centra = new_users.id_centra) " +
-            //    "left join users on users.id_usera = new_users.id_usera) where new_users.id_centra = centr.id_centra " +
-            //    "and users.id_usera = new_users.id_usera GROUP BY new_users.id_new_usera, new_users.fam, new_users.name, " +
-            //    "new_users.otch, centr.name, users.name, new_users.login, new_users.parol ORDER BY \"Код\"";
-
-            
-
             Должность_comboBox2.DataSource = Form1.cdt.Tables["Пользователи"].DefaultView;
             Должность_comboBox2.DisplayMember = "name";
         }

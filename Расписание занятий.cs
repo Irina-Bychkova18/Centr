@@ -29,8 +29,7 @@ namespace Centr
         {
 
         }
-
-        private void tabPage1_Enter(object sender, EventArgs e)
+        private void ret()
         {
             string sql = "SELECT id_raspisania AS \"Код расписания\", kursi.name AS \"Название курса\","
                + " dni.name AS \"Дни работы\", vrema.name AS \"Время работы\" FROM (((raspisanie inner join kursi on kursi.id_kursi = raspisanie.id_kursi)"
@@ -47,6 +46,16 @@ namespace Centr
             dataGridView1.ReadOnly = true;
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
+
+            Дни_работы_comboBox1.DataSource = Form1.cdt.Tables["Расписание"].DefaultView;
+            Дни_работы_comboBox1.DisplayMember = "Дни работы";
+
+            Временной_промежуток_comboBox1.DataSource = Form1.cdt.Tables["Расписание"].DefaultView;
+            Временной_промежуток_comboBox1.DisplayMember = "Время работы";
+        }
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            ret();
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
@@ -86,6 +95,23 @@ namespace Centr
             Sheet_.Range[Sheet_.Cells[3, 4], Sheet_.Cells[3 + dataGridView1.RowCount, 4]].HorizontalAlignment = 4;
             Sheet_.Range[Sheet_.Cells[2, 1], Sheet_.Cells[2 + dataGridView1.RowCount, 4]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous ;
             Sheet_.Cells.Columns.EntireColumn.AutoFit();
+        }
+
+        private void Показать_button2_Click(object sender, EventArgs e)
+        {
+            string a = Convert.ToString(Дни_работы_comboBox1.Text);
+            string b = Convert.ToString(Временной_промежуток_comboBox1.Text);
+            string sql = "SELECT id_raspisania AS \"Код расписания\", kursi.name AS \"Название курса\","
+               + " dni.name AS \"Дни работы\", vrema.name AS \"Время работы\" FROM (((raspisanie inner join kursi on kursi.id_kursi = raspisanie.id_kursi)"
+               + "left join dni on dni.id_dni = raspisanie.id_dni) left join vrema on vrema.id_vrema = raspisanie.id_vrema) where kursi.id_kursi = raspisanie.id_kursi and dni.id_dni = raspisanie.id_dni " +
+               "and vrema.id_vrema = raspisanie.id_vrema and dni.name = '" + a +
+               "' and vrema.name = '" + b + "' GROUP BY id_raspisania, kursi.name, dni.name, vrema.name ORDER BY \"Код расписания\"";
+            Form1.Table_Fill("Расписание", sql);
+        }
+
+        private void Назад_button1_Click(object sender, EventArgs e)
+        {
+            ret();
         }
     }
 }

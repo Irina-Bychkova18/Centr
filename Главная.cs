@@ -50,5 +50,10 @@ namespace Centr
             if (Form1.cdt.Tables["Пользователи"].Rows.Count > n)
                 FieldsForm_Fill();
         }
+
+        private void Главная_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
