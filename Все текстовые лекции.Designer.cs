@@ -32,16 +32,16 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Все_текстовые_лекции));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Выход_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -68,6 +68,29 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(802, 453);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Все текстовые лекции";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(679, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Выход_button
+            // 
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Выход_button.Location = new System.Drawing.Point(12, 12);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(121, 38);
+            this.Выход_button.TabIndex = 52;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // textBox1
             // 
@@ -105,28 +128,6 @@ namespace Centr
             this.dataGridView1.Size = new System.Drawing.Size(556, 354);
             this.dataGridView1.TabIndex = 24;
             // 
-            // Выход_button
-            // 
-            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Выход_button.Location = new System.Drawing.Point(12, 12);
-            this.Выход_button.Name = "Выход_button";
-            this.Выход_button.Size = new System.Drawing.Size(121, 38);
-            this.Выход_button.TabIndex = 52;
-            this.Выход_button.Text = "Выход";
-            this.Выход_button.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(679, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            // 
             // Все_текстовые_лекции
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -138,8 +139,8 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

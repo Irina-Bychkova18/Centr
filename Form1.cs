@@ -18,7 +18,7 @@ namespace Centr
             InitializeComponent();
         }
         public static NpgsqlConnection connection = new NpgsqlConnection("Server=localhost;Port=5433;User Id=postgres;" +
-            "Password=toor;Database=obraz_center;");
+            "Password=toor;Database=center;");
         public static DataSet cdt = new DataSet();
         public static TabControl tabControl1 = new TabControl();
         public static void Table_Fill(string name, string sql)

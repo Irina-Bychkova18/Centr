@@ -56,8 +56,8 @@ namespace Centr
         private void расписаниеЗанятийToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Расписание_занятий расписание_Занятий = new Расписание_занятий();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(расписание_Занятий.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
         private void моиЗанятияToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,6 +122,27 @@ namespace Centr
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Выход_button_Click(object sender, EventArgs e)
+        {
+            вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация();
+            Form1.tabControl1.TabPages.RemoveAt(0);
+            Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
+        }
+
+      
+
+        private void расписаниеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void курсыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            все_курсы Все_Курсы = new все_курсы();
+            Form1.tabControl1.Controls.Add(Все_Курсы.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }
 }

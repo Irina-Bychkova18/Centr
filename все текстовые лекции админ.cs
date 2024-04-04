@@ -41,6 +41,9 @@ namespace Centr
             dataGridView1.ReadOnly = true;
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
+
+            int numRows = dataGridView1.Rows.Count;
+            Всего_лекций_textBox1.Text = numRows.ToString();
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
@@ -108,6 +111,26 @@ namespace Centr
         {
             int numRows = dataGridView1.Rows.Count;
             Всего_лекций_textBox1.Text = numRows.ToString();
+        }
+
+        private void Выход_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void все_текстовые_лекции_админ_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Всего_лекций_textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Добавить_лекцию_button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

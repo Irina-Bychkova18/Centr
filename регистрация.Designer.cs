@@ -32,6 +32,8 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(регистрация));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.Должность_comboBox2 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Отменить_регистрацию_button2 = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@ namespace Centr
             this.Пароль_textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Центр_comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.Логин_textBox4 = new System.Windows.Forms.TextBox();
             this.Имя_textBox3 = new System.Windows.Forms.TextBox();
             this.Отчество_textBox2 = new System.Windows.Forms.TextBox();
@@ -49,8 +49,6 @@ namespace Centr
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Фамилия_textBox1 = new System.Windows.Forms.TextBox();
-            this.Выход_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,10 +57,10 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-8, -25);
+            this.tabControl1.Location = new System.Drawing.Point(-8, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(817, 480);
+            this.tabControl1.Size = new System.Drawing.Size(817, 455);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -77,8 +75,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Пароль_textBox5);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.Центр_comboBox1);
-            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.Логин_textBox4);
             this.tabPage1.Controls.Add(this.Имя_textBox3);
             this.tabPage1.Controls.Add(this.Отчество_textBox2);
@@ -90,15 +86,38 @@ namespace Centr
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(809, 451);
+            this.tabPage1.Size = new System.Drawing.Size(809, 426);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Регистрация";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(683, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Выход_button
+            // 
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Выход_button.Location = new System.Drawing.Point(16, 6);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(121, 38);
+            this.Выход_button.TabIndex = 45;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
+            // 
             // Должность_comboBox2
             // 
             this.Должность_comboBox2.FormattingEnabled = true;
-            this.Должность_comboBox2.Location = new System.Drawing.Point(395, 254);
+            this.Должность_comboBox2.Location = new System.Drawing.Point(421, 217);
             this.Должность_comboBox2.Name = "Должность_comboBox2";
             this.Должность_comboBox2.Size = new System.Drawing.Size(217, 24);
             this.Должность_comboBox2.TabIndex = 43;
@@ -107,7 +126,7 @@ namespace Centr
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label8.Location = new System.Drawing.Point(154, 254);
+            this.label8.Location = new System.Drawing.Point(154, 217);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(235, 22);
             this.label8.TabIndex = 42;
@@ -131,7 +150,7 @@ namespace Centr
             this.Зарегистрироваться_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Зарегистрироваться_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Зарегистрироваться_button1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Зарегистрироваться_button1.Location = new System.Drawing.Point(395, 368);
+            this.Зарегистрироваться_button1.Location = new System.Drawing.Point(421, 368);
             this.Зарегистрироваться_button1.Name = "Зарегистрироваться_button1";
             this.Зарегистрироваться_button1.Size = new System.Drawing.Size(217, 33);
             this.Зарегистрироваться_button1.TabIndex = 40;
@@ -141,7 +160,7 @@ namespace Centr
             // 
             // Пароль_textBox5
             // 
-            this.Пароль_textBox5.Location = new System.Drawing.Point(395, 319);
+            this.Пароль_textBox5.Location = new System.Drawing.Point(421, 275);
             this.Пароль_textBox5.Name = "Пароль_textBox5";
             this.Пароль_textBox5.Size = new System.Drawing.Size(217, 22);
             this.Пароль_textBox5.TabIndex = 39;
@@ -152,7 +171,7 @@ namespace Centr
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label7.Location = new System.Drawing.Point(472, 294);
+            this.label7.Location = new System.Drawing.Point(498, 250);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 22);
             this.label7.TabIndex = 38;
@@ -163,33 +182,15 @@ namespace Centr
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label6.Location = new System.Drawing.Point(244, 294);
+            this.label6.Location = new System.Drawing.Point(244, 250);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 22);
             this.label6.TabIndex = 37;
             this.label6.Text = "Логин";
             // 
-            // Центр_comboBox1
-            // 
-            this.Центр_comboBox1.FormattingEnabled = true;
-            this.Центр_comboBox1.Location = new System.Drawing.Point(395, 219);
-            this.Центр_comboBox1.Name = "Центр_comboBox1";
-            this.Центр_comboBox1.Size = new System.Drawing.Size(217, 24);
-            this.Центр_comboBox1.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label5.Location = new System.Drawing.Point(154, 218);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 22);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Название центра";
-            // 
             // Логин_textBox4
             // 
-            this.Логин_textBox4.Location = new System.Drawing.Point(158, 319);
+            this.Логин_textBox4.Location = new System.Drawing.Point(158, 275);
             this.Логин_textBox4.Name = "Логин_textBox4";
             this.Логин_textBox4.Size = new System.Drawing.Size(217, 22);
             this.Логин_textBox4.TabIndex = 34;
@@ -198,7 +199,7 @@ namespace Centr
             // 
             // Имя_textBox3
             // 
-            this.Имя_textBox3.Location = new System.Drawing.Point(395, 144);
+            this.Имя_textBox3.Location = new System.Drawing.Point(421, 144);
             this.Имя_textBox3.Name = "Имя_textBox3";
             this.Имя_textBox3.Size = new System.Drawing.Size(217, 22);
             this.Имя_textBox3.TabIndex = 33;
@@ -207,7 +208,7 @@ namespace Centr
             // 
             // Отчество_textBox2
             // 
-            this.Отчество_textBox2.Location = new System.Drawing.Point(395, 180);
+            this.Отчество_textBox2.Location = new System.Drawing.Point(421, 180);
             this.Отчество_textBox2.Name = "Отчество_textBox2";
             this.Отчество_textBox2.Size = new System.Drawing.Size(217, 22);
             this.Отчество_textBox2.TabIndex = 32;
@@ -256,44 +257,23 @@ namespace Centr
             // 
             // Фамилия_textBox1
             // 
-            this.Фамилия_textBox1.Location = new System.Drawing.Point(395, 111);
+            this.Фамилия_textBox1.Location = new System.Drawing.Point(421, 111);
             this.Фамилия_textBox1.Name = "Фамилия_textBox1";
             this.Фамилия_textBox1.Size = new System.Drawing.Size(217, 22);
             this.Фамилия_textBox1.TabIndex = 27;
             this.Фамилия_textBox1.Enter += new System.EventHandler(this.Фамилия_textBox1_Enter);
             this.Фамилия_textBox1.Leave += new System.EventHandler(this.Фамилия_textBox1_Leave);
             // 
-            // Выход_button
-            // 
-            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Выход_button.Location = new System.Drawing.Point(6, 6);
-            this.Выход_button.Name = "Выход_button";
-            this.Выход_button.Size = new System.Drawing.Size(121, 38);
-            this.Выход_button.TabIndex = 45;
-            this.Выход_button.Text = "Выход";
-            this.Выход_button.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(683, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
-            // 
             // регистрация
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(806, 452);
             this.Controls.Add(this.tabControl1);
             this.Name = "регистрация";
             this.Text = "регистрация";
+            this.Load += new System.EventHandler(this.регистрация_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -313,8 +293,6 @@ namespace Centr
         private System.Windows.Forms.TextBox Пароль_textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox Центр_comboBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Логин_textBox4;
         private System.Windows.Forms.TextBox Имя_textBox3;
         private System.Windows.Forms.TextBox Отчество_textBox2;

@@ -38,6 +38,7 @@ namespace Centr
                 if (Пароль_textBox.Text == "Admin")
                 {
                     Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
+                    Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
                     Form1.Table_Fill("Возраст", "SELECT id_vozr AS \"Код возраста\", name AS \"Наименование возраста\" FROM vozrast" + " ORDER BY \"Код возраста\"");
                     Form1.Table_Fill("Опыт", "SELECT id_opita AS \"Код опыта\", name AS \"Наименование опыта\" FROM opit" + " ORDER BY \"Код опыта\"");
                     Form1.Table_Fill("Сотрудники", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
@@ -47,7 +48,7 @@ namespace Centr
                     меню Меню = new меню();
                     Form1.tabControl1.TabPages.RemoveAt(0);
                     Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
-                    Form1.Table_Fill("Центры", "SELECT id_centra AS \"Код_центра\", name AS \"Название_центра\",  rukovoditeli.fio AS \"fio\" FROM centr left join rukovoditeli on centr.id_ruk = rukovoditeli.id_ruk ORDER BY \"Код_центра\"");
+                   
                     //Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\",  kolvo_mest_vsego AS \"Количество мест всего\"," +
                     //    " mest_ostav AS \"Количество мест оставшихся\", centr.name AS \"Название центра\", information AS \"Информация о курсе\" FROM kursi left join centr on kursi.id_centra = centr.id_centra ORDER BY \"Код курса\"");
                     Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
@@ -72,6 +73,11 @@ namespace Centr
                 Пароль_textBox.UseSystemPasswordChar = false;
             else
                 Пароль_textBox.UseSystemPasswordChar = true;
+        }
+
+        private void вход_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

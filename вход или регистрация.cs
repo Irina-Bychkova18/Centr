@@ -30,5 +30,17 @@ namespace Centr
             Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(Вход.tabControl1.TabPages[0]);
         }
+
+        private void вход_или_регистрация_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Главная главная = new Главная();
+            Form1.tabControl1.TabPages.RemoveAt(0);
+            Form1.tabControl1.Controls.Add(главная.tabControl1.TabPages[0]);
+        }
+
+        private void вход_или_регистрация_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

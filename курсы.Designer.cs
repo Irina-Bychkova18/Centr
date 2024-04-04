@@ -57,6 +57,7 @@ namespace Centr
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.Выход_button4);
             this.tabPage1.Controls.Add(this.Записаться_на_курс_button1);
@@ -73,7 +74,7 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(799, 427);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Курс";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // label4
             // 
@@ -86,22 +87,26 @@ namespace Centr
             // 
             // Выход_button4
             // 
+            this.Выход_button4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Выход_button4.Location = new System.Drawing.Point(581, 13);
             this.Выход_button4.Name = "Выход_button4";
             this.Выход_button4.Size = new System.Drawing.Size(204, 30);
             this.Выход_button4.TabIndex = 22;
             this.Выход_button4.Text = "Выход";
-            this.Выход_button4.UseVisualStyleBackColor = true;
+            this.Выход_button4.UseVisualStyleBackColor = false;
             this.Выход_button4.Click += new System.EventHandler(this.Выход_button4_Click);
             // 
             // Записаться_на_курс_button1
             // 
+            this.Записаться_на_курс_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Записаться_на_курс_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Записаться_на_курс_button1.Location = new System.Drawing.Point(473, 184);
             this.Записаться_на_курс_button1.Name = "Записаться_на_курс_button1";
             this.Записаться_на_курс_button1.Size = new System.Drawing.Size(312, 35);
             this.Записаться_на_курс_button1.TabIndex = 21;
             this.Записаться_на_курс_button1.Text = "Записаться на курс";
-            this.Записаться_на_курс_button1.UseVisualStyleBackColor = true;
+            this.Записаться_на_курс_button1.UseVisualStyleBackColor = false;
             // 
             // Всего_мест_textBox3
             // 
@@ -165,6 +170,7 @@ namespace Centr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "курсы";

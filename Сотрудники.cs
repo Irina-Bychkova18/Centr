@@ -95,5 +95,10 @@ namespace Centr
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
         }
+
+        private void Выход_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,9 +19,24 @@ namespace Centr
 
         private void Выход_button4_Click(object sender, EventArgs e)
         {
-            меню Меню = new меню();
-            Form1.tabControl1.TabPages.RemoveAt(0);
-            Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
+
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            string sql = "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\","
+                + " text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"";
+            Form1.Table_Fill("Курс", sql);
+
+            dataGridView1.DataSource = Form1.cdt.Tables["Все текстовые лекции"];
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.AutoResizeColumns();
+            dataGridView1.CurrentCell = null;
         }
     }
 }
