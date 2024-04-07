@@ -69,7 +69,7 @@ namespace Centr
             //Form1.cdt.Tables["Новые_пользователи"].Rows.Add(new object[] { Фамилия_textBox1.Text, Имя_textBox3.Text, Отчество_textBox2, Центр_comboBox1.Text, Должность_comboBox2.Text, Логин_textBox4.Text, Пароль_textBox5.Text });
             
             
-            меню Меню = new меню();
+            меню_админ Меню = new меню_админ();
             Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
             

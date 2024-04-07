@@ -29,18 +29,21 @@ namespace Centr
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(текстовая_лекция));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Выход_button = new System.Windows.Forms.Button();
+            this.В_конец_button5 = new System.Windows.Forms.Button();
+            this.В_начало_button3 = new System.Windows.Forms.Button();
+            this.Назад_button2 = new System.Windows.Forms.Button();
+            this.Вперед_button1 = new System.Windows.Forms.Button();
+            this.Название_textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,12 +58,14 @@ namespace Centr
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.Выход_button);
+            this.tabPage1.Controls.Add(this.В_конец_button5);
+            this.tabPage1.Controls.Add(this.В_начало_button3);
+            this.tabPage1.Controls.Add(this.Назад_button2);
+            this.tabPage1.Controls.Add(this.Вперед_button1);
+            this.tabPage1.Controls.Add(this.Название_textBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -69,65 +74,90 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(792, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Текстовая лекция";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
-            // button5
+            // pictureBox1
             // 
-            this.button5.Location = new System.Drawing.Point(658, 102);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 30);
-            this.button5.TabIndex = 41;
-            this.button5.Text = "В конец";
-            this.button5.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(675, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 94;
+            this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // Выход_button
             // 
-            this.button3.Location = new System.Drawing.Point(514, 102);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 30);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "В начало";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Выход_button.Location = new System.Drawing.Point(10, 15);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(121, 38);
+            this.Выход_button.TabIndex = 93;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
-            // button2
+            // В_конец_button5
             // 
-            this.button2.Location = new System.Drawing.Point(658, 55);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 30);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Назад";
-            this.button2.UseVisualStyleBackColor = true;
+            this.В_конец_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.В_конец_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.В_конец_button5.Location = new System.Drawing.Point(662, 149);
+            this.В_конец_button5.Name = "В_конец_button5";
+            this.В_конец_button5.Size = new System.Drawing.Size(124, 30);
+            this.В_конец_button5.TabIndex = 41;
+            this.В_конец_button5.Text = "В конец";
+            this.В_конец_button5.UseVisualStyleBackColor = false;
+            this.В_конец_button5.Click += new System.EventHandler(this.В_конец_button5_Click);
             // 
-            // button1
+            // В_начало_button3
             // 
-            this.button1.Location = new System.Drawing.Point(514, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 30);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Вперед";
-            this.button1.UseVisualStyleBackColor = true;
+            this.В_начало_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.В_начало_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.В_начало_button3.Location = new System.Drawing.Point(518, 149);
+            this.В_начало_button3.Name = "В_начало_button3";
+            this.В_начало_button3.Size = new System.Drawing.Size(124, 30);
+            this.В_начало_button3.TabIndex = 40;
+            this.В_начало_button3.Text = "В начало";
+            this.В_начало_button3.UseVisualStyleBackColor = false;
+            this.В_начало_button3.Click += new System.EventHandler(this.В_начало_button3_Click);
             // 
-            // textBox1
+            // Назад_button2
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 22);
-            this.textBox1.TabIndex = 37;
+            this.Назад_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Назад_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Назад_button2.Location = new System.Drawing.Point(662, 102);
+            this.Назад_button2.Name = "Назад_button2";
+            this.Назад_button2.Size = new System.Drawing.Size(124, 30);
+            this.Назад_button2.TabIndex = 39;
+            this.Назад_button2.Text = "Назад";
+            this.Назад_button2.UseVisualStyleBackColor = false;
+            this.Назад_button2.Click += new System.EventHandler(this.Назад_button2_Click);
             // 
-            // button4
+            // Вперед_button1
             // 
-            this.button4.Location = new System.Drawing.Point(578, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(204, 32);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "Выход";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Вперед_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Вперед_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Вперед_button1.Location = new System.Drawing.Point(518, 102);
+            this.Вперед_button1.Name = "Вперед_button1";
+            this.Вперед_button1.Size = new System.Drawing.Size(124, 30);
+            this.Вперед_button1.TabIndex = 38;
+            this.Вперед_button1.Text = "Вперед";
+            this.Вперед_button1.UseVisualStyleBackColor = false;
+            this.Вперед_button1.Click += new System.EventHandler(this.Вперед_button1_Click);
+            // 
+            // Название_textBox1
+            // 
+            this.Название_textBox1.Location = new System.Drawing.Point(141, 74);
+            this.Название_textBox1.Name = "Название_textBox1";
+            this.Название_textBox1.Size = new System.Drawing.Size(367, 22);
+            this.Название_textBox1.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(8, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 17);
             this.label1.TabIndex = 35;
@@ -136,17 +166,19 @@ namespace Centr
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 102);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(498, 312);
             this.dataGridView1.TabIndex = 34;
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
             // текстовая_лекция
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "текстовая_лекция";
@@ -154,22 +186,23 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button В_конец_button5;
+        private System.Windows.Forms.Button В_начало_button3;
+        private System.Windows.Forms.Button Назад_button2;
+        private System.Windows.Forms.Button Вперед_button1;
+        private System.Windows.Forms.TextBox Название_textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TabControl tabControl1;
     }
 }

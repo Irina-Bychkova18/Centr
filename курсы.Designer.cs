@@ -74,6 +74,7 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(799, 427);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Курс";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // label4
@@ -101,31 +102,32 @@ namespace Centr
             // 
             this.Записаться_на_курс_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Записаться_на_курс_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Записаться_на_курс_button1.Location = new System.Drawing.Point(473, 184);
+            this.Записаться_на_курс_button1.Location = new System.Drawing.Point(473, 218);
             this.Записаться_на_курс_button1.Name = "Записаться_на_курс_button1";
             this.Записаться_на_курс_button1.Size = new System.Drawing.Size(312, 35);
             this.Записаться_на_курс_button1.TabIndex = 21;
             this.Записаться_на_курс_button1.Text = "Записаться на курс";
             this.Записаться_на_курс_button1.UseVisualStyleBackColor = false;
+            this.Записаться_на_курс_button1.Click += new System.EventHandler(this.Записаться_на_курс_button1_Click);
             // 
             // Всего_мест_textBox3
             // 
-            this.Всего_мест_textBox3.Location = new System.Drawing.Point(608, 106);
+            this.Всего_мест_textBox3.Location = new System.Drawing.Point(473, 109);
             this.Всего_мест_textBox3.Name = "Всего_мест_textBox3";
-            this.Всего_мест_textBox3.Size = new System.Drawing.Size(177, 22);
+            this.Всего_мест_textBox3.Size = new System.Drawing.Size(312, 22);
             this.Всего_мест_textBox3.TabIndex = 20;
             // 
             // Оставшиеся_места_textBox2
             // 
-            this.Оставшиеся_места_textBox2.Location = new System.Drawing.Point(608, 146);
+            this.Оставшиеся_места_textBox2.Location = new System.Drawing.Point(473, 149);
             this.Оставшиеся_места_textBox2.Name = "Оставшиеся_места_textBox2";
-            this.Оставшиеся_места_textBox2.Size = new System.Drawing.Size(177, 22);
+            this.Оставшиеся_места_textBox2.Size = new System.Drawing.Size(312, 22);
             this.Оставшиеся_места_textBox2.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(470, 149);
+            this.label3.Location = new System.Drawing.Point(335, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 17);
             this.label3.TabIndex = 18;
@@ -134,7 +136,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(470, 109);
+            this.label2.Location = new System.Drawing.Point(335, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 17;
@@ -147,13 +149,14 @@ namespace Centr
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(442, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(322, 373);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(470, 65);
+            this.label1.Location = new System.Drawing.Point(335, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 15;
@@ -161,9 +164,9 @@ namespace Centr
             // 
             // Название_textBox1
             // 
-            this.Название_textBox1.Location = new System.Drawing.Point(608, 62);
+            this.Название_textBox1.Location = new System.Drawing.Point(473, 65);
             this.Название_textBox1.Name = "Название_textBox1";
-            this.Название_textBox1.Size = new System.Drawing.Size(177, 22);
+            this.Название_textBox1.Size = new System.Drawing.Size(312, 22);
             this.Название_textBox1.TabIndex = 14;
             // 
             // курсы

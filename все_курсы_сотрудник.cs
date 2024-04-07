@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Centr
 {
-    public partial class все_курсы : Form
+    public partial class все_курсы_сотрудник : Form
     {
-        public все_курсы()
+        public все_курсы_сотрудник()
         {
             InitializeComponent();
-            
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
@@ -23,7 +22,6 @@ namespace Centr
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
 
-     
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
@@ -43,41 +41,12 @@ namespace Centr
 
             int numRows = dataGridView1.Rows.Count;
             Всего_курсов_textBox1.Text = numRows.ToString();
-
-        
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
         {
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
-        }
-
-        private void Всего_курсов_textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            курсы.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код курса"].Value.ToString();
-            курсы Курсы = new курсы();
-            if (Form1.tabControl1.TabCount > 2)
-                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
-            Form1.tabControl1.Controls.Add(Курсы.tabControl1.TabPages[0]);
-            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Добавить_курс_button1_Click(object sender, EventArgs e)
-        {
-            Добавить_курс добавить_курс = new Добавить_курс();
-            Form1.tabControl1.Controls.Add(добавить_курс.tabControl1.TabPages[0]);
-            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }
 }

@@ -85,7 +85,7 @@ namespace Centr
             if (!Form1.Modification_Execute(sql))
                 return;
 
-            меню Меню = new меню();
+            меню_админ Меню = new меню_админ();
             Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }

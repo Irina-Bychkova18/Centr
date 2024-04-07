@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Centr
 {
-    public partial class меню : Form
+    public partial class меню_админ : Form
     {
-        public меню()
+        public меню_админ()
         {
             InitializeComponent();
         }
@@ -126,9 +126,11 @@ namespace Centr
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
             вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+            
         }
 
       

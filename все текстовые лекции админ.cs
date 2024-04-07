@@ -130,7 +130,19 @@ namespace Centr
 
         private void Добавить_лекцию_button1_Click(object sender, EventArgs e)
         {
+            Добавить_лекцию добавить_лекцию = new Добавить_лекцию();
+            Form1.tabControl1.Controls.Add(добавить_лекцию.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
 
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            текстовая_лекция.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код лекции"].Value.ToString();
+            текстовая_лекция текстовая_Лекция = new текстовая_лекция();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(текстовая_Лекция.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }
 }

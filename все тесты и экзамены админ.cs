@@ -24,7 +24,7 @@ namespace Centr
 
         private void Выход_button4_Click(object sender, EventArgs e)
         {
-            меню Меню = new меню();
+            меню_админ Меню = new меню_админ();
             Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
         }
