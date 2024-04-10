@@ -1,7 +1,7 @@
 ﻿
 namespace Centr
 {
-    partial class все_текстовые_лекции_админ
+    partial class все_текстовые_лекции_учащийся
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,13 @@ namespace Centr
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(все_текстовые_лекции_админ));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(все_текстовые_лекции_учащийся));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Всего_лекций_textBox1 = new System.Windows.Forms.TextBox();
-            this.Удалить_лекцию_button5 = new System.Windows.Forms.Button();
-            this.Добавить_лекцию_button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
@@ -49,11 +47,11 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-6, 1);
+            this.tabControl1.Location = new System.Drawing.Point(-7, -2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(814, 455);
-            this.tabControl1.TabIndex = 2;
+            this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
@@ -62,8 +60,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.Всего_лекций_textBox1);
-            this.tabPage1.Controls.Add(this.Удалить_лекцию_button5);
-            this.tabPage1.Controls.Add(this.Добавить_лекцию_button1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -100,7 +96,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(556, 94);
+            this.label2.Location = new System.Drawing.Point(243, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 42;
@@ -108,35 +104,10 @@ namespace Centr
             // 
             // Всего_лекций_textBox1
             // 
-            this.Всего_лекций_textBox1.Location = new System.Drawing.Point(681, 91);
+            this.Всего_лекций_textBox1.Location = new System.Drawing.Point(349, 60);
             this.Всего_лекций_textBox1.Name = "Всего_лекций_textBox1";
             this.Всего_лекций_textBox1.Size = new System.Drawing.Size(107, 22);
             this.Всего_лекций_textBox1.TabIndex = 43;
-            this.Всего_лекций_textBox1.TextChanged += new System.EventHandler(this.Всего_лекций_textBox1_TextChanged_1);
-            // 
-            // Удалить_лекцию_button5
-            // 
-            this.Удалить_лекцию_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Удалить_лекцию_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Удалить_лекцию_button5.Location = new System.Drawing.Point(559, 203);
-            this.Удалить_лекцию_button5.Name = "Удалить_лекцию_button5";
-            this.Удалить_лекцию_button5.Size = new System.Drawing.Size(231, 31);
-            this.Удалить_лекцию_button5.TabIndex = 41;
-            this.Удалить_лекцию_button5.Text = "Удалить лекцию";
-            this.Удалить_лекцию_button5.UseVisualStyleBackColor = false;
-            this.Удалить_лекцию_button5.Click += new System.EventHandler(this.Удалить_лекцию_button5_Click);
-            // 
-            // Добавить_лекцию_button1
-            // 
-            this.Добавить_лекцию_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Добавить_лекцию_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_лекцию_button1.Location = new System.Drawing.Point(559, 151);
-            this.Добавить_лекцию_button1.Name = "Добавить_лекцию_button1";
-            this.Добавить_лекцию_button1.Size = new System.Drawing.Size(231, 31);
-            this.Добавить_лекцию_button1.TabIndex = 37;
-            this.Добавить_лекцию_button1.Text = "Добавить лекцию";
-            this.Добавить_лекцию_button1.UseVisualStyleBackColor = false;
-            this.Добавить_лекцию_button1.Click += new System.EventHandler(this.Добавить_лекцию_button1_Click);
             // 
             // label1
             // 
@@ -150,25 +121,22 @@ namespace Centr
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 332);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 327);
             this.dataGridView1.TabIndex = 33;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
-            // все_текстовые_лекции_админ
+            // все_текстовые_лекции_учащийся
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 453);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "все_текстовые_лекции_админ";
-            this.Text = "все_текстовые_лекции_админ";
-            this.Load += new System.EventHandler(this.все_текстовые_лекции_админ_Load);
+            this.Name = "все_текстовые_лекции_учащийся";
+            this.Text = "все_текстовые_лекции_учащийся";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -181,14 +149,12 @@ namespace Centr
         #endregion
 
         public System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Button Удалить_лекцию_button5;
-        private System.Windows.Forms.Button Добавить_лекцию_button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Всего_лекций_textBox1;
-        private System.Windows.Forms.Button Выход_button;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

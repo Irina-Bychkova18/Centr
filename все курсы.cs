@@ -44,7 +44,12 @@ namespace Centr
             int numRows = dataGridView1.Rows.Count;
             Всего_курсов_textBox1.Text = numRows.ToString();
 
-        
+            int sum = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(dataGridView1.Rows[i].Cells["Количество оставшихся мест"].Value);
+            }
+            Количество_оставшихся_мест_textBox2.Text = sum.ToString();
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
@@ -77,6 +82,21 @@ namespace Centr
         {
             Добавить_курс добавить_курс = new Добавить_курс();
             Form1.tabControl1.Controls.Add(добавить_курс.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void Сохранить_button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Изменить_курс_button2_Click(object sender, EventArgs e)
+        {
+            Изменить_курс.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код курса"].Value.ToString();
+            Изменить_курс изменить_Курс = new Изменить_курс();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(изменить_Курс.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }

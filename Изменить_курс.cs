@@ -10,14 +10,12 @@ using System.Windows.Forms;
 
 namespace Centr
 {
-    public partial class курсы : Form
+    public partial class Изменить_курс : Form
     {
-        public курсы()
+        public Изменить_курс()
         {
             InitializeComponent();
         }
-
-        
         public static string n = null;
         private void tabPage1_Enter(object sender, EventArgs e)
         {
@@ -35,30 +33,28 @@ namespace Centr
             Информация_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Информация о курсе"].ToString();
 
             Form1.cdt.Tables["Курсы"].DefaultView.RowFilter = "[Код курса]=" + n;
-
-
-            
-
-            
-        }
-
-        
-
-        private void Записаться_на_курс_button1_Click(object sender, EventArgs e)
-        {
-            Записаться_на_курс записаться_На_Курс = new Записаться_на_курс();
-            Form1.tabControl1.TabPages.RemoveAt(0);
-            Form1.tabControl1.Controls.Add(записаться_На_Курс.tabControl1.TabPages[0]);
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
+    
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
+
+        private void Изменить_button1_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            while (Form1.cdt.Tables["Курсы"].Rows[i]["Код курса"].ToString() != n)
+                i++;
+            string sql;
+            if (i < Form1.cdt.Tables["Курсы"].Rows.Count)
+            {
+                i = i + 1;
+                sql = "UPDATE kursi SET name ='" + Название_textBox1.Text + "', kolvo_mest_vsego = " + Всего_мест_textBox3.Text + ", mest_ostav = " + Оставшиеся_места_textBox2.Text + ", information ='" + Информация_textBox1.Text + "' WHERE id_kursi = " + i;
+                if (!Form1.Modification_Execute(sql))
+                    return;
+                
+            }
         }
     }
 }

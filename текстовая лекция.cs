@@ -25,8 +25,9 @@ namespace Centr
         private void FieldsForm_Fill()
         {
             Название_textBox1.Text = Form1.cdt.Tables["Все текстовые лекции"].Rows[k]["Название лекции"].ToString();
-            //string sql = "SELECT text AS \"Текст лекции\" FROM lekcii where name ='" + Название_textBox1.Text + "'";
-            //Form1.Table_Fill("Все текстовые лекции", sql);
+            string sql = "SELECT text AS \"Текст лекции\" FROM lekcii where name ='" + Название_textBox1.Text + "'";
+            Form1.Table_Fill("текстовые лекции", sql);
+            dataGridView1.DataSource = Form1.cdt.Tables["текстовые лекции"].DefaultView;
         }
 
         private void FieldsForm_Clear()
@@ -112,6 +113,11 @@ namespace Centr
         {
             FieldsForm_Clear();
             k = Form1.cdt.Tables["Все текстовые лекции"].Rows.Count;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

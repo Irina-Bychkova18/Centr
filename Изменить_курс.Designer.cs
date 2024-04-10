@@ -1,7 +1,7 @@
 ﻿
 namespace Centr
 {
-    partial class курсы
+    partial class Изменить_курс
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,20 @@ namespace Centr
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(курсы));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Изменить_курс));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Выход_button = new System.Windows.Forms.Button();
+            this.Информация_textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Записаться_на_курс_button1 = new System.Windows.Forms.Button();
+            this.Изменить_button1 = new System.Windows.Forms.Button();
             this.Всего_мест_textBox3 = new System.Windows.Forms.TextBox();
             this.Оставшиеся_места_textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
-            this.Информация_textBox1 = new System.Windows.Forms.TextBox();
-            this.Выход_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +55,7 @@ namespace Centr
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(807, 456);
-            this.tabControl1.TabIndex = 2;
+            this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
@@ -64,7 +64,7 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Информация_textBox1);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.Записаться_на_курс_button1);
+            this.tabPage1.Controls.Add(this.Изменить_button1);
             this.tabPage1.Controls.Add(this.Всего_мест_textBox3);
             this.tabPage1.Controls.Add(this.Оставшиеся_места_textBox2);
             this.tabPage1.Controls.Add(this.label3);
@@ -76,41 +76,71 @@ namespace Centr
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(799, 427);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Курс";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabPage1.Text = "Изменение_курса";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(662, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 93;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Выход_button
+            // 
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Выход_button.Location = new System.Drawing.Point(26, 6);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(121, 38);
+            this.Выход_button.TabIndex = 92;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
+            // 
+            // Информация_textBox1
+            // 
+            this.Информация_textBox1.Location = new System.Drawing.Point(180, 161);
+            this.Информация_textBox1.Multiline = true;
+            this.Информация_textBox1.Name = "Информация_textBox1";
+            this.Информация_textBox1.Size = new System.Drawing.Size(591, 182);
+            this.Информация_textBox1.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 192);
+            this.label4.Location = new System.Drawing.Point(23, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "Информация о курсе:";
             // 
-            // Записаться_на_курс_button1
+            // Изменить_button1
             // 
-            this.Записаться_на_курс_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Записаться_на_курс_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Записаться_на_курс_button1.Location = new System.Drawing.Point(240, 372);
-            this.Записаться_на_курс_button1.Name = "Записаться_на_курс_button1";
-            this.Записаться_на_курс_button1.Size = new System.Drawing.Size(312, 35);
-            this.Записаться_на_курс_button1.TabIndex = 21;
-            this.Записаться_на_курс_button1.Text = "Записаться на курс";
-            this.Записаться_на_курс_button1.UseVisualStyleBackColor = false;
-            this.Записаться_на_курс_button1.Click += new System.EventHandler(this.Записаться_на_курс_button1_Click);
+            this.Изменить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Изменить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_button1.Location = new System.Drawing.Point(255, 361);
+            this.Изменить_button1.Name = "Изменить_button1";
+            this.Изменить_button1.Size = new System.Drawing.Size(312, 35);
+            this.Изменить_button1.TabIndex = 21;
+            this.Изменить_button1.Text = "Изменить";
+            this.Изменить_button1.UseVisualStyleBackColor = false;
+            this.Изменить_button1.Click += new System.EventHandler(this.Изменить_button1_Click);
             // 
             // Всего_мест_textBox3
             // 
-            this.Всего_мест_textBox3.Location = new System.Drawing.Point(185, 145);
+            this.Всего_мест_textBox3.Location = new System.Drawing.Point(180, 124);
             this.Всего_мест_textBox3.Name = "Всего_мест_textBox3";
-            this.Всего_мест_textBox3.Size = new System.Drawing.Size(209, 22);
+            this.Всего_мест_textBox3.Size = new System.Drawing.Size(218, 22);
             this.Всего_мест_textBox3.TabIndex = 20;
             // 
             // Оставшиеся_места_textBox2
             // 
-            this.Оставшиеся_места_textBox2.Location = new System.Drawing.Point(575, 147);
+            this.Оставшиеся_места_textBox2.Location = new System.Drawing.Point(561, 124);
             this.Оставшиеся_места_textBox2.Name = "Оставшиеся_места_textBox2";
             this.Оставшиеся_места_textBox2.Size = new System.Drawing.Size(210, 22);
             this.Оставшиеся_места_textBox2.TabIndex = 19;
@@ -118,7 +148,7 @@ namespace Centr
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(415, 150);
+            this.label3.Location = new System.Drawing.Point(404, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 17);
             this.label3.TabIndex = 18;
@@ -127,7 +157,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 148);
+            this.label2.Location = new System.Drawing.Point(23, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 17;
@@ -136,7 +166,7 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 79);
+            this.label1.Location = new System.Drawing.Point(23, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 15;
@@ -144,52 +174,19 @@ namespace Centr
             // 
             // Название_textBox1
             // 
-            this.Название_textBox1.Location = new System.Drawing.Point(185, 79);
-            this.Название_textBox1.Multiline = true;
+            this.Название_textBox1.Location = new System.Drawing.Point(180, 80);
             this.Название_textBox1.Name = "Название_textBox1";
-            this.Название_textBox1.Size = new System.Drawing.Size(600, 47);
+            this.Название_textBox1.Size = new System.Drawing.Size(591, 22);
             this.Название_textBox1.TabIndex = 14;
             // 
-            // Информация_textBox1
-            // 
-            this.Информация_textBox1.Location = new System.Drawing.Point(185, 192);
-            this.Информация_textBox1.Multiline = true;
-            this.Информация_textBox1.Name = "Информация_textBox1";
-            this.Информация_textBox1.Size = new System.Drawing.Size(600, 158);
-            this.Информация_textBox1.TabIndex = 24;
-            // 
-            // Выход_button
-            // 
-            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Выход_button.Location = new System.Drawing.Point(31, 6);
-            this.Выход_button.Name = "Выход_button";
-            this.Выход_button.Size = new System.Drawing.Size(121, 38);
-            this.Выход_button.TabIndex = 92;
-            this.Выход_button.Text = "Выход";
-            this.Выход_button.UseVisualStyleBackColor = false;
-            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(678, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 93;
-            this.pictureBox1.TabStop = false;
-            // 
-            // курсы
+            // Изменить_курс
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "курсы";
-            this.Text = "курсы";
+            this.Name = "Изменить_курс";
+            this.Text = "Изменить_курс";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -203,7 +200,7 @@ namespace Centr
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Записаться_на_курс_button1;
+        private System.Windows.Forms.Button Изменить_button1;
         private System.Windows.Forms.TextBox Всего_мест_textBox3;
         private System.Windows.Forms.TextBox Оставшиеся_места_textBox2;
         private System.Windows.Forms.Label label3;

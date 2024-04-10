@@ -116,6 +116,12 @@
     <Compile Include="все_курсы_сотрудник.Designer.cs">
       <DependentUpon>все_курсы_сотрудник.cs</DependentUpon>
     </Compile>
+    <Compile Include="все_текстовые_лекции_учащийся.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="все_текстовые_лекции_учащийся.Designer.cs">
+      <DependentUpon>все_текстовые_лекции_учащийся.cs</DependentUpon>
+    </Compile>
     <Compile Include="вход или регистрация.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,12 @@
     <Compile Include="Записаться на курс.Designer.cs">
       <DependentUpon>Записаться на курс.cs</DependentUpon>
     </Compile>
+    <Compile Include="Изменить_курс.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменить_курс.Designer.cs">
+      <DependentUpon>Изменить_курс.cs</DependentUpon>
+    </Compile>
     <Compile Include="курсы.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +223,12 @@
     </Compile>
     <Compile Include="меню_сотрудник.Designer.cs">
       <DependentUpon>меню_сотрудник.cs</DependentUpon>
+    </Compile>
+    <Compile Include="меню_учащийся.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="меню_учащийся.Designer.cs">
+      <DependentUpon>меню_учащийся.cs</DependentUpon>
     </Compile>
     <Compile Include="Мои занятия.cs">
       <SubType>Form</SubType>
@@ -299,6 +317,9 @@
     <EmbeddedResource Include="все_курсы_сотрудник.resx">
       <DependentUpon>все_курсы_сотрудник.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="все_текстовые_лекции_учащийся.resx">
+      <DependentUpon>все_текстовые_лекции_учащийся.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="вход или регистрация.resx">
       <DependentUpon>вход или регистрация.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +356,9 @@
     <EmbeddedResource Include="Записаться на курс.resx">
       <DependentUpon>Записаться на курс.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Изменить_курс.resx">
+      <DependentUpon>Изменить_курс.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="курсы.resx">
       <DependentUpon>курсы.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="меню_сотрудник.resx">
       <DependentUpon>меню_сотрудник.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="меню_учащийся.resx">
+      <DependentUpon>меню_учащийся.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Мои занятия.resx">
       <DependentUpon>Мои занятия.cs</DependentUpon>

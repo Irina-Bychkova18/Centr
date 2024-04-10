@@ -101,5 +101,10 @@ namespace Centr
             Время_занятий_comboBox4.DataSource = Form1.cdt.Tables["Время"].DefaultView;
             Время_занятий_comboBox4.DisplayMember = "Время занятий";
         }
+
+        private void Выход_button_Click(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
     }
 }

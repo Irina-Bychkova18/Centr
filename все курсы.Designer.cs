@@ -34,7 +34,6 @@ namespace Centr
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
-            this.Сохранить_button3 = new System.Windows.Forms.Button();
             this.Изменить_курс_button2 = new System.Windows.Forms.Button();
             this.Добавить_курс_button1 = new System.Windows.Forms.Button();
             this.Количество_оставшихся_мест_textBox2 = new System.Windows.Forms.TextBox();
@@ -63,7 +62,6 @@ namespace Centr
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
-            this.tabPage1.Controls.Add(this.Сохранить_button3);
             this.tabPage1.Controls.Add(this.Изменить_курс_button2);
             this.tabPage1.Controls.Add(this.Добавить_курс_button1);
             this.tabPage1.Controls.Add(this.Количество_оставшихся_мест_textBox2);
@@ -103,35 +101,25 @@ namespace Centr
             this.Выход_button.UseVisualStyleBackColor = false;
             this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
-            // Сохранить_button3
-            // 
-            this.Сохранить_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Сохранить_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Сохранить_button3.Location = new System.Drawing.Point(225, 357);
-            this.Сохранить_button3.Name = "Сохранить_button3";
-            this.Сохранить_button3.Size = new System.Drawing.Size(331, 32);
-            this.Сохранить_button3.TabIndex = 90;
-            this.Сохранить_button3.Text = "Сохранить";
-            this.Сохранить_button3.UseVisualStyleBackColor = false;
-            // 
             // Изменить_курс_button2
             // 
             this.Изменить_курс_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_курс_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Изменить_курс_button2.Location = new System.Drawing.Point(620, 357);
+            this.Изменить_курс_button2.Location = new System.Drawing.Point(406, 382);
             this.Изменить_курс_button2.Name = "Изменить_курс_button2";
-            this.Изменить_курс_button2.Size = new System.Drawing.Size(159, 32);
+            this.Изменить_курс_button2.Size = new System.Drawing.Size(373, 32);
             this.Изменить_курс_button2.TabIndex = 89;
             this.Изменить_курс_button2.Text = "Изменить курс";
             this.Изменить_курс_button2.UseVisualStyleBackColor = false;
+            this.Изменить_курс_button2.Click += new System.EventHandler(this.Изменить_курс_button2_Click);
             // 
             // Добавить_курс_button1
             // 
             this.Добавить_курс_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_курс_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_курс_button1.Location = new System.Drawing.Point(19, 357);
+            this.Добавить_курс_button1.Location = new System.Drawing.Point(19, 382);
             this.Добавить_курс_button1.Name = "Добавить_курс_button1";
-            this.Добавить_курс_button1.Size = new System.Drawing.Size(154, 32);
+            this.Добавить_курс_button1.Size = new System.Drawing.Size(362, 32);
             this.Добавить_курс_button1.TabIndex = 88;
             this.Добавить_курс_button1.Text = "Добавить курс";
             this.Добавить_курс_button1.UseVisualStyleBackColor = false;
@@ -186,7 +174,7 @@ namespace Centr
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(760, 195);
+            this.dataGridView1.Size = new System.Drawing.Size(760, 223);
             this.dataGridView1.TabIndex = 80;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -212,7 +200,6 @@ namespace Centr
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Выход_button;
-        private System.Windows.Forms.Button Сохранить_button3;
         private System.Windows.Forms.Button Изменить_курс_button2;
         private System.Windows.Forms.Button Добавить_курс_button1;
         private System.Windows.Forms.TextBox Количество_оставшихся_мест_textBox2;

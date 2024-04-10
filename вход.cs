@@ -49,48 +49,42 @@ namespace Centr
                     меню_админ Меню = new меню_админ();
                     Form1.tabControl1.TabPages.RemoveAt(0);
                     Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
-                   
+
                     //Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\",  kolvo_mest_vsego AS \"Количество мест всего\"," +
                     //    " mest_ostav AS \"Количество мест оставшихся\", centr.name AS \"Название центра\", information AS \"Информация о курсе\" FROM kursi left join centr on kursi.id_centra = centr.id_centra ORDER BY \"Код курса\"");
                     Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
                     Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
                     Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
                 }
-                else
-                {
-                    MessageBox.Show("Неправильный пароль.Попробуйте еще раз!");
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Неправильный логин. Попробуйте еще раз!");
             }
 
-            if (Логин_textbox.Text == "Admin")
-            {
-                if (Пароль_textBox.Text == "Admin")
-                {
-                    Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
+
+            //if (Form1.Modification_Execute("Select * from sotrudniki where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
+            //{
+            //    Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
                     
-                    меню_сотрудник Меню_2 = new меню_сотрудник();
-                    Form1.tabControl1.TabPages.RemoveAt(0);
-                    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
+            //    меню_сотрудник Меню_2 = new меню_сотрудник();
+            //    Form1.tabControl1.TabPages.RemoveAt(0);
+            //    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
 
-                    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
-                    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
-                    Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
-                }
-                else
-                {
-                    MessageBox.Show("Неправильный пароль.Попробуйте еще раз!");
-                }
+            //    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
+            //    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
+            //    Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
+            //}
 
-            }
-            else
-            {
-                MessageBox.Show("Неправильный логин. Попробуйте еще раз!");
-            }
+            //if (Form1.Modification_Execute("Select * from uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
+            //{
+            //    Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
+
+            //    меню_сотрудник Меню_2 = new меню_сотрудник();
+            //    Form1.tabControl1.TabPages.RemoveAt(0);
+            //    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
+
+            //    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
+            //    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
+            //    Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
+            //}
+
         }
 
         private void Показать_пароль_checkBox_CheckedChanged(object sender, EventArgs e)
