@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Centr
 {
@@ -44,6 +45,8 @@ namespace Centr
 
             int numRows = dataGridView1.Rows.Count;
             Всего_лекций_textBox1.Text = numRows.ToString();
+
+            dataGridView1.Columns["Текст лекции"].DefaultCellStyle.ForeColor = Color.Blue;
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
@@ -94,7 +97,15 @@ namespace Centr
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Проверка, что нажата конкретная ячейка с ссылкой
+            if (e.RowIndex >= 0 && e.ColumnIndex == 2)
+            {
+                // Получение значения ячейки с ссылкой
+                string url = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
+                // Открытие ссылки в браузере по умолчанию
+                Process.Start(url);
+            }
         }
 
         private void Всего_лекций_textBox1_TextChanged(object sender, EventArgs e)
@@ -115,7 +126,7 @@ namespace Centr
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
-
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
 
         private void все_текстовые_лекции_админ_Load(object sender, EventArgs e)

@@ -36,7 +36,6 @@ namespace Centr
             this.Выход_button = new System.Windows.Forms.Button();
             this.Ведет_курсы_textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Сохранить_button5 = new System.Windows.Forms.Button();
             this.Удалить_button3 = new System.Windows.Forms.Button();
             this.Изменить_button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,7 +67,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Ведет_курсы_textBox2);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.Сохранить_button5);
             this.tabPage1.Controls.Add(this.Удалить_button3);
             this.tabPage1.Controls.Add(this.Изменить_button1);
             this.tabPage1.Controls.Add(this.label3);
@@ -125,22 +123,11 @@ namespace Centr
             this.label4.TabIndex = 61;
             this.label4.Text = "Ведет курсы:";
             // 
-            // Сохранить_button5
-            // 
-            this.Сохранить_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Сохранить_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Сохранить_button5.Location = new System.Drawing.Point(380, 353);
-            this.Сохранить_button5.Name = "Сохранить_button5";
-            this.Сохранить_button5.Size = new System.Drawing.Size(406, 35);
-            this.Сохранить_button5.TabIndex = 60;
-            this.Сохранить_button5.Text = "Сохранить";
-            this.Сохранить_button5.UseVisualStyleBackColor = false;
-            // 
             // Удалить_button3
             // 
             this.Удалить_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Удалить_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Удалить_button3.Location = new System.Drawing.Point(661, 308);
+            this.Удалить_button3.Location = new System.Drawing.Point(661, 332);
             this.Удалить_button3.Name = "Удалить_button3";
             this.Удалить_button3.Size = new System.Drawing.Size(125, 39);
             this.Удалить_button3.TabIndex = 59;
@@ -152,12 +139,13 @@ namespace Centr
             // 
             this.Изменить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Изменить_button1.Location = new System.Drawing.Point(520, 308);
+            this.Изменить_button1.Location = new System.Drawing.Point(520, 332);
             this.Изменить_button1.Name = "Изменить_button1";
             this.Изменить_button1.Size = new System.Drawing.Size(125, 39);
             this.Изменить_button1.TabIndex = 58;
             this.Изменить_button1.Text = "Изменить";
             this.Изменить_button1.UseVisualStyleBackColor = false;
+            this.Изменить_button1.Click += new System.EventHandler(this.Изменить_button1_Click);
             // 
             // label3
             // 
@@ -188,7 +176,7 @@ namespace Centr
             // 
             this.Добавить_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_button2.Location = new System.Drawing.Point(380, 308);
+            this.Добавить_button2.Location = new System.Drawing.Point(380, 332);
             this.Добавить_button2.Name = "Добавить_button2";
             this.Добавить_button2.Size = new System.Drawing.Size(125, 39);
             this.Добавить_button2.TabIndex = 54;
@@ -249,7 +237,6 @@ namespace Centr
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox Ведет_курсы_textBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Сохранить_button5;
         private System.Windows.Forms.Button Удалить_button3;
         private System.Windows.Forms.Button Изменить_button1;
         private System.Windows.Forms.Label label3;

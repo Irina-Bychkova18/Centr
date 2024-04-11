@@ -121,5 +121,10 @@ namespace Centr
             }
             
         }
+
+        private void Изменить_button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

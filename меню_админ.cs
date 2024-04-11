@@ -29,14 +29,13 @@ namespace Centr
             все_текстовые_лекции_админ все_Текстовые_Лекции_Админ = new все_текстовые_лекции_админ();
             Form1.tabControl1.Controls.Add(все_Текстовые_Лекции_Админ.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
-            
         }
 
         private void видеороликиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             все_видеоролики_админ все_Видеоролики_Админ = new все_видеоролики_админ();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(все_Видеоролики_Админ.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
         private void тестыИЭкзаменыToolStripMenuItem_Click(object sender, EventArgs e)

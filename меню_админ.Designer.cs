@@ -143,21 +143,21 @@ namespace Centr
             // текстовыеЛекцииToolStripMenuItem
             // 
             this.текстовыеЛекцииToolStripMenuItem.Name = "текстовыеЛекцииToolStripMenuItem";
-            this.текстовыеЛекцииToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.текстовыеЛекцииToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.текстовыеЛекцииToolStripMenuItem.Text = "Текстовые лекции";
             this.текстовыеЛекцииToolStripMenuItem.Click += new System.EventHandler(this.текстовыеЛекцииToolStripMenuItem_Click);
             // 
             // видеороликиToolStripMenuItem
             // 
             this.видеороликиToolStripMenuItem.Name = "видеороликиToolStripMenuItem";
-            this.видеороликиToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.видеороликиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.видеороликиToolStripMenuItem.Text = "Видеоролики";
             this.видеороликиToolStripMenuItem.Click += new System.EventHandler(this.видеороликиToolStripMenuItem_Click);
             // 
             // тестыИЭкзаменыToolStripMenuItem
             // 
             this.тестыИЭкзаменыToolStripMenuItem.Name = "тестыИЭкзаменыToolStripMenuItem";
-            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.тестыИЭкзаменыToolStripMenuItem.Text = "Тесты и экзамены";
             this.тестыИЭкзаменыToolStripMenuItem.Click += new System.EventHandler(this.тестыИЭкзаменыToolStripMenuItem_Click);
             // 
@@ -254,14 +254,14 @@ namespace Centr
             this.личныйКабинетToolStripMenuItem.Text = "Личный кабинет";
             this.личныйКабинетToolStripMenuItem.Click += new System.EventHandler(this.личныйКабинетToolStripMenuItem_Click);
             // 
-            // меню
+            // меню_админ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "меню";
+            this.Name = "меню_админ";
             this.Text = "меню";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
