@@ -65,7 +65,7 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(819, 429);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Главная";
-            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter_1);
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // pictureBox1
             // 
@@ -98,6 +98,7 @@ namespace Centr
             this.Выборка_пользователя_combobox.Name = "Выборка_пользователя_combobox";
             this.Выборка_пользователя_combobox.Size = new System.Drawing.Size(417, 30);
             this.Выборка_пользователя_combobox.TabIndex = 27;
+            this.Выборка_пользователя_combobox.SelectedIndexChanged += new System.EventHandler(this.Выборка_пользователя_combobox_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -146,9 +147,9 @@ namespace Centr
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Далее_button;
-        private System.Windows.Forms.ComboBox Выборка_пользователя_combobox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.ComboBox Выборка_пользователя_combobox;
     }
 }

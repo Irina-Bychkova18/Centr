@@ -95,6 +95,7 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(793, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавить сотрудника";
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // Отменить_добавление_button1
             // 
@@ -106,6 +107,7 @@ namespace Centr
             this.Отменить_добавление_button1.TabIndex = 108;
             this.Отменить_добавление_button1.Text = "Отменить добавление";
             this.Отменить_добавление_button1.UseVisualStyleBackColor = false;
+            this.Отменить_добавление_button1.Click += new System.EventHandler(this.Отменить_добавление_button1_Click);
             // 
             // Ведет_курс_comboBox4
             // 
@@ -226,6 +228,7 @@ namespace Centr
             this.Выход_button.TabIndex = 53;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // label3
             // 
@@ -271,6 +274,7 @@ namespace Centr
             this.Изменить_button2.TabIndex = 37;
             this.Изменить_button2.Text = "Изменить";
             this.Изменить_button2.UseVisualStyleBackColor = false;
+            this.Изменить_button2.Click += new System.EventHandler(this.Изменить_button2_Click);
             // 
             // Изменить_сотрудника
             // 

@@ -124,7 +124,21 @@ namespace Centr
 
         private void Изменить_button1_Click(object sender, EventArgs e)
         {
+            Изменить_сотрудника.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код сотрудника"].Value.ToString();
+            Изменить_сотрудника изменить_Сотрудника = new Изменить_сотрудника();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(изменить_Сотрудника.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ФИОtextBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            Должность_comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            Ведет_курсы_textBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+
+            
         }
     }
 }
