@@ -93,11 +93,16 @@ namespace Centr
             {
                 if (Form1.Modification_Execute("Select * from uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
                 {
+                    Form1.Table_Fill("Личный кабинет", "SELECT fio AS \"ФИО\", data_r AS \"Дата рождения\", telephon AS \"Телефон\", login AS \"Логин\", parol AS \"Пароль\" FROM uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'");
                     Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
-
-                    меню_сотрудник Меню_2 = new меню_сотрудник();
+                    Form1.Table_Fill("Ученик_Курс", "SELECT uchenik.fio AS \"ФИО\" , kursi.name AS \"Название курса\", dni.name AS \"Дни работы\", vrema.name AS \"Время работы\", " +
+                        "uchenik.login AS \"Логин\", uchenik.parol AS \"Пароль\" FROM ((((uchenik_kursi inner join uchenik on uchenik_kursi.id_uch = uchenik.id_uch)"
+                   + "left join kursi on kursi.id_kursi = uchenik_kursi.id_kursi) left join dni on dni.id_dni = uchenik_kursi.id_dni) left join vrema on vrema.id_vrema = uchenik_kursi.id_vrema)" +
+                   " where uchenik_kursi.id_uch = uchenik.id_uch and kursi.id_kursi = uchenik_kursi.id_kursi and dni.id_dni = uchenik_kursi.id_dni and vrema.id_vrema = uchenik_kursi.id_vrema and uchenik.login = '" + Логин_textbox.Text + "' and uchenik.parol = '" + Пароль_textBox.Text + "'" +
+                   " GROUP BY uchenik.fio, kursi.name, dni.name, vrema.name, uchenik.login, uchenik.parol ORDER BY \"ФИО\"");
+                    меню_учащийся Меню_1 = new меню_учащийся();
                     Form1.tabControl1.TabPages.RemoveAt(0);
-                    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
+                    Form1.tabControl1.Controls.Add(Меню_1.tabControl1.TabPages[0]);
 
                     Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
                     Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");

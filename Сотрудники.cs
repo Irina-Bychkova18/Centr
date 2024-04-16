@@ -140,5 +140,10 @@ namespace Centr
 
             
         }
+
+        private void ФИОtextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

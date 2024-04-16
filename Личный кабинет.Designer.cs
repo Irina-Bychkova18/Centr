@@ -39,18 +39,18 @@ namespace Centr
             this.label1 = new System.Windows.Forms.Label();
             this.Выход_button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ФИОtextBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Номер_телефона_textBox3 = new System.Windows.Forms.TextBox();
+            this.Логин_textBox4 = new System.Windows.Forms.TextBox();
+            this.Пароль_textBox5 = new System.Windows.Forms.TextBox();
+            this.Курсы_textBox6 = new System.Windows.Forms.TextBox();
+            this.Дата_рождения_dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,18 +68,18 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.Дата_рождения_dateTimePicker1);
+            this.tabPage1.Controls.Add(this.Курсы_textBox6);
+            this.tabPage1.Controls.Add(this.Пароль_textBox5);
+            this.tabPage1.Controls.Add(this.Логин_textBox4);
+            this.tabPage1.Controls.Add(this.Номер_телефона_textBox3);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.ФИОtextBox1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Завершить_настоящий_курс_button6);
@@ -169,12 +169,12 @@ namespace Centr
             this.pictureBox1.TabIndex = 95;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // ФИОtextBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 22);
-            this.textBox1.TabIndex = 96;
+            this.ФИОtextBox1.Location = new System.Drawing.Point(142, 89);
+            this.ФИОtextBox1.Name = "ФИОtextBox1";
+            this.ФИОtextBox1.Size = new System.Drawing.Size(443, 22);
+            this.ФИОtextBox1.TabIndex = 96;
             // 
             // label3
             // 
@@ -230,41 +230,41 @@ namespace Centr
             this.label8.TabIndex = 102;
             this.label8.Text = "Курсы:";
             // 
-            // textBox3
+            // Номер_телефона_textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(426, 126);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 22);
-            this.textBox3.TabIndex = 104;
+            this.Номер_телефона_textBox3.Location = new System.Drawing.Point(426, 126);
+            this.Номер_телефона_textBox3.Name = "Номер_телефона_textBox3";
+            this.Номер_телефона_textBox3.Size = new System.Drawing.Size(159, 22);
+            this.Номер_телефона_textBox3.TabIndex = 104;
             // 
-            // textBox4
+            // Логин_textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(142, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 22);
-            this.textBox4.TabIndex = 105;
+            this.Логин_textBox4.Location = new System.Drawing.Point(142, 161);
+            this.Логин_textBox4.Name = "Логин_textBox4";
+            this.Логин_textBox4.Size = new System.Drawing.Size(153, 22);
+            this.Логин_textBox4.TabIndex = 105;
             // 
-            // textBox5
+            // Пароль_textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(426, 163);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 22);
-            this.textBox5.TabIndex = 106;
+            this.Пароль_textBox5.Location = new System.Drawing.Point(426, 163);
+            this.Пароль_textBox5.Name = "Пароль_textBox5";
+            this.Пароль_textBox5.Size = new System.Drawing.Size(159, 22);
+            this.Пароль_textBox5.TabIndex = 106;
             // 
-            // textBox6
+            // Курсы_textBox6
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(142, 321);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(445, 22);
-            this.textBox6.TabIndex = 107;
+            this.Курсы_textBox6.Enabled = false;
+            this.Курсы_textBox6.Location = new System.Drawing.Point(142, 321);
+            this.Курсы_textBox6.Name = "Курсы_textBox6";
+            this.Курсы_textBox6.Size = new System.Drawing.Size(445, 22);
+            this.Курсы_textBox6.TabIndex = 107;
             // 
-            // dateTimePicker1
+            // Дата_рождения_dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(142, 126);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 22);
-            this.dateTimePicker1.TabIndex = 108;
+            this.Дата_рождения_dateTimePicker1.Location = new System.Drawing.Point(142, 126);
+            this.Дата_рождения_dateTimePicker1.Name = "Дата_рождения_dateTimePicker1";
+            this.Дата_рождения_dateTimePicker1.Size = new System.Drawing.Size(153, 22);
+            this.Дата_рождения_dateTimePicker1.TabIndex = 108;
             // 
             // Личный_кабинет
             // 
@@ -293,17 +293,17 @@ namespace Centr
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker Дата_рождения_dateTimePicker1;
+        private System.Windows.Forms.TextBox Курсы_textBox6;
+        private System.Windows.Forms.TextBox Пароль_textBox5;
+        private System.Windows.Forms.TextBox Логин_textBox4;
+        private System.Windows.Forms.TextBox Номер_телефона_textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ФИОtextBox1;
     }
 }

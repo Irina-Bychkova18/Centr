@@ -46,5 +46,12 @@ namespace Centr
             Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void личныйКабинетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Личный_кабинет личный_Кабинет = new Личный_кабинет();
+            Form1.tabControl1.Controls.Add(личный_Кабинет.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }

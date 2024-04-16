@@ -154,6 +154,7 @@ namespace Centr
             this.Название_textBox1.Name = "Название_textBox1";
             this.Название_textBox1.Size = new System.Drawing.Size(367, 22);
             this.Название_textBox1.TabIndex = 37;
+            this.Название_textBox1.TextChanged += new System.EventHandler(this.Название_textBox1_TextChanged);
             // 
             // label1
             // 

@@ -21,26 +21,16 @@ namespace Centr
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
-
+        public static int i = 0;
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
-              + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", " +
-              "information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"";
-            Form1.Table_Fill("Курсы", sql);
 
-            //int numRows = dataGridView1.Rows.Count;
-            //Всего_курсов_textBox1.Text = numRows.ToString();
-
-            dataGridView1.DataSource = Form1.cdt.Tables["Курсы"];
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.ReadOnly = true;
-            dataGridView1.AutoResizeColumns();
-            dataGridView1.CurrentCell = null;
+            ФИОtextBox1.Text = Form1.cdt.Tables["Личный кабинет"].Rows[i]["ФИО"].ToString();
+            Дата_рождения_dateTimePicker1.Text = Form1.cdt.Tables["Личный кабинет"].Rows[i]["Дата рождения"].ToString();
+            Номер_телефона_textBox3.Text = Form1.cdt.Tables["Личный кабинет"].Rows[i]["Телефон"].ToString();
+            Логин_textBox4.Text = Form1.cdt.Tables["Личный кабинет"].Rows[i]["Логин"].ToString();
+            Пароль_textBox5.Text = Form1.cdt.Tables["Личный кабинет"].Rows[i]["Пароль"].ToString();
+            Курсы_textBox6.Text = Form1.cdt.Tables["Ученик_Курс"].Rows[i]["Название курса"].ToString();
         }
     }
 }

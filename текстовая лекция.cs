@@ -124,5 +124,10 @@ namespace Centr
         {
 
         }
+
+        private void Название_textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

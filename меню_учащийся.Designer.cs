@@ -231,6 +231,7 @@ namespace Centr
             this.личныйКабинетToolStripMenuItem.Name = "личныйКабинетToolStripMenuItem";
             this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.личныйКабинетToolStripMenuItem.Text = "Личный кабинет";
+            this.личныйКабинетToolStripMenuItem.Click += new System.EventHandler(this.личныйКабинетToolStripMenuItem_Click);
             // 
             // меню_учащийся
             // 

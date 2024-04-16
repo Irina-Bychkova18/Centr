@@ -162,6 +162,7 @@ namespace Centr
             this.ФИОtextBox1.Name = "ФИОtextBox1";
             this.ФИОtextBox1.Size = new System.Drawing.Size(309, 22);
             this.ФИОtextBox1.TabIndex = 56;
+            this.ФИОtextBox1.TextChanged += new System.EventHandler(this.ФИОtextBox1_TextChanged);
             // 
             // label2
             // 
