@@ -134,12 +134,6 @@
     <Compile Include="вход.Designer.cs">
       <DependentUpon>вход.cs</DependentUpon>
     </Compile>
-    <Compile Include="Выбор центра.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Выбор центра.Designer.cs">
-      <DependentUpon>Выбор центра.cs</DependentUpon>
-    </Compile>
     <Compile Include="Главная.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,9 +325,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="вход.resx">
       <DependentUpon>вход.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Выбор центра.resx">
-      <DependentUpon>Выбор центра.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Главная.resx">
       <DependentUpon>Главная.cs</DependentUpon>

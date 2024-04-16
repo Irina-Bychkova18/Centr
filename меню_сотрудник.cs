@@ -37,5 +37,10 @@ namespace Centr
             Form1.tabControl1.Controls.Add(расписание_Занятий.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void Выход_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

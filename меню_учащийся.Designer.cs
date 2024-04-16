@@ -90,6 +90,7 @@ namespace Centr
             this.Выход_button.TabIndex = 46;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // pictureBox1
             // 
@@ -187,7 +188,7 @@ namespace Centr
             // записатьсяToolStripMenuItem
             // 
             this.записатьсяToolStripMenuItem.Name = "записатьсяToolStripMenuItem";
-            this.записатьсяToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.записатьсяToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.записатьсяToolStripMenuItem.Text = "Записаться";
             this.записатьсяToolStripMenuItem.Click += new System.EventHandler(this.записатьсяToolStripMenuItem_Click);
             // 

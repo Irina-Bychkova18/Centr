@@ -12,14 +12,16 @@ namespace Centr
 {
     public partial class вход : Form
     {
-        public вход()
+        private string receivedData;
+        public вход(string data)
         {
             InitializeComponent();
+            receivedData = data;
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
-            вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация();
+            вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация(receivedData);
             Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
         }
@@ -33,9 +35,10 @@ namespace Centr
 
         private void Войти_button_Click(object sender, EventArgs e)
         {
+            //string a = receivedData;
             //Главная главная = new Главная();
-            //if (главная.selectedValue == "Админ")
-            //{
+            if (receivedData == "Админ")
+            {
                 if (Логин_textbox.Text == "Admin")
                 {
                     if (Пароль_textBox.Text == "Admin")
@@ -68,36 +71,40 @@ namespace Centr
                 {
                     MessageBox.Show("Неправильный логин! Попробуйте снова.");
                 }
-            //}
-         
+            }
 
 
-            //if (Form1.Modification_Execute("Select * from sotrudniki where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
-            //{
-            //    Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
-                    
-            //    меню_сотрудник Меню_2 = new меню_сотрудник();
-            //    Form1.tabControl1.TabPages.RemoveAt(0);
-            //    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
+            if (receivedData == "Сотрудник")
+            {
+                if (Form1.Modification_Execute("Select * from sotrudniki where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
+                {
+                    Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
 
-            //    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
-            //    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
-            //    Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
-            //}
+                    меню_сотрудник Меню_2 = new меню_сотрудник();
+                    Form1.tabControl1.TabPages.RemoveAt(0);
+                    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
 
-            //if (Form1.Modification_Execute("Select * from uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
-            //{
-            //    Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
+                    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
+                    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
+                    Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
+                }
+            }
+            if (receivedData == "Учащийся")
+            {
+                if (Form1.Modification_Execute("Select * from uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
+                {
+                    Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
 
-            //    меню_сотрудник Меню_2 = new меню_сотрудник();
-            //    Form1.tabControl1.TabPages.RemoveAt(0);
-            //    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
+                    меню_сотрудник Меню_2 = new меню_сотрудник();
+                    Form1.tabControl1.TabPages.RemoveAt(0);
+                    Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
 
-            //    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
-            //    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
-            //    Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
-            //}
+                    Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
+                    Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
+                    Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
+                }
 
+            }
         }
 
         private void Показать_пароль_checkBox_CheckedChanged(object sender, EventArgs e)
