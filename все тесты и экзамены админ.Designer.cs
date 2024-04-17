@@ -135,6 +135,7 @@ namespace Centr
             this.Добавить_домашнее_задание_button1.TabIndex = 37;
             this.Добавить_домашнее_задание_button1.Text = "Добавить домашнее задание";
             this.Добавить_домашнее_задание_button1.UseVisualStyleBackColor = false;
+            this.Добавить_домашнее_задание_button1.Click += new System.EventHandler(this.Добавить_домашнее_задание_button1_Click);
             // 
             // label1
             // 
@@ -155,6 +156,7 @@ namespace Centr
             this.dataGridView1.Size = new System.Drawing.Size(526, 332);
             this.dataGridView1.TabIndex = 33;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
             // все_тесты_и_экзамены_админ

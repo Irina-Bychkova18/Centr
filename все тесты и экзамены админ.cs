@@ -95,5 +95,22 @@ namespace Centr
                     return;
                 }
         }
+
+        private void Добавить_домашнее_задание_button1_Click(object sender, EventArgs e)
+        {
+            добавить_тест_экзамен Добавить_тест_экзамен = new добавить_тест_экзамен();
+            Form1.tabControl1.Controls.Add(Добавить_тест_экзамен.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            тест_экзамен.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код домашнего задания"].Value.ToString();
+            тест_экзамен Тест_экзамен = new тест_экзамен();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(Тест_экзамен.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }

@@ -278,6 +278,12 @@
     <Compile Include="текстовая лекция.Designer.cs">
       <DependentUpon>текстовая лекция.cs</DependentUpon>
     </Compile>
+    <Compile Include="тест_экзамен.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="тест_экзамен.Designer.cs">
+      <DependentUpon>тест_экзамен.cs</DependentUpon>
+    </Compile>
     <Compile Include="Успеваемость.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="текстовая лекция.resx">
       <DependentUpon>текстовая лекция.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="тест_экзамен.resx">
+      <DependentUpon>тест_экзамен.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Успеваемость.resx">
       <DependentUpon>Успеваемость.cs</DependentUpon>
