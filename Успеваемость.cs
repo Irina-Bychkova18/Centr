@@ -23,5 +23,10 @@ namespace Centr
             Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

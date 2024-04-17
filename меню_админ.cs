@@ -83,8 +83,8 @@ namespace Centr
         private void посещаемостьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Посещаемость посещаемость = new Посещаемость();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(посещаемость.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
         private void журналМатериалаToolStripMenuItem_Click(object sender, EventArgs e)
