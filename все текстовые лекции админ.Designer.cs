@@ -49,10 +49,10 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-6, 1);
+            this.tabControl1.Location = new System.Drawing.Point(-6, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(814, 455);
+            this.tabControl1.Size = new System.Drawing.Size(814, 459);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -69,7 +69,7 @@ namespace Centr
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(806, 426);
+            this.tabPage1.Size = new System.Drawing.Size(806, 430);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Все текстовые лекции и их добавление";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);

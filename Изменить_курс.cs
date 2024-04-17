@@ -53,7 +53,7 @@ namespace Centr
                 sql = "UPDATE kursi SET name ='" + Название_textBox1.Text + "', kolvo_mest_vsego = " + Всего_мест_textBox3.Text + ", mest_ostav = " + Оставшиеся_места_textBox2.Text + ", information ='" + Информация_textBox1.Text + "' WHERE id_kursi = " + i;
                 if (!Form1.Modification_Execute(sql))
                     return;
-                
+                MessageBox.Show("Запись успешно изменена!");
             }
         }
     }

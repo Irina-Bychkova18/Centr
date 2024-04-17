@@ -41,6 +41,13 @@ namespace Centr
 
             int numRows = dataGridView1.Rows.Count;
             Всего_курсов_textBox1.Text = numRows.ToString();
+
+            int sum = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(dataGridView1.Rows[i].Cells["Количество оставшихся мест"].Value);
+            }
+            Количество_оставшихся_мест_textBox2.Text = sum.ToString();
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)

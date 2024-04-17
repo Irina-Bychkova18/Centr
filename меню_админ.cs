@@ -38,12 +38,7 @@ namespace Centr
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
-        private void тестыИЭкзаменыToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            все_тесты_и_экзамены_админ все_Тесты_И_Экзамены = new все_тесты_и_экзамены_админ();
-            Form1.tabControl1.TabPages.RemoveAt(0);
-            Form1.tabControl1.Controls.Add(все_Тесты_И_Экзамены.tabControl1.TabPages[0]);
-        }
+        
 
         private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -143,6 +138,13 @@ namespace Centr
         {
             все_курсы Все_Курсы = new все_курсы();
             Form1.tabControl1.Controls.Add(Все_Курсы.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void домашнее_задание_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            все_тесты_и_экзамены_админ Все_тесты_и_экзамены_админ = new все_тесты_и_экзамены_админ();
+            Form1.tabControl1.Controls.Add(Все_тесты_и_экзамены_админ.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }

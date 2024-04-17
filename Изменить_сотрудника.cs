@@ -19,25 +19,25 @@ namespace Centr
         public static string n = null;
         private void Изменить_button2_Click(object sender, EventArgs e)
         {
-            string kod_1 = Form1.cdt.Tables["Возраст"].DefaultView[Возраст_comboBox1.SelectedIndex]["Код возраста"].ToString();
-            string kod_2 = Form1.cdt.Tables["Опыт"].DefaultView[Опыт_comboBox2.SelectedIndex]["Код опыта"].ToString();
-            string kod_3 = Form1.cdt.Tables["Должности"].DefaultView[Должность_comboBox3.SelectedIndex]["Код должности"].ToString();
-            string kod_4 = Form1.cdt.Tables["Курсы"].DefaultView[Ведет_курс_comboBox4.SelectedIndex]["Код курса"].ToString();
-            int i = 0;
-            while (Form1.cdt.Tables["Сотрудники"].Rows[i]["Код сотрудника"].ToString() != n)
-                i++;
-            string sql;
-            if (i < Form1.cdt.Tables["Сотрудники"].Rows.Count)
-            {
-                i = i + 1;
-                sql = "UPDATE sotrudniki SET fio ='" + ФИО_textBox1.Text + "', id_vozr = " + kod_1 + ", id_opita = " + kod_2 + 
-                    ", telephon ='" + Телефон_textBox5.Text + "', id_dolj ="+ kod_3 + ", id_kursi = " + kod_4 + ", login = '" + 
-                    Логин_textBox8.Text + "',  parol = '"+ Пароль_textBox7.Text + "' WHERE id_sot = " + i;
-                if (!Form1.Modification_Execute(sql))
-                    return;
-
-            }
-            MessageBox.Show("");
+            //string kod_1 = Form1.cdt.Tables["Возраст"].DefaultView[Возраст_comboBox1.SelectedIndex]["Код возраста"].ToString();
+            //string kod_2 = Form1.cdt.Tables["Опыт"].DefaultView[Опыт_comboBox2.SelectedIndex]["Код опыта"].ToString();
+            //string kod_3 = Form1.cdt.Tables["Должности"].DefaultView[Должность_comboBox3.SelectedIndex]["Код должности"].ToString();
+            //string kod_4 = Form1.cdt.Tables["Курсы"].DefaultView[Ведет_курс_comboBox4.SelectedIndex]["Код курса"].ToString();
+            //int i = 0;
+            //while (Form1.cdt.Tables["Сотрудники"].Rows[i]["Код сотрудника"].ToString() != n)
+            //    i++;
+            //string sql;
+            //if (i < Form1.cdt.Tables["Сотрудники"].Rows.Count)
+            //{
+            //    i = i + 1;
+            //    sql = "UPDATE sotrudniki SET fio ='" + ФИО_textBox1.Text + "', id_vozr = " + kod_1 + ", id_opita = " + kod_2 + 
+            //        ", telephon ='" + Телефон_textBox5.Text + "', id_dolj ="+ kod_3 + ", id_kursi = " + kod_4 + ", login = '" + 
+            //        Логин_textBox8.Text + "',  parol = '"+ Пароль_textBox7.Text + "' WHERE id_sot = " + i;
+            //    if (!Form1.Modification_Execute(sql))
+            //        return;
+            //    MessageBox.Show("Запись успешно изменена!");
+            //}
+            //MessageBox.Show("");
             
 
           

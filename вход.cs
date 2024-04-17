@@ -93,7 +93,7 @@ namespace Centr
             {
                 if (Form1.Modification_Execute("Select * from uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'"))
                 {
-                    Form1.Table_Fill("Личный кабинет", "SELECT fio AS \"ФИО\", data_r AS \"Дата рождения\", telephon AS \"Телефон\", login AS \"Логин\", parol AS \"Пароль\" FROM uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'");
+                    Form1.Table_Fill("Личный кабинет", "SELECT id_uch AS \"Код учащегося\", fio AS \"ФИО\", data_r AS \"Дата рождения\", telephon AS \"Телефон\", login AS \"Логин\", parol AS \"Пароль\" FROM uchenik where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "'");
                     Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
                     Form1.Table_Fill("Ученик_Курс", "SELECT uchenik.fio AS \"ФИО\" , kursi.name AS \"Название курса\", dni.name AS \"Дни работы\", vrema.name AS \"Время работы\", " +
                         "uchenik.login AS \"Логин\", uchenik.parol AS \"Пароль\" FROM ((((uchenik_kursi inner join uchenik on uchenik_kursi.id_uch = uchenik.id_uch)"

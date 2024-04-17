@@ -137,6 +137,7 @@ namespace Centr
             this.Изменить_данные_button1.TabIndex = 41;
             this.Изменить_данные_button1.Text = "Изменить данные";
             this.Изменить_данные_button1.UseVisualStyleBackColor = false;
+            this.Изменить_данные_button1.Click += new System.EventHandler(this.Изменить_данные_button1_Click);
             // 
             // label1
             // 

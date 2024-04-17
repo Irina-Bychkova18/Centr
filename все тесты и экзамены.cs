@@ -16,5 +16,10 @@ namespace Centr
         {
             InitializeComponent();
         }
+
+        private void Выход_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
