@@ -16,8 +16,24 @@ namespace Centr
         {
             InitializeComponent();
         }
+        public static int k = 0;
+        private void FieldsForm_Fill()
+        {
+            Название_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Название курса"].ToString();
+            Всего_мест_textBox3.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Количество мест всего"].ToString();
+            Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Количество оставшихся мест"].ToString();
+            Информация_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Информация о курсе"].ToString();
 
-        
+        }
+
+        private void FieldsForm_Clear()
+        {
+            Название_textBox1.Text = "";
+            Всего_мест_textBox3.Text = "";
+            Оставшиеся_места_textBox2.Text = "";
+            Информация_textBox1.Text = "";
+        }
+
         public static string n = null;
         private void tabPage1_Enter(object sender, EventArgs e)
         {
@@ -59,6 +75,41 @@ namespace Centr
         private void Выход_button_Click(object sender, EventArgs e)
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
+
+        private void Вперед_button1_Click(object sender, EventArgs e)
+        {
+            if (k < Form1.cdt.Tables["Курсы"].Rows.Count) k++;
+            if (Form1.cdt.Tables["Курсы"].Rows.Count > k)
+            {
+                FieldsForm_Fill();
+            }
+            else
+            {
+                FieldsForm_Clear();
+            }
+        }
+
+        private void Назад_button2_Click(object sender, EventArgs e)
+        {
+            if (k > 0)
+            {
+                k--; FieldsForm_Fill();
+            }
+        }
+
+        private void В_начало_button3_Click(object sender, EventArgs e)
+        {
+            if (Form1.cdt.Tables["Курсы"].Rows.Count > 0)
+            {
+                k = 0; FieldsForm_Fill();
+            }
+        }
+
+        private void В_конец_button5_Click(object sender, EventArgs e)
+        {
+            FieldsForm_Clear();
+            k = Form1.cdt.Tables["Курсы"].Rows.Count;
         }
     }
 }

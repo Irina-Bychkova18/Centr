@@ -47,6 +47,8 @@ namespace Centr
             Всего_лекций_textBox1.Text = numRows.ToString();
 
             dataGridView1.Columns["Текст лекции"].DefaultCellStyle.ForeColor = Color.Blue;
+
+            
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
@@ -154,6 +156,15 @@ namespace Centr
                 Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
             Form1.tabControl1.Controls.Add(текстовая_Лекция.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void Сортировать_button1_Click(object sender, EventArgs e)
+        {
+            string a = Convert.ToString(Сортировка_textBox1.Text);
+
+            string sql = "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\","
+                + " text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"" + a + "\"";
+            Form1.Table_Fill("Все текстовые лекции", sql);
         }
     }
 }

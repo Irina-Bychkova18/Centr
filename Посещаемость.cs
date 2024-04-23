@@ -15,13 +15,16 @@ namespace Centr
         public Посещаемость()
         {
             InitializeComponent();
+
+            Название_столбца_textBox1.Text = "d_22_04";
+            Название_столбца_textBox1.ForeColor = Color.Gray;
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            string sql = "SELECT id_pos AS \"Номер записи\", uchenik.fio AS \"ФИО ученика\" FROM (poseshaemost inner join uchenik on uchenik.id_uch = poseshaemost.id_uch)"
+            string sql = "SELECT id_pos AS \"Номер\", uchenik.fio AS \"ФИО ученика\" FROM (poseshaemost inner join uchenik on uchenik.id_uch = poseshaemost.id_uch)"
                + " where uchenik.id_uch = poseshaemost.id_uch" +
-               " GROUP BY id_pos, uchenik.fio ORDER BY \"Номер записи\"";
+               " GROUP BY id_pos, uchenik.fio ORDER BY \"Номер\"";
             Form1.Table_Fill("Посещаемость", sql);
 
             dataGridView1.DataSource = Form1.cdt.Tables["Посещаемость"];
@@ -37,6 +40,7 @@ namespace Centr
             string sql1 = "SELECT * FROM poseshaemost";
             Form1.Table_Fill("Даты", sql1);
 
+            //dataGridView2.Rows[0].Height = 15;
             dataGridView2.DataSource = Form1.cdt.Tables["Даты"];
             dataGridView2.BackgroundColor = SystemColors.Control;
             dataGridView2.BorderStyle = BorderStyle.None;
@@ -60,6 +64,24 @@ namespace Centr
                 return;
 
             MessageBox.Show("Новая запись успешно добавлена!");
+        }
+
+        private void Название_столбца_textBox1_Enter(object sender, EventArgs e)
+        {
+            Название_столбца_textBox1.Text = "";
+            Название_столбца_textBox1.ForeColor = Color.Black;
+        }
+
+        private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.AutoResizeColumns();
+            dataGridView1.CurrentCell = null;
+        }
+
+        private void dataGridView2_BindingContextChanged(object sender, EventArgs e)
+        {
+            dataGridView2.AutoResizeColumns();
+            dataGridView2.CurrentCell = null;
         }
     }
 }

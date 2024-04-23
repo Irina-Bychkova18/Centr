@@ -17,14 +17,12 @@ namespace Centr
             InitializeComponent();
             
         }
-
+        
         private void Выход_button_Click(object sender, EventArgs e)
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
-
-     
-        private void tabPage1_Enter(object sender, EventArgs e)
+        public void ret()
         {
             string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
               + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", " +
@@ -51,6 +49,11 @@ namespace Centr
             }
             Количество_оставшихся_мест_textBox2.Text = sum.ToString();
         }
+     
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            ret();
+        }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
         {
@@ -67,10 +70,13 @@ namespace Centr
         {
             курсы.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код курса"].Value.ToString();
             курсы Курсы = new курсы();
+            
             if (Form1.tabControl1.TabCount > 2)
                 Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            
             Form1.tabControl1.Controls.Add(Курсы.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

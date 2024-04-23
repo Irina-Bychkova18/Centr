@@ -40,6 +40,9 @@ namespace Centr
             this.Добавить_лекцию_button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Сортировать_button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Сортировка_textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +61,9 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Сортировка_textBox1);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.Сортировать_button1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.label2);
@@ -118,7 +124,7 @@ namespace Centr
             // 
             this.Удалить_лекцию_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Удалить_лекцию_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Удалить_лекцию_button5.Location = new System.Drawing.Point(559, 203);
+            this.Удалить_лекцию_button5.Location = new System.Drawing.Point(559, 384);
             this.Удалить_лекцию_button5.Name = "Удалить_лекцию_button5";
             this.Удалить_лекцию_button5.Size = new System.Drawing.Size(231, 31);
             this.Удалить_лекцию_button5.TabIndex = 41;
@@ -130,7 +136,7 @@ namespace Centr
             // 
             this.Добавить_лекцию_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_лекцию_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_лекцию_button1.Location = new System.Drawing.Point(559, 151);
+            this.Добавить_лекцию_button1.Location = new System.Drawing.Point(559, 332);
             this.Добавить_лекцию_button1.Name = "Добавить_лекцию_button1";
             this.Добавить_лекцию_button1.Size = new System.Drawing.Size(231, 31);
             this.Добавить_лекцию_button1.TabIndex = 37;
@@ -159,6 +165,34 @@ namespace Centr
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
+            // 
+            // Сортировать_button1
+            // 
+            this.Сортировать_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Сортировать_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Сортировать_button1.Location = new System.Drawing.Point(559, 221);
+            this.Сортировать_button1.Name = "Сортировать_button1";
+            this.Сортировать_button1.Size = new System.Drawing.Size(231, 31);
+            this.Сортировать_button1.TabIndex = 54;
+            this.Сортировать_button1.Text = "Сортировать";
+            this.Сортировать_button1.UseVisualStyleBackColor = false;
+            this.Сортировать_button1.Click += new System.EventHandler(this.Сортировать_button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(556, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 17);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Введите столбец для сортировки:";
+            // 
+            // Сортировка_textBox1
+            // 
+            this.Сортировка_textBox1.Location = new System.Drawing.Point(559, 173);
+            this.Сортировка_textBox1.Name = "Сортировка_textBox1";
+            this.Сортировка_textBox1.Size = new System.Drawing.Size(229, 22);
+            this.Сортировка_textBox1.TabIndex = 57;
             // 
             // все_текстовые_лекции_админ
             // 
@@ -190,5 +224,8 @@ namespace Centr
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Сортировать_button1;
+        private System.Windows.Forms.TextBox Сортировка_textBox1;
     }
 }

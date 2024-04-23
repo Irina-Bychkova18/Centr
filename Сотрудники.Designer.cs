@@ -45,6 +45,10 @@ namespace Centr
             this.Должность_comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Назад_button1 = new System.Windows.Forms.Button();
+            this.Показать_button2 = new System.Windows.Forms.Button();
+            this.Курс_comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +67,10 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Назад_button1);
+            this.tabPage1.Controls.Add(this.Показать_button2);
+            this.tabPage1.Controls.Add(this.Курс_comboBox1);
+            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Ведет_курсы_textBox2);
@@ -109,7 +117,7 @@ namespace Centr
             // 
             // Ведет_курсы_textBox2
             // 
-            this.Ведет_курсы_textBox2.Location = new System.Drawing.Point(477, 187);
+            this.Ведет_курсы_textBox2.Location = new System.Drawing.Point(477, 165);
             this.Ведет_курсы_textBox2.Name = "Ведет_курсы_textBox2";
             this.Ведет_курсы_textBox2.Size = new System.Drawing.Size(309, 22);
             this.Ведет_курсы_textBox2.TabIndex = 62;
@@ -117,7 +125,7 @@ namespace Centr
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(372, 190);
+            this.label4.Location = new System.Drawing.Point(372, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 61;
@@ -127,7 +135,7 @@ namespace Centr
             // 
             this.Удалить_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Удалить_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Удалить_button3.Location = new System.Drawing.Point(661, 332);
+            this.Удалить_button3.Location = new System.Drawing.Point(661, 375);
             this.Удалить_button3.Name = "Удалить_button3";
             this.Удалить_button3.Size = new System.Drawing.Size(125, 39);
             this.Удалить_button3.TabIndex = 59;
@@ -139,7 +147,7 @@ namespace Centr
             // 
             this.Изменить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Изменить_button1.Location = new System.Drawing.Point(520, 332);
+            this.Изменить_button1.Location = new System.Drawing.Point(520, 375);
             this.Изменить_button1.Name = "Изменить_button1";
             this.Изменить_button1.Size = new System.Drawing.Size(125, 39);
             this.Изменить_button1.TabIndex = 58;
@@ -177,7 +185,7 @@ namespace Centr
             // 
             this.Добавить_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_button2.Location = new System.Drawing.Point(380, 332);
+            this.Добавить_button2.Location = new System.Drawing.Point(380, 375);
             this.Добавить_button2.Name = "Добавить_button2";
             this.Добавить_button2.Size = new System.Drawing.Size(125, 39);
             this.Добавить_button2.TabIndex = 54;
@@ -188,7 +196,7 @@ namespace Centr
             // Должность_comboBox1
             // 
             this.Должность_comboBox1.FormattingEnabled = true;
-            this.Должность_comboBox1.Location = new System.Drawing.Point(477, 137);
+            this.Должность_comboBox1.Location = new System.Drawing.Point(477, 124);
             this.Должность_comboBox1.Name = "Должность_comboBox1";
             this.Должность_comboBox1.Size = new System.Drawing.Size(309, 24);
             this.Должность_comboBox1.TabIndex = 53;
@@ -196,7 +204,7 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(372, 140);
+            this.label1.Location = new System.Drawing.Point(372, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 52;
@@ -214,6 +222,47 @@ namespace Centr
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
+            // 
+            // Назад_button1
+            // 
+            this.Назад_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Назад_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Назад_button1.Location = new System.Drawing.Point(375, 300);
+            this.Назад_button1.Name = "Назад_button1";
+            this.Назад_button1.Size = new System.Drawing.Size(176, 27);
+            this.Назад_button1.TabIndex = 102;
+            this.Назад_button1.Text = "Назад\r\n";
+            this.Назад_button1.UseVisualStyleBackColor = false;
+            this.Назад_button1.Click += new System.EventHandler(this.Назад_button1_Click);
+            // 
+            // Показать_button2
+            // 
+            this.Показать_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Показать_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Показать_button2.Location = new System.Drawing.Point(599, 300);
+            this.Показать_button2.Name = "Показать_button2";
+            this.Показать_button2.Size = new System.Drawing.Size(187, 27);
+            this.Показать_button2.TabIndex = 99;
+            this.Показать_button2.Text = "Показать";
+            this.Показать_button2.UseVisualStyleBackColor = false;
+            this.Показать_button2.Click += new System.EventHandler(this.Показать_button2_Click);
+            // 
+            // Курс_comboBox1
+            // 
+            this.Курс_comboBox1.FormattingEnabled = true;
+            this.Курс_comboBox1.Location = new System.Drawing.Point(485, 258);
+            this.Курс_comboBox1.Name = "Курс_comboBox1";
+            this.Курс_comboBox1.Size = new System.Drawing.Size(301, 24);
+            this.Курс_comboBox1.TabIndex = 98;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(372, 261);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 17);
+            this.label6.TabIndex = 97;
+            this.label6.Text = "Выберете курс:";
             // 
             // Сотрудники
             // 
@@ -250,5 +299,9 @@ namespace Centr
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Назад_button1;
+        private System.Windows.Forms.Button Показать_button2;
+        private System.Windows.Forms.ComboBox Курс_comboBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

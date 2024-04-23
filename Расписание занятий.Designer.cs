@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Расписание_занятий));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Назад_button1 = new System.Windows.Forms.Button();
             this.Дни_работы_comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@ namespace Centr
             this.label1 = new System.Windows.Forms.Label();
             this.Распечатать_расписание_button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Назад_button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +78,18 @@ namespace Centr
             this.tabPage1.Text = "Расписание занятий";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // Назад_button1
+            // 
+            this.Назад_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Назад_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Назад_button1.Location = new System.Drawing.Point(571, 265);
+            this.Назад_button1.Name = "Назад_button1";
+            this.Назад_button1.Size = new System.Drawing.Size(214, 27);
+            this.Назад_button1.TabIndex = 96;
+            this.Назад_button1.Text = "Назад\r\n";
+            this.Назад_button1.UseVisualStyleBackColor = false;
+            this.Назад_button1.Click += new System.EventHandler(this.Назад_button1_Click);
+            // 
             // Дни_работы_comboBox1
             // 
             this.Дни_работы_comboBox1.FormattingEnabled = true;
@@ -85,6 +97,7 @@ namespace Centr
             this.Дни_работы_comboBox1.Name = "Дни_работы_comboBox1";
             this.Дни_работы_comboBox1.Size = new System.Drawing.Size(109, 24);
             this.Дни_работы_comboBox1.TabIndex = 95;
+            this.Дни_работы_comboBox1.SelectedIndexChanged += new System.EventHandler(this.Дни_работы_comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -94,6 +107,7 @@ namespace Centr
             this.label2.Size = new System.Drawing.Size(89, 34);
             this.label2.TabIndex = 94;
             this.label2.Text = "Выберите \r\nдни работы:\r\n";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -137,6 +151,7 @@ namespace Centr
             this.Временной_промежуток_comboBox1.Name = "Временной_промежуток_comboBox1";
             this.Временной_промежуток_comboBox1.Size = new System.Drawing.Size(109, 24);
             this.Временной_промежуток_comboBox1.TabIndex = 40;
+            this.Временной_промежуток_comboBox1.SelectedIndexChanged += new System.EventHandler(this.Временной_промежуток_comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -146,6 +161,7 @@ namespace Centr
             this.label1.Size = new System.Drawing.Size(105, 34);
             this.label1.TabIndex = 39;
             this.label1.Text = "Выберите \r\nвремя работы:\r\n";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Распечатать_расписание_button1
             // 
@@ -169,18 +185,6 @@ namespace Centr
             this.dataGridView1.Size = new System.Drawing.Size(552, 339);
             this.dataGridView1.TabIndex = 37;
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
-            // 
-            // Назад_button1
-            // 
-            this.Назад_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Назад_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Назад_button1.Location = new System.Drawing.Point(571, 265);
-            this.Назад_button1.Name = "Назад_button1";
-            this.Назад_button1.Size = new System.Drawing.Size(214, 27);
-            this.Назад_button1.TabIndex = 96;
-            this.Назад_button1.Text = "Назад\r\n";
-            this.Назад_button1.UseVisualStyleBackColor = false;
-            this.Назад_button1.Click += new System.EventHandler(this.Назад_button1_Click);
             // 
             // Расписание_занятий
             // 

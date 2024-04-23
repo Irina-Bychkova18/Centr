@@ -112,5 +112,14 @@ namespace Centr
             Form1.tabControl1.Controls.Add(Тест_экзамен.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void Сортировать_button1_Click(object sender, EventArgs e)
+        {
+            string a = Convert.ToString(Сортировка_textBox1.Text);
+            string sql = "SELECT id_dz AS \"Код домашнего задания\", name AS \"Название домашнего задания\","
+                + " text AS \"Ссылка на домашнее задание\" FROM dz" + " ORDER BY \"" + a + "\"";
+            Form1.Table_Fill("Все домашнее задание", sql);
+            
+        }
     }
 }

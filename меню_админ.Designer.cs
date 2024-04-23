@@ -47,7 +47,6 @@ namespace Centr
             this.записатьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.посещаемостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.журналМатериалаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -200,7 +199,6 @@ namespace Centr
             // 
             this.успеваемостьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.посещаемостьToolStripMenuItem,
-            this.журналМатериалаToolStripMenuItem,
             this.успеваемостьToolStripMenuItem1});
             this.успеваемостьToolStripMenuItem.Name = "успеваемостьToolStripMenuItem";
             this.успеваемостьToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
@@ -209,21 +207,14 @@ namespace Centr
             // посещаемостьToolStripMenuItem
             // 
             this.посещаемостьToolStripMenuItem.Name = "посещаемостьToolStripMenuItem";
-            this.посещаемостьToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.посещаемостьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.посещаемостьToolStripMenuItem.Text = "Посещаемость";
             this.посещаемостьToolStripMenuItem.Click += new System.EventHandler(this.посещаемостьToolStripMenuItem_Click);
-            // 
-            // журналМатериалаToolStripMenuItem
-            // 
-            this.журналМатериалаToolStripMenuItem.Name = "журналМатериалаToolStripMenuItem";
-            this.журналМатериалаToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.журналМатериалаToolStripMenuItem.Text = "Журнал материала";
-            this.журналМатериалаToolStripMenuItem.Click += new System.EventHandler(this.журналМатериалаToolStripMenuItem_Click);
             // 
             // успеваемостьToolStripMenuItem1
             // 
             this.успеваемостьToolStripMenuItem1.Name = "успеваемостьToolStripMenuItem1";
-            this.успеваемостьToolStripMenuItem1.Size = new System.Drawing.Size(225, 26);
+            this.успеваемостьToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.успеваемостьToolStripMenuItem1.Text = "Успеваемость";
             this.успеваемостьToolStripMenuItem1.Click += new System.EventHandler(this.успеваемостьToolStripMenuItem1_Click);
             // 
@@ -263,7 +254,6 @@ namespace Centr
         private System.Windows.Forms.ToolStripMenuItem записатьсяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem успеваемостьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem посещаемостьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem журналМатериалаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem успеваемостьToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Выход_button;

@@ -45,24 +45,12 @@ namespace Centr
 
         private void Зарегистрироваться_button1_Click(object sender, EventArgs e)
         {
-            Form1.Table_Fill("Пользователи", "Select * from users");
             
-            
-            //string sql = "SELECT new_users.id_new_usera AS \"Код\", " +
-            //    "new_users.fam AS \"Фамилия\", new_users.name  AS \"Имя\", new_users.otch AS \"Отчество\", " +
-            //    "centr.name AS \"name\", users.name AS \"name\", " +
-            //    "new_users.login AS \"Логин\", new_users.parol AS \"Пароль\" " +
-            //    "FROM ((new_users inner join centr on centr.id_centra = new_users.id_centra) " +
-            //    "left join users on users.id_usera = new_users.id_usera) where new_users.id_centra = centr.id_centra " +
-            //    "and users.id_usera = new_users.id_usera GROUP BY new_users.id_new_usera, new_users.fam, new_users.name, " +
-            //    "new_users.otch, centr.name, users.name, new_users.login, new_users.parol ORDER BY \"Код\"";
-
-           
 
             Должность_comboBox2.DataSource = Form1.cdt.Tables["Пользователи"].DefaultView;
-            Должность_comboBox2.DisplayMember = "name";
+            Должность_comboBox2.DisplayMember = "Название_пользователя";
             
-            string kod_1 = Form1.cdt.Tables["Пользователи"].DefaultView[Должность_comboBox2.SelectedIndex]["id_usera"].ToString();
+            string kod_1 = Form1.cdt.Tables["Пользователи"].DefaultView[Должность_comboBox2.SelectedIndex]["Код_пользователя"].ToString();
             string sql = "INSERT INTO new_users (fam, name, otch, id_usera, login, parol) VALUES ('" + Фамилия_textBox1.Text + "','" + Имя_textBox3.Text + "','" + Отчество_textBox2 + "',"  + kod_1 + ",'" + Логин_textBox4.Text + "','" + Пароль_textBox5.Text + "')";
             if (!Form1.Modification_Execute(sql))
                 return;
@@ -159,10 +147,11 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            Form1.Table_Fill("Пользователи", "Select * from users");
-            
+            string sql = "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"";
+            Form1.Table_Fill("Пользователи", sql);
             Должность_comboBox2.DataSource = Form1.cdt.Tables["Пользователи"].DefaultView;
-            Должность_comboBox2.DisplayMember = "name";
+            Должность_comboBox2.DisplayMember = "Название_пользователя";
+           
         }
 
         private void Выход_button_Click(object sender, EventArgs e)

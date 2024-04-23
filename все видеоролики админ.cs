@@ -109,5 +109,14 @@ namespace Centr
                 Process.Start(url);
             }
         }
+
+        private void Сортировать_button1_Click(object sender, EventArgs e)
+        {
+            string a = Convert.ToString(Сортировка_textBox1.Text);
+            string sql = "SELECT id_vid AS \"Код видео\", name AS \"Название видеоролика\","
+                + " text AS \"Видеоролик\" FROM video" + " ORDER BY \"" + a + "\"";
+            Form1.Table_Fill("Все видеоролики", sql);
+            
+        }
     }
 }
