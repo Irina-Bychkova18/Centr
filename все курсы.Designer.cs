@@ -42,6 +42,7 @@ namespace Centr
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Удалить_курс_button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +61,7 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Удалить_курс_button5);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Изменить_курс_button2);
@@ -105,9 +107,9 @@ namespace Centr
             // 
             this.Изменить_курс_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_курс_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Изменить_курс_button2.Location = new System.Drawing.Point(406, 382);
+            this.Изменить_курс_button2.Location = new System.Drawing.Point(287, 382);
             this.Изменить_курс_button2.Name = "Изменить_курс_button2";
-            this.Изменить_курс_button2.Size = new System.Drawing.Size(373, 32);
+            this.Изменить_курс_button2.Size = new System.Drawing.Size(240, 32);
             this.Изменить_курс_button2.TabIndex = 89;
             this.Изменить_курс_button2.Text = "Изменить курс";
             this.Изменить_курс_button2.UseVisualStyleBackColor = false;
@@ -117,9 +119,9 @@ namespace Centr
             // 
             this.Добавить_курс_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_курс_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_курс_button1.Location = new System.Drawing.Point(19, 382);
+            this.Добавить_курс_button1.Location = new System.Drawing.Point(560, 382);
             this.Добавить_курс_button1.Name = "Добавить_курс_button1";
-            this.Добавить_курс_button1.Size = new System.Drawing.Size(362, 32);
+            this.Добавить_курс_button1.Size = new System.Drawing.Size(219, 32);
             this.Добавить_курс_button1.TabIndex = 88;
             this.Добавить_курс_button1.Text = "Добавить курс";
             this.Добавить_курс_button1.UseVisualStyleBackColor = false;
@@ -180,6 +182,18 @@ namespace Centr
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
+            // Удалить_курс_button5
+            // 
+            this.Удалить_курс_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Удалить_курс_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Удалить_курс_button5.Location = new System.Drawing.Point(19, 382);
+            this.Удалить_курс_button5.Name = "Удалить_курс_button5";
+            this.Удалить_курс_button5.Size = new System.Drawing.Size(231, 31);
+            this.Удалить_курс_button5.TabIndex = 93;
+            this.Удалить_курс_button5.Text = "Удалить курс";
+            this.Удалить_курс_button5.UseVisualStyleBackColor = false;
+            this.Удалить_курс_button5.Click += new System.EventHandler(this.Удалить_курс_button5_Click);
+            // 
             // все_курсы
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -210,5 +224,6 @@ namespace Centr
         private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button Удалить_курс_button5;
     }
 }

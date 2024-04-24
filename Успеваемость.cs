@@ -37,12 +37,15 @@ namespace Centr
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             string sql = "SELECT id_usp AS \"Номер записи\", uchenik.fio AS \"ФИО\", lekcii.name AS \"Название лекции\","
-                   + " proideno_lekcii AS \"Пройдено лекций\", vsego_lekcii AS \"Всего лекций\",  (proideno_lekcii/vsego_lekcii)*100 AS \"Процент успеваемости\" FROM ((uspevaemost inner join uchenik on uchenik.id_uch = uspevaemost.id_uch)"
+                   + " proideno_lekcii_fl AS \"Пройдено лекций\", vsego_lekcii_fl AS \"Всего лекций\",  (proideno_lekcii_fl/vsego_lekcii_fl)*100 AS \"Процент успеваемости\" FROM ((uspevaemost inner join uchenik on uchenik.id_uch = uspevaemost.id_uch)"
                    + "left join lekcii on lekcii.id_lek = uspevaemost.id_lek) where uchenik.id_uch = uspevaemost.id_uch and lekcii.id_lek = uspevaemost.id_lek" +
-                   " GROUP BY id_usp, uchenik.fio, lekcii.name, proideno_lekcii, vsego_lekcii ORDER BY \"Номер записи\"";
+                   " GROUP BY id_usp, uchenik.fio, lekcii.name, proideno_lekcii_fl, vsego_lekcii_fl ORDER BY \"Номер записи\"";
             Form1.Table_Fill("Успеваемость", sql);
 
             dataGridView1.DataSource = Form1.cdt.Tables["Успеваемость"];
+            dataGridView1.Columns["Пройдено лекций"].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns["Всего лекций"].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns["Процент успеваемости"].DefaultCellStyle.Format = "0\\% ";
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.RowHeadersVisible = false;

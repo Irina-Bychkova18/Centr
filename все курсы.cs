@@ -105,5 +105,32 @@ namespace Centr
             Form1.tabControl1.Controls.Add(изменить_Курс.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void Удалить_курс_button5_Click(object sender, EventArgs e)
+        {
+            string kod;
+            try
+            {
+                kod = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код курса"].Value.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Не указан удаляемый экземпляр!!!", "Ошибка"); return;
+            }
+            string message = "Вы точно хотите удалить запись № " + kod + "?";
+            string caption = "Удаление записи";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult rezult = MessageBox.Show(message, caption, buttons);
+            if (rezult == DialogResult.No) { return; }
+            string sql = "DELETE FROM kursi WHERE id_kursi = " + kod;
+            Form1.Modification_Execute(sql);
+            for (int i = Form1.cdt.Tables["Курсы"].Rows.Count - 1; i >= 0; i--)
+                if (Form1.cdt.Tables["Курсы"].Rows[i]["Код курса"].ToString() == kod)
+                {
+                    Form1.cdt.Tables["Курсы"].Rows.RemoveAt(i);
+                    dataGridView1.CurrentCell = null;
+                    return;
+                }
+        }
     }
 }

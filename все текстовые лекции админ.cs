@@ -166,5 +166,15 @@ namespace Centr
                 + " text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"" + a + "\"";
             Form1.Table_Fill("Все текстовые лекции", sql);
         }
+
+        private void Изменить_button1_Click(object sender, EventArgs e)
+        {
+            Изменить_лекцию.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код лекции"].Value.ToString();
+            Изменить_лекцию изменить_лекцию = new Изменить_лекцию();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(изменить_лекцию.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }
