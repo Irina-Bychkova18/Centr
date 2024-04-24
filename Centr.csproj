@@ -218,6 +218,12 @@
     <Compile Include="Изменить_лекцию.Designer.cs">
       <DependentUpon>Изменить_лекцию.cs</DependentUpon>
     </Compile>
+    <Compile Include="Изменить_расписание.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменить_расписание.Designer.cs">
+      <DependentUpon>Изменить_расписание.cs</DependentUpon>
+    </Compile>
     <Compile Include="Изменить_сотрудника.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Изменить_лекцию.resx">
       <DependentUpon>Изменить_лекцию.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменить_расписание.resx">
+      <DependentUpon>Изменить_расписание.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Изменить_сотрудника.resx">
       <DependentUpon>Изменить_сотрудника.cs</DependentUpon>

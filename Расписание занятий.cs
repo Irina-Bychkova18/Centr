@@ -147,5 +147,15 @@ namespace Centr
             Form1.tabControl1.Controls.Add(добавить_расписание.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void Изменить_занятие_button2_Click(object sender, EventArgs e)
+        {
+            Изменить_расписание.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код расписания"].Value.ToString();
+            Изменить_расписание изменить_расписание = new Изменить_расписание();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(изменить_расписание.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }

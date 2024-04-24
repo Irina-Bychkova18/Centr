@@ -32,7 +32,6 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Изменить_сотрудника));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Отменить_добавление_button1 = new System.Windows.Forms.Button();
             this.Ведет_курс_comboBox4 = new System.Windows.Forms.ComboBox();
             this.Должность_comboBox3 = new System.Windows.Forms.ComboBox();
             this.Опыт_comboBox2 = new System.Windows.Forms.ComboBox();
@@ -69,7 +68,6 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage1.Controls.Add(this.Отменить_добавление_button1);
             this.tabPage1.Controls.Add(this.Ведет_курс_comboBox4);
             this.tabPage1.Controls.Add(this.Должность_comboBox3);
             this.tabPage1.Controls.Add(this.Опыт_comboBox2);
@@ -94,20 +92,8 @@ namespace Centr
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(793, 424);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Добавить сотрудника";
+            this.tabPage1.Text = "Изменить сотрудника";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
-            // 
-            // Отменить_добавление_button1
-            // 
-            this.Отменить_добавление_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Отменить_добавление_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Отменить_добавление_button1.Location = new System.Drawing.Point(178, 331);
-            this.Отменить_добавление_button1.Name = "Отменить_добавление_button1";
-            this.Отменить_добавление_button1.Size = new System.Drawing.Size(203, 30);
-            this.Отменить_добавление_button1.TabIndex = 108;
-            this.Отменить_добавление_button1.Text = "Отменить добавление";
-            this.Отменить_добавление_button1.UseVisualStyleBackColor = false;
-            this.Отменить_добавление_button1.Click += new System.EventHandler(this.Отменить_добавление_button1_Click);
             // 
             // Ведет_курс_comboBox4
             // 
@@ -268,7 +254,7 @@ namespace Centr
             // 
             this.Изменить_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Изменить_button2.Location = new System.Drawing.Point(412, 331);
+            this.Изменить_button2.Location = new System.Drawing.Point(280, 335);
             this.Изменить_button2.Name = "Изменить_button2";
             this.Изменить_button2.Size = new System.Drawing.Size(219, 30);
             this.Изменить_button2.TabIndex = 37;
@@ -296,7 +282,6 @@ namespace Centr
 
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button Отменить_добавление_button1;
         private System.Windows.Forms.ComboBox Ведет_курс_comboBox4;
         private System.Windows.Forms.ComboBox Должность_comboBox3;
         private System.Windows.Forms.ComboBox Опыт_comboBox2;
