@@ -69,6 +69,7 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(792, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Изменить текстовую лекцию";
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // Ссылка_на_лекцию_textBox1
             // 
@@ -108,6 +109,7 @@ namespace Centr
             this.Выход_button.TabIndex = 93;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // Название_textBox1
             // 
@@ -135,6 +137,7 @@ namespace Centr
             this.Изменить_button1.TabIndex = 97;
             this.Изменить_button1.Text = "Изменить";
             this.Изменить_button1.UseVisualStyleBackColor = false;
+            this.Изменить_button1.Click += new System.EventHandler(this.Изменить_button1_Click);
             // 
             // Изменить_лекцию
             // 

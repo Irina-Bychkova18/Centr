@@ -32,6 +32,9 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(все_тесты_и_экзамены_админ));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Сортировка_textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Сортировать_button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,9 +43,7 @@ namespace Centr
             this.Добавить_домашнее_задание_button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Сортировка_textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Сортировать_button1 = new System.Windows.Forms.Button();
+            this.Изменить_button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,6 +62,7 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Изменить_button1);
             this.tabPage1.Controls.Add(this.Сортировка_textBox1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.Сортировать_button1);
@@ -79,6 +81,34 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Домашнее задание и добавление";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // Сортировка_textBox1
+            // 
+            this.Сортировка_textBox1.Location = new System.Drawing.Point(550, 163);
+            this.Сортировка_textBox1.Name = "Сортировка_textBox1";
+            this.Сортировка_textBox1.Size = new System.Drawing.Size(241, 22);
+            this.Сортировка_textBox1.TabIndex = 60;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(547, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 17);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Введите столбец для сортировки:";
+            // 
+            // Сортировать_button1
+            // 
+            this.Сортировать_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Сортировать_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Сортировать_button1.Location = new System.Drawing.Point(550, 211);
+            this.Сортировать_button1.Name = "Сортировать_button1";
+            this.Сортировать_button1.Size = new System.Drawing.Size(240, 31);
+            this.Сортировать_button1.TabIndex = 58;
+            this.Сортировать_button1.Text = "Сортировать";
+            this.Сортировать_button1.UseVisualStyleBackColor = false;
+            this.Сортировать_button1.Click += new System.EventHandler(this.Сортировать_button1_Click);
             // 
             // pictureBox1
             // 
@@ -135,7 +165,7 @@ namespace Centr
             // 
             this.Добавить_домашнее_задание_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_домашнее_задание_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_домашнее_задание_button1.Location = new System.Drawing.Point(549, 330);
+            this.Добавить_домашнее_задание_button1.Location = new System.Drawing.Point(550, 290);
             this.Добавить_домашнее_задание_button1.Name = "Добавить_домашнее_задание_button1";
             this.Добавить_домашнее_задание_button1.Size = new System.Drawing.Size(241, 31);
             this.Добавить_домашнее_задание_button1.TabIndex = 37;
@@ -165,33 +195,17 @@ namespace Centr
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
-            // Сортировка_textBox1
+            // Изменить_button1
             // 
-            this.Сортировка_textBox1.Location = new System.Drawing.Point(550, 163);
-            this.Сортировка_textBox1.Name = "Сортировка_textBox1";
-            this.Сортировка_textBox1.Size = new System.Drawing.Size(241, 22);
-            this.Сортировка_textBox1.TabIndex = 60;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(547, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 17);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Введите столбец для сортировки:";
-            // 
-            // Сортировать_button1
-            // 
-            this.Сортировать_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Сортировать_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Сортировать_button1.Location = new System.Drawing.Point(550, 211);
-            this.Сортировать_button1.Name = "Сортировать_button1";
-            this.Сортировать_button1.Size = new System.Drawing.Size(240, 31);
-            this.Сортировать_button1.TabIndex = 58;
-            this.Сортировать_button1.Text = "Сортировать";
-            this.Сортировать_button1.UseVisualStyleBackColor = false;
-            this.Сортировать_button1.Click += new System.EventHandler(this.Сортировать_button1_Click);
+            this.Изменить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Изменить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_button1.Location = new System.Drawing.Point(550, 338);
+            this.Изменить_button1.Name = "Изменить_button1";
+            this.Изменить_button1.Size = new System.Drawing.Size(241, 31);
+            this.Изменить_button1.TabIndex = 59;
+            this.Изменить_button1.Text = "Изменить домашнее задание";
+            this.Изменить_button1.UseVisualStyleBackColor = false;
+            this.Изменить_button1.Click += new System.EventHandler(this.Изменить_button1_Click);
             // 
             // все_тесты_и_экзамены_админ
             // 
@@ -225,5 +239,6 @@ namespace Centr
         private System.Windows.Forms.TextBox Сортировка_textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Сортировать_button1;
+        private System.Windows.Forms.Button Изменить_button1;
     }
 }

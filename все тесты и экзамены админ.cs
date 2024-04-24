@@ -121,5 +121,15 @@ namespace Centr
             Form1.Table_Fill("Все домашнее задание", sql);
             
         }
+
+        private void Изменить_button1_Click(object sender, EventArgs e)
+        {
+            Изменить_домашнее_задание.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код домашнего задания"].Value.ToString();
+            Изменить_домашнее_задание изменить_домашнее_задание = new Изменить_домашнее_задание();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(изменить_домашнее_задание.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }
