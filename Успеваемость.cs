@@ -61,5 +61,50 @@ namespace Centr
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
         }
+
+        private void Удалить_запись_button5_Click(object sender, EventArgs e)
+        {
+            string kod;
+            try
+            {
+                kod = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Номер записи"].Value.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Не указан удаляемый экземпляр!!!", "Ошибка"); return;
+            }
+            string message = "Вы точно хотите удалить запись № " + kod + "?";
+            string caption = "Удаление записи";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult rezult = MessageBox.Show(message, caption, buttons);
+            if (rezult == DialogResult.No) { return; }
+            string sql = "DELETE FROM uspevaemost WHERE id_usp = " + kod;
+            Form1.Modification_Execute(sql);
+            for (int i = Form1.cdt.Tables["Успеваемость"].Rows.Count - 1; i >= 0; i--)
+                if (Form1.cdt.Tables["Успеваемость"].Rows[i]["Номер записи"].ToString() == kod)
+                {
+                    Form1.cdt.Tables["Успеваемость"].Rows.RemoveAt(i);
+                    dataGridView1.CurrentCell = null;
+                    return;
+                }
+        }
+
+        private void Добавить_запись_button1_Click(object sender, EventArgs e)
+        {
+            Добавить_успеваемость добавить_успеваемость = new Добавить_успеваемость();
+            Form1.tabControl1.Controls.Add(добавить_успеваемость.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void Изменить_запись_button2_Click(object sender, EventArgs e)
+        {
+            Изменить_успеваемость.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Номер записи"].Value.ToString();
+            Изменить_успеваемость изменить_успеваемость = new Изменить_успеваемость();
+            if (Form1.tabControl1.TabCount > 2)
+                Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
+            Form1.tabControl1.Controls.Add(изменить_успеваемость.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace Centr
                     if (Пароль_textBox.Text == "Admin")
                     {
                         Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
+                        Form1.Table_Fill("Ученики", "SELECT id_uch AS \"Код ученика\", fio AS \"ФИО ученика\", data_r AS \"Дата рождения\", telephon AS \"Номер телефона\", login AS \"Логин\", parol AS \"Пароль\" FROM uchenik" + " ORDER BY \"Код ученика\"");
                         Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
                         Form1.Table_Fill("Возраст", "SELECT id_vozr AS \"Код возраста\", name AS \"Наименование возраста\" FROM vozrast" + " ORDER BY \"Код возраста\"");
                         Form1.Table_Fill("Опыт", "SELECT id_opita AS \"Код опыта\", name AS \"Наименование опыта\" FROM opit" + " ORDER BY \"Код опыта\"");

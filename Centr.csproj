@@ -182,6 +182,12 @@
     <Compile Include="Добавить_расписание.Designer.cs">
       <DependentUpon>Добавить_расписание.cs</DependentUpon>
     </Compile>
+    <Compile Include="Добавить_успеваемость.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить_успеваемость.Designer.cs">
+      <DependentUpon>Добавить_успеваемость.cs</DependentUpon>
+    </Compile>
     <Compile Include="Журнал материала.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,12 @@
     </Compile>
     <Compile Include="Изменить_сотрудника.Designer.cs">
       <DependentUpon>Изменить_сотрудника.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменить_успеваемость.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменить_успеваемость.Designer.cs">
+      <DependentUpon>Изменить_успеваемость.cs</DependentUpon>
     </Compile>
     <Compile Include="курсы.cs">
       <SubType>Form</SubType>
@@ -392,6 +404,9 @@
     <EmbeddedResource Include="Добавить_расписание.resx">
       <DependentUpon>Добавить_расписание.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Добавить_успеваемость.resx">
+      <DependentUpon>Добавить_успеваемость.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Журнал материала.resx">
       <DependentUpon>Журнал материала.cs</DependentUpon>
     </EmbeddedResource>
@@ -415,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Изменить_сотрудника.resx">
       <DependentUpon>Изменить_сотрудника.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменить_успеваемость.resx">
+      <DependentUpon>Изменить_успеваемость.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="курсы.resx">
       <DependentUpon>курсы.cs</DependentUpon>

@@ -36,6 +36,9 @@ namespace Centr
             this.Выход_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.Удалить_запись_button5 = new System.Windows.Forms.Button();
+            this.Изменить_запись_button2 = new System.Windows.Forms.Button();
+            this.Добавить_запись_button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +57,9 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Удалить_запись_button5);
+            this.tabPage1.Controls.Add(this.Изменить_запись_button2);
+            this.tabPage1.Controls.Add(this.Добавить_запись_button1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.dataGridView1);
@@ -96,7 +102,7 @@ namespace Centr
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(773, 309);
+            this.dataGridView1.Size = new System.Drawing.Size(773, 278);
             this.dataGridView1.TabIndex = 46;
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
@@ -109,6 +115,43 @@ namespace Centr
             this.label1.TabIndex = 45;
             this.label1.Text = "Сведения об успеваемости";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Удалить_запись_button5
+            // 
+            this.Удалить_запись_button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Удалить_запись_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Удалить_запись_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Удалить_запись_button5.Location = new System.Drawing.Point(12, 384);
+            this.Удалить_запись_button5.Name = "Удалить_запись_button5";
+            this.Удалить_запись_button5.Size = new System.Drawing.Size(244, 31);
+            this.Удалить_запись_button5.TabIndex = 102;
+            this.Удалить_запись_button5.Text = "Удалить запись";
+            this.Удалить_запись_button5.UseVisualStyleBackColor = false;
+            this.Удалить_запись_button5.Click += new System.EventHandler(this.Удалить_запись_button5_Click);
+            // 
+            // Изменить_запись_button2
+            // 
+            this.Изменить_запись_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Изменить_запись_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_запись_button2.Location = new System.Drawing.Point(283, 383);
+            this.Изменить_запись_button2.Name = "Изменить_запись_button2";
+            this.Изменить_запись_button2.Size = new System.Drawing.Size(262, 32);
+            this.Изменить_запись_button2.TabIndex = 101;
+            this.Изменить_запись_button2.Text = "Изменить запись";
+            this.Изменить_запись_button2.UseVisualStyleBackColor = false;
+            this.Изменить_запись_button2.Click += new System.EventHandler(this.Изменить_запись_button2_Click);
+            // 
+            // Добавить_запись_button1
+            // 
+            this.Добавить_запись_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Добавить_запись_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_запись_button1.Location = new System.Drawing.Point(568, 384);
+            this.Добавить_запись_button1.Name = "Добавить_запись_button1";
+            this.Добавить_запись_button1.Size = new System.Drawing.Size(217, 32);
+            this.Добавить_запись_button1.TabIndex = 100;
+            this.Добавить_запись_button1.Text = "Добавить запись";
+            this.Добавить_запись_button1.UseVisualStyleBackColor = false;
+            this.Добавить_запись_button1.Click += new System.EventHandler(this.Добавить_запись_button1_Click);
             // 
             // Успеваемость
             // 
@@ -135,5 +178,8 @@ namespace Centr
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Удалить_запись_button5;
+        private System.Windows.Forms.Button Изменить_запись_button2;
+        private System.Windows.Forms.Button Добавить_запись_button1;
     }
 }
