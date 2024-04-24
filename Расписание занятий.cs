@@ -114,24 +114,38 @@ namespace Centr
             ret();
         }
 
-        private void Дни_работы_comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Удалить_занятие_button5_Click(object sender, EventArgs e)
         {
-
+            string kod;
+            try
+            {
+                kod = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Код расписания"].Value.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Не указан удаляемый экземпляр!!!", "Ошибка"); return;
+            }
+            string message = "Вы точно хотите удалить запись № " + kod + "?";
+            string caption = "Удаление записи";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult rezult = MessageBox.Show(message, caption, buttons);
+            if (rezult == DialogResult.No) { return; }
+            string sql = "DELETE FROM raspisanie WHERE id_raspisania = " + kod;
+            Form1.Modification_Execute(sql);
+            for (int i = Form1.cdt.Tables["Расписание"].Rows.Count - 1; i >= 0; i--)
+                if (Form1.cdt.Tables["Расписание"].Rows[i]["Код расписания"].ToString() == kod)
+                {
+                    Form1.cdt.Tables["Расписание"].Rows.RemoveAt(i);
+                    dataGridView1.CurrentCell = null;
+                    return;
+                }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Добавить_занятие_button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Временной_промежуток_comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Добавить_расписание добавить_расписание = new Добавить_расписание();
+            Form1.tabControl1.Controls.Add(добавить_расписание.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }
 }

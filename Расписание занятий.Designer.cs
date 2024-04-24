@@ -32,6 +32,9 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Расписание_занятий));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Удалить_занятие_button5 = new System.Windows.Forms.Button();
+            this.Изменить_занятие_button2 = new System.Windows.Forms.Button();
+            this.Добавить_занятие_button1 = new System.Windows.Forms.Button();
             this.Назад_button1 = new System.Windows.Forms.Button();
             this.Дни_работы_comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +63,9 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Удалить_занятие_button5);
+            this.tabPage1.Controls.Add(this.Изменить_занятие_button2);
+            this.tabPage1.Controls.Add(this.Добавить_занятие_button1);
             this.tabPage1.Controls.Add(this.Назад_button1);
             this.tabPage1.Controls.Add(this.Дни_работы_comboBox1);
             this.tabPage1.Controls.Add(this.label2);
@@ -78,13 +84,49 @@ namespace Centr
             this.tabPage1.Text = "Расписание занятий";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // Удалить_занятие_button5
+            // 
+            this.Удалить_занятие_button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Удалить_занятие_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Удалить_занятие_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Удалить_занятие_button5.Location = new System.Drawing.Point(8, 377);
+            this.Удалить_занятие_button5.Name = "Удалить_занятие_button5";
+            this.Удалить_занятие_button5.Size = new System.Drawing.Size(254, 31);
+            this.Удалить_занятие_button5.TabIndex = 99;
+            this.Удалить_занятие_button5.Text = "Удалить занятие";
+            this.Удалить_занятие_button5.UseVisualStyleBackColor = false;
+            this.Удалить_занятие_button5.Click += new System.EventHandler(this.Удалить_занятие_button5_Click);
+            // 
+            // Изменить_занятие_button2
+            // 
+            this.Изменить_занятие_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Изменить_занятие_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_занятие_button2.Location = new System.Drawing.Point(299, 377);
+            this.Изменить_занятие_button2.Name = "Изменить_занятие_button2";
+            this.Изменить_занятие_button2.Size = new System.Drawing.Size(262, 32);
+            this.Изменить_занятие_button2.TabIndex = 98;
+            this.Изменить_занятие_button2.Text = "Изменить занятие";
+            this.Изменить_занятие_button2.UseVisualStyleBackColor = false;
+            // 
+            // Добавить_занятие_button1
+            // 
+            this.Добавить_занятие_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Добавить_занятие_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_занятие_button1.Location = new System.Drawing.Point(574, 377);
+            this.Добавить_занятие_button1.Name = "Добавить_занятие_button1";
+            this.Добавить_занятие_button1.Size = new System.Drawing.Size(217, 32);
+            this.Добавить_занятие_button1.TabIndex = 97;
+            this.Добавить_занятие_button1.Text = "Добавить занятие";
+            this.Добавить_занятие_button1.UseVisualStyleBackColor = false;
+            this.Добавить_занятие_button1.Click += new System.EventHandler(this.Добавить_занятие_button1_Click);
+            // 
             // Назад_button1
             // 
             this.Назад_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Назад_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Назад_button1.Location = new System.Drawing.Point(571, 265);
+            this.Назад_button1.Location = new System.Drawing.Point(567, 217);
             this.Назад_button1.Name = "Назад_button1";
-            this.Назад_button1.Size = new System.Drawing.Size(214, 27);
+            this.Назад_button1.Size = new System.Drawing.Size(218, 27);
             this.Назад_button1.TabIndex = 96;
             this.Назад_button1.Text = "Назад\r\n";
             this.Назад_button1.UseVisualStyleBackColor = false;
@@ -93,21 +135,19 @@ namespace Centr
             // Дни_работы_comboBox1
             // 
             this.Дни_работы_comboBox1.FormattingEnabled = true;
-            this.Дни_работы_comboBox1.Location = new System.Drawing.Point(676, 105);
+            this.Дни_работы_comboBox1.Location = new System.Drawing.Point(676, 87);
             this.Дни_работы_comboBox1.Name = "Дни_работы_comboBox1";
             this.Дни_работы_comboBox1.Size = new System.Drawing.Size(109, 24);
             this.Дни_работы_comboBox1.TabIndex = 95;
-            this.Дни_работы_comboBox1.SelectedIndexChanged += new System.EventHandler(this.Дни_работы_comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(565, 95);
+            this.label2.Location = new System.Drawing.Point(565, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 34);
             this.label2.TabIndex = 94;
             this.label2.Text = "Выберите \r\nдни работы:\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -136,9 +176,9 @@ namespace Centr
             // 
             this.Показать_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Показать_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Показать_button2.Location = new System.Drawing.Point(571, 204);
+            this.Показать_button2.Location = new System.Drawing.Point(567, 173);
             this.Показать_button2.Name = "Показать_button2";
-            this.Показать_button2.Size = new System.Drawing.Size(214, 27);
+            this.Показать_button2.Size = new System.Drawing.Size(218, 27);
             this.Показать_button2.TabIndex = 41;
             this.Показать_button2.Text = "Показать";
             this.Показать_button2.UseVisualStyleBackColor = false;
@@ -147,27 +187,25 @@ namespace Centr
             // Временной_промежуток_comboBox1
             // 
             this.Временной_промежуток_comboBox1.FormattingEnabled = true;
-            this.Временной_промежуток_comboBox1.Location = new System.Drawing.Point(676, 151);
+            this.Временной_промежуток_comboBox1.Location = new System.Drawing.Point(676, 132);
             this.Временной_промежуток_comboBox1.Name = "Временной_промежуток_comboBox1";
             this.Временной_промежуток_comboBox1.Size = new System.Drawing.Size(109, 24);
             this.Временной_промежуток_comboBox1.TabIndex = 40;
-            this.Временной_промежуток_comboBox1.SelectedIndexChanged += new System.EventHandler(this.Временной_промежуток_comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(565, 141);
+            this.label1.Location = new System.Drawing.Point(565, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 34);
             this.label1.TabIndex = 39;
             this.label1.Text = "Выберите \r\nвремя работы:\r\n";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Распечатать_расписание_button1
             // 
             this.Распечатать_расписание_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Распечатать_расписание_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Распечатать_расписание_button1.Location = new System.Drawing.Point(571, 378);
+            this.Распечатать_расписание_button1.Location = new System.Drawing.Point(574, 335);
             this.Распечатать_расписание_button1.Name = "Распечатать_расписание_button1";
             this.Распечатать_расписание_button1.Size = new System.Drawing.Size(214, 36);
             this.Распечатать_расписание_button1.TabIndex = 38;
@@ -178,11 +216,11 @@ namespace Centr
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(552, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(552, 309);
             this.dataGridView1.TabIndex = 37;
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
@@ -218,5 +256,8 @@ namespace Centr
         private System.Windows.Forms.ComboBox Дни_работы_comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Назад_button1;
+        private System.Windows.Forms.Button Удалить_занятие_button5;
+        private System.Windows.Forms.Button Изменить_занятие_button2;
+        private System.Windows.Forms.Button Добавить_занятие_button1;
     }
 }
