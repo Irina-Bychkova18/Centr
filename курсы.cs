@@ -19,10 +19,10 @@ namespace Centr
         public static int k = 0;
         private void FieldsForm_Fill()
         {
-            Название_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Название курса"].ToString();
-            Всего_мест_textBox3.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Количество мест всего"].ToString();
-            Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Количество оставшихся мест"].ToString();
-            Информация_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[k]["Информация о курсе"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[k]["Название курса"].ToString();
+            Всего_мест_textBox3.Text = Form1.cdt.Tables["Курс"].Rows[k]["Количество мест всего"].ToString();
+            Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курс"].Rows[k]["Количество оставшихся мест"].ToString();
+            Информация_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[k]["Информация о курсе"].ToString();
 
         }
 
@@ -40,17 +40,17 @@ namespace Centr
             string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
               + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", " +
               "information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"";
-            Form1.Table_Fill("Курсы", sql);
+            Form1.Table_Fill("Курс", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Курсы"].Rows[i]["Код курса"].ToString() != n)
+            while (Form1.cdt.Tables["Курс"].Rows[i]["Код курса"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Название курса"].ToString();
-            Всего_мест_textBox3.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Количество мест всего"].ToString();
-            Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Количество оставшихся мест"].ToString();
-            Информация_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Информация о курсе"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Название курса"].ToString();
+            Всего_мест_textBox3.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество мест всего"].ToString();
+            Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество оставшихся мест"].ToString();
+            Информация_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Информация о курсе"].ToString();
 
-            Form1.cdt.Tables["Курсы"].DefaultView.RowFilter = "[Код курса]=" + n;
+            Form1.cdt.Tables["Курс"].DefaultView.RowFilter = "[Код курса]=" + n;
 
 
             
@@ -79,8 +79,8 @@ namespace Centr
 
         private void Вперед_button1_Click(object sender, EventArgs e)
         {
-            if (k < Form1.cdt.Tables["Курсы"].Rows.Count) k++;
-            if (Form1.cdt.Tables["Курсы"].Rows.Count > k)
+            if (k < Form1.cdt.Tables["Курс"].Rows.Count) k++;
+            if (Form1.cdt.Tables["Курс"].Rows.Count > k)
             {
                 FieldsForm_Fill();
             }
@@ -100,7 +100,7 @@ namespace Centr
 
         private void В_начало_button3_Click(object sender, EventArgs e)
         {
-            if (Form1.cdt.Tables["Курсы"].Rows.Count > 0)
+            if (Form1.cdt.Tables["Курс"].Rows.Count > 0)
             {
                 k = 0; FieldsForm_Fill();
             }
@@ -109,7 +109,7 @@ namespace Centr
         private void В_конец_button5_Click(object sender, EventArgs e)
         {
             FieldsForm_Clear();
-            k = Form1.cdt.Tables["Курсы"].Rows.Count;
+            k = Form1.cdt.Tables["Курс"].Rows.Count;
         }
     }
 }

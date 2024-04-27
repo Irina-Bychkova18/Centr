@@ -22,17 +22,17 @@ namespace Centr
             string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
               + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", " +
               "information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"";
-            Form1.Table_Fill("Курсы", sql);
+            Form1.Table_Fill("Курс", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Курсы"].Rows[i]["Код курса"].ToString() != n)
+            while (Form1.cdt.Tables["Курс"].Rows[i]["Код курса"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Название курса"].ToString();
-            Всего_мест_textBox3.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Количество мест всего"].ToString();
-            Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Количество оставшихся мест"].ToString();
-            Информация_textBox1.Text = Form1.cdt.Tables["Курсы"].Rows[i]["Информация о курсе"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Название курса"].ToString();
+            Всего_мест_textBox3.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество мест всего"].ToString();
+            Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество оставшихся мест"].ToString();
+            Информация_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Информация о курсе"].ToString();
 
-            Form1.cdt.Tables["Курсы"].DefaultView.RowFilter = "[Код курса]=" + n;
+            Form1.cdt.Tables["Курс"].DefaultView.RowFilter = "[Код курса]=" + n;
     
         }
 
@@ -44,10 +44,10 @@ namespace Centr
         private void Изменить_button1_Click(object sender, EventArgs e)
         {
             int i = 0;
-            while (Form1.cdt.Tables["Курсы"].Rows[i]["Код курса"].ToString() != n)
+            while (Form1.cdt.Tables["Курс"].Rows[i]["Код курса"].ToString() != n)
                 i++;
             string sql;
-            if (i < Form1.cdt.Tables["Курсы"].Rows.Count)
+            if (i < Form1.cdt.Tables["Курс"].Rows.Count)
             {
                 i = i + 1;
                 sql = "UPDATE kursi SET name ='" + Название_textBox1.Text + "', kolvo_mest_vsego = " + Всего_мест_textBox3.Text + ", mest_ostav = " + Оставшиеся_места_textBox2.Text + ", information ='" + Информация_textBox1.Text + "' WHERE id_kursi = " + i;

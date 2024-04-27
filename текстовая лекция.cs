@@ -24,8 +24,8 @@ namespace Centr
         public static int k = 0;
         private void FieldsForm_Fill()
         {
-            Название_textBox1.Text = Form1.cdt.Tables["Все текстовые лекции"].Rows[k]["Название лекции"].ToString();
-            Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Все текстовые лекции"].Rows[k]["Текст лекции"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[k]["Название лекции"].ToString();
+            Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[k]["Текст лекции"].ToString();
 
         }
 
@@ -42,15 +42,15 @@ namespace Centr
 
             string sql = "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\","
                 + " text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"";
-            Form1.Table_Fill("Все текстовые лекции", sql);
+            Form1.Table_Fill("Текстовая лекция", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Все текстовые лекции"].Rows[i]["Код лекции"].ToString() != n)
+            while (Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Код лекции"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Все текстовые лекции"].Rows[i]["Название лекции"].ToString();
-            Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Все текстовые лекции"].Rows[i]["Текст лекции"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Название лекции"].ToString();
+            Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Текст лекции"].ToString();
 
-            Form1.cdt.Tables["Все текстовые лекции"].DefaultView.RowFilter = "[Код лекции]=" + n;
+            Form1.cdt.Tables["Текстовая лекция"].DefaultView.RowFilter = "[Код лекции]=" + n;
 
             
 
@@ -67,8 +67,8 @@ namespace Centr
 
         private void Вперед_button1_Click(object sender, EventArgs e)
         {
-            if (k < Form1.cdt.Tables["Все текстовые лекции"].Rows.Count) k++;
-            if (Form1.cdt.Tables["Все текстовые лекции"].Rows.Count > k)
+            if (k < Form1.cdt.Tables["Текстовая лекция"].Rows.Count) k++;
+            if (Form1.cdt.Tables["Текстовая лекция"].Rows.Count > k)
             {
                 FieldsForm_Fill();
             }
@@ -90,7 +90,7 @@ namespace Centr
 
         private void В_начало_button3_Click(object sender, EventArgs e)
         {
-            if (Form1.cdt.Tables["Все текстовые лекции"].Rows.Count > 0)
+            if (Form1.cdt.Tables["Текстовая лекция"].Rows.Count > 0)
             {
                 k = 0; FieldsForm_Fill();
             }
@@ -99,7 +99,7 @@ namespace Centr
         private void В_конец_button5_Click(object sender, EventArgs e)
         {
             FieldsForm_Clear();
-            k = Form1.cdt.Tables["Все текстовые лекции"].Rows.Count;
+            k = Form1.cdt.Tables["Текстовая лекция"].Rows.Count;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)

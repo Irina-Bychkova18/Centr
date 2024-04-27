@@ -35,19 +35,19 @@ namespace Centr
                    + " proideno_lekcii_fl AS \"Пройдено лекций\", vsego_lekcii_fl AS \"Всего лекций\",  (proideno_lekcii_fl/vsego_lekcii_fl)*100 AS \"Процент успеваемости\" FROM ((uspevaemost inner join uchenik on uchenik.id_uch = uspevaemost.id_uch)"
                    + "left join lekcii on lekcii.id_lek = uspevaemost.id_lek) where uchenik.id_uch = uspevaemost.id_uch and lekcii.id_lek = uspevaemost.id_lek" +
                    " GROUP BY id_usp, uchenik.fio, lekcii.name, proideno_lekcii_fl, vsego_lekcii_fl ORDER BY \"Номер записи\"";
-            Form1.Table_Fill("Успеваемость", sql);
+            Form1.Table_Fill("Одна успеваемость", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Успеваемость"].Rows[i]["Номер записи"].ToString() != n)
+            while (Form1.cdt.Tables["Одна успеваемость"].Rows[i]["Номер записи"].ToString() != n)
                 i++;
-            ФИО_ученика_comboBox1.Text = Form1.cdt.Tables["Успеваемость"].Rows[i]["ФИО"].ToString();
-            Название_лекции_comboBox2.Text = Form1.cdt.Tables["Успеваемость"].Rows[i]["Название лекции"].ToString();
-            Пройдено_лекций_textBox1.Text = Form1.cdt.Tables["Успеваемость"].Rows[i]["Пройдено лекций"].ToString();
-            Всего_лекций_textBox2.Text = Form1.cdt.Tables["Успеваемость"].Rows[i]["Всего лекций"].ToString();
+            ФИО_ученика_comboBox1.Text = Form1.cdt.Tables["Одна успеваемость"].Rows[i]["ФИО"].ToString();
+            Название_лекции_comboBox2.Text = Form1.cdt.Tables["Одна успеваемость"].Rows[i]["Название лекции"].ToString();
+            Пройдено_лекций_textBox1.Text = Form1.cdt.Tables["Одна успеваемость"].Rows[i]["Пройдено лекций"].ToString();
+            Всего_лекций_textBox2.Text = Form1.cdt.Tables["Одна успеваемость"].Rows[i]["Всего лекций"].ToString();
             
 
 
-            Form1.cdt.Tables["Успеваемость"].DefaultView.RowFilter = "[Номер записи]=" + n;
+            Form1.cdt.Tables["Одна успеваемость"].DefaultView.RowFilter = "[Номер записи]=" + n;
         }
 
         private void Изменить_button2_Click(object sender, EventArgs e)
@@ -57,10 +57,10 @@ namespace Centr
        
             
             int i = 0;
-            while (Form1.cdt.Tables["Успеваемость"].Rows[i]["Номер записи"].ToString() != n)
+            while (Form1.cdt.Tables["Одна успеваемость"].Rows[i]["Номер записи"].ToString() != n)
                 i++;
             string sql;
-            if (i < Form1.cdt.Tables["Успеваемость"].Rows.Count)
+            if (i < Form1.cdt.Tables["Одна успеваемость"].Rows.Count)
             {
                 i = i + 1;
                 sql = "UPDATE uspevaemost SET id_uch = " + kod_1 + ", id_lek = " + kod_2 + ", proideno_lekcii_fl = " + Пройдено_лекций_textBox1.Text +

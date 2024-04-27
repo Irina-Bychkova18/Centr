@@ -156,7 +156,7 @@ namespace Centr
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Name = "все_курсы_сотрудник";
-            this.Text = "все_курсы_сотрудник";
+            this.Text = "Все курсы сотрудник";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

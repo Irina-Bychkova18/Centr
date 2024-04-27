@@ -25,10 +25,10 @@ namespace Centr
         private void Изменить_button1_Click(object sender, EventArgs e)
         {
             int i = 0;
-            while (Form1.cdt.Tables["Все домашнее задание"].Rows[i]["Код домашнего задания"].ToString() != n)
+            while (Form1.cdt.Tables["Домашнее задание"].Rows[i]["Код домашнего задания"].ToString() != n)
                 i++;
             string sql;
-            if (i < Form1.cdt.Tables["Все домашнее задание"].Rows.Count)
+            if (i < Form1.cdt.Tables["Домашнее задание"].Rows.Count)
             {
                 i = i + 1;
                 sql = "UPDATE dz SET name ='" + Название_textBox1.Text + "', text = '" + Информация_textBox4.Text + "' WHERE id_dz = " + i;
@@ -42,16 +42,16 @@ namespace Centr
         {
             string sql = "SELECT id_dz AS \"Код домашнего задания\", name AS \"Название домашнего задания\","
                 + " text AS \"Ссылка на домашнее задание\" FROM dz" + " ORDER BY \"Код домашнего задания\"";
-            Form1.Table_Fill("Все домашнее задание", sql);
+            Form1.Table_Fill("Домашнее задание", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Все домашнее задание"].Rows[i]["Код домашнего задания"].ToString() != n)
+            while (Form1.cdt.Tables["Домашнее задание"].Rows[i]["Код домашнего задания"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Все домашнее задание"].Rows[i]["Название домашнего задания"].ToString();
-            Информация_textBox4.Text = Form1.cdt.Tables["Все домашнее задание"].Rows[i]["Ссылка на домашнее задание"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Домашнее задание"].Rows[i]["Название домашнего задания"].ToString();
+            Информация_textBox4.Text = Form1.cdt.Tables["Домашнее задание"].Rows[i]["Ссылка на домашнее задание"].ToString();
 
 
-            Form1.cdt.Tables["Все домашнее задание"].DefaultView.RowFilter = "[Код домашнего задания]=" + n;
+            Form1.cdt.Tables["Домашнее задание"].DefaultView.RowFilter = "[Код домашнего задания]=" + n;
         }
     }
 }

@@ -31,8 +31,8 @@ namespace Centr
         {
             Название_textBox1.Text = Form1.cdt.Tables["Все видеоролики"].Rows[k]["Название видеоролика"].ToString();
             string sql = "SELECT text AS \"Видеоролик\" FROM video where name ='" + Название_textBox1.Text + "'";
-            Form1.Table_Fill("видеоролик", sql);
-            dataGridView1.DataSource = Form1.cdt.Tables["видеоролик"].DefaultView;
+            Form1.Table_Fill("Видеоролик", sql);
+            dataGridView1.DataSource = Form1.cdt.Tables["Видеоролик"].DefaultView;
         }
 
         private void FieldsForm_Clear()
@@ -45,17 +45,17 @@ namespace Centr
         {
             string sql = "SELECT id_vid AS \"Код видео\", name AS \"Название видеоролика\","
                 + " text AS \"Видеоролик\" FROM video" + " ORDER BY \"Код видео\"";
-            Form1.Table_Fill("Все видеоролики", sql);
+            Form1.Table_Fill("Видеоролик", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Все видеоролики"].Rows[i]["Код видео"].ToString() != n)
+            while (Form1.cdt.Tables["Видеоролик"].Rows[i]["Код видео"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Все видеоролики"].Rows[i]["Название видеоролика"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Видеоролик"].Rows[i]["Название видеоролика"].ToString();
 
-            Form1.cdt.Tables["Все видеоролики"].DefaultView.RowFilter = "[Код видео]=" + n;
+            Form1.cdt.Tables["Видеоролик"].DefaultView.RowFilter = "[Код видео]=" + n;
 
 
-            dataGridView1.DataSource = Form1.cdt.Tables["Все видеоролики"].DefaultView;
+            dataGridView1.DataSource = Form1.cdt.Tables["Видеоролик"].DefaultView;
             dataGridView1.Columns["Код видео"].Visible = false;
             dataGridView1.Columns["Название видеоролика"].Visible = false;
 
@@ -72,8 +72,8 @@ namespace Centr
 
         private void Вперед_button1_Click(object sender, EventArgs e)
         {
-            if (k < Form1.cdt.Tables["Все видеоролики"].Rows.Count) k++;
-            if (Form1.cdt.Tables["Все видеоролики"].Rows.Count > k)
+            if (k < Form1.cdt.Tables["Видеоролик"].Rows.Count) k++;
+            if (Form1.cdt.Tables["Видеоролик"].Rows.Count > k)
             {
                 FieldsForm_Fill();
             }
@@ -93,7 +93,7 @@ namespace Centr
 
         private void В_начало_button3_Click(object sender, EventArgs e)
         {
-            if (Form1.cdt.Tables["Все видеоролики"].Rows.Count > 0)
+            if (Form1.cdt.Tables["Видеоролик"].Rows.Count > 0)
             {
                 k = 0; FieldsForm_Fill();
             }
@@ -102,7 +102,7 @@ namespace Centr
         private void В_конец_button5_Click(object sender, EventArgs e)
         {
             FieldsForm_Clear();
-            k = Form1.cdt.Tables["Все видеоролики"].Rows.Count;
+            k = Form1.cdt.Tables["Видеоролик"].Rows.Count;
         }
 
         private void dataGridView1_BindingContextChanged(object sender, EventArgs e)

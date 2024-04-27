@@ -21,8 +21,8 @@ namespace Centr
         {
             Название_textBox1.Text = Form1.cdt.Tables["Все домашнее задание"].Rows[k]["Название домашнего задания"].ToString();
             string sql = "SELECT text AS \"Ссылка на домашнее задание\" FROM dz where name ='" + Название_textBox1.Text + "'";
-            Form1.Table_Fill("домашнее задание", sql);
-            dataGridView1.DataSource = Form1.cdt.Tables["домашнее задание"].DefaultView;
+            Form1.Table_Fill("Домашнее задание", sql);
+            dataGridView1.DataSource = Form1.cdt.Tables["Домашнее задание"].DefaultView;
         }
 
         private void FieldsForm_Clear()
@@ -40,17 +40,17 @@ namespace Centr
         {
             string sql = "SELECT id_dz AS \"Код домашнего задания\", name AS \"Название домашнего задания\","
                 + " text AS \"Ссылка на домашнее задание\" FROM dz" + " ORDER BY \"Код домашнего задания\"";
-            Form1.Table_Fill("Все домашнее задание", sql);
+            Form1.Table_Fill("Домашнее задание", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Все домашнее задание"].Rows[i]["Код домашнего задания"].ToString() != n)
+            while (Form1.cdt.Tables["Домашнее задание"].Rows[i]["Код домашнего задания"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Все домашнее задание"].Rows[i]["Название домашнего задания"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Домашнее задание"].Rows[i]["Название домашнего задания"].ToString();
 
-            Form1.cdt.Tables["Все домашнее задание"].DefaultView.RowFilter = "[Код домашнего задания]=" + n;
+            Form1.cdt.Tables["Домашнее задание"].DefaultView.RowFilter = "[Код домашнего задания]=" + n;
 
 
-            dataGridView1.DataSource = Form1.cdt.Tables["Все домашнее задание"].DefaultView;
+            dataGridView1.DataSource = Form1.cdt.Tables["Домашнее задание"].DefaultView;
             dataGridView1.Columns["Код домашнего задания"].Visible = false;
             dataGridView1.Columns["Название домашнего задания"].Visible = false;
 
@@ -73,8 +73,8 @@ namespace Centr
 
         private void Вперед_button1_Click(object sender, EventArgs e)
         {
-            if (k < Form1.cdt.Tables["Все домашнее задание"].Rows.Count) k++;
-            if (Form1.cdt.Tables["Все домашнее задание"].Rows.Count > k)
+            if (k < Form1.cdt.Tables["Домашнее задание"].Rows.Count) k++;
+            if (Form1.cdt.Tables["Домашнее задание"].Rows.Count > k)
             {
                 FieldsForm_Fill();
             }
@@ -94,7 +94,7 @@ namespace Centr
 
         private void В_начало_button3_Click(object sender, EventArgs e)
         {
-            if (Form1.cdt.Tables["Все домашнее задание"].Rows.Count > 0)
+            if (Form1.cdt.Tables["Домашнее задание"].Rows.Count > 0)
             {
                 k = 0; FieldsForm_Fill();
             }
@@ -103,7 +103,7 @@ namespace Centr
         private void В_конец_button5_Click(object sender, EventArgs e)
         {
             FieldsForm_Clear();
-            k = Form1.cdt.Tables["Все домашнее задание"].Rows.Count;
+            k = Form1.cdt.Tables["Домашнее задание"].Rows.Count;
         }
     }
 }

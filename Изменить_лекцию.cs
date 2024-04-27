@@ -25,10 +25,10 @@ namespace Centr
         private void Изменить_button1_Click(object sender, EventArgs e)
         {
             int i = 0;
-            while (Form1.cdt.Tables["Все текстовые лекции"].Rows[i]["Код лекции"].ToString() != n)
+            while (Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Код лекции"].ToString() != n)
                 i++;
             string sql;
-            if (i < Form1.cdt.Tables["Все текстовые лекции"].Rows.Count)
+            if (i < Form1.cdt.Tables["Текстовая лекция"].Rows.Count)
             {
                 i = i + 1;
                 sql = "UPDATE lekcii SET name ='" + Название_textBox1.Text + "', text = '" + Ссылка_на_лекцию_textBox1.Text + "' WHERE id_lek = " + i;
@@ -45,13 +45,13 @@ namespace Centr
             Form1.Table_Fill("Все текстовые лекции", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Все текстовые лекции"].Rows[i]["Код лекции"].ToString() != n)
+            while (Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Код лекции"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Все текстовые лекции"].Rows[i]["Название лекции"].ToString();
-            Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Все текстовые лекции"].Rows[i]["Текст лекции"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Название лекции"].ToString();
+            Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Текст лекции"].ToString();
             
 
-            Form1.cdt.Tables["Все текстовые лекции"].DefaultView.RowFilter = "[Код лекции]=" + n;
+            Form1.cdt.Tables["Текстовая лекция"].DefaultView.RowFilter = "[Код лекции]=" + n;
         }
     }
 }

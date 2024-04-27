@@ -25,10 +25,10 @@ namespace Centr
         private void Изменить_button1_Click(object sender, EventArgs e)
         {
             int i = 0;
-            while (Form1.cdt.Tables["Все видеоролики"].Rows[i]["Код видео"].ToString() != n)
+            while (Form1.cdt.Tables["Видеоролик"].Rows[i]["Код видео"].ToString() != n)
                 i++;
             string sql;
-            if (i < Form1.cdt.Tables["Все видеоролики"].Rows.Count)
+            if (i < Form1.cdt.Tables["Видеоролик"].Rows.Count)
             {
                 i = i + 1;
                 sql = "UPDATE video SET name ='" + Название_textBox1.Text + "', text = '" + Информация_textBox4.Text + "' WHERE id_vid = " + i;
@@ -42,16 +42,16 @@ namespace Centr
         {
             string sql = "SELECT id_vid AS \"Код видео\", name AS \"Название видеоролика\","
                 + " text AS \"Видеоролик\" FROM video" + " ORDER BY \"Код видео\"";
-            Form1.Table_Fill("Все видеоролики", sql);
+            Form1.Table_Fill("Видеоролик", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Все видеоролики"].Rows[i]["Код видео"].ToString() != n)
+            while (Form1.cdt.Tables["Видеоролик"].Rows[i]["Код видео"].ToString() != n)
                 i++;
-            Название_textBox1.Text = Form1.cdt.Tables["Все видеоролики"].Rows[i]["Название видеоролика"].ToString();
-            Информация_textBox4.Text = Form1.cdt.Tables["Все видеоролики"].Rows[i]["Видеоролик"].ToString();
+            Название_textBox1.Text = Form1.cdt.Tables["Видеоролик"].Rows[i]["Название видеоролика"].ToString();
+            Информация_textBox4.Text = Form1.cdt.Tables["Видеоролик"].Rows[i]["Видеоролик"].ToString();
 
 
-            Form1.cdt.Tables["Все видеоролики"].DefaultView.RowFilter = "[Код видео]=" + n;
+            Form1.cdt.Tables["Видеоролик"].DefaultView.RowFilter = "[Код видео]=" + n;
         }
     }
 }

@@ -37,17 +37,17 @@ namespace Centr
                + " dni.name AS \"Дни работы\", vrema.name AS \"Время работы\" FROM (((raspisanie inner join kursi on kursi.id_kursi = raspisanie.id_kursi)"
                + "left join dni on dni.id_dni = raspisanie.id_dni) left join vrema on vrema.id_vrema = raspisanie.id_vrema) where kursi.id_kursi = raspisanie.id_kursi and dni.id_dni = raspisanie.id_dni and vrema.id_vrema = raspisanie.id_vrema" +
                " GROUP BY id_raspisania, kursi.name, dni.name, vrema.name ORDER BY \"Код расписания\"";
-            Form1.Table_Fill("Расписание", sql);
+            Form1.Table_Fill("Одно расписание", sql);
 
             int i = 0;
-            while (Form1.cdt.Tables["Расписание"].Rows[i]["Код расписания"].ToString() != n)
+            while (Form1.cdt.Tables["Одно расписание"].Rows[i]["Код расписания"].ToString() != n)
                 i++;
-            Курс_comboBox1.Text = Form1.cdt.Tables["Расписание"].Rows[i]["Название курса"].ToString();
-            Дни_comboBox2.Text = Form1.cdt.Tables["Расписание"].Rows[i]["Дни работы"].ToString();
-            Время_comboBox3.Text = Form1.cdt.Tables["Расписание"].Rows[i]["Время работы"].ToString();
+            Курс_comboBox1.Text = Form1.cdt.Tables["Одно расписание"].Rows[i]["Название курса"].ToString();
+            Дни_comboBox2.Text = Form1.cdt.Tables["Одно расписание"].Rows[i]["Дни работы"].ToString();
+            Время_comboBox3.Text = Form1.cdt.Tables["Одно расписание"].Rows[i]["Время работы"].ToString();
 
             
-            Form1.cdt.Tables["Расписание"].DefaultView.RowFilter = "[Код расписания]=" + n;
+            Form1.cdt.Tables["Одно расписание"].DefaultView.RowFilter = "[Код расписания]=" + n;
         }
 
         private void Изменить_button2_Click(object sender, EventArgs e)
@@ -56,10 +56,10 @@ namespace Centr
             string kod_2 = Form1.cdt.Tables["Дни"].DefaultView[Дни_comboBox2.SelectedIndex]["Код дня"].ToString();
             string kod_3 = Form1.cdt.Tables["Время"].DefaultView[Время_comboBox3.SelectedIndex]["Код времени"].ToString();
             int i = 0;
-            while (Form1.cdt.Tables["Расписание"].Rows[i]["Код расписания"].ToString() != n)
+            while (Form1.cdt.Tables["Одно расписание"].Rows[i]["Код расписания"].ToString() != n)
                 i++;
             string sql;
-            if (i < Form1.cdt.Tables["Расписание"].Rows.Count)
+            if (i < Form1.cdt.Tables["Одно расписание"].Rows.Count)
             {
                 i = i + 1;
                 sql = "UPDATE raspisanie SET id_kursi = " + kod_1 + ", id_dni = " + kod_2 + ", id_vrema = " + kod_3 + " WHERE id_raspisania = " + i;
