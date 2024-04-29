@@ -55,7 +55,10 @@ namespace Centr
                         Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
                         Form1.Table_Fill("Возраст", "SELECT id_vozr AS \"Код возраста\", name AS \"Наименование возраста\" FROM vozrast" + " ORDER BY \"Код возраста\"");
                         Form1.Table_Fill("Опыт", "SELECT id_opita AS \"Код опыта\", name AS \"Наименование опыта\" FROM opit" + " ORDER BY \"Код опыта\"");
-                        
+                        Form1.Table_Fill("Город", "SELECT id_goroda AS \"Код города\", name AS \"Название города\" FROM gorod" + " ORDER BY \"Код города\"");
+                        Form1.Table_Fill("Улица", "SELECT id_ulici AS \"Код улицы\", name AS \"Название улицы\" FROM ulica" + " ORDER BY \"Код улицы\"");
+                        Form1.Table_Fill("Дом", "SELECT id_doma AS \"Код дома\", nomer AS \"Номер дома\" FROM dom" + " ORDER BY \"Код дома\"");
+                        Form1.Table_Fill("Квартира", "SELECT id_kvartiri AS \"Код квартиры\", nomer AS \"Номер квартиры\" FROM kvartira" + " ORDER BY \"Код квартиры\"");
                         Form1.Table_Fill("Должности", "SELECT id_dolj AS \"Код должности\", name AS \"Наименование должности\", id_zarp AS \"Наименование зарплаты\" FROM doljnosti" + " ORDER BY \"Код должности\"");
                         Form1.Table_Fill("Сотрудники", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
                    + " opit.name AS \"Опыт\", telephon AS \"Телефон\", doljnosti.name AS \"Должность\", login AS \"Логин\", parol AS \"Пароль\" FROM (((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"

@@ -32,6 +32,8 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Сотрудники));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Поиск_textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Назад_button1 = new System.Windows.Forms.Button();
             this.Показать_button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,8 +49,6 @@ namespace Centr
             this.Должность_comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Поиск_textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +91,24 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Сотрудники и их добавление";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // Поиск_textBox2
+            // 
+            this.Поиск_textBox2.Location = new System.Drawing.Point(577, 257);
+            this.Поиск_textBox2.Name = "Поиск_textBox2";
+            this.Поиск_textBox2.Size = new System.Drawing.Size(208, 22);
+            this.Поиск_textBox2.TabIndex = 105;
+            this.Поиск_textBox2.TextChanged += new System.EventHandler(this.Поиск_textBox2_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(372, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(199, 17);
+            this.label5.TabIndex = 103;
+            this.label5.Text = "Введите данные для поиска:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Назад_button1
             // 
@@ -246,22 +264,6 @@ namespace Centr
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(372, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(199, 17);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "Введите данные для поиска:";
-            // 
-            // Поиск_textBox2
-            // 
-            this.Поиск_textBox2.Location = new System.Drawing.Point(577, 257);
-            this.Поиск_textBox2.Name = "Поиск_textBox2";
-            this.Поиск_textBox2.Size = new System.Drawing.Size(208, 22);
-            this.Поиск_textBox2.TabIndex = 105;
             // 
             // Сотрудники
             // 
