@@ -32,6 +32,8 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Сотрудники));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Назад_button1 = new System.Windows.Forms.Button();
+            this.Показать_button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Ведет_курсы_textBox2 = new System.Windows.Forms.TextBox();
@@ -45,10 +47,8 @@ namespace Centr
             this.Должность_comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Назад_button1 = new System.Windows.Forms.Button();
-            this.Показать_button2 = new System.Windows.Forms.Button();
-            this.Курс_comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Поиск_textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,10 +67,10 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Поиск_textBox2);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.Назад_button1);
             this.tabPage1.Controls.Add(this.Показать_button2);
-            this.tabPage1.Controls.Add(this.Курс_comboBox1);
-            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Ведет_курсы_textBox2);
@@ -91,6 +91,30 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Сотрудники и их добавление";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // Назад_button1
+            // 
+            this.Назад_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Назад_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Назад_button1.Location = new System.Drawing.Point(375, 300);
+            this.Назад_button1.Name = "Назад_button1";
+            this.Назад_button1.Size = new System.Drawing.Size(176, 27);
+            this.Назад_button1.TabIndex = 102;
+            this.Назад_button1.Text = "Назад\r\n";
+            this.Назад_button1.UseVisualStyleBackColor = false;
+            this.Назад_button1.Click += new System.EventHandler(this.Назад_button1_Click);
+            // 
+            // Показать_button2
+            // 
+            this.Показать_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Показать_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Показать_button2.Location = new System.Drawing.Point(599, 300);
+            this.Показать_button2.Name = "Показать_button2";
+            this.Показать_button2.Size = new System.Drawing.Size(187, 27);
+            this.Показать_button2.TabIndex = 99;
+            this.Показать_button2.Text = "Показать";
+            this.Показать_button2.UseVisualStyleBackColor = false;
+            this.Показать_button2.Click += new System.EventHandler(this.Показать_button2_Click);
             // 
             // pictureBox1
             // 
@@ -223,46 +247,21 @@ namespace Centr
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
-            // Назад_button1
+            // label5
             // 
-            this.Назад_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Назад_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Назад_button1.Location = new System.Drawing.Point(375, 300);
-            this.Назад_button1.Name = "Назад_button1";
-            this.Назад_button1.Size = new System.Drawing.Size(176, 27);
-            this.Назад_button1.TabIndex = 102;
-            this.Назад_button1.Text = "Назад\r\n";
-            this.Назад_button1.UseVisualStyleBackColor = false;
-            this.Назад_button1.Click += new System.EventHandler(this.Назад_button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(372, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(199, 17);
+            this.label5.TabIndex = 103;
+            this.label5.Text = "Введите данные для поиска:";
             // 
-            // Показать_button2
+            // Поиск_textBox2
             // 
-            this.Показать_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Показать_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Показать_button2.Location = new System.Drawing.Point(599, 300);
-            this.Показать_button2.Name = "Показать_button2";
-            this.Показать_button2.Size = new System.Drawing.Size(187, 27);
-            this.Показать_button2.TabIndex = 99;
-            this.Показать_button2.Text = "Показать";
-            this.Показать_button2.UseVisualStyleBackColor = false;
-            this.Показать_button2.Click += new System.EventHandler(this.Показать_button2_Click);
-            // 
-            // Курс_comboBox1
-            // 
-            this.Курс_comboBox1.FormattingEnabled = true;
-            this.Курс_comboBox1.Location = new System.Drawing.Point(485, 258);
-            this.Курс_comboBox1.Name = "Курс_comboBox1";
-            this.Курс_comboBox1.Size = new System.Drawing.Size(301, 24);
-            this.Курс_comboBox1.TabIndex = 98;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(372, 261);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 17);
-            this.label6.TabIndex = 97;
-            this.label6.Text = "Выберете курс:";
+            this.Поиск_textBox2.Location = new System.Drawing.Point(577, 257);
+            this.Поиск_textBox2.Name = "Поиск_textBox2";
+            this.Поиск_textBox2.Size = new System.Drawing.Size(208, 22);
+            this.Поиск_textBox2.TabIndex = 105;
             // 
             // Сотрудники
             // 
@@ -301,7 +300,7 @@ namespace Centr
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Назад_button1;
         private System.Windows.Forms.Button Показать_button2;
-        private System.Windows.Forms.ComboBox Курс_comboBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox Поиск_textBox2;
+        private System.Windows.Forms.Label label5;
     }
 }

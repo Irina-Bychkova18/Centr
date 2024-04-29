@@ -72,8 +72,7 @@ namespace Centr
             Должность_comboBox1.DataSource = Form1.cdt.Tables["Сотрудники"].DefaultView;
             Должность_comboBox1.DisplayMember = "Должность";
 
-            Курс_comboBox1.DataSource = Form1.cdt.Tables["Сотрудники"].DefaultView;
-            Курс_comboBox1.DisplayMember = "Ведет курсы";
+            
 
             if (Form1.cdt.Tables["Сотрудники"].Rows.Count > n)
             {
@@ -152,19 +151,25 @@ namespace Centr
 
         private void Показать_button2_Click(object sender, EventArgs e)
         {
-            string a = Convert.ToString(Курс_comboBox1.Text);
+            
+            string b = Convert.ToString(Поиск_textBox2.Text);
             string sql = "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
                + " opit.name AS \"Опыт\", telephon AS \"Телефон\", doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курсы\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
                + "left join opit on opit.id_opita = sotrudniki.id_opita) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
                "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and " +
-               "doljnosti.id_dolj = sotrudniki.id_dolj and kursi.id_kursi = sotrudniki.id_kursi and kursi.name = '" + a +
-               "' GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, doljnosti.name, kursi.name, login, parol ORDER BY \"Код сотрудника\"";
+               "doljnosti.id_dolj = sotrudniki.id_dolj and kursi.id_kursi = sotrudniki.id_kursi and  (fio = '" + b +
+               "' or telephon = '" + b + "' or kursi.name = '" + b + "') GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, doljnosti.name, kursi.name, login, parol ORDER BY \"Код сотрудника\"";
             Form1.Table_Fill("Сотрудники", sql);
         }
 
         private void Назад_button1_Click(object sender, EventArgs e)
         {
             ret();
+        }
+
+        private void Название_столбца_textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

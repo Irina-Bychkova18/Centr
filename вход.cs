@@ -44,10 +44,18 @@ namespace Centr
                     if (Пароль_textBox.Text == "Admin")
                     {
                         Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
-                        Form1.Table_Fill("Ученики", "SELECT id_uch AS \"Код ученика\", fio AS \"ФИО ученика\", data_r AS \"Дата рождения\", telephon AS \"Номер телефона\", login AS \"Логин\", parol AS \"Пароль\" FROM uchenik" + " ORDER BY \"Код ученика\"");
+                        Form1.Table_Fill("Ученики", "SELECT id_uch AS \"Код ученика\", fio AS \"ФИО\","
+              + " data_r AS \"Дата рождения\", telephon_uch AS \"Номер телефона ученика\", gorod.name AS \"Город\", " +
+              "ulica.name AS \"Улица\", dom.nomer AS \"Дом\", kvartira.nomer AS \"Квартира\"," +
+              "telephon_roditela AS \"Номер телефона родителей\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((uchenik inner join gorod on gorod.id_goroda = uchenik.id_g)"
+               + "left join ulica on ulica.id_ulici = uchenik.id_ul) left join dom on dom.id_doma = uchenik.id_d) " +
+               "left join kvartira on kvartira.id_kvartiri = uchenik.id_k) where gorod.id_goroda = uchenik.id_g " +
+               "and ulica.id_ulici = uchenik.id_ul and dom.id_doma = uchenik.id_d and kvartira.id_kvartiri = uchenik.id_k GROUP BY id_uch, fio,"
+              + " data_r, telephon_uch, gorod.name, ulica.name, dom.nomer, kvartira.nomer, telephon_roditela, login, parol" + " ORDER BY \"Код ученика\"");
                         Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
                         Form1.Table_Fill("Возраст", "SELECT id_vozr AS \"Код возраста\", name AS \"Наименование возраста\" FROM vozrast" + " ORDER BY \"Код возраста\"");
                         Form1.Table_Fill("Опыт", "SELECT id_opita AS \"Код опыта\", name AS \"Наименование опыта\" FROM opit" + " ORDER BY \"Код опыта\"");
+                        
                         Form1.Table_Fill("Должности", "SELECT id_dolj AS \"Код должности\", name AS \"Наименование должности\", id_zarp AS \"Наименование зарплаты\" FROM doljnosti" + " ORDER BY \"Код должности\"");
                         Form1.Table_Fill("Сотрудники", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
                    + " opit.name AS \"Опыт\", telephon AS \"Телефон\", doljnosti.name AS \"Должность\", login AS \"Логин\", parol AS \"Пароль\" FROM (((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"

@@ -332,6 +332,12 @@
     <Compile Include="Успеваемость.Designer.cs">
       <DependentUpon>Успеваемость.cs</DependentUpon>
     </Compile>
+    <Compile Include="Учащиеся.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Учащиеся.Designer.cs">
+      <DependentUpon>Учащиеся.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Успеваемость.resx">
       <DependentUpon>Успеваемость.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Учащиеся.resx">
+      <DependentUpon>Учащиеся.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

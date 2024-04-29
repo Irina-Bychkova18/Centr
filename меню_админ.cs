@@ -147,5 +147,12 @@ namespace Centr
             Form1.tabControl1.Controls.Add(Все_тесты_и_экзамены_админ.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void учащиесяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Учащиеся учащиеся = new Учащиеся();
+            Form1.tabControl1.Controls.Add(учащиеся.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }
