@@ -42,8 +42,13 @@ namespace Centr
             Form1.Table_Fill("Текстовая лекция", sql);
 
             int i = 0;
+            k = 0;
             while (Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Код лекции"].ToString() != n)
-                i++;
+            {
+                i++; 
+                k++;
+            }
+                
             Название_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Название лекции"].ToString();
             Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Текст лекции"].ToString();
 
