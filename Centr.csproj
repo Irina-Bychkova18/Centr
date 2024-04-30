@@ -146,6 +146,12 @@
     <Compile Include="добавить видеоролик.Designer.cs">
       <DependentUpon>добавить видеоролик.cs</DependentUpon>
     </Compile>
+    <Compile Include="Добавить должность.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить должность.Designer.cs">
+      <DependentUpon>Добавить должность.cs</DependentUpon>
+    </Compile>
     <Compile Include="Добавить курс.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="добавить видеоролик.resx">
       <DependentUpon>добавить видеоролик.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавить должность.resx">
+      <DependentUpon>Добавить должность.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Добавить курс.resx">
       <DependentUpon>Добавить курс.cs</DependentUpon>

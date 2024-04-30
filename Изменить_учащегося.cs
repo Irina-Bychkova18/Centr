@@ -87,5 +87,11 @@ namespace Centr
               
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Добавить_улицу f2 = new Добавить_улицу();
+            f2.Show();
+        }
     }
 }
