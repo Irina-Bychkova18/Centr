@@ -40,11 +40,11 @@ namespace Centr
             this.Вперед_button1 = new System.Windows.Forms.Button();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Ссылка_на_домашнее_задание_textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -59,6 +59,8 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Ссылка_на_домашнее_задание_textBox1);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.В_конец_button5);
@@ -67,7 +69,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Вперед_button1);
             this.tabPage1.Controls.Add(this.Название_textBox1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -103,9 +104,9 @@ namespace Centr
             // 
             this.В_конец_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.В_конец_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.В_конец_button5.Location = new System.Drawing.Point(662, 149);
+            this.В_конец_button5.Location = new System.Drawing.Point(384, 351);
             this.В_конец_button5.Name = "В_конец_button5";
-            this.В_конец_button5.Size = new System.Drawing.Size(124, 30);
+            this.В_конец_button5.Size = new System.Drawing.Size(209, 30);
             this.В_конец_button5.TabIndex = 41;
             this.В_конец_button5.Text = "В конец";
             this.В_конец_button5.UseVisualStyleBackColor = false;
@@ -115,9 +116,9 @@ namespace Centr
             // 
             this.В_начало_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.В_начало_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.В_начало_button3.Location = new System.Drawing.Point(518, 149);
+            this.В_начало_button3.Location = new System.Drawing.Point(147, 351);
             this.В_начало_button3.Name = "В_начало_button3";
-            this.В_начало_button3.Size = new System.Drawing.Size(124, 30);
+            this.В_начало_button3.Size = new System.Drawing.Size(217, 30);
             this.В_начало_button3.TabIndex = 40;
             this.В_начало_button3.Text = "В начало";
             this.В_начало_button3.UseVisualStyleBackColor = false;
@@ -127,9 +128,9 @@ namespace Centr
             // 
             this.Назад_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Назад_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Назад_button2.Location = new System.Drawing.Point(662, 102);
+            this.Назад_button2.Location = new System.Drawing.Point(384, 304);
             this.Назад_button2.Name = "Назад_button2";
-            this.Назад_button2.Size = new System.Drawing.Size(124, 30);
+            this.Назад_button2.Size = new System.Drawing.Size(209, 30);
             this.Назад_button2.TabIndex = 39;
             this.Назад_button2.Text = "Назад";
             this.Назад_button2.UseVisualStyleBackColor = false;
@@ -139,9 +140,9 @@ namespace Centr
             // 
             this.Вперед_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Вперед_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Вперед_button1.Location = new System.Drawing.Point(518, 102);
+            this.Вперед_button1.Location = new System.Drawing.Point(147, 304);
             this.Вперед_button1.Name = "Вперед_button1";
-            this.Вперед_button1.Size = new System.Drawing.Size(124, 30);
+            this.Вперед_button1.Size = new System.Drawing.Size(217, 30);
             this.Вперед_button1.TabIndex = 38;
             this.Вперед_button1.Text = "Вперед";
             this.Вперед_button1.UseVisualStyleBackColor = false;
@@ -149,30 +150,36 @@ namespace Centr
             // 
             // Название_textBox1
             // 
-            this.Название_textBox1.Location = new System.Drawing.Point(226, 74);
+            this.Название_textBox1.Location = new System.Drawing.Point(271, 103);
             this.Название_textBox1.Name = "Название_textBox1";
-            this.Название_textBox1.Size = new System.Drawing.Size(282, 22);
+            this.Название_textBox1.Size = new System.Drawing.Size(388, 22);
             this.Название_textBox1.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 74);
+            this.label1.Location = new System.Drawing.Point(62, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 17);
             this.label1.TabIndex = 35;
             this.label1.Text = "Название домашнего задания:";
             // 
-            // dataGridView1
+            // Ссылка_на_домашнее_задание_textBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 102);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 312);
-            this.dataGridView1.TabIndex = 34;
-            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
+            this.Ссылка_на_домашнее_задание_textBox1.Location = new System.Drawing.Point(271, 154);
+            this.Ссылка_на_домашнее_задание_textBox1.Multiline = true;
+            this.Ссылка_на_домашнее_задание_textBox1.Name = "Ссылка_на_домашнее_задание_textBox1";
+            this.Ссылка_на_домашнее_задание_textBox1.Size = new System.Drawing.Size(388, 81);
+            this.Ссылка_на_домашнее_задание_textBox1.TabIndex = 98;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(62, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 17);
+            this.label2.TabIndex = 97;
+            this.label2.Text = "Ссылка на домашнее задание:";
             // 
             // тест_экзамен
             // 
@@ -186,7 +193,6 @@ namespace Centr
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,6 +209,7 @@ namespace Centr
         private System.Windows.Forms.Button Вперед_button1;
         private System.Windows.Forms.TextBox Название_textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox Ссылка_на_домашнее_задание_textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

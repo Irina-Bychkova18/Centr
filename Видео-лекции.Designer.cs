@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Видео_лекции));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.В_конец_button5 = new System.Windows.Forms.Button();
@@ -40,12 +41,10 @@ namespace Centr
             this.Вперед_button1 = new System.Windows.Forms.Button();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Ссылка_на_видеоролик_textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -60,6 +59,7 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Ссылка_на_видеоролик_textBox1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
@@ -69,7 +69,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Вперед_button1);
             this.tabPage1.Controls.Add(this.Название_textBox1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -77,6 +76,15 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Видеоролик";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 17);
+            this.label2.TabIndex = 95;
+            this.label2.Text = "Ссылка на видеоролик:";
             // 
             // pictureBox1
             // 
@@ -165,25 +173,13 @@ namespace Centr
             this.label1.TabIndex = 35;
             this.label1.Text = "Название видеоролика:";
             // 
-            // dataGridView1
+            // Ссылка_на_видеоролик_textBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 163);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(659, 107);
-            this.dataGridView1.TabIndex = 34;
-            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 17);
-            this.label2.TabIndex = 95;
-            this.label2.Text = "Ссылка на видеоролике:";
+            this.Ссылка_на_видеоролик_textBox1.Location = new System.Drawing.Point(180, 143);
+            this.Ссылка_на_видеоролик_textBox1.Multiline = true;
+            this.Ссылка_на_видеоролик_textBox1.Name = "Ссылка_на_видеоролик_textBox1";
+            this.Ссылка_на_видеоролик_textBox1.Size = new System.Drawing.Size(489, 103);
+            this.Ссылка_на_видеоролик_textBox1.TabIndex = 96;
             // 
             // Видео_лекции
             // 
@@ -197,7 +193,6 @@ namespace Centr
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,6 +210,6 @@ namespace Centr
         private System.Windows.Forms.Button Вперед_button1;
         private System.Windows.Forms.TextBox Название_textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox Ссылка_на_видеоролик_textBox1;
     }
 }

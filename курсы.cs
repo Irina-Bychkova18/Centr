@@ -43,8 +43,13 @@ namespace Centr
             Form1.Table_Fill("Курс", sql);
 
             int i = 0;
+            k = 0;
             while (Form1.cdt.Tables["Курс"].Rows[i]["Код курса"].ToString() != n)
+            {
                 i++;
+                k++;
+            }    
+               
             Название_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Название курса"].ToString();
             Всего_мест_textBox3.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество мест всего"].ToString();
             Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество оставшихся мест"].ToString();
