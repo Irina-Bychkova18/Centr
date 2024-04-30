@@ -36,8 +36,7 @@ namespace Centr
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
-
-        private void tabPage1_Enter(object sender, EventArgs e)
+        public void ret()
         {
             Город_comboBox3.DataSource = Form1.cdt.Tables["Город"].DefaultView;
             Город_comboBox3.DisplayMember = "Название города";
@@ -50,6 +49,10 @@ namespace Centr
 
             Квартира_comboBox2.DataSource = Form1.cdt.Tables["Квартира"].DefaultView;
             Квартира_comboBox2.DisplayMember = "Номер квартиры";
+        }
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            ret();
         }
 
         private void Отменить_добавление_button1_Click(object sender, EventArgs e)
@@ -79,6 +82,14 @@ namespace Centr
             меню_админ Меню = new меню_админ();
             Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Добавить_улицу f2 = new Добавить_улицу();
+            f2.Show();
+            
+            ret();
         }
     }
 }

@@ -37,9 +37,6 @@ namespace Centr
         public static string n = null;
         public void field()
         {
-           
-            
-
             string sql = "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\","
                 + " text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"";
             Form1.Table_Fill("Текстовая лекция", sql);
@@ -51,9 +48,6 @@ namespace Centr
             Ссылка_на_лекцию_textBox1.Text = Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Текст лекции"].ToString();
 
             Form1.cdt.Tables["Текстовая лекция"].DefaultView.RowFilter = "[Код лекции]=" + n;
-
-            
-
         }
         private void tabPage1_Enter(object sender, EventArgs e)
         {

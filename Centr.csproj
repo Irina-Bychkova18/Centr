@@ -176,6 +176,12 @@
     <Compile Include="добавить тест экзамен.Designer.cs">
       <DependentUpon>добавить тест экзамен.cs</DependentUpon>
     </Compile>
+    <Compile Include="Добавить улицу.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить улицу.Designer.cs">
+      <DependentUpon>Добавить улицу.cs</DependentUpon>
+    </Compile>
     <Compile Include="Добавить_расписание.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -418,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="добавить тест экзамен.resx">
       <DependentUpon>добавить тест экзамен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавить улицу.resx">
+      <DependentUpon>Добавить улицу.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Добавить_расписание.resx">
       <DependentUpon>Добавить_расписание.cs</DependentUpon>

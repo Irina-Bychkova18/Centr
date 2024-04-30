@@ -61,9 +61,14 @@ namespace Centr
                         Form1.Table_Fill("Квартира", "SELECT id_kvartiri AS \"Код квартиры\", nomer AS \"Номер квартиры\" FROM kvartira" + " ORDER BY \"Код квартиры\"");
                         Form1.Table_Fill("Должности", "SELECT id_dolj AS \"Код должности\", name AS \"Наименование должности\", id_zarp AS \"Наименование зарплаты\" FROM doljnosti" + " ORDER BY \"Код должности\"");
                         Form1.Table_Fill("Сотрудники", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
-                   + " opit.name AS \"Опыт\", telephon AS \"Телефон\", doljnosti.name AS \"Должность\", login AS \"Логин\", parol AS \"Пароль\" FROM (((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
-                   + "left join opit on opit.id_opita = sotrudniki.id_opita) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and doljnosti.id_dolj = sotrudniki.id_dolj" +
-                   " GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, doljnosti.name, login, parol ORDER BY \"Код сотрудника\"");
+               + " opit.name AS \"Опыт\", telephon AS \"Телефон\", gorod.name AS \"Город\", " +
+              "ulica.name AS \"Улица\", dom.nomer AS \"Дом\", kvartira.nomer AS \"Квартира\", doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курсы\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((((((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
+               + "left join opit on opit.id_opita = sotrudniki.id_opita) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
+               "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) left join gorod on gorod.id_goroda = sotrudniki.id_g) " +
+               "left join ulica on ulica.id_ulici = sotrudniki.id_ul) left join dom on dom.id_doma = sotrudniki.id_d) left join kvartira on kvartira.id_kvartiri = sotrudniki.id_k) " +
+               "where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and " +
+               "doljnosti.id_dolj = sotrudniki.id_dolj and kursi.id_kursi = sotrudniki.id_kursi and  gorod.id_goroda = sotrudniki.id_g and ulica.id_ulici = sotrudniki.id_ul " +
+               "and dom.id_doma = sotrudniki.id_d and kvartira.id_kvartiri = sotrudniki.id_k GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, gorod.name, ulica.name, dom.nomer, kvartira.nomer, doljnosti.name, kursi.name, login, parol ORDER BY \"Код сотрудника\"");
                         меню_админ Меню = new меню_админ();
                         Form1.tabControl1.TabPages.RemoveAt(0);
                         Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);

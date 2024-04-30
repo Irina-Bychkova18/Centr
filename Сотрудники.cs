@@ -63,10 +63,14 @@ namespace Centr
         public void ret()
         {
             string sql = "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
-               + " opit.name AS \"Опыт\", telephon AS \"Телефон\", doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курсы\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
+               + " opit.name AS \"Опыт\", telephon AS \"Телефон\", gorod.name AS \"Город\", " +
+              "ulica.name AS \"Улица\", dom.nomer AS \"Дом\", kvartira.nomer AS \"Квартира\", doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курсы\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((((((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
                + "left join opit on opit.id_opita = sotrudniki.id_opita) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
-               "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and doljnosti.id_dolj = sotrudniki.id_dolj and kursi.id_kursi = sotrudniki.id_kursi" +
-               " GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, doljnosti.name, kursi.name, login, parol ORDER BY \"Код сотрудника\"";
+               "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) left join gorod on gorod.id_goroda = sotrudniki.id_g) " +
+               "left join ulica on ulica.id_ulici = sotrudniki.id_ul) left join dom on dom.id_doma = sotrudniki.id_d) left join kvartira on kvartira.id_kvartiri = sotrudniki.id_k) " +
+               "where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and " +
+               "doljnosti.id_dolj = sotrudniki.id_dolj and kursi.id_kursi = sotrudniki.id_kursi and  gorod.id_goroda = sotrudniki.id_g and ulica.id_ulici = sotrudniki.id_ul " +
+               "and dom.id_doma = sotrudniki.id_d and kvartira.id_kvartiri = sotrudniki.id_k GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, gorod.name, ulica.name, dom.nomer, kvartira.nomer, doljnosti.name, kursi.name, login, parol ORDER BY \"Код сотрудника\"";
             Form1.Table_Fill("Сотрудники", sql);
 
             Должность_comboBox1.DataSource = Form1.cdt.Tables["Сотрудники"].DefaultView;
@@ -138,8 +142,8 @@ namespace Centr
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ФИОtextBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            Должность_comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            Ведет_курсы_textBox2.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            Должность_comboBox1.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            Ведет_курсы_textBox2.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
 
             
         }
@@ -154,11 +158,15 @@ namespace Centr
             
             string b = Convert.ToString(Поиск_textBox2.Text);
             string sql = "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\", vozrast.name AS \"Возраст\","
-               + " opit.name AS \"Опыт\", telephon AS \"Телефон\", doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курсы\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
+               + " opit.name AS \"Опыт\", telephon AS \"Телефон\", gorod.name AS \"Город\", " +
+              "ulica.name AS \"Улица\", dom.nomer AS \"Дом\", kvartira.nomer AS \"Квартира\", doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курсы\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((((((sotrudniki inner join vozrast on vozrast.id_vozr = sotrudniki.id_vozr)"
                + "left join opit on opit.id_opita = sotrudniki.id_opita) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
-               "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and " +
-               "doljnosti.id_dolj = sotrudniki.id_dolj and kursi.id_kursi = sotrudniki.id_kursi and  (fio = '" + b +
-               "' or telephon = '" + b + "' or kursi.name = '" + b + "') GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, doljnosti.name, kursi.name, login, parol ORDER BY \"Код сотрудника\"";
+               "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) left join gorod on gorod.id_goroda = sotrudniki.id_g) " +
+               "left join ulica on ulica.id_ulici = sotrudniki.id_ul) left join dom on dom.id_doma = sotrudniki.id_d) left join kvartira on kvartira.id_kvartiri = sotrudniki.id_k) " +
+               "where vozrast.id_vozr = sotrudniki.id_vozr and opit.id_opita = sotrudniki.id_opita and " +
+               "doljnosti.id_dolj = sotrudniki.id_dolj and kursi.id_kursi = sotrudniki.id_kursi and  gorod.id_goroda = sotrudniki.id_g and ulica.id_ulici = sotrudniki.id_ul " +
+               "and dom.id_doma = sotrudniki.id_d and kvartira.id_kvartiri = sotrudniki.id_k and (fio = '" + b +
+               "' or telephon = '" + b + "' or kursi.name = '" + b + "') GROUP BY id_sot, fio, vozrast.name,opit.name, telephon, gorod.name, ulica.name, dom.nomer, kvartira.nomer, doljnosti.name, kursi.name, login, parol ORDER BY \"Код сотрудника\"";
             Form1.Table_Fill("Сотрудники", sql);
         }
 
@@ -168,16 +176,6 @@ namespace Centr
         }
 
         private void Название_столбца_textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Поиск_textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
