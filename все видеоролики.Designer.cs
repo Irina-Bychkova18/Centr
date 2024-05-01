@@ -32,12 +32,15 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(все_видеоролики));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Сортировать_button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Всего_видеороликов_textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Сортировка_textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,15 +50,18 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-4, -25);
+            this.tabControl1.Location = new System.Drawing.Point(-1, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(809, 479);
+            this.tabControl1.Size = new System.Drawing.Size(802, 456);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Сортировка_textBox1);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.Сортировать_button1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Всего_видеороликов_textBox1);
@@ -65,9 +71,31 @@ namespace Centr
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(801, 450);
+            this.tabPage1.Size = new System.Drawing.Size(794, 427);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Все видеоролики и их добавление";
+            this.tabPage1.Text = "Все видеоролики ";
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(550, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 17);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Введите столбец для сортировки:";
+            // 
+            // Сортировать_button1
+            // 
+            this.Сортировать_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Сортировать_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Сортировать_button1.Location = new System.Drawing.Point(553, 222);
+            this.Сортировать_button1.Name = "Сортировать_button1";
+            this.Сортировать_button1.Size = new System.Drawing.Size(231, 31);
+            this.Сортировать_button1.TabIndex = 58;
+            this.Сортировать_button1.Text = "Сортировать";
+            this.Сортировать_button1.UseVisualStyleBackColor = false;
+            this.Сортировать_button1.Click += new System.EventHandler(this.Сортировать_button1_Click);
             // 
             // pictureBox1
             // 
@@ -90,10 +118,11 @@ namespace Centr
             this.Выход_button.TabIndex = 51;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // Всего_видеороликов_textBox1
             // 
-            this.Всего_видеороликов_textBox1.Location = new System.Drawing.Point(698, 88);
+            this.Всего_видеороликов_textBox1.Location = new System.Drawing.Point(698, 101);
             this.Всего_видеороликов_textBox1.Name = "Всего_видеороликов_textBox1";
             this.Всего_видеороликов_textBox1.Size = new System.Drawing.Size(87, 22);
             this.Всего_видеороликов_textBox1.TabIndex = 45;
@@ -101,7 +130,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(546, 91);
+            this.label2.Location = new System.Drawing.Point(546, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 17);
             this.label2.TabIndex = 44;
@@ -123,8 +152,18 @@ namespace Centr
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(531, 349);
+            this.dataGridView1.Size = new System.Drawing.Size(531, 331);
             this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
+            // 
+            // Сортировка_textBox1
+            // 
+            this.Сортировка_textBox1.Location = new System.Drawing.Point(553, 174);
+            this.Сортировка_textBox1.Name = "Сортировка_textBox1";
+            this.Сортировка_textBox1.Size = new System.Drawing.Size(229, 22);
+            this.Сортировка_textBox1.TabIndex = 60;
             // 
             // все_видеоролики
             // 
@@ -147,6 +186,9 @@ namespace Centr
 
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox Сортировка_textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Сортировать_button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.TextBox Всего_видеороликов_textBox1;

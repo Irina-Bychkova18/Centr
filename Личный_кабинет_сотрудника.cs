@@ -26,5 +26,10 @@ namespace Centr
         {
 
         }
+
+        private void Изменить_данные_button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

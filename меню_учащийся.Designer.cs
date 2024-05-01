@@ -115,7 +115,7 @@ namespace Centr
             this.личныйКабинетToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(794, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(794, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,25 +133,27 @@ namespace Centr
             this.видеороликиToolStripMenuItem,
             this.тестыИЭкзаменыToolStripMenuItem});
             this.лекцииToolStripMenuItem.Name = "лекцииToolStripMenuItem";
-            this.лекцииToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.лекцииToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.лекцииToolStripMenuItem.Text = "Лекции";
             // 
             // текстовыеЛекцииToolStripMenuItem
             // 
             this.текстовыеЛекцииToolStripMenuItem.Name = "текстовыеЛекцииToolStripMenuItem";
-            this.текстовыеЛекцииToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.текстовыеЛекцииToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.текстовыеЛекцииToolStripMenuItem.Text = "Текстовые лекции";
+            this.текстовыеЛекцииToolStripMenuItem.Click += new System.EventHandler(this.текстовыеЛекцииToolStripMenuItem_Click);
             // 
             // видеороликиToolStripMenuItem
             // 
             this.видеороликиToolStripMenuItem.Name = "видеороликиToolStripMenuItem";
-            this.видеороликиToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.видеороликиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.видеороликиToolStripMenuItem.Text = "Видеоролики";
+            this.видеороликиToolStripMenuItem.Click += new System.EventHandler(this.видеороликиToolStripMenuItem_Click);
             // 
             // тестыИЭкзаменыToolStripMenuItem
             // 
             this.тестыИЭкзаменыToolStripMenuItem.Name = "тестыИЭкзаменыToolStripMenuItem";
-            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.тестыИЭкзаменыToolStripMenuItem.Text = "Тесты и экзамены";
             // 
             // расписаниеToolStripMenuItem
@@ -184,6 +186,7 @@ namespace Centr
             this.записьНаКурсToolStripMenuItem.Name = "записьНаКурсToolStripMenuItem";
             this.записьНаКурсToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.записьНаКурсToolStripMenuItem.Text = "Запись на курс";
+            this.записьНаКурсToolStripMenuItem.Click += new System.EventHandler(this.записьНаКурсToolStripMenuItem_Click);
             // 
             // записатьсяToolStripMenuItem
             // 

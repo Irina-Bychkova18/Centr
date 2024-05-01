@@ -32,6 +32,11 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Личный_кабинет_сотрудника));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -47,11 +52,6 @@ namespace Centr
             this.Выход_button = new System.Windows.Forms.Button();
             this.Изменить_данные_button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,6 +95,45 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(795, 426);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Личный кабинет";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(398, 232);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(208, 22);
+            this.textBox7.TabIndex = 112;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(93, 232);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(205, 22);
+            this.textBox8.TabIndex = 111;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(331, 237);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 17);
+            this.label9.TabIndex = 110;
+            this.label9.Text = "Пароль:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 237);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 17);
+            this.label10.TabIndex = 109;
+            this.label10.Text = "Логин:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(93, 126);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(208, 22);
+            this.textBox2.TabIndex = 108;
             // 
             // textBox6
             // 
@@ -221,6 +260,7 @@ namespace Centr
             this.Изменить_данные_button1.TabIndex = 41;
             this.Изменить_данные_button1.Text = "Изменить данные";
             this.Изменить_данные_button1.UseVisualStyleBackColor = false;
+            this.Изменить_данные_button1.Click += new System.EventHandler(this.Изменить_данные_button1_Click);
             // 
             // label1
             // 
@@ -230,45 +270,6 @@ namespace Centr
             this.label1.Size = new System.Drawing.Size(155, 17);
             this.label1.TabIndex = 39;
             this.label1.Text = "Информация обо мне:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(93, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 22);
-            this.textBox2.TabIndex = 108;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(398, 232);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(208, 22);
-            this.textBox7.TabIndex = 112;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(93, 232);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(205, 22);
-            this.textBox8.TabIndex = 111;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(331, 237);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 17);
-            this.label9.TabIndex = 110;
-            this.label9.Text = "Пароль:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 237);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 17);
-            this.label10.TabIndex = 109;
-            this.label10.Text = "Логин:";
             // 
             // Личный_кабинет_сотрудника
             // 
