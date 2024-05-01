@@ -41,12 +41,8 @@ namespace Centr
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Имя_textBox3 = new System.Windows.Forms.TextBox();
-            this.Отчество_textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Фамилия_textBox1 = new System.Windows.Forms.TextBox();
+            this.ФИО_textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,12 +69,8 @@ namespace Centr
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.Имя_textBox3);
-            this.tabPage1.Controls.Add(this.Отчество_textBox2);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.Фамилия_textBox1);
+            this.tabPage1.Controls.Add(this.ФИО_textBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -114,7 +106,7 @@ namespace Centr
             // 
             this.Записаться_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Записаться_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Записаться_button1.Location = new System.Drawing.Point(260, 354);
+            this.Записаться_button1.Location = new System.Drawing.Point(269, 325);
             this.Записаться_button1.Name = "Записаться_button1";
             this.Записаться_button1.Size = new System.Drawing.Size(275, 33);
             this.Записаться_button1.TabIndex = 48;
@@ -125,7 +117,7 @@ namespace Centr
             // Время_занятий_comboBox4
             // 
             this.Время_занятий_comboBox4.FormattingEnabled = true;
-            this.Время_занятий_comboBox4.Location = new System.Drawing.Point(197, 282);
+            this.Время_занятий_comboBox4.Location = new System.Drawing.Point(229, 254);
             this.Время_занятий_comboBox4.Name = "Время_занятий_comboBox4";
             this.Время_занятий_comboBox4.Size = new System.Drawing.Size(413, 24);
             this.Время_занятий_comboBox4.TabIndex = 47;
@@ -133,7 +125,7 @@ namespace Centr
             // Дни_посещений_comboBox3
             // 
             this.Дни_посещений_comboBox3.FormattingEnabled = true;
-            this.Дни_посещений_comboBox3.Location = new System.Drawing.Point(197, 239);
+            this.Дни_посещений_comboBox3.Location = new System.Drawing.Point(229, 211);
             this.Дни_посещений_comboBox3.Name = "Дни_посещений_comboBox3";
             this.Дни_посещений_comboBox3.Size = new System.Drawing.Size(413, 24);
             this.Дни_посещений_comboBox3.TabIndex = 46;
@@ -141,7 +133,7 @@ namespace Centr
             // Курс_comboBox2
             // 
             this.Курс_comboBox2.FormattingEnabled = true;
-            this.Курс_comboBox2.Location = new System.Drawing.Point(197, 194);
+            this.Курс_comboBox2.Location = new System.Drawing.Point(229, 166);
             this.Курс_comboBox2.Name = "Курс_comboBox2";
             this.Курс_comboBox2.Size = new System.Drawing.Size(413, 24);
             this.Курс_comboBox2.TabIndex = 45;
@@ -149,7 +141,7 @@ namespace Centr
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 284);
+            this.label7.Location = new System.Drawing.Point(40, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 17);
             this.label7.TabIndex = 44;
@@ -158,7 +150,7 @@ namespace Centr
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 239);
+            this.label6.Location = new System.Drawing.Point(40, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 17);
             this.label6.TabIndex = 43;
@@ -167,65 +159,29 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 197);
+            this.label1.Location = new System.Drawing.Point(40, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 17);
             this.label1.TabIndex = 42;
             this.label1.Text = "Название курса";
             // 
-            // Имя_textBox3
-            // 
-            this.Имя_textBox3.Location = new System.Drawing.Point(197, 117);
-            this.Имя_textBox3.Name = "Имя_textBox3";
-            this.Имя_textBox3.Size = new System.Drawing.Size(413, 22);
-            this.Имя_textBox3.TabIndex = 38;
-            this.Имя_textBox3.Enter += new System.EventHandler(this.Имя_textBox3_Enter);
-            this.Имя_textBox3.Leave += new System.EventHandler(this.Имя_textBox3_Leave);
-            // 
-            // Отчество_textBox2
-            // 
-            this.Отчество_textBox2.Location = new System.Drawing.Point(197, 154);
-            this.Отчество_textBox2.Name = "Отчество_textBox2";
-            this.Отчество_textBox2.Size = new System.Drawing.Size(413, 22);
-            this.Отчество_textBox2.TabIndex = 37;
-            this.Отчество_textBox2.Enter += new System.EventHandler(this.Отчество_textBox2_Enter);
-            this.Отчество_textBox2.Leave += new System.EventHandler(this.Отчество_textBox2_Leave);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 17);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Отчество (если есть)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Имя";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 85);
+            this.label2.Location = new System.Drawing.Point(40, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
+            this.label2.Size = new System.Drawing.Size(168, 17);
             this.label2.TabIndex = 34;
-            this.label2.Text = "Фамилия";
+            this.label2.Text = "Фамилия Имя Отчество";
             // 
-            // Фамилия_textBox1
+            // ФИО_textBox1
             // 
-            this.Фамилия_textBox1.Location = new System.Drawing.Point(197, 80);
-            this.Фамилия_textBox1.Name = "Фамилия_textBox1";
-            this.Фамилия_textBox1.Size = new System.Drawing.Size(413, 22);
-            this.Фамилия_textBox1.TabIndex = 33;
-            this.Фамилия_textBox1.Enter += new System.EventHandler(this.Фамилия_textBox1_Enter);
-            this.Фамилия_textBox1.Leave += new System.EventHandler(this.Фамилия_textBox1_Leave);
+            this.ФИО_textBox1.Location = new System.Drawing.Point(229, 116);
+            this.ФИО_textBox1.Name = "ФИО_textBox1";
+            this.ФИО_textBox1.Size = new System.Drawing.Size(413, 22);
+            this.ФИО_textBox1.TabIndex = 33;
+            this.ФИО_textBox1.Enter += new System.EventHandler(this.Фамилия_textBox1_Enter);
+            this.ФИО_textBox1.Leave += new System.EventHandler(this.Фамилия_textBox1_Leave);
             // 
             // Записаться_на_курс
             // 
@@ -255,12 +211,8 @@ namespace Centr
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Имя_textBox3;
-        private System.Windows.Forms.TextBox Отчество_textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Фамилия_textBox1;
+        private System.Windows.Forms.TextBox ФИО_textBox1;
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

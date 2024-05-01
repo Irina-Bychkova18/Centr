@@ -15,12 +15,9 @@ namespace Centr
         public Записаться_на_курс()
         {
             InitializeComponent();
-            Фамилия_textBox1.Text = "Введите фамилию";
-            Фамилия_textBox1.ForeColor = Color.Gray;
-            Имя_textBox3.Text = "Введите имя";
-            Имя_textBox3.ForeColor = Color.Gray;
-            Отчество_textBox2.Text = "Введите отчество";
-            Отчество_textBox2.ForeColor = Color.Gray;
+            ФИО_textBox1.Text = "Введите фамилию, имя и отчество";
+            ФИО_textBox1.ForeColor = Color.Gray;
+            
         }
 
         private void Выход_button4_Click(object sender, EventArgs e)
@@ -32,48 +29,22 @@ namespace Centr
 
         private void Фамилия_textBox1_Enter(object sender, EventArgs e)
         {
-            Фамилия_textBox1.Text = "";
-            Фамилия_textBox1.ForeColor = Color.Black;
+            ФИО_textBox1.Text = "";
+            ФИО_textBox1.ForeColor = Color.Black;
         }
 
-        private void Имя_textBox3_Enter(object sender, EventArgs e)
-        {
-            Имя_textBox3.Text = "";
-            Имя_textBox3.ForeColor = Color.Black;
-        }
-
-        private void Отчество_textBox2_Enter(object sender, EventArgs e)
-        {
-            Отчество_textBox2.Text = "";
-            Отчество_textBox2.ForeColor = Color.Black;
-        }
+       
 
         private void Фамилия_textBox1_Leave(object sender, EventArgs e)
         {
-            if (Фамилия_textBox1.Text == "")
+            if (ФИО_textBox1.Text == "")
             {
-                Фамилия_textBox1.Text = "Введите фамилию";
-                Фамилия_textBox1.ForeColor = Color.Gray;
+                ФИО_textBox1.Text = "Введите фамилию, имя и отчество";
+                ФИО_textBox1.ForeColor = Color.Gray;
             }
         }
 
-        private void Имя_textBox3_Leave(object sender, EventArgs e)
-        {
-            if (Имя_textBox3.Text == "")
-            {
-                Имя_textBox3.Text = "Введите фамилию";
-                Имя_textBox3.ForeColor = Color.Gray;
-            }
-        }
-
-        private void Отчество_textBox2_Leave(object sender, EventArgs e)
-        {
-            if (Отчество_textBox2.Text == "")
-            {
-                Отчество_textBox2.Text = "Введите фамилию";
-                Отчество_textBox2.ForeColor = Color.Gray;
-            }
-        }
+        
 
         private void Записаться_button1_Click(object sender, EventArgs e)
         {
@@ -81,7 +52,7 @@ namespace Centr
             string kod_1 = Form1.cdt.Tables["Курсы"].DefaultView[Курс_comboBox2.SelectedIndex]["Код курса"].ToString();
             string kod_2 = Form1.cdt.Tables["Дни"].DefaultView[Дни_посещений_comboBox3.SelectedIndex]["Код дня"].ToString();
             string kod_3 = Form1.cdt.Tables["Время"].DefaultView[Время_занятий_comboBox4.SelectedIndex]["Код времени"].ToString();
-            string sql = "INSERT INTO zapis (familia, imja, otchestvo, id_kursi , id_dni , id_vrema ) VALUES ('" + Фамилия_textBox1.Text + "','" + Имя_textBox3.Text + "','" + Отчество_textBox2.Text + "'," + kod_1 + "," + kod_2 + "," + kod_3 + ")";
+            string sql = "INSERT INTO zapis (fio, id_kursi , id_dni , id_vrema ) VALUES ('" + ФИО_textBox1.Text  + "'," + kod_1 + "," + kod_2 + "," + kod_3 + ")";
             if (!Form1.Modification_Execute(sql))
                 return;
 

@@ -218,6 +218,12 @@
     <Compile Include="Записаться на курс.Designer.cs">
       <DependentUpon>Записаться на курс.cs</DependentUpon>
     </Compile>
+    <Compile Include="Записи на курс.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Записи на курс.Designer.cs">
+      <DependentUpon>Записи на курс.cs</DependentUpon>
+    </Compile>
     <Compile Include="Изменить_видеолекцию.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -469,6 +475,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Записаться на курс.resx">
       <DependentUpon>Записаться на курс.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Записи на курс.resx">
+      <DependentUpon>Записи на курс.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Изменить_видеолекцию.resx">
       <DependentUpon>Изменить_видеолекцию.cs</DependentUpon>

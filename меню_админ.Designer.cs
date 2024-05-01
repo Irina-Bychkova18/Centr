@@ -44,7 +44,6 @@ namespace Centr
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеЗанятийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.записьНаКурсToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.записатьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.посещаемостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -183,19 +182,10 @@ namespace Centr
             // 
             // записьНаКурсToolStripMenuItem
             // 
-            this.записьНаКурсToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.записатьсяToolStripMenuItem});
             this.записьНаКурсToolStripMenuItem.Name = "записьНаКурсToolStripMenuItem";
-            this.записьНаКурсToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
-            this.записьНаКурсToolStripMenuItem.Text = "Запись на курс";
+            this.записьНаКурсToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.записьНаКурсToolStripMenuItem.Text = "Записи на курс";
             this.записьНаКурсToolStripMenuItem.Click += new System.EventHandler(this.записьНаКурсToolStripMenuItem_Click);
-            // 
-            // записатьсяToolStripMenuItem
-            // 
-            this.записатьсяToolStripMenuItem.Name = "записатьсяToolStripMenuItem";
-            this.записатьсяToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
-            this.записатьсяToolStripMenuItem.Text = "Записаться";
-            this.записатьсяToolStripMenuItem.Click += new System.EventHandler(this.записатьсяToolStripMenuItem_Click);
             // 
             // успеваемостьToolStripMenuItem
             // 
@@ -209,14 +199,14 @@ namespace Centr
             // посещаемостьToolStripMenuItem
             // 
             this.посещаемостьToolStripMenuItem.Name = "посещаемостьToolStripMenuItem";
-            this.посещаемостьToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.посещаемостьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.посещаемостьToolStripMenuItem.Text = "Посещаемость";
             this.посещаемостьToolStripMenuItem.Click += new System.EventHandler(this.посещаемостьToolStripMenuItem_Click);
             // 
             // успеваемостьToolStripMenuItem1
             // 
             this.успеваемостьToolStripMenuItem1.Name = "успеваемостьToolStripMenuItem1";
-            this.успеваемостьToolStripMenuItem1.Size = new System.Drawing.Size(196, 26);
+            this.успеваемостьToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.успеваемостьToolStripMenuItem1.Text = "Успеваемость";
             this.успеваемостьToolStripMenuItem1.Click += new System.EventHandler(this.успеваемостьToolStripMenuItem1_Click);
             // 
@@ -260,7 +250,6 @@ namespace Centr
         private System.Windows.Forms.ToolStripMenuItem расписаниеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеЗанятийToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem записьНаКурсToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem записатьсяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem успеваемостьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem посещаемостьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem успеваемостьToolStripMenuItem1;
