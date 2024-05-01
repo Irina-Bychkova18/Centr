@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Centr
 {
-    public partial class Мои_курсы : Form
+    public partial class Успеваемость_учащегося : Form
     {
-        public Мои_курсы()
+        public Успеваемость_учащегося()
         {
             InitializeComponent();
         }
@@ -22,15 +22,14 @@ namespace Centr
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
 
-        private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
-        {
-            dataGridView1.AutoResizeColumns();
-            dataGridView1.CurrentCell = null;
-        }
-
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Form1.cdt.Tables["Мои курсы"];
+            
+
+            dataGridView1.DataSource = Form1.cdt.Tables["Успеваемость учащегося"];
+            dataGridView1.Columns["Пройдено лекций"].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns["Всего лекций"].DefaultCellStyle.Format = "N0";
+            dataGridView1.Columns["Процент успеваемости"].DefaultCellStyle.Format = "0\\% ";
             dataGridView1.Columns["Логин"].Visible = false;
             dataGridView1.Columns["Пароль"].Visible = false;
             dataGridView1.BackgroundColor = SystemColors.Control;
@@ -43,9 +42,10 @@ namespace Centr
             dataGridView1.CurrentCell = null;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_BindingContextChanged(object sender, EventArgs e)
         {
-
+            dataGridView1.AutoResizeColumns();
+            dataGridView1.CurrentCell = null;
         }
     }
 }

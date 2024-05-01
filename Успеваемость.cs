@@ -106,5 +106,10 @@ namespace Centr
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -89,6 +89,7 @@ namespace Centr
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(321, 305);
             this.dataGridView2.TabIndex = 101;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.BindingContextChanged += new System.EventHandler(this.dataGridView2_BindingContextChanged);
             // 
             // добавить_новую_дату_button1
@@ -174,6 +175,7 @@ namespace Centr
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(275, 305);
             this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
             // label1

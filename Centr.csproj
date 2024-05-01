@@ -314,6 +314,12 @@
     <Compile Include="Мои курсы.Designer.cs">
       <DependentUpon>Мои курсы.cs</DependentUpon>
     </Compile>
+    <Compile Include="Посещаемость учащегося.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Посещаемость учащегося.Designer.cs">
+      <DependentUpon>Посещаемость учащегося.cs</DependentUpon>
+    </Compile>
     <Compile Include="Посещаемость.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +361,12 @@
     </Compile>
     <Compile Include="тест_экзамен.Designer.cs">
       <DependentUpon>тест_экзамен.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Успеваемость учащегося.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Успеваемость учащегося.Designer.cs">
+      <DependentUpon>Успеваемость учащегося.cs</DependentUpon>
     </Compile>
     <Compile Include="Успеваемость.cs">
       <SubType>Form</SubType>
@@ -506,6 +518,9 @@
     <EmbeddedResource Include="Мои курсы.resx">
       <DependentUpon>Мои курсы.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Посещаемость учащегося.resx">
+      <DependentUpon>Посещаемость учащегося.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Посещаемость.resx">
       <DependentUpon>Посещаемость.cs</DependentUpon>
     </EmbeddedResource>
@@ -526,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="тест_экзамен.resx">
       <DependentUpon>тест_экзамен.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Успеваемость учащегося.resx">
+      <DependentUpon>Успеваемость учащегося.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Успеваемость.resx">
       <DependentUpon>Успеваемость.cs</DependentUpon>

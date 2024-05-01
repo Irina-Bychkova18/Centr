@@ -143,6 +143,17 @@ namespace Centr
                         Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
                         Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
                         Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
+                        
+                        Form1.Table_Fill("Успеваемость учащегося", "SELECT id_usp AS \"Номер записи\", uchenik.fio AS \"ФИО\", uchenik.login AS \"Логин\", uchenik.parol AS \"Пароль\", lekcii.name AS \"Название лекции\","
+                   + " proideno_lekcii_fl AS \"Пройдено лекций\", vsego_lekcii_fl AS \"Всего лекций\",  (proideno_lekcii_fl/vsego_lekcii_fl)*100 AS \"Процент успеваемости\" FROM ((uspevaemost inner join uchenik on uchenik.id_uch = uspevaemost.id_uch)"
+                   + "left join lekcii on lekcii.id_lek = uspevaemost.id_lek) where uchenik.id_uch = uspevaemost.id_uch and lekcii.id_lek = uspevaemost.id_lek and uchenik.login = '" + Логин_textbox.Text + "' and uchenik.parol = '" + Пароль_textBox.Text + "'" +
+                   " GROUP BY id_usp, uchenik.fio, uchenik.login, uchenik.parol, lekcii.name, proideno_lekcii_fl, vsego_lekcii_fl ORDER BY \"Номер записи\"");
+
+                        Form1.Table_Fill("Посещаемость учащегося", "SELECT id_pos AS \"Номер\", uchenik.fio AS \"ФИО ученика\", uchenik.login AS \"Логин\", uchenik.parol AS \"Пароль\" FROM (poseshaemost inner join uchenik on uchenik.id_uch = poseshaemost.id_uch)"
+               + " where uchenik.id_uch = poseshaemost.id_uch and uchenik.login = '" + Логин_textbox.Text + "' and uchenik.parol = '" + Пароль_textBox.Text + "'" +
+               " GROUP BY id_pos, uchenik.fio, uchenik.login, uchenik.parol ORDER BY \"Номер\"");
+                        Form1.Table_Fill("Даты учащегося", "SELECT * FROM (poseshaemost inner join uchenik on uchenik.id_uch = poseshaemost.id_uch)"
+               + " where uchenik.id_uch = poseshaemost.id_uch and uchenik.login = '" + Логин_textbox.Text + "' and uchenik.parol = '" + Пароль_textBox.Text + "'");
                     }
 
                     }
