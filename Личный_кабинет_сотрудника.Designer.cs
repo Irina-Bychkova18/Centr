@@ -32,26 +32,35 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Личный_кабинет_сотрудника));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Пароль_textBox7 = new System.Windows.Forms.TextBox();
+            this.Логин_textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Телефон_textBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ФИОtextBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Изменить_данные_button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Квартира_comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Дом_comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Улица_comboBox4 = new System.Windows.Forms.ComboBox();
+            this.Город_comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Возраст_comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Опыт_comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Должность_comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Курс_comboBox4 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,22 +78,31 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.Курс_comboBox4);
+            this.tabPage1.Controls.Add(this.Должность_comboBox3);
+            this.tabPage1.Controls.Add(this.Опыт_comboBox2);
+            this.tabPage1.Controls.Add(this.Возраст_comboBox1);
+            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.Квартира_comboBox2);
+            this.tabPage1.Controls.Add(this.Дом_comboBox1);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.Улица_comboBox4);
+            this.tabPage1.Controls.Add(this.Город_comboBox3);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.Пароль_textBox7);
+            this.tabPage1.Controls.Add(this.Логин_textBox8);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.Телефон_textBox4);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.ФИОtextBox1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Изменить_данные_button1);
@@ -95,25 +113,26 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(795, 426);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Личный кабинет";
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
-            // textBox7
+            // Пароль_textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(398, 232);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(208, 22);
-            this.textBox7.TabIndex = 112;
+            this.Пароль_textBox7.Location = new System.Drawing.Point(429, 301);
+            this.Пароль_textBox7.Name = "Пароль_textBox7";
+            this.Пароль_textBox7.Size = new System.Drawing.Size(205, 22);
+            this.Пароль_textBox7.TabIndex = 112;
             // 
-            // textBox8
+            // Логин_textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(93, 232);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(205, 22);
-            this.textBox8.TabIndex = 111;
+            this.Логин_textBox8.Location = new System.Drawing.Point(121, 301);
+            this.Логин_textBox8.Name = "Логин_textBox8";
+            this.Логин_textBox8.Size = new System.Drawing.Size(205, 22);
+            this.Логин_textBox8.TabIndex = 111;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(331, 237);
+            this.label9.Location = new System.Drawing.Point(359, 306);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 17);
             this.label9.TabIndex = 110;
@@ -122,63 +141,32 @@ namespace Centr
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 237);
+            this.label10.Location = new System.Drawing.Point(37, 304);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 17);
             this.label10.TabIndex = 109;
             this.label10.Text = "Логин:";
             // 
-            // textBox2
+            // Телефон_textBox4
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 22);
-            this.textBox2.TabIndex = 108;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(93, 198);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(513, 22);
-            this.textBox6.TabIndex = 107;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(398, 164);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(208, 22);
-            this.textBox5.TabIndex = 106;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(93, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(208, 22);
-            this.textBox4.TabIndex = 105;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(398, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 22);
-            this.textBox3.TabIndex = 104;
+            this.Телефон_textBox4.Location = new System.Drawing.Point(121, 230);
+            this.Телефон_textBox4.Name = "Телефон_textBox4";
+            this.Телефон_textBox4.Size = new System.Drawing.Size(205, 22);
+            this.Телефон_textBox4.TabIndex = 105;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 203);
+            this.label8.Location = new System.Drawing.Point(37, 272);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 17);
             this.label8.TabIndex = 102;
             this.label8.Text = "Курс:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(307, 166);
+            this.label7.Location = new System.Drawing.Point(335, 235);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 17);
             this.label7.TabIndex = 101;
@@ -187,7 +175,7 @@ namespace Centr
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 164);
+            this.label6.Location = new System.Drawing.Point(37, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 17);
             this.label6.TabIndex = 100;
@@ -196,17 +184,16 @@ namespace Centr
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(344, 132);
+            this.label5.Location = new System.Drawing.Point(372, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 99;
             this.label5.Text = "Опыт:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 126);
+            this.label4.Location = new System.Drawing.Point(37, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 17);
             this.label4.TabIndex = 98;
@@ -215,18 +202,18 @@ namespace Centr
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 89);
+            this.label3.Location = new System.Drawing.Point(37, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 97;
             this.label3.Text = "ФИО:";
             // 
-            // textBox1
+            // ФИОtextBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(513, 22);
-            this.textBox1.TabIndex = 96;
+            this.ФИОtextBox1.Location = new System.Drawing.Point(121, 92);
+            this.ФИОtextBox1.Name = "ФИОtextBox1";
+            this.ФИОtextBox1.Size = new System.Drawing.Size(513, 22);
+            this.ФИОtextBox1.TabIndex = 96;
             // 
             // pictureBox1
             // 
@@ -249,12 +236,13 @@ namespace Centr
             this.Выход_button.TabIndex = 92;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // Изменить_данные_button1
             // 
             this.Изменить_данные_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_данные_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Изменить_данные_button1.Location = new System.Drawing.Point(93, 318);
+            this.Изменить_данные_button1.Location = new System.Drawing.Point(121, 356);
             this.Изменить_данные_button1.Name = "Изменить_данные_button1";
             this.Изменить_данные_button1.Size = new System.Drawing.Size(513, 31);
             this.Изменить_данные_button1.TabIndex = 41;
@@ -265,11 +253,122 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 56);
+            this.label1.Location = new System.Drawing.Point(299, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 17);
             this.label1.TabIndex = 39;
             this.label1.Text = "Информация обо мне:";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(644, 151);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(141, 38);
+            this.checkBox1.TabIndex = 140;
+            this.checkBox1.Text = "Моей улицы нет \r\nв списке";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // Квартира_comboBox2
+            // 
+            this.Квартира_comboBox2.FormattingEnabled = true;
+            this.Квартира_comboBox2.Location = new System.Drawing.Point(429, 196);
+            this.Квартира_comboBox2.Name = "Квартира_comboBox2";
+            this.Квартира_comboBox2.Size = new System.Drawing.Size(205, 24);
+            this.Квартира_comboBox2.TabIndex = 138;
+            // 
+            // Дом_comboBox1
+            // 
+            this.Дом_comboBox1.FormattingEnabled = true;
+            this.Дом_comboBox1.Location = new System.Drawing.Point(121, 193);
+            this.Дом_comboBox1.Name = "Дом_comboBox1";
+            this.Дом_comboBox1.Size = new System.Drawing.Size(205, 24);
+            this.Дом_comboBox1.TabIndex = 137;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(345, 196);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 17);
+            this.label11.TabIndex = 136;
+            this.label11.Text = "Квартира:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(40, 193);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 17);
+            this.label12.TabIndex = 135;
+            this.label12.Text = "Дом:";
+            // 
+            // Улица_comboBox4
+            // 
+            this.Улица_comboBox4.FormattingEnabled = true;
+            this.Улица_comboBox4.Location = new System.Drawing.Point(429, 158);
+            this.Улица_comboBox4.Name = "Улица_comboBox4";
+            this.Улица_comboBox4.Size = new System.Drawing.Size(205, 24);
+            this.Улица_comboBox4.TabIndex = 134;
+            // 
+            // Город_comboBox3
+            // 
+            this.Город_comboBox3.FormattingEnabled = true;
+            this.Город_comboBox3.Location = new System.Drawing.Point(121, 157);
+            this.Город_comboBox3.Name = "Город_comboBox3";
+            this.Город_comboBox3.Size = new System.Drawing.Size(205, 24);
+            this.Город_comboBox3.TabIndex = 133;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(367, 161);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 17);
+            this.label13.TabIndex = 132;
+            this.label13.Text = "Улица:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(40, 160);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(52, 17);
+            this.label14.TabIndex = 131;
+            this.label14.Text = "Город:";
+            // 
+            // Возраст_comboBox1
+            // 
+            this.Возраст_comboBox1.FormattingEnabled = true;
+            this.Возраст_comboBox1.Location = new System.Drawing.Point(121, 126);
+            this.Возраст_comboBox1.Name = "Возраст_comboBox1";
+            this.Возраст_comboBox1.Size = new System.Drawing.Size(205, 24);
+            this.Возраст_comboBox1.TabIndex = 141;
+            // 
+            // Опыт_comboBox2
+            // 
+            this.Опыт_comboBox2.FormattingEnabled = true;
+            this.Опыт_comboBox2.Location = new System.Drawing.Point(429, 128);
+            this.Опыт_comboBox2.Name = "Опыт_comboBox2";
+            this.Опыт_comboBox2.Size = new System.Drawing.Size(205, 24);
+            this.Опыт_comboBox2.TabIndex = 142;
+            // 
+            // Должность_comboBox3
+            // 
+            this.Должность_comboBox3.FormattingEnabled = true;
+            this.Должность_comboBox3.Location = new System.Drawing.Point(429, 232);
+            this.Должность_comboBox3.Name = "Должность_comboBox3";
+            this.Должность_comboBox3.Size = new System.Drawing.Size(205, 24);
+            this.Должность_comboBox3.TabIndex = 143;
+            // 
+            // Курс_comboBox4
+            // 
+            this.Курс_comboBox4.FormattingEnabled = true;
+            this.Курс_comboBox4.Location = new System.Drawing.Point(121, 269);
+            this.Курс_comboBox4.Name = "Курс_comboBox4";
+            this.Курс_comboBox4.Size = new System.Drawing.Size(513, 24);
+            this.Курс_comboBox4.TabIndex = 144;
             // 
             // Личный_кабинет_сотрудника
             // 
@@ -291,25 +390,34 @@ namespace Centr
 
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Телефон_textBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ФИОtextBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.Button Изменить_данные_button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox Пароль_textBox7;
+        private System.Windows.Forms.TextBox Логин_textBox8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox Квартира_comboBox2;
+        private System.Windows.Forms.ComboBox Дом_comboBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox Улица_comboBox4;
+        private System.Windows.Forms.ComboBox Город_comboBox3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox Курс_comboBox4;
+        private System.Windows.Forms.ComboBox Должность_comboBox3;
+        private System.Windows.Forms.ComboBox Опыт_comboBox2;
+        private System.Windows.Forms.ComboBox Возраст_comboBox1;
     }
 }

@@ -142,12 +142,14 @@ namespace Centr
             this.видеороликиToolStripMenuItem.Name = "видеороликиToolStripMenuItem";
             this.видеороликиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.видеороликиToolStripMenuItem.Text = "Видеоролики";
+            this.видеороликиToolStripMenuItem.Click += new System.EventHandler(this.видеороликиToolStripMenuItem_Click);
             // 
             // тестыИЭкзаменыToolStripMenuItem
             // 
             this.тестыИЭкзаменыToolStripMenuItem.Name = "тестыИЭкзаменыToolStripMenuItem";
-            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.тестыИЭкзаменыToolStripMenuItem.Text = "Тесты и экзамены";
+            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.тестыИЭкзаменыToolStripMenuItem.Text = "Домашнее задание";
+            this.тестыИЭкзаменыToolStripMenuItem.Click += new System.EventHandler(this.тестыИЭкзаменыToolStripMenuItem_Click);
             // 
             // расписаниеToolStripMenuItem
             // 
@@ -178,18 +180,21 @@ namespace Centr
             this.посещаемостьToolStripMenuItem.Name = "посещаемостьToolStripMenuItem";
             this.посещаемостьToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.посещаемостьToolStripMenuItem.Text = "Посещаемость";
+            this.посещаемостьToolStripMenuItem.Click += new System.EventHandler(this.посещаемостьToolStripMenuItem_Click);
             // 
             // успеваемостьToolStripMenuItem1
             // 
             this.успеваемостьToolStripMenuItem1.Name = "успеваемостьToolStripMenuItem1";
             this.успеваемостьToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.успеваемостьToolStripMenuItem1.Text = "Успеваемость";
+            this.успеваемостьToolStripMenuItem1.Click += new System.EventHandler(this.успеваемостьToolStripMenuItem1_Click);
             // 
             // личныйКабинетToolStripMenuItem
             // 
             this.личныйКабинетToolStripMenuItem.Name = "личныйКабинетToolStripMenuItem";
             this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.личныйКабинетToolStripMenuItem.Text = "Личный кабинет";
+            this.личныйКабинетToolStripMenuItem.Click += new System.EventHandler(this.личныйКабинетToolStripMenuItem_Click);
             // 
             // меню_сотрудник
             // 

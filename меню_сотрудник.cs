@@ -16,7 +16,7 @@ namespace Centr
         {
             InitializeComponent();
         }
-
+        string data = "";
         private void курсыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             все_курсы_сотрудник Все_Курсы_сотрудник = new все_курсы_сотрудник();
@@ -40,7 +40,45 @@ namespace Centr
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+            вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация(data);
+            Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
 
+        private void видеороликиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            все_видеоролики_админ все_Видеоролики_Админ = new все_видеоролики_админ();
+            Form1.tabControl1.Controls.Add(все_Видеоролики_Админ.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void тестыИЭкзаменыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            все_тесты_и_экзамены_админ Все_тесты_и_экзамены_админ = new все_тесты_и_экзамены_админ();
+            Form1.tabControl1.Controls.Add(Все_тесты_и_экзамены_админ.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void посещаемостьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Посещаемость посещаемость = new Посещаемость();
+            Form1.tabControl1.Controls.Add(посещаемость.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void успеваемостьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Успеваемость успеваемость = new Успеваемость();
+            Form1.tabControl1.Controls.Add(успеваемость.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void личныйКабинетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Личный_кабинет_сотрудника личный_кабинет_сотрудника = new Личный_кабинет_сотрудника();
+            Form1.tabControl1.Controls.Add(личный_кабинет_сотрудника.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }
 }

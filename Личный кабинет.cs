@@ -25,6 +25,17 @@ namespace Centr
         public static string n = null;
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            Город_comboBox3.DataSource = Form1.cdt.Tables["Город"].DefaultView;
+            Город_comboBox3.DisplayMember = "Название города";
+
+            Улица_comboBox4.DataSource = Form1.cdt.Tables["Улица"].DefaultView;
+            Улица_comboBox4.DisplayMember = "Название улицы";
+
+            Дом_comboBox1.DataSource = Form1.cdt.Tables["Дом"].DefaultView;
+            Дом_comboBox1.DisplayMember = "Номер дома";
+
+            Квартира_comboBox2.DataSource = Form1.cdt.Tables["Квартира"].DefaultView;
+            Квартира_comboBox2.DisplayMember = "Номер квартиры";
 
             ФИОtextBox1.Text = Form1.cdt.Tables["Личный кабинет"].Rows[i]["ФИО"].ToString();
             Дата_рождения_dateTimePicker1.Text = Form1.cdt.Tables["Личный кабинет"].Rows[i]["Дата рождения"].ToString();
@@ -52,7 +63,7 @@ namespace Centr
             if (i < Form1.cdt.Tables["Личный кабинет"].Rows.Count)
             {
                 i = i + 1;
-                sql = "UPDATE uchenik SET fio = '" + ФИОtextBox1.Text + "', data_r = '" + Дата_рождения_dateTimePicker1.Text + "', telephon_uch = '" + Номер_телефона_textBox3 + "', id_g = " + kod_1 + 
+                sql = "UPDATE uchenik SET fio = '" + ФИОtextBox1.Text + "', data_r = '" + Дата_рождения_dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', telephon_uch = '" + Номер_телефона_textBox3 + "', id_g = " + kod_1 + 
                     ", id_ul = " + kod_2 + ", id_d = " + kod_3 + ", id_k = " + kod_4 + ", telephon_roditela = '" + Телефон_родителей_textBox1.Text +
                     "', login = '" + Логин_textBox4.Text + "', parol = '" + Пароль_textBox5.Text + "' WHERE id_uch = " + i;
                 if (!Form1.Modification_Execute(sql))

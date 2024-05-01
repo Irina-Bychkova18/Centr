@@ -101,9 +101,30 @@ namespace Centr
                     Form1.tabControl1.TabPages.RemoveAt(0);
                     Form1.tabControl1.Controls.Add(Меню_2.tabControl1.TabPages[0]);
 
+                    Form1.Table_Fill("Личный кабинет сотрудника", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\","
+                  + " vozrast.name AS \"Возраст\", opit.name AS \"Опыт\", telephon AS \"Номер телефона\", gorod.name AS \"Город\", " +
+                  "ulica.name AS \"Улица\", dom.nomer AS \"Дом\", kvartira.nomer AS \"Квартира\"," +
+                  "doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курс\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((((((sotrudniki inner join gorod on gorod.id_goroda = sotrudniki.id_g)"
+                   + "left join ulica on ulica.id_ulici = sotrudniki.id_ul) left join dom on dom.id_doma = sotrudniki.id_d) " +
+                   "left join kvartira on kvartira.id_kvartiri = sotrudniki.id_k) left join opit on opit.id_opita = sotrudniki.id_opita) " +
+                   "left join vozrast on vozrast.id_vozr = sotrudniki.id_vozr) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
+                   "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) where login = '" + Логин_textbox.Text + "' and parol = '" + Пароль_textBox.Text + "' and gorod.id_goroda = sotrudniki.id_g " +
+                   "and ulica.id_ulici = sotrudniki.id_ul and dom.id_doma = sotrudniki.id_d and kvartira.id_kvartiri = sotrudniki.id_k  and doljnosti.id_dolj = sotrudniki.id_dolj " +
+                   " and kursi.id_kursi = sotrudniki.id_kursi and opit.id_opita = sotrudniki.id_opita and vozrast.id_vozr = sotrudniki.id_vozr GROUP BY id_sot, fio,"
+                  + " vozrast.name, opit.name, telephon, gorod.name, ulica.name, dom.nomer, kvartira.nomer, doljnosti.name, kursi.name, login, parol" + " ORDER BY \"Код сотрудника\"");
+
+                    Form1.Table_Fill("Должности", "SELECT id_dolj AS \"Код должности\", name AS \"Наименование должности\", id_zarp AS \"Наименование зарплаты\" FROM doljnosti" + " ORDER BY \"Код должности\"");
+
+                    Form1.Table_Fill("Возраст", "SELECT id_vozr AS \"Код возраста\", name AS \"Наименование возраста\" FROM vozrast" + " ORDER BY \"Код возраста\"");
+                    Form1.Table_Fill("Опыт", "SELECT id_opita AS \"Код опыта\", name AS \"Наименование опыта\" FROM opit" + " ORDER BY \"Код опыта\"");
                     Form1.Table_Fill("Дни", "SELECT id_dni AS \"Код дня\", name AS \"Дни посещений\" FROM dni ORDER BY \"Код дня\"");
                     Form1.Table_Fill("Время", "SELECT id_vrema AS \"Код времени\", name AS \"Время занятий\" FROM vrema ORDER BY \"Код времени\"");
                     Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
+                    Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
+                    Form1.Table_Fill("Город", "SELECT id_goroda AS \"Код города\", name AS \"Название города\" FROM gorod" + " ORDER BY \"Код города\"");
+                    Form1.Table_Fill("Улица", "SELECT id_ulici AS \"Код улицы\", name AS \"Название улицы\" FROM ulica" + " ORDER BY \"Код улицы\"");
+                    Form1.Table_Fill("Дом", "SELECT id_doma AS \"Код дома\", nomer AS \"Номер дома\" FROM dom" + " ORDER BY \"Код дома\"");
+                    Form1.Table_Fill("Квартира", "SELECT id_kvartiri AS \"Код квартиры\", nomer AS \"Номер квартиры\" FROM kvartira" + " ORDER BY \"Код квартиры\"");
                 }
             }
             if (receivedData == "Учащийся")
