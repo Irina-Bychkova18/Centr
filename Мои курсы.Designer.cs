@@ -29,19 +29,16 @@ namespace Centr
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Мои_курсы));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Статус_comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Показать_button2 = new System.Windows.Forms.Button();
-            this.Временной_промежуток_comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Распечатать_расписание_button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Выход_button4 = new System.Windows.Forms.Button();
+            this.Выход_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -55,73 +52,17 @@ namespace Centr
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Статус_comboBox2);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.Показать_button2);
-            this.tabPage1.Controls.Add(this.Временной_промежуток_comboBox1);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.Распечатать_расписание_button1);
+            this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.Выход_button4);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(795, 426);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Мои курсы";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // Статус_comboBox2
-            // 
-            this.Статус_comboBox2.FormattingEnabled = true;
-            this.Статус_comboBox2.Location = new System.Drawing.Point(140, 39);
-            this.Статус_comboBox2.Name = "Статус_comboBox2";
-            this.Статус_comboBox2.Size = new System.Drawing.Size(237, 24);
-            this.Статус_comboBox2.TabIndex = 59;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 17);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Выберите статус:";
-            // 
-            // Показать_button2
-            // 
-            this.Показать_button2.Location = new System.Drawing.Point(394, 36);
-            this.Показать_button2.Name = "Показать_button2";
-            this.Показать_button2.Size = new System.Drawing.Size(168, 27);
-            this.Показать_button2.TabIndex = 57;
-            this.Показать_button2.Text = "Показать";
-            this.Показать_button2.UseVisualStyleBackColor = true;
-            // 
-            // Временной_промежуток_comboBox1
-            // 
-            this.Временной_промежуток_comboBox1.FormattingEnabled = true;
-            this.Временной_промежуток_comboBox1.Location = new System.Drawing.Point(252, 6);
-            this.Временной_промежуток_comboBox1.Name = "Временной_промежуток_comboBox1";
-            this.Временной_промежуток_comboBox1.Size = new System.Drawing.Size(125, 24);
-            this.Временной_промежуток_comboBox1.TabIndex = 56;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 17);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Выберите временной промежуток:";
-            // 
-            // Распечатать_расписание_button1
-            // 
-            this.Распечатать_расписание_button1.Location = new System.Drawing.Point(581, 65);
-            this.Распечатать_расписание_button1.Name = "Распечатать_расписание_button1";
-            this.Распечатать_расписание_button1.Size = new System.Drawing.Size(204, 36);
-            this.Распечатать_расписание_button1.TabIndex = 54;
-            this.Распечатать_расписание_button1.Text = "Распечатать расписание";
-            this.Распечатать_расписание_button1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // dataGridView1
             // 
@@ -130,18 +71,32 @@ namespace Centr
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(552, 335);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 335);
             this.dataGridView1.TabIndex = 53;
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
-            // Выход_button4
+            // Выход_button
             // 
-            this.Выход_button4.Location = new System.Drawing.Point(581, 6);
-            this.Выход_button4.Name = "Выход_button4";
-            this.Выход_button4.Size = new System.Drawing.Size(204, 32);
-            this.Выход_button4.TabIndex = 52;
-            this.Выход_button4.Text = "Выход";
-            this.Выход_button4.UseVisualStyleBackColor = true;
-            this.Выход_button4.Click += new System.EventHandler(this.Выход_button4_Click);
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Выход_button.Location = new System.Drawing.Point(10, 6);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(121, 38);
+            this.Выход_button.TabIndex = 93;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(676, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 96;
+            this.pictureBox1.TabStop = false;
             // 
             // Мои_курсы
             // 
@@ -153,8 +108,8 @@ namespace Centr
             this.Text = "Мои_курсы";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,14 +117,9 @@ namespace Centr
         #endregion
 
         public System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox Статус_comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Показать_button2;
-        private System.Windows.Forms.ComboBox Временной_промежуток_comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Распечатать_расписание_button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button Выход_button4;
+        public System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -27,8 +27,8 @@ namespace Centr
 
         private void расписаниеЗанятийToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Расписание_занятий расписание_Занятий = new Расписание_занятий();
-            Form1.tabControl1.Controls.Add(расписание_Занятий.tabControl1.TabPages[0]);
+            Расписание_занятий_учащийся расписание_Занятий_учащийся = new Расписание_занятий_учащийся();
+            Form1.tabControl1.Controls.Add(расписание_Занятий_учащийся.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
@@ -70,6 +70,27 @@ namespace Centr
         {
             все_видеоролики все_Видеоролики = new все_видеоролики();
             Form1.tabControl1.Controls.Add(все_Видеоролики.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void тестыИЭкзаменыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            все_тесты_и_экзамены Все_тесты_и_экзамены = new все_тесты_и_экзамены();
+            Form1.tabControl1.Controls.Add(Все_тесты_и_экзамены.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void моиЗанятияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Мои_занятия мои_занятия = new Мои_занятия();
+            Form1.tabControl1.Controls.Add(мои_занятия.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void моиКурсыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Мои_курсы мои_курсы = new Мои_курсы();
+            Form1.tabControl1.Controls.Add(мои_курсы.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }

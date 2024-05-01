@@ -320,6 +320,12 @@
     <Compile Include="Посещаемость.Designer.cs">
       <DependentUpon>Посещаемость.cs</DependentUpon>
     </Compile>
+    <Compile Include="Расписание занятий учащийся.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Расписание занятий учащийся.Designer.cs">
+      <DependentUpon>Расписание занятий учащийся.cs</DependentUpon>
+    </Compile>
     <Compile Include="Расписание занятий.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -502,6 +508,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Посещаемость.resx">
       <DependentUpon>Посещаемость.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Расписание занятий учащийся.resx">
+      <DependentUpon>Расписание занятий учащийся.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Расписание занятий.resx">
       <DependentUpon>Расписание занятий.cs</DependentUpon>

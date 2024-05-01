@@ -18,16 +18,11 @@ namespace Centr
             InitializeComponent();
         }
 
-        private void Выход_button4_Click(object sender, EventArgs e)
-        {
-            меню_админ Меню = new меню_админ();
-            Form1.tabControl1.TabPages.RemoveAt(0);
-            Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
-        }
+        
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
-
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
         private void ret()
         {
