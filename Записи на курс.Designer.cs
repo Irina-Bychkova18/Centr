@@ -82,6 +82,7 @@ namespace Centr
             this.Удалить_запись_button5.TabIndex = 93;
             this.Удалить_запись_button5.Text = "Удалить запись";
             this.Удалить_запись_button5.UseVisualStyleBackColor = false;
+            this.Удалить_запись_button5.Click += new System.EventHandler(this.Удалить_запись_button5_Click);
             // 
             // pictureBox1
             // 
@@ -116,6 +117,7 @@ namespace Centr
             this.Добавить_запись_button1.TabIndex = 88;
             this.Добавить_запись_button1.Text = "Добавить запись";
             this.Добавить_запись_button1.UseVisualStyleBackColor = false;
+            this.Добавить_запись_button1.Click += new System.EventHandler(this.Добавить_запись_button1_Click);
             // 
             // Всего_записей_textBox1
             // 

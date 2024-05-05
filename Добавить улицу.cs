@@ -26,5 +26,15 @@ namespace Centr
             MessageBox.Show("Новая запись успешно добавлена!");
             Form1.Table_Fill("Улица", "SELECT id_ulici AS \"Код улицы\", name AS \"Название улицы\" FROM ulica" + " ORDER BY \"Код улицы\"");
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Название_улицы_textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

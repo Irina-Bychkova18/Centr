@@ -188,6 +188,12 @@
     <Compile Include="Добавить улицу.Designer.cs">
       <DependentUpon>Добавить улицу.cs</DependentUpon>
     </Compile>
+    <Compile Include="Добавить фио.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавить фио.Designer.cs">
+      <DependentUpon>Добавить фио.cs</DependentUpon>
+    </Compile>
     <Compile Include="Добавить_расписание.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,12 @@
     </Compile>
     <Compile Include="Добавить_учащегося.Designer.cs">
       <DependentUpon>Добавить_учащегося.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Добавление записи.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Добавление записи.Designer.cs">
+      <DependentUpon>Добавление записи.cs</DependentUpon>
     </Compile>
     <Compile Include="Журнал материала.cs">
       <SubType>Form</SubType>
@@ -461,6 +473,9 @@
     <EmbeddedResource Include="Добавить улицу.resx">
       <DependentUpon>Добавить улицу.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Добавить фио.resx">
+      <DependentUpon>Добавить фио.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Добавить_расписание.resx">
       <DependentUpon>Добавить_расписание.cs</DependentUpon>
     </EmbeddedResource>
@@ -469,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Добавить_учащегося.resx">
       <DependentUpon>Добавить_учащегося.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Добавление записи.resx">
+      <DependentUpon>Добавление записи.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Журнал материала.resx">
       <DependentUpon>Журнал материала.cs</DependentUpon>

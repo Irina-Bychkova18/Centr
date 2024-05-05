@@ -80,5 +80,19 @@ namespace Centr
             Form1.tabControl1.Controls.Add(личный_кабинет_сотрудника.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void записиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Записи_на_курс записи_на_курс = new Записи_на_курс();
+            Form1.tabControl1.Controls.Add(записи_на_курс.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void записатьУченикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Записаться_на_курс записаться_На_Курс = new Записаться_на_курс();
+            Form1.tabControl1.Controls.Add(записаться_На_Курс.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }

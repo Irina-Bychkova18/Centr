@@ -15,8 +15,7 @@ namespace Centr
         public Записаться_на_курс()
         {
             InitializeComponent();
-            ФИО_textBox1.Text = "Введите фамилию, имя и отчество";
-            ФИО_textBox1.ForeColor = Color.Gray;
+            
             
         }
 
@@ -27,32 +26,15 @@ namespace Centr
             
         }
 
-        private void Фамилия_textBox1_Enter(object sender, EventArgs e)
-        {
-            ФИО_textBox1.Text = "";
-            ФИО_textBox1.ForeColor = Color.Black;
-        }
-
        
-
-        private void Фамилия_textBox1_Leave(object sender, EventArgs e)
-        {
-            if (ФИО_textBox1.Text == "")
-            {
-                ФИО_textBox1.Text = "Введите фамилию, имя и отчество";
-                ФИО_textBox1.ForeColor = Color.Gray;
-            }
-        }
-
-        
 
         private void Записаться_button1_Click(object sender, EventArgs e)
         {
-            
-            string kod_1 = Form1.cdt.Tables["Курсы"].DefaultView[Курс_comboBox2.SelectedIndex]["Код курса"].ToString();
-            string kod_2 = Form1.cdt.Tables["Дни"].DefaultView[Дни_посещений_comboBox3.SelectedIndex]["Код дня"].ToString();
-            string kod_3 = Form1.cdt.Tables["Время"].DefaultView[Время_занятий_comboBox4.SelectedIndex]["Код времени"].ToString();
-            string sql = "INSERT INTO zapis (fio, id_kursi , id_dni , id_vrema ) VALUES ('" + ФИО_textBox1.Text  + "'," + kod_1 + "," + kod_2 + "," + kod_3 + ")";
+            string kod_1 = Form1.cdt.Tables["Ученики"].DefaultView[ФИО_comboBox1.SelectedIndex]["Код ученика"].ToString();
+            string kod_2 = Form1.cdt.Tables["Курсы"].DefaultView[Курс_comboBox2.SelectedIndex]["Код курса"].ToString();
+            string kod_3 = Form1.cdt.Tables["Дни"].DefaultView[Дни_посещений_comboBox3.SelectedIndex]["Код дня"].ToString();
+            string kod_4 = Form1.cdt.Tables["Время"].DefaultView[Время_занятий_comboBox4.SelectedIndex]["Код времени"].ToString();
+            string sql = "INSERT INTO zapis (id_uch, id_kursi , id_dni , id_vrema ) VALUES (" + kod_1  + "," + kod_2 + "," + kod_3 + "," + kod_4 + ")";
             if (!Form1.Modification_Execute(sql))
                 return;
 
@@ -63,6 +45,9 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            ФИО_comboBox1.DataSource = Form1.cdt.Tables["Ученики"].DefaultView;
+            ФИО_comboBox1.DisplayMember = "ФИО";
+
             Курс_comboBox2.DataSource = Form1.cdt.Tables["Курсы"].DefaultView;
             Курс_comboBox2.DisplayMember = "Название курса";
 
@@ -76,6 +61,19 @@ namespace Centr
         private void Выход_button_Click(object sender, EventArgs e)
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Добавить_учащегося добавить_учащегося = new Добавить_учащегося();
+
+            Form1.tabControl1.Controls.Add(добавить_учащегося.tabControl1.TabPages[0]);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }
 }

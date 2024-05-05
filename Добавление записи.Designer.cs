@@ -1,7 +1,7 @@
 ﻿
 namespace Centr
 {
-    partial class Записаться_на_курс
+    partial class Добавление_записи
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@ namespace Centr
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Записаться_на_курс));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Добавление_записи));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
-            this.Записаться_button1 = new System.Windows.Forms.Button();
+            this.Добавить_button1 = new System.Windows.Forms.Button();
             this.Время_занятий_comboBox4 = new System.Windows.Forms.ComboBox();
             this.Дни_посещений_comboBox3 = new System.Windows.Forms.ComboBox();
             this.Курс_comboBox2 = new System.Windows.Forms.ComboBox();
@@ -43,7 +43,6 @@ namespace Centr
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ФИО_comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,16 +55,15 @@ namespace Centr
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(801, 453);
-            this.tabControl1.TabIndex = 2;
+            this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.ФИО_comboBox1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
-            this.tabPage1.Controls.Add(this.Записаться_button1);
+            this.tabPage1.Controls.Add(this.Добавить_button1);
             this.tabPage1.Controls.Add(this.Время_занятий_comboBox4);
             this.tabPage1.Controls.Add(this.Дни_посещений_comboBox3);
             this.tabPage1.Controls.Add(this.Курс_comboBox2);
@@ -78,8 +76,7 @@ namespace Centr
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(793, 424);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Записаться на курс";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabPage1.Text = "Добавить запись";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
             // pictureBox1
@@ -105,22 +102,22 @@ namespace Centr
             this.Выход_button.UseVisualStyleBackColor = false;
             this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
-            // Записаться_button1
+            // Добавить_button1
             // 
-            this.Записаться_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Записаться_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Записаться_button1.Location = new System.Drawing.Point(245, 322);
-            this.Записаться_button1.Name = "Записаться_button1";
-            this.Записаться_button1.Size = new System.Drawing.Size(275, 33);
-            this.Записаться_button1.TabIndex = 48;
-            this.Записаться_button1.Text = "Записаться";
-            this.Записаться_button1.UseVisualStyleBackColor = false;
-            this.Записаться_button1.Click += new System.EventHandler(this.Записаться_button1_Click);
+            this.Добавить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Добавить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_button1.Location = new System.Drawing.Point(269, 325);
+            this.Добавить_button1.Name = "Добавить_button1";
+            this.Добавить_button1.Size = new System.Drawing.Size(275, 33);
+            this.Добавить_button1.TabIndex = 48;
+            this.Добавить_button1.Text = "Добавить";
+            this.Добавить_button1.UseVisualStyleBackColor = false;
+            this.Добавить_button1.Click += new System.EventHandler(this.Добавить_button1_Click);
             // 
             // Время_занятий_comboBox4
             // 
             this.Время_занятий_comboBox4.FormattingEnabled = true;
-            this.Время_занятий_comboBox4.Location = new System.Drawing.Point(205, 251);
+            this.Время_занятий_comboBox4.Location = new System.Drawing.Point(229, 254);
             this.Время_занятий_comboBox4.Name = "Время_занятий_comboBox4";
             this.Время_занятий_comboBox4.Size = new System.Drawing.Size(413, 24);
             this.Время_занятий_comboBox4.TabIndex = 47;
@@ -128,7 +125,7 @@ namespace Centr
             // Дни_посещений_comboBox3
             // 
             this.Дни_посещений_comboBox3.FormattingEnabled = true;
-            this.Дни_посещений_comboBox3.Location = new System.Drawing.Point(205, 208);
+            this.Дни_посещений_comboBox3.Location = new System.Drawing.Point(229, 211);
             this.Дни_посещений_comboBox3.Name = "Дни_посещений_comboBox3";
             this.Дни_посещений_comboBox3.Size = new System.Drawing.Size(413, 24);
             this.Дни_посещений_comboBox3.TabIndex = 46;
@@ -136,7 +133,7 @@ namespace Centr
             // Курс_comboBox2
             // 
             this.Курс_comboBox2.FormattingEnabled = true;
-            this.Курс_comboBox2.Location = new System.Drawing.Point(205, 163);
+            this.Курс_comboBox2.Location = new System.Drawing.Point(229, 166);
             this.Курс_comboBox2.Name = "Курс_comboBox2";
             this.Курс_comboBox2.Size = new System.Drawing.Size(413, 24);
             this.Курс_comboBox2.TabIndex = 45;
@@ -144,7 +141,7 @@ namespace Centr
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 253);
+            this.label7.Location = new System.Drawing.Point(40, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 17);
             this.label7.TabIndex = 44;
@@ -153,7 +150,7 @@ namespace Centr
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 208);
+            this.label6.Location = new System.Drawing.Point(40, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 17);
             this.label6.TabIndex = 43;
@@ -162,7 +159,7 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 166);
+            this.label1.Location = new System.Drawing.Point(40, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 17);
             this.label1.TabIndex = 42;
@@ -171,7 +168,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 116);
+            this.label2.Location = new System.Drawing.Point(40, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 17);
             this.label2.TabIndex = 34;
@@ -180,31 +177,19 @@ namespace Centr
             // ФИО_comboBox1
             // 
             this.ФИО_comboBox1.FormattingEnabled = true;
-            this.ФИО_comboBox1.Location = new System.Drawing.Point(205, 113);
+            this.ФИО_comboBox1.Location = new System.Drawing.Point(229, 119);
             this.ФИО_comboBox1.Name = "ФИО_comboBox1";
             this.ФИО_comboBox1.Size = new System.Drawing.Size(413, 24);
             this.ФИО_comboBox1.TabIndex = 94;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(624, 106);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(129, 38);
-            this.checkBox1.TabIndex = 127;
-            this.checkBox1.Text = "Моей фамилии\r\nнет в списке";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // Записаться_на_курс
+            // Добавление_записи
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Записаться_на_курс";
-            this.Text = "Записаться_на_курс";
+            this.Name = "Добавление_записи";
+            this.Text = "Добавление_записи";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -217,7 +202,9 @@ namespace Centr
 
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button Записаться_button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.Button Добавить_button1;
         private System.Windows.Forms.ComboBox Время_занятий_comboBox4;
         private System.Windows.Forms.ComboBox Дни_посещений_comboBox3;
         private System.Windows.Forms.ComboBox Курс_comboBox2;
@@ -225,9 +212,6 @@ namespace Centr
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Выход_button;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox ФИО_comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
