@@ -23,9 +23,10 @@ namespace Centr
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
-            вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация(receivedData);
-            Form1.tabControl1.TabPages.RemoveAt(0);
-            Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
+            Главная главная = new Главная();
+            Form1.tabControl1.Controls.Add(главная.tabControl1.TabPages[0]);
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
         private void Зарегистрироваться_button_Click(object sender, EventArgs e)
