@@ -90,6 +90,8 @@ namespace Centr
             this.dataGridView2.Size = new System.Drawing.Size(321, 305);
             this.dataGridView2.TabIndex = 101;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
+            this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged);
             this.dataGridView2.BindingContextChanged += new System.EventHandler(this.dataGridView2_BindingContextChanged);
             // 
             // добавить_новую_дату_button1
@@ -165,6 +167,7 @@ namespace Centr
             this.Сохранить_изменения_button1.TabIndex = 43;
             this.Сохранить_изменения_button1.Text = "Изменить данные";
             this.Сохранить_изменения_button1.UseVisualStyleBackColor = false;
+            this.Сохранить_изменения_button1.Click += new System.EventHandler(this.Сохранить_изменения_button1_Click);
             // 
             // dataGridView1
             // 

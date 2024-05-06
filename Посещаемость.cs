@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Centr
 {
@@ -19,8 +20,8 @@ namespace Centr
             Название_столбца_textBox1.Text = "d_22_04";
             Название_столбца_textBox1.ForeColor = Color.Gray;
         }
-
-        private void tabPage1_Enter(object sender, EventArgs e)
+        List<Tuple<int, int, bool>> changedBoolData = new List<Tuple<int, int, bool>>(); // Коллекция для хранения измененных данных типа boolean
+        private void ret()
         {
             string sql = "SELECT id_pos AS \"Номер\", uchenik.fio AS \"ФИО ученика\" FROM (poseshaemost inner join uchenik on uchenik.id_uch = poseshaemost.id_uch)"
                + " where uchenik.id_uch = poseshaemost.id_uch" +
@@ -37,11 +38,13 @@ namespace Centr
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
 
-            string sql1 = "SELECT * FROM poseshaemost";
+            string sql1 = "SELECT * FROM poseshaemost ORDER BY id_pos";
             Form1.Table_Fill("Даты", sql1);
 
             //dataGridView2.Rows[0].Height = 15;
             dataGridView2.DataSource = Form1.cdt.Tables["Даты"];
+            
+            dataGridView2.Columns["id_uch"].Visible = false;
             dataGridView2.BackgroundColor = SystemColors.Control;
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.RowHeadersVisible = false;
@@ -50,6 +53,13 @@ namespace Centr
             dataGridView2.ReadOnly = true;
             dataGridView2.AutoResizeColumns();
             dataGridView2.CurrentCell = null;
+
+            dataGridView2.ReadOnly = false;
+            dataGridView2.EditMode = DataGridViewEditMode.EditOnEnter;
+        }
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            ret();
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
@@ -92,6 +102,59 @@ namespace Centr
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+   
+
+        private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCell cell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            string newValue = cell.Value.ToString();
+        }
+
+        private void Сохранить_изменения_button1_Click(object sender, EventArgs e)
+        {
+            string connString = "Server=localhost;Port=5433;User Id = postgres; Password=toor;Database=center;";
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand())
+                {
+                    cmd.Connection = conn;
+
+                    foreach (var data in changedBoolData)
+                    {
+                        int rowId = data.Item1;
+                        int columnIdx = data.Item2;
+                        bool cellValue = data.Item3;
+
+                        string columnName = dataGridView2.Columns[columnIdx].Name;
+
+                        cmd.CommandText = $"UPDATE poseshaemost SET {columnName} = @value WHERE id_pos = @rowId";
+                        cmd.Parameters.AddWithValue("@value", cellValue);
+                        cmd.Parameters.AddWithValue("@rowId", rowId);
+                        cmd.ExecuteNonQuery();
+
+                        cmd.Parameters.Clear();
+                    }
+                }
+            }
+            ret();
+            // Очистка коллекции измененных данных
+            changedBoolData.Clear();
+        }
+    
+
+        private void dataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridView2.Columns[e.ColumnIndex].ValueType == typeof(bool))
+            {
+                int rowId = Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells["id_pos"].Value);
+                bool cellValue = Convert.ToBoolean(dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+
+                changedBoolData.Add(new Tuple<int, int, bool>(rowId, e.ColumnIndex, cellValue));
+            }
         }
     }
 }
