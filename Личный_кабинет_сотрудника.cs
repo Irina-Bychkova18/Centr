@@ -51,8 +51,8 @@ namespace Centr
             Квартира_comboBox2.DataSource = Form1.cdt.Tables["Квартира"].DefaultView;
             Квартира_comboBox2.DisplayMember = "Номер квартиры";
 
-            while (Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Код сотрудника"].ToString() != n)
-                i++;
+            //while (Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Код сотрудника"].ToString() != n)
+            //    i++;
 
             ФИОtextBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["ФИО"].ToString();
             Возраст_comboBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Возраст"].ToString();
