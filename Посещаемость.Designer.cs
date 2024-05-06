@@ -38,7 +38,6 @@ namespace Centr
             this.Название_столбца_textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
-            this.Отменить_изменения_button2 = new System.Windows.Forms.Button();
             this.Сохранить_изменения_button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Название_столбца_textBox1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
-            this.tabPage1.Controls.Add(this.Отменить_изменения_button2);
             this.tabPage1.Controls.Add(this.Сохранить_изменения_button1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.label1);
@@ -146,24 +144,13 @@ namespace Centr
             this.Выход_button.UseVisualStyleBackColor = false;
             this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
-            // Отменить_изменения_button2
-            // 
-            this.Отменить_изменения_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Отменить_изменения_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Отменить_изменения_button2.Location = new System.Drawing.Point(597, 363);
-            this.Отменить_изменения_button2.Name = "Отменить_изменения_button2";
-            this.Отменить_изменения_button2.Size = new System.Drawing.Size(191, 36);
-            this.Отменить_изменения_button2.TabIndex = 44;
-            this.Отменить_изменения_button2.Text = "Отменить изменения";
-            this.Отменить_изменения_button2.UseVisualStyleBackColor = false;
-            // 
             // Сохранить_изменения_button1
             // 
             this.Сохранить_изменения_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Сохранить_изменения_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Сохранить_изменения_button1.Location = new System.Drawing.Point(597, 310);
+            this.Сохранить_изменения_button1.Location = new System.Drawing.Point(597, 358);
             this.Сохранить_изменения_button1.Name = "Сохранить_изменения_button1";
-            this.Сохранить_изменения_button1.Size = new System.Drawing.Size(191, 34);
+            this.Сохранить_изменения_button1.Size = new System.Drawing.Size(191, 41);
             this.Сохранить_изменения_button1.TabIndex = 43;
             this.Сохранить_изменения_button1.Text = "Изменить данные";
             this.Сохранить_изменения_button1.UseVisualStyleBackColor = false;
@@ -218,7 +205,6 @@ namespace Centr
         private System.Windows.Forms.TextBox Название_столбца_textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Выход_button;
-        private System.Windows.Forms.Button Отменить_изменения_button2;
         private System.Windows.Forms.Button Сохранить_изменения_button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;

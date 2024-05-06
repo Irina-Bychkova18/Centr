@@ -141,6 +141,7 @@ namespace Centr
                 }
             }
             ret();
+            MessageBox.Show("Данные успешно изменены!");
             // Очистка коллекции измененных данных
             changedBoolData.Clear();
         }
