@@ -97,11 +97,9 @@ namespace Centr
                     "', login = '" + Логин_textBox4.Text + "', parol = '" + Пароль_textBox5.Text + "' WHERE id_uch = " + a;
             if (!Form1.Modification_Execute(sql))
                 return;
+
+            MessageBox.Show("Вы изменили данные!");
             ret();
-
-
-
-
 
         }
 
@@ -136,7 +134,7 @@ namespace Centr
                 return;
 
             MessageBox.Show("Вы завершили текущий курс!");
-
+            ret();
 
            
         }
