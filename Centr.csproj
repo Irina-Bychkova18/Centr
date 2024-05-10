@@ -164,12 +164,6 @@
     <Compile Include="Добавить лекцию.Designer.cs">
       <DependentUpon>Добавить лекцию.cs</DependentUpon>
     </Compile>
-    <Compile Include="Добавить свой центр.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Добавить свой центр.Designer.cs">
-      <DependentUpon>Добавить свой центр.cs</DependentUpon>
-    </Compile>
     <Compile Include="Добавить сотрудника.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,12 +211,6 @@
     </Compile>
     <Compile Include="Добавление записи.Designer.cs">
       <DependentUpon>Добавление записи.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Журнал материала.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Журнал материала.Designer.cs">
-      <DependentUpon>Журнал материала.cs</DependentUpon>
     </Compile>
     <Compile Include="Записаться на курс.cs">
       <SubType>Form</SubType>
@@ -461,9 +449,6 @@
     <EmbeddedResource Include="Добавить лекцию.resx">
       <DependentUpon>Добавить лекцию.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Добавить свой центр.resx">
-      <DependentUpon>Добавить свой центр.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Добавить сотрудника.resx">
       <DependentUpon>Добавить сотрудника.cs</DependentUpon>
     </EmbeddedResource>
@@ -487,9 +472,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Добавление записи.resx">
       <DependentUpon>Добавление записи.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Журнал материала.resx">
-      <DependentUpon>Журнал материала.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Записаться на курс.resx">
       <DependentUpon>Записаться на курс.cs</DependentUpon>

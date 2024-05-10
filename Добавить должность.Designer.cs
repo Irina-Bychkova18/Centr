@@ -66,6 +66,7 @@ namespace Centr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(353, 167);
             this.Controls.Add(this.Название_должности_textBox1);
             this.Controls.Add(this.label1);

@@ -87,12 +87,7 @@ namespace Centr
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
-        private void журналМатериалаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Журнал_материала журнал_Материала = new Журнал_материала();
-            Form1.tabControl1.Controls.Add(журнал_Материала.tabControl1.TabPages[0]);
-            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
-        }
+       
 
         private void успеваемостьToolStripMenuItem1_Click(object sender, EventArgs e)
         {

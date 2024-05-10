@@ -234,11 +234,11 @@ namespace Centr
                    "and ulica.id_ulici = uchenik.id_ul and dom.id_doma = uchenik.id_d and kvartira.id_kvartiri = uchenik.id_k GROUP BY id_uch, fio,"
                   + " data_r, telephon_uch, gorod.name, ulica.name, dom.nomer, kvartira.nomer, telephon_roditela, login, parol" + " ORDER BY \"Код ученика\"");
                             Form1.Table_Fill("Все текстовые лекции", "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\", text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"");
-                            Form1.Table_Fill("Ученик_Курс", "SELECT uchenik.fio AS \"ФИО\" , kursi.name AS \"Название курса\", dni.name AS \"Дни работы\", vrema.name AS \"Время работы\", status AS \"Статус\", " +
+                            Form1.Table_Fill("Ученик_Курс", "SELECT id_uch_kur AS \"Номер записи\", uchenik.fio AS \"ФИО\" , kursi.name AS \"Название курса\", dni.name AS \"Дни работы\", vrema.name AS \"Время работы\", status AS \"Статус\", " +
                                 "uchenik.login AS \"Логин\", uchenik.parol AS \"Пароль\" FROM ((((uchenik_kursi inner join uchenik on uchenik_kursi.id_uch = uchenik.id_uch)"
                            + "left join kursi on kursi.id_kursi = uchenik_kursi.id_kursi) left join dni on dni.id_dni = uchenik_kursi.id_dni) left join vrema on vrema.id_vrema = uchenik_kursi.id_vrema)" +
                            " where uchenik_kursi.id_uch = uchenik.id_uch and kursi.id_kursi = uchenik_kursi.id_kursi and dni.id_dni = uchenik_kursi.id_dni and vrema.id_vrema = uchenik_kursi.id_vrema and uchenik.login = '" + Логин_textbox.Text + "' and uchenik.parol = '" + Пароль_textBox.Text + "'" +
-                           " GROUP BY uchenik.fio, kursi.name, dni.name, vrema.name, status, uchenik.login, uchenik.parol ORDER BY \"ФИО\"");
+                           " GROUP BY id_uch_kur, uchenik.fio, kursi.name, dni.name, vrema.name, status, uchenik.login, uchenik.parol ORDER BY \"ФИО\"");
                             Form1.Table_Fill("Мои курсы", "SELECT kursi.name AS \"Название курса\", kursi.information AS \"Информация о курсе\", " +
                                 "uchenik.login AS \"Логин\", uchenik.parol AS \"Пароль\" FROM ((uchenik_kursi inner join uchenik on uchenik_kursi.id_uch = uchenik.id_uch)"
                            + "left join kursi on kursi.id_kursi = uchenik_kursi.id_kursi) " +

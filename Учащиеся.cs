@@ -104,7 +104,7 @@ namespace Centr
 
         private void Назад_button1_Click(object sender, EventArgs e)
         {
-
+            ret();
         }
 
         private void Показать_button2_Click(object sender, EventArgs e)
