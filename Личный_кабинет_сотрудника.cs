@@ -52,6 +52,17 @@ namespace Centr
 
 
             a = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Код сотрудника"].ToString();
+            Form1.Table_Fill("Личный кабинет сотрудника", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\","
+                          + " vozrast.name AS \"Возраст\", opit.name AS \"Опыт\", telephon AS \"Номер телефона\", gorod.name AS \"Город\", " +
+                          "ulica.name AS \"Улица\", dom.nomer AS \"Дом\", kvartira.nomer AS \"Квартира\"," +
+                          "doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курс\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((((((sotrudniki inner join gorod on gorod.id_goroda = sotrudniki.id_g)"
+                           + "left join ulica on ulica.id_ulici = sotrudniki.id_ul) left join dom on dom.id_doma = sotrudniki.id_d) " +
+                           "left join kvartira on kvartira.id_kvartiri = sotrudniki.id_k) left join opit on opit.id_opita = sotrudniki.id_opita) " +
+                           "left join vozrast on vozrast.id_vozr = sotrudniki.id_vozr) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
+                           "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) where id_sot = " + a + " and gorod.id_goroda = sotrudniki.id_g " +
+                           "and ulica.id_ulici = sotrudniki.id_ul and dom.id_doma = sotrudniki.id_d and kvartira.id_kvartiri = sotrudniki.id_k  and doljnosti.id_dolj = sotrudniki.id_dolj " +
+                           " and kursi.id_kursi = sotrudniki.id_kursi and opit.id_opita = sotrudniki.id_opita and vozrast.id_vozr = sotrudniki.id_vozr GROUP BY id_sot, fio,"
+                          + " vozrast.name, opit.name, telephon, gorod.name, ulica.name, dom.nomer, kvartira.nomer, doljnosti.name, kursi.name, login, parol" + " ORDER BY \"Код сотрудника\"");
             ФИОtextBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["ФИО"].ToString();
             Возраст_comboBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Возраст"].ToString();
             Опыт_comboBox2.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Опыт"].ToString();
