@@ -26,8 +26,7 @@ namespace Centr
         }
         private void ret()
         {
-            Возраст_comboBox1.DataSource = Form1.cdt.Tables["Возраст"].DefaultView;
-            Возраст_comboBox1.DisplayMember = "Наименование возраста";
+            
 
             Опыт_comboBox2.DataSource = Form1.cdt.Tables["Опыт"].DefaultView;
             Опыт_comboBox2.DisplayMember = "Наименование опыта";
@@ -53,24 +52,24 @@ namespace Centr
 
             a = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Код сотрудника"].ToString();
             Form1.Table_Fill("Личный кабинет сотрудника", "SELECT id_sot AS \"Код сотрудника\", fio AS \"ФИО\","
-                          + " vozrast.name AS \"Возраст\", opit.name AS \"Опыт\", telephon AS \"Номер телефона\", gorod.name AS \"Город\", " +
+                          + " data_r AS \"Дата рождения\", opit.name AS \"Опыт\", telephon AS \"Номер телефона\", gorod.name AS \"Город\", " +
                           "ulica.name AS \"Улица\", dom.nomer AS \"Дом\", kvartira.nomer AS \"Квартира\"," +
-                          "doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курс\", login AS \"Логин\", parol AS \"Пароль\" FROM ((((((((sotrudniki inner join gorod on gorod.id_goroda = sotrudniki.id_g)"
+                          "doljnosti.name AS \"Должность\", kursi.name AS \"Ведет курс\", login AS \"Логин\", parol AS \"Пароль\" FROM (((((((sotrudniki inner join gorod on gorod.id_goroda = sotrudniki.id_g)"
                            + "left join ulica on ulica.id_ulici = sotrudniki.id_ul) left join dom on dom.id_doma = sotrudniki.id_d) " +
                            "left join kvartira on kvartira.id_kvartiri = sotrudniki.id_k) left join opit on opit.id_opita = sotrudniki.id_opita) " +
-                           "left join vozrast on vozrast.id_vozr = sotrudniki.id_vozr) left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
+                           " left join doljnosti on doljnosti.id_dolj = sotrudniki.id_dolj) " +
                            "left join kursi on kursi.id_kursi = sotrudniki.id_kursi) where id_sot = " + a + " and gorod.id_goroda = sotrudniki.id_g " +
                            "and ulica.id_ulici = sotrudniki.id_ul and dom.id_doma = sotrudniki.id_d and kvartira.id_kvartiri = sotrudniki.id_k  and doljnosti.id_dolj = sotrudniki.id_dolj " +
-                           " and kursi.id_kursi = sotrudniki.id_kursi and opit.id_opita = sotrudniki.id_opita and vozrast.id_vozr = sotrudniki.id_vozr GROUP BY id_sot, fio,"
-                          + " vozrast.name, opit.name, telephon, gorod.name, ulica.name, dom.nomer, kvartira.nomer, doljnosti.name, kursi.name, login, parol" + " ORDER BY \"Код сотрудника\"");
+                           " and kursi.id_kursi = sotrudniki.id_kursi and opit.id_opita = sotrudniki.id_opita GROUP BY id_sot, fio,"
+                          + "data_r, opit.name, telephon, gorod.name, ulica.name, dom.nomer, kvartira.nomer, doljnosti.name, kursi.name, login, parol" + " ORDER BY \"Код сотрудника\"");
             ФИОtextBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["ФИО"].ToString();
-            Возраст_comboBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Возраст"].ToString();
+            dateTimePicker1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Дата рождения"].ToString();
             Опыт_comboBox2.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Опыт"].ToString();
             Город_comboBox3.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Город"].ToString();
             Улица_comboBox4.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Улица"].ToString();
             Дом_comboBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Дом"].ToString();
             Квартира_comboBox2.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Квартира"].ToString();
-            Телефон_textBox4.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Номер телефона"].ToString();
+            maskedTextBox1.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Номер телефона"].ToString();
             Должность_comboBox3.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Должность"].ToString();
             Курс_comboBox4.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Ведет курс"].ToString();
             Логин_textBox8.Text = Form1.cdt.Tables["Личный кабинет сотрудника"].Rows[i]["Логин"].ToString();
@@ -89,7 +88,7 @@ namespace Centr
 
         private void Изменить_данные_button1_Click(object sender, EventArgs e)
         {
-            string kod_1 = Form1.cdt.Tables["Возраст"].DefaultView[Возраст_comboBox1.SelectedIndex]["Код возраста"].ToString();
+            
             string kod_2 = Form1.cdt.Tables["Опыт"].DefaultView[Опыт_comboBox2.SelectedIndex]["Код опыта"].ToString();
             string kod_3 = Form1.cdt.Tables["Должности"].DefaultView[Должность_comboBox3.SelectedIndex]["Код должности"].ToString();
             string kod_4 = Form1.cdt.Tables["Курсы"].DefaultView[Курс_comboBox4.SelectedIndex]["Код курса"].ToString();
@@ -98,8 +97,8 @@ namespace Centr
             string kod_7 = Form1.cdt.Tables["Дом"].DefaultView[Дом_comboBox1.SelectedIndex]["Код дома"].ToString();
             string kod_8 = Form1.cdt.Tables["Квартира"].DefaultView[Квартира_comboBox2.SelectedIndex]["Код квартиры"].ToString();
 
-            string sql = "UPDATE sotrudniki SET fio ='" + ФИОtextBox1.Text + "', id_vozr = " + kod_1 + ", id_opita = " + kod_2 +
-                    ", telephon ='" + Телефон_textBox4.Text + "', id_g = " + kod_5 + ", id_ul = " + kod_6 + ", id_d = " + kod_7 + ", id_k = " + kod_8 + ", id_dolj =" + kod_3 + ", id_kursi = " + kod_4 + ", login = '" +
+            string sql = "UPDATE sotrudniki SET fio ='" + ФИОtextBox1.Text + "', data_r = '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', id_opita = " + kod_2 +
+                    ", telephon ='" + maskedTextBox1.Text + "', id_g = " + kod_5 + ", id_ul = " + kod_6 + ", id_d = " + kod_7 + ", id_k = " + kod_8 + ", id_dolj =" + kod_3 + ", id_kursi = " + kod_4 + ", login = '" +
                     Логин_textBox8.Text + "',  parol = '" + Пароль_textBox7.Text + "' WHERE id_sot = " + a;
             if (!Form1.Modification_Execute(sql))
                 return;
