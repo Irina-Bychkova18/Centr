@@ -22,6 +22,7 @@ namespace Centr
             Название_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[k]["Название курса"].ToString();
             Всего_мест_textBox3.Text = Form1.cdt.Tables["Курс"].Rows[k]["Количество мест всего"].ToString();
             Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курс"].Rows[k]["Количество оставшихся мест"].ToString();
+            Цена_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[k]["Стоимость курса (4 занятия)"].ToString();
             Информация_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[k]["Информация о курсе"].ToString();
 
         }
@@ -31,15 +32,16 @@ namespace Centr
             Название_textBox1.Text = "";
             Всего_мест_textBox3.Text = "";
             Оставшиеся_места_textBox2.Text = "";
-            Информация_textBox1.Text = "";
+            Цена_textBox1.Text = "";
+           Информация_textBox1.Text = "";
         }
 
         public static string n = null;
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
-              + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", " +
-              "information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"";
+               + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", cena AS \"Стоимость курса (4 занятия)\", " +
+               "information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"";
             Form1.Table_Fill("Курс", sql);
 
             int i = 0;
@@ -53,6 +55,7 @@ namespace Centr
             Название_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Название курса"].ToString();
             Всего_мест_textBox3.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество мест всего"].ToString();
             Оставшиеся_места_textBox2.Text = Form1.cdt.Tables["Курс"].Rows[i]["Количество оставшихся мест"].ToString();
+            Цена_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Стоимость курса (4 занятия)"].ToString();
             Информация_textBox1.Text = Form1.cdt.Tables["Курс"].Rows[i]["Информация о курсе"].ToString();
 
             Form1.cdt.Tables["Курс"].DefaultView.RowFilter = "[Код курса]=" + n;

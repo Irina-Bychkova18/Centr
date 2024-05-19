@@ -26,7 +26,7 @@ namespace Centr
 
         private void Добавить_курс_button2_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO kursi (name, kolvo_mest_vsego, mest_ostav, information) VALUES ('" + Название_textBox1.Text + "'," + Всего_мест_textBox3.Text + "," + Оставшиеся_места_textBox2.Text + ",'" + Информация_textBox4.Text + "')";
+            string sql = "INSERT INTO kursi (name, kolvo_mest_vsego, mest_ostav, cena, information) VALUES ('" + Название_textBox1.Text + "'," + Всего_мест_textBox3.Text + "," + Оставшиеся_места_textBox2.Text + "," + Цена_textBox1.Text + ",'" + Информация_textBox4.Text + "')";
             if (!Form1.Modification_Execute(sql))
                 return;
 

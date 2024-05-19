@@ -66,7 +66,7 @@ namespace Centr
                "left join kvartira on kvartira.id_kvartiri = uchenik.id_k) where gorod.id_goroda = uchenik.id_g " +
                "and ulica.id_ulici = uchenik.id_ul and dom.id_doma = uchenik.id_d and kvartira.id_kvartiri = uchenik.id_k GROUP BY id_uch, fio,"
               + " data_r, telephon_uch, gorod.name, ulica.name, dom.nomer, kvartira.nomer, telephon_roditela, login, parol" + " ORDER BY \"Код ученика\"");
-                        Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
+                        Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", cena AS \"Стоимость курса (4 занятия)\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
                         Form1.Table_Fill("Возраст", "SELECT id_vozr AS \"Код возраста\", name AS \"Наименование возраста\" FROM vozrast" + " ORDER BY \"Код возраста\"");
                         Form1.Table_Fill("Опыт", "SELECT id_opita AS \"Код опыта\", name AS \"Наименование опыта\" FROM opit" + " ORDER BY \"Код опыта\"");
                         Form1.Table_Fill("Город", "SELECT id_goroda AS \"Код города\", name AS \"Название города\" FROM gorod" + " ORDER BY \"Код города\"");
@@ -247,15 +247,15 @@ namespace Centr
                            + "left join kursi on kursi.id_kursi = uchenik_kursi.id_kursi) left join dni on dni.id_dni = uchenik_kursi.id_dni) left join vrema on vrema.id_vrema = uchenik_kursi.id_vrema)" +
                            " where uchenik_kursi.id_uch = uchenik.id_uch and kursi.id_kursi = uchenik_kursi.id_kursi and dni.id_dni = uchenik_kursi.id_dni and vrema.id_vrema = uchenik_kursi.id_vrema and uchenik.login = '" + Логин_textbox.Text + "' and uchenik.parol = '" + Пароль_textBox.Text + "'" +
                            " GROUP BY id_uch_kur, uchenik.fio, kursi.name, dni.name, vrema.name, status, uchenik.login, uchenik.parol ORDER BY \"ФИО\"");
-                            Form1.Table_Fill("Мои курсы", "SELECT kursi.name AS \"Название курса\", kursi.information AS \"Информация о курсе\", " +
+                            Form1.Table_Fill("Мои курсы", "SELECT kursi.name AS \"Название курса\", kursi.cena AS \"Стоимость курса (4 занятия)\", kursi.information AS \"Информация о курсе\", " +
                                 "uchenik.login AS \"Логин\", uchenik.parol AS \"Пароль\" FROM ((uchenik_kursi inner join uchenik on uchenik_kursi.id_uch = uchenik.id_uch)"
                            + "left join kursi on kursi.id_kursi = uchenik_kursi.id_kursi) " +
                            " where uchenik_kursi.id_uch = uchenik.id_uch and kursi.id_kursi = uchenik_kursi.id_kursi and uchenik.login = '" + Логин_textbox.Text + "' and uchenik.parol = '" + Пароль_textBox.Text + "'" +
-                           " GROUP BY kursi.name, kursi.information, uchenik.login, uchenik.parol ORDER BY \"Название курса\"");
+                           " GROUP BY kursi.name, kursi.cena, kursi.information, uchenik.login, uchenik.parol ORDER BY \"Название курса\"");
                             меню_учащийся Меню_1 = new меню_учащийся();
                             Form1.tabControl1.TabPages.RemoveAt(0);
                             Form1.tabControl1.Controls.Add(Меню_1.tabControl1.TabPages[0]);
-                            Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
+                            Form1.Table_Fill("Курсы", "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\", kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", cena AS \"Стоимость курса (4 занятия)\", information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"");
                             Form1.Table_Fill("Город", "SELECT id_goroda AS \"Код города\", name AS \"Название города\" FROM gorod" + " ORDER BY \"Код города\"");
                             Form1.Table_Fill("Улица", "SELECT id_ulici AS \"Код улицы\", name AS \"Название улицы\" FROM ulica" + " ORDER BY \"Код улицы\"");
                             Form1.Table_Fill("Дом", "SELECT id_doma AS \"Код дома\", nomer AS \"Номер дома\" FROM dom" + " ORDER BY \"Код дома\"");

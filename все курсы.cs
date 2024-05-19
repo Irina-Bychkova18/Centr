@@ -25,11 +25,12 @@ namespace Centr
         public void ret()
         {
             string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
-              + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", " +
+              + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", cena AS \"Стоимость курса (4 занятия)\", " +
               "information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"";
             Form1.Table_Fill("Курсы", sql);
 
             dataGridView1.DataSource = Form1.cdt.Tables["Курсы"];
+            dataGridView1.Columns["Стоимость курса (4 занятия)"].DefaultCellStyle.Format = "C2";
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.RowHeadersVisible = false;

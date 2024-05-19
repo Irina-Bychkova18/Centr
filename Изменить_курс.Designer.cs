@@ -43,6 +43,8 @@ namespace Centr
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
+            this.Цена_textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +62,8 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Цена_textBox1);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Информация_textBox1);
@@ -104,16 +108,16 @@ namespace Centr
             // 
             // Информация_textBox1
             // 
-            this.Информация_textBox1.Location = new System.Drawing.Point(180, 161);
+            this.Информация_textBox1.Location = new System.Drawing.Point(180, 217);
             this.Информация_textBox1.Multiline = true;
             this.Информация_textBox1.Name = "Информация_textBox1";
-            this.Информация_textBox1.Size = new System.Drawing.Size(591, 182);
+            this.Информация_textBox1.Size = new System.Drawing.Size(591, 126);
             this.Информация_textBox1.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 161);
+            this.label4.Location = new System.Drawing.Point(23, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 17);
             this.label4.TabIndex = 23;
@@ -179,6 +183,22 @@ namespace Centr
             this.Название_textBox1.Size = new System.Drawing.Size(591, 22);
             this.Название_textBox1.TabIndex = 14;
             // 
+            // Цена_textBox1
+            // 
+            this.Цена_textBox1.Location = new System.Drawing.Point(180, 167);
+            this.Цена_textBox1.Name = "Цена_textBox1";
+            this.Цена_textBox1.Size = new System.Drawing.Size(591, 22);
+            this.Цена_textBox1.TabIndex = 98;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 167);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 34);
+            this.label5.TabIndex = 97;
+            this.label5.Text = "Цена за курс:\r\n(4 занятия)";
+            // 
             // Изменить_курс
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -210,5 +230,7 @@ namespace Centr
         private System.Windows.Forms.TextBox Информация_textBox1;
         private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox Цена_textBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

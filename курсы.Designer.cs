@@ -32,6 +32,10 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(курсы));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.В_конец_button5 = new System.Windows.Forms.Button();
+            this.В_начало_button3 = new System.Windows.Forms.Button();
+            this.Назад_button2 = new System.Windows.Forms.Button();
+            this.Вперед_button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Информация_textBox1 = new System.Windows.Forms.TextBox();
@@ -42,10 +46,8 @@ namespace Centr
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
-            this.В_конец_button5 = new System.Windows.Forms.Button();
-            this.В_начало_button3 = new System.Windows.Forms.Button();
-            this.Назад_button2 = new System.Windows.Forms.Button();
-            this.Вперед_button1 = new System.Windows.Forms.Button();
+            this.Цена_textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +65,8 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Цена_textBox1);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.В_конец_button5);
             this.tabPage1.Controls.Add(this.В_начало_button3);
             this.tabPage1.Controls.Add(this.Назад_button2);
@@ -85,6 +89,54 @@ namespace Centr
             this.tabPage1.Text = "Курс";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // В_конец_button5
+            // 
+            this.В_конец_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.В_конец_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.В_конец_button5.Location = new System.Drawing.Point(462, 386);
+            this.В_конец_button5.Name = "В_конец_button5";
+            this.В_конец_button5.Size = new System.Drawing.Size(163, 30);
+            this.В_конец_button5.TabIndex = 97;
+            this.В_конец_button5.Text = "В конец";
+            this.В_конец_button5.UseVisualStyleBackColor = false;
+            this.В_конец_button5.Click += new System.EventHandler(this.В_конец_button5_Click);
+            // 
+            // В_начало_button3
+            // 
+            this.В_начало_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.В_начало_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.В_начало_button3.Location = new System.Drawing.Point(257, 386);
+            this.В_начало_button3.Name = "В_начало_button3";
+            this.В_начало_button3.Size = new System.Drawing.Size(170, 30);
+            this.В_начало_button3.TabIndex = 96;
+            this.В_начало_button3.Text = "В начало";
+            this.В_начало_button3.UseVisualStyleBackColor = false;
+            this.В_начало_button3.Click += new System.EventHandler(this.В_начало_button3_Click);
+            // 
+            // Назад_button2
+            // 
+            this.Назад_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Назад_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Назад_button2.Location = new System.Drawing.Point(462, 347);
+            this.Назад_button2.Name = "Назад_button2";
+            this.Назад_button2.Size = new System.Drawing.Size(163, 30);
+            this.Назад_button2.TabIndex = 95;
+            this.Назад_button2.Text = "Назад";
+            this.Назад_button2.UseVisualStyleBackColor = false;
+            this.Назад_button2.Click += new System.EventHandler(this.Назад_button2_Click);
+            // 
+            // Вперед_button1
+            // 
+            this.Вперед_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Вперед_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Вперед_button1.Location = new System.Drawing.Point(257, 347);
+            this.Вперед_button1.Name = "Вперед_button1";
+            this.Вперед_button1.Size = new System.Drawing.Size(170, 30);
+            this.Вперед_button1.TabIndex = 94;
+            this.Вперед_button1.Text = "Вперед";
+            this.Вперед_button1.UseVisualStyleBackColor = false;
+            this.Вперед_button1.Click += new System.EventHandler(this.Вперед_button1_Click);
             // 
             // pictureBox1
             // 
@@ -111,16 +163,16 @@ namespace Centr
             // 
             // Информация_textBox1
             // 
-            this.Информация_textBox1.Location = new System.Drawing.Point(169, 192);
+            this.Информация_textBox1.Location = new System.Drawing.Point(169, 232);
             this.Информация_textBox1.Multiline = true;
             this.Информация_textBox1.Name = "Информация_textBox1";
-            this.Информация_textBox1.Size = new System.Drawing.Size(618, 133);
+            this.Информация_textBox1.Size = new System.Drawing.Size(618, 93);
             this.Информация_textBox1.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 192);
+            this.label4.Location = new System.Drawing.Point(12, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 17);
             this.label4.TabIndex = 23;
@@ -175,53 +227,21 @@ namespace Centr
             this.Название_textBox1.Size = new System.Drawing.Size(618, 47);
             this.Название_textBox1.TabIndex = 14;
             // 
-            // В_конец_button5
+            // Цена_textBox1
             // 
-            this.В_конец_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.В_конец_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.В_конец_button5.Location = new System.Drawing.Point(462, 386);
-            this.В_конец_button5.Name = "В_конец_button5";
-            this.В_конец_button5.Size = new System.Drawing.Size(163, 30);
-            this.В_конец_button5.TabIndex = 97;
-            this.В_конец_button5.Text = "В конец";
-            this.В_конец_button5.UseVisualStyleBackColor = false;
-            this.В_конец_button5.Click += new System.EventHandler(this.В_конец_button5_Click);
+            this.Цена_textBox1.Location = new System.Drawing.Point(169, 185);
+            this.Цена_textBox1.Name = "Цена_textBox1";
+            this.Цена_textBox1.Size = new System.Drawing.Size(618, 22);
+            this.Цена_textBox1.TabIndex = 100;
             // 
-            // В_начало_button3
+            // label5
             // 
-            this.В_начало_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.В_начало_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.В_начало_button3.Location = new System.Drawing.Point(257, 386);
-            this.В_начало_button3.Name = "В_начало_button3";
-            this.В_начало_button3.Size = new System.Drawing.Size(170, 30);
-            this.В_начало_button3.TabIndex = 96;
-            this.В_начало_button3.Text = "В начало";
-            this.В_начало_button3.UseVisualStyleBackColor = false;
-            this.В_начало_button3.Click += new System.EventHandler(this.В_начало_button3_Click);
-            // 
-            // Назад_button2
-            // 
-            this.Назад_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Назад_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Назад_button2.Location = new System.Drawing.Point(462, 347);
-            this.Назад_button2.Name = "Назад_button2";
-            this.Назад_button2.Size = new System.Drawing.Size(163, 30);
-            this.Назад_button2.TabIndex = 95;
-            this.Назад_button2.Text = "Назад";
-            this.Назад_button2.UseVisualStyleBackColor = false;
-            this.Назад_button2.Click += new System.EventHandler(this.Назад_button2_Click);
-            // 
-            // Вперед_button1
-            // 
-            this.Вперед_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Вперед_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Вперед_button1.Location = new System.Drawing.Point(257, 347);
-            this.Вперед_button1.Name = "Вперед_button1";
-            this.Вперед_button1.Size = new System.Drawing.Size(170, 30);
-            this.Вперед_button1.TabIndex = 94;
-            this.Вперед_button1.Text = "Вперед";
-            this.Вперед_button1.UseVisualStyleBackColor = false;
-            this.Вперед_button1.Click += new System.EventHandler(this.Вперед_button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 185);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 34);
+            this.label5.TabIndex = 99;
+            this.label5.Text = "Цена за курс:\r\n(4 занятия)";
             // 
             // курсы
             // 
@@ -258,5 +278,7 @@ namespace Centr
         private System.Windows.Forms.Button В_начало_button3;
         private System.Windows.Forms.Button Назад_button2;
         private System.Windows.Forms.Button Вперед_button1;
+        private System.Windows.Forms.TextBox Цена_textBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
