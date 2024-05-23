@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class Добавить_учащегося : Form
     {
-        public Добавить_учащегося()
+        private int rec;
+        public Добавить_учащегося(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -72,7 +74,7 @@ namespace Centr
             string kod_2 = Form1.cdt.Tables["Улица"].DefaultView[Улица_comboBox4.SelectedIndex]["Код улицы"].ToString();
             string kod_3 = Form1.cdt.Tables["Дом"].DefaultView[Дом_comboBox1.SelectedIndex]["Код дома"].ToString();
             string kod_4 = Form1.cdt.Tables["Квартира"].DefaultView[Квартира_comboBox2.SelectedIndex]["Код квартиры"].ToString();
-            string sql = "INSERT INTO uchenik (fio, data_r, telephon_uch, id_g, id_ul, id_d, id_k,telephon_roditela, login, parol) VALUES ('" + ФИО_textBox1.Text + "','" + 
+            string sql = "INSERT INTO uchenik (id_uch, fio, data_r, telephon_uch, id_g, id_ul, id_d, id_k,telephon_roditela, login, parol) VALUES (" + rec + ",'" + ФИО_textBox1.Text + "','" + 
                 dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + maskedTextBox1.Text + "',"
                 + kod_1 + "," + kod_2 + ","  + kod_3 + "," + kod_4 + ",'" + maskedTextBox2.Text + "','" + Логин_textBox8.Text + "','" + Пароль_textBox7.Text + "')";
             if (!Form1.Modification_Execute(sql))

@@ -36,17 +36,19 @@ namespace Centr
             // 
             // Название_должности_textBox1
             // 
+            this.Название_должности_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.Название_должности_textBox1.Location = new System.Drawing.Point(15, 71);
             this.Название_должности_textBox1.Name = "Название_должности_textBox1";
-            this.Название_должности_textBox1.Size = new System.Drawing.Size(326, 22);
+            this.Название_должности_textBox1.Size = new System.Drawing.Size(326, 34);
             this.Название_должности_textBox1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 17);
+            this.label1.Size = new System.Drawing.Size(219, 27);
             this.label1.TabIndex = 4;
             this.label1.Text = "Введите должность:";
             // 
@@ -54,6 +56,7 @@ namespace Centr
             // 
             this.Добавить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.Добавить_button1.Location = new System.Drawing.Point(114, 116);
             this.Добавить_button1.Name = "Добавить_button1";
             this.Добавить_button1.Size = new System.Drawing.Size(135, 29);
@@ -67,7 +70,7 @@ namespace Centr
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(353, 167);
+            this.ClientSize = new System.Drawing.Size(587, 293);
             this.Controls.Add(this.Название_должности_textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Добавить_button1);

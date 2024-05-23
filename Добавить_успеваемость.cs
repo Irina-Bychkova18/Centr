@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class Добавить_успеваемость : Form
     {
-        public Добавить_успеваемость()
+        private int rec;
+        public Добавить_успеваемость(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
@@ -25,7 +27,7 @@ namespace Centr
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             ФИО_ученика_comboBox1.DataSource = Form1.cdt.Tables["Ученики"].DefaultView;
-            ФИО_ученика_comboBox1.DisplayMember = "ФИО ученика";
+            ФИО_ученика_comboBox1.DisplayMember = "ФИО";
 
             Название_лекции_comboBox2.DataSource = Form1.cdt.Tables["Все текстовые лекции"].DefaultView;
             Название_лекции_comboBox2.DisplayMember = "Название лекции";
@@ -37,7 +39,7 @@ namespace Centr
             string kod_2 = Form1.cdt.Tables["Все текстовые лекции"].DefaultView[Название_лекции_comboBox2.SelectedIndex]["Код лекции"].ToString();
             
 
-            string sql = "INSERT INTO uspevaemost (id_uch, id_lek, proideno_lekcii_fl, vsego_lekcii_fl) VALUES (" + kod_1 + "," + kod_2 + "," + Пройдено_лекций_textBox1.Text + "," + Всего_лекций_textBox2.Text + ")";
+            string sql = "INSERT INTO uspevaemost (id_usp, id_uch, id_lek, proideno_lekcii_fl, vsego_lekcii_fl) VALUES (" + rec + "," + kod_1 + "," + kod_2 + "," + Пройдено_лекций_textBox1.Text + "," + Всего_лекций_textBox2.Text + ")";
             if (!Form1.Modification_Execute(sql))
                 return;
 

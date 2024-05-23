@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using iText;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Centr
 {
@@ -114,7 +118,7 @@ namespace Centr
 
         private void Сохранить_изменения_button1_Click(object sender, EventArgs e)
         {
-            string connString = "Server=localhost;Port=5433;User Id = postgres; Password=toor;Database=center;";
+            string connString = "Server=localhost;Port=5432;Username = postgres; Password=toor;Database=center;";
             using (NpgsqlConnection conn = new NpgsqlConnection(connString))
             {
                 conn.Open();
@@ -157,5 +161,7 @@ namespace Centr
                 changedBoolData.Add(new Tuple<int, int, bool>(rowId, e.ColumnIndex, cellValue));
             }
         }
+
+        
     }
 }

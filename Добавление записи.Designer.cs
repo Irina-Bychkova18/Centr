@@ -32,8 +32,8 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Добавление_записи));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ФИО_comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Выход_button = new System.Windows.Forms.Button();
             this.Добавить_button1 = new System.Windows.Forms.Button();
             this.Время_занятий_comboBox4 = new System.Windows.Forms.ComboBox();
             this.Дни_посещений_comboBox3 = new System.Windows.Forms.ComboBox();
@@ -42,7 +42,7 @@ namespace Centr
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ФИО_comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,18 +51,19 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.tabControl1.Location = new System.Drawing.Point(0, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(801, 453);
+            this.tabControl1.Size = new System.Drawing.Size(1027, 702);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.ФИО_comboBox1);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Добавить_button1);
             this.tabPage1.Controls.Add(this.Время_занятий_comboBox4);
             this.tabPage1.Controls.Add(this.Дни_посещений_comboBox3);
@@ -71,13 +72,21 @@ namespace Centr
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 35);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(793, 424);
+            this.tabPage1.Size = new System.Drawing.Size(1019, 663);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавить запись";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            // 
+            // ФИО_comboBox1
+            // 
+            this.ФИО_comboBox1.FormattingEnabled = true;
+            this.ФИО_comboBox1.Location = new System.Drawing.Point(229, 119);
+            this.ФИО_comboBox1.Name = "ФИО_comboBox1";
+            this.ФИО_comboBox1.Size = new System.Drawing.Size(413, 34);
+            this.ФИО_comboBox1.TabIndex = 94;
             // 
             // pictureBox1
             // 
@@ -88,19 +97,6 @@ namespace Centr
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 93;
             this.pictureBox1.TabStop = false;
-            // 
-            // Выход_button
-            // 
-            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Выход_button.Location = new System.Drawing.Point(8, 15);
-            this.Выход_button.Name = "Выход_button";
-            this.Выход_button.Size = new System.Drawing.Size(121, 38);
-            this.Выход_button.TabIndex = 92;
-            this.Выход_button.Text = "Выход";
-            this.Выход_button.UseVisualStyleBackColor = false;
-            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // Добавить_button1
             // 
@@ -119,7 +115,7 @@ namespace Centr
             this.Время_занятий_comboBox4.FormattingEnabled = true;
             this.Время_занятий_comboBox4.Location = new System.Drawing.Point(229, 254);
             this.Время_занятий_comboBox4.Name = "Время_занятий_comboBox4";
-            this.Время_занятий_comboBox4.Size = new System.Drawing.Size(413, 24);
+            this.Время_занятий_comboBox4.Size = new System.Drawing.Size(413, 34);
             this.Время_занятий_comboBox4.TabIndex = 47;
             // 
             // Дни_посещений_comboBox3
@@ -127,7 +123,7 @@ namespace Centr
             this.Дни_посещений_comboBox3.FormattingEnabled = true;
             this.Дни_посещений_comboBox3.Location = new System.Drawing.Point(229, 211);
             this.Дни_посещений_comboBox3.Name = "Дни_посещений_comboBox3";
-            this.Дни_посещений_comboBox3.Size = new System.Drawing.Size(413, 24);
+            this.Дни_посещений_comboBox3.Size = new System.Drawing.Size(413, 34);
             this.Дни_посещений_comboBox3.TabIndex = 46;
             // 
             // Курс_comboBox2
@@ -135,7 +131,7 @@ namespace Centr
             this.Курс_comboBox2.FormattingEnabled = true;
             this.Курс_comboBox2.Location = new System.Drawing.Point(229, 166);
             this.Курс_comboBox2.Name = "Курс_comboBox2";
-            this.Курс_comboBox2.Size = new System.Drawing.Size(413, 24);
+            this.Курс_comboBox2.Size = new System.Drawing.Size(413, 34);
             this.Курс_comboBox2.TabIndex = 45;
             // 
             // label7
@@ -143,7 +139,7 @@ namespace Centr
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(40, 256);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 17);
+            this.label7.Size = new System.Drawing.Size(163, 27);
             this.label7.TabIndex = 44;
             this.label7.Text = "Время занятий";
             // 
@@ -152,7 +148,7 @@ namespace Centr
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(40, 211);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 17);
+            this.label6.Size = new System.Drawing.Size(176, 27);
             this.label6.TabIndex = 43;
             this.label6.Text = "Дни посещений";
             // 
@@ -161,7 +157,7 @@ namespace Centr
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(40, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.Size = new System.Drawing.Size(172, 27);
             this.label1.TabIndex = 42;
             this.label1.Text = "Название курса";
             // 
@@ -170,23 +166,27 @@ namespace Centr
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(40, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 17);
+            this.label2.Size = new System.Drawing.Size(255, 27);
             this.label2.TabIndex = 34;
             this.label2.Text = "Фамилия Имя Отчество";
             // 
-            // ФИО_comboBox1
+            // Выход_button
             // 
-            this.ФИО_comboBox1.FormattingEnabled = true;
-            this.ФИО_comboBox1.Location = new System.Drawing.Point(229, 119);
-            this.ФИО_comboBox1.Name = "ФИО_comboBox1";
-            this.ФИО_comboBox1.Size = new System.Drawing.Size(413, 24);
-            this.ФИО_comboBox1.TabIndex = 94;
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Выход_button.Location = new System.Drawing.Point(8, 15);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(200, 45);
+            this.Выход_button.TabIndex = 98;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
             // 
             // Добавление_записи
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1009, 655);
             this.Controls.Add(this.tabControl1);
             this.Name = "Добавление_записи";
             this.Text = "Добавление_записи";
@@ -203,7 +203,6 @@ namespace Centr
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.Button Добавить_button1;
         private System.Windows.Forms.ComboBox Время_занятий_comboBox4;
         private System.Windows.Forms.ComboBox Дни_посещений_comboBox3;
@@ -213,5 +212,6 @@ namespace Centr
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ФИО_comboBox1;
+        private System.Windows.Forms.Button Выход_button;
     }
 }

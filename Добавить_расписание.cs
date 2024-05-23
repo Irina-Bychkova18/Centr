@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class Добавить_расписание : Form
     {
-        public Добавить_расписание()
+        private int rec;
+        public Добавить_расписание(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace Centr
             string kod_2 = Form1.cdt.Tables["Дни"].DefaultView[Дни_comboBox2.SelectedIndex]["Код дня"].ToString();
             string kod_3 = Form1.cdt.Tables["Время"].DefaultView[Время_comboBox3.SelectedIndex]["Код времени"].ToString();
             
-            string sql = "INSERT INTO raspisanie (id_kursi, id_dni, id_vrema) VALUES (" +  kod_1 + "," + kod_2 + "," + kod_3 + ")";
+            string sql = "INSERT INTO raspisanie (id_raspisania, id_kursi, id_dni, id_vrema) VALUES (" + rec + "," +  kod_1 + "," + kod_2 + "," + kod_3 + ")";
             if (!Form1.Modification_Execute(sql))
                 return;
 

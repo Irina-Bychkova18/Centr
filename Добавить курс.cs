@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class Добавить_курс : Form
     {
-        public Добавить_курс()
+        private int rec;
+        public Добавить_курс(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
       
@@ -26,7 +28,7 @@ namespace Centr
 
         private void Добавить_курс_button2_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO kursi (name, kolvo_mest_vsego, mest_ostav, cena, information) VALUES ('" + Название_textBox1.Text + "'," + Всего_мест_textBox3.Text + "," + Оставшиеся_места_textBox2.Text + "," + Цена_textBox1.Text + ",'" + Информация_textBox4.Text + "')";
+            string sql = "INSERT INTO kursi (id_kursi, name, kolvo_mest_vsego, mest_ostav, cena, information) VALUES (" + rec + ",'"+ Название_textBox1.Text + "'," + Всего_мест_textBox3.Text + "," + Оставшиеся_места_textBox2.Text + "," + Цена_textBox1.Text + ",'" + Информация_textBox4.Text + "')";
             if (!Form1.Modification_Execute(sql))
                 return;
 

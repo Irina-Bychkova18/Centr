@@ -32,7 +32,6 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(меню_админ));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Выход_button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.курсыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,12 +43,13 @@ namespace Centr
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеЗанятийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.записьНаКурсToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.записиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.записатьУченикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.посещаемостьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.успеваемостьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.учащиесяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.записиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.записатьУченикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,10 +59,11 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(808, 481);
+            this.tabControl1.Size = new System.Drawing.Size(1027, 702);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -71,25 +72,12 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.menuStrip1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 35);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(800, 452);
+            this.tabPage1.Size = new System.Drawing.Size(1019, 663);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Меню";
-            // 
-            // Выход_button
-            // 
-            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.Выход_button.Location = new System.Drawing.Point(7, 373);
-            this.Выход_button.Name = "Выход_button";
-            this.Выход_button.Size = new System.Drawing.Size(121, 38);
-            this.Выход_button.TabIndex = 46;
-            this.Выход_button.Text = "Выход";
-            this.Выход_button.UseVisualStyleBackColor = false;
-            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click);
             // 
             // pictureBox1
             // 
@@ -105,6 +93,7 @@ namespace Centr
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.курсыToolStripMenuItem,
@@ -116,7 +105,7 @@ namespace Centr
             this.учащиесяToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(794, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1013, 35);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -192,6 +181,20 @@ namespace Centr
             this.записьНаКурсToolStripMenuItem.Text = "Записи на курс";
             this.записьНаКурсToolStripMenuItem.Click += new System.EventHandler(this.записьНаКурсToolStripMenuItem_Click);
             // 
+            // записиToolStripMenuItem
+            // 
+            this.записиToolStripMenuItem.Name = "записиToolStripMenuItem";
+            this.записиToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.записиToolStripMenuItem.Text = "Записи ";
+            this.записиToolStripMenuItem.Click += new System.EventHandler(this.записиToolStripMenuItem_Click);
+            // 
+            // записатьУченикаToolStripMenuItem
+            // 
+            this.записатьУченикаToolStripMenuItem.Name = "записатьУченикаToolStripMenuItem";
+            this.записатьУченикаToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.записатьУченикаToolStripMenuItem.Text = "Записать ученика";
+            this.записатьУченикаToolStripMenuItem.Click += new System.EventHandler(this.записатьУченикаToolStripMenuItem_Click);
+            // 
             // успеваемостьToolStripMenuItem
             // 
             this.успеваемостьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -222,26 +225,24 @@ namespace Centr
             this.учащиесяToolStripMenuItem.Text = "Учащиеся";
             this.учащиесяToolStripMenuItem.Click += new System.EventHandler(this.учащиесяToolStripMenuItem_Click);
             // 
-            // записиToolStripMenuItem
+            // Выход_button
             // 
-            this.записиToolStripMenuItem.Name = "записиToolStripMenuItem";
-            this.записиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.записиToolStripMenuItem.Text = "Записи ";
-            this.записиToolStripMenuItem.Click += new System.EventHandler(this.записиToolStripMenuItem_Click);
-            // 
-            // записатьУченикаToolStripMenuItem
-            // 
-            this.записатьУченикаToolStripMenuItem.Name = "записатьУченикаToolStripMenuItem";
-            this.записатьУченикаToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.записатьУченикаToolStripMenuItem.Text = "Записать ученика";
-            this.записатьУченикаToolStripMenuItem.Click += new System.EventHandler(this.записатьУченикаToolStripMenuItem_Click);
+            this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Выход_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Выход_button.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Выход_button.Location = new System.Drawing.Point(16, 572);
+            this.Выход_button.Name = "Выход_button";
+            this.Выход_button.Size = new System.Drawing.Size(200, 45);
+            this.Выход_button.TabIndex = 98;
+            this.Выход_button.Text = "Выход";
+            this.Выход_button.UseVisualStyleBackColor = false;
             // 
             // меню_админ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1009, 655);
             this.Controls.Add(this.tabControl1);
             this.Name = "меню_админ";
             this.Text = "меню";
@@ -273,9 +274,9 @@ namespace Centr
         private System.Windows.Forms.ToolStripMenuItem посещаемостьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem успеваемостьToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Выход_button;
         private System.Windows.Forms.ToolStripMenuItem учащиесяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem записиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem записатьУченикаToolStripMenuItem;
+        private System.Windows.Forms.Button Выход_button;
     }
 }

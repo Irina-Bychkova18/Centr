@@ -17,7 +17,7 @@ namespace Centr
         {
             InitializeComponent();
         }
-
+        public int numRows;
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,8 @@ namespace Centr
 
         private void Добавить_видео_лекцию_button1_Click(object sender, EventArgs e)
         {
-            добавить_видеоролик добавить_Видеоролик = new добавить_видеоролик();
+            int numRows = dataGridView1.Rows.Count;
+            добавить_видеоролик добавить_Видеоролик = new добавить_видеоролик(numRows);
             Form1.tabControl1.Controls.Add(добавить_Видеоролик.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }

@@ -44,10 +44,11 @@ namespace Centr
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.tabControl1.Location = new System.Drawing.Point(0, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(801, 452);
+            this.tabControl1.Size = new System.Drawing.Size(1027, 702);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -57,10 +58,10 @@ namespace Centr
             this.tabPage1.Controls.Add(this.Войти_button);
             this.tabPage1.Controls.Add(this.Зарегистрироваться_button);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 35);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(793, 423);
+            this.tabPage1.Size = new System.Drawing.Size(1019, 663);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Вход или регистрация";
             // 
@@ -78,7 +79,7 @@ namespace Centr
             // 
             this.Войти_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Войти_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Войти_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Войти_button.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.Войти_button.Location = new System.Drawing.Point(429, 245);
             this.Войти_button.Name = "Войти_button";
             this.Войти_button.Size = new System.Drawing.Size(309, 35);
@@ -91,7 +92,7 @@ namespace Centr
             // 
             this.Зарегистрироваться_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Зарегистрироваться_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Зарегистрироваться_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Зарегистрироваться_button.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.Зарегистрироваться_button.Location = new System.Drawing.Point(53, 245);
             this.Зарегистрироваться_button.Name = "Зарегистрироваться_button";
             this.Зарегистрироваться_button.Size = new System.Drawing.Size(284, 35);
@@ -104,10 +105,10 @@ namespace Centr
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.AliceBlue;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.label3.Location = new System.Drawing.Point(167, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(460, 110);
+            this.label3.Size = new System.Drawing.Size(552, 135);
             this.label3.TabIndex = 17;
             this.label3.Text = "Теперь попрошу вас выбрать:\r\nявляетесь ли вы зарегистрированным пользователем\r\nил" +
     "и нет.\r\n\r\nЕсли нет, то, пожалуйста, зарегистрируйтесь!";
@@ -118,7 +119,7 @@ namespace Centr
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1009, 655);
             this.Controls.Add(this.tabControl1);
             this.Name = "вход_или_регистрация";
             this.Text = "вход_или_регистрация";

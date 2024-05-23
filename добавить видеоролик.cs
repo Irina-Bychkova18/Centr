@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class добавить_видеоролик : Form
     {
-        public добавить_видеоролик()
+        private int rec;
+        public добавить_видеоролик(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace Centr
 
         private void Добавить_видео_button2_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO video (name, text) VALUES ('" + Название_textBox1.Text + "','" + Информация_textBox4.Text + "')";
+            string sql = "INSERT INTO video (id_vid, name, text) VALUES (" + rec + ",'" + Название_textBox1.Text + "','" + Информация_textBox4.Text + "')";
             if (!Form1.Modification_Execute(sql))
                 return;
 

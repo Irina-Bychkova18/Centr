@@ -7,6 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iText;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using Npgsql;
+using iText.Kernel.Font;
+using iText.Kernel.Colors;
+using iText.Layout.Element;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Centr
 {
@@ -16,7 +25,7 @@ namespace Centr
         {
             InitializeComponent();
         }
-
+        public int numRows;
         private void Выход_button4_Click(object sender, EventArgs e)
         {
             меню_админ Меню = new меню_админ();
@@ -91,7 +100,8 @@ namespace Centr
 
         private void Добавить_запись_button1_Click(object sender, EventArgs e)
         {
-            Добавить_успеваемость добавить_успеваемость = new Добавить_успеваемость();
+            int numRows = dataGridView1.Rows.Count;
+            Добавить_успеваемость добавить_успеваемость = new Добавить_успеваемость(numRows);
             Form1.tabControl1.Controls.Add(добавить_успеваемость.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
@@ -109,6 +119,51 @@ namespace Centr
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void Распечатать_расписание_button1_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT id_usp AS \"Номер записи\", uchenik.fio AS \"ФИО\", lekcii.name AS \"Название лекции\","
+                   + " proideno_lekcii_fl AS \"Пройдено лекций\", vsego_lekcii_fl AS \"Всего лекций\",  (proideno_lekcii_fl/vsego_lekcii_fl)*100 AS \"Процент успеваемости\" FROM ((uspevaemost inner join uchenik on uchenik.id_uch = uspevaemost.id_uch)"
+                   + "left join lekcii on lekcii.id_lek = uspevaemost.id_lek) where uchenik.id_uch = uspevaemost.id_uch and lekcii.id_lek = uspevaemost.id_lek" +
+                   " GROUP BY id_usp, uchenik.fio, lekcii.name, proideno_lekcii_fl, vsego_lekcii_fl ORDER BY \"Номер записи\"";
+            Form1.Table_Fill("Успеваемость", sql);
+
+            Excel.Application Excel_ = new Excel.Application();
+            Excel_.Visible = true;
+            Excel.Workbook Workbook_ = Excel_.Workbooks.Add();
+            Excel.Worksheet Sheet_ = (Excel.Worksheet)Workbook_.Sheets[1];
+
+            Sheet_.Cells[1, 1].Value = "Успеваемость";
+            Sheet_.Range[Sheet_.Cells[1, 1], Sheet_.Cells[1, 6]].Merge();
+            Sheet_.Cells[1, 1].HorizontalAlignment = 3;
+
+            Sheet_.Cells[2, 1].Value = dataGridView1.Columns["Номер записи"].HeaderText;
+            Sheet_.Cells[2, 2].Value = dataGridView1.Columns["ФИО"].HeaderText;
+            Sheet_.Cells[2, 3].Value = dataGridView1.Columns["Название лекции"].HeaderText;
+            Sheet_.Cells[2, 4].Value = dataGridView1.Columns["Пройдено лекций"].HeaderText;
+            Sheet_.Cells[2, 5].Value = dataGridView1.Columns["Всего лекций"].HeaderText;
+            Sheet_.Cells[2, 6].Value = dataGridView1.Columns["Процент успеваемости"].HeaderText;
+
+            Sheet_.Range[Sheet_.Cells[2, 1], Sheet_.Cells[2, 5]].HorizontalAlignment = 3;
+
+            int n = 3;
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                Sheet_.Cells[n, 1].Value = dataGridView1.Rows[i].Cells["Номер записи"].Value;
+                Sheet_.Cells[n, 2].Value = dataGridView1.Rows[i].Cells["ФИО"].Value;
+                Sheet_.Cells[n, 3].Value = dataGridView1.Rows[i].Cells["Название лекции"].Value;
+                Sheet_.Cells[n, 4].Value = dataGridView1.Rows[i].Cells["Пройдено лекций"].Value;
+                Sheet_.Cells[n, 5].Value = dataGridView1.Rows[i].Cells["Всего лекций"].Value;
+                Sheet_.Cells[n, 6].Value = dataGridView1.Rows[i].Cells["Процент успеваемости"].Value;
+                n++;
+            }
+            Sheet_.Range[Sheet_.Cells[3, 1], Sheet_.Cells[3 + dataGridView1.RowCount, 3]].HorizontalAlignment = 3;
+            Sheet_.Range[Sheet_.Cells[3, 4], Sheet_.Cells[3 + dataGridView1.RowCount, 6]].HorizontalAlignment = 4;
+            Sheet_.Range[Sheet_.Cells[2, 1], Sheet_.Cells[2 + dataGridView1.RowCount, 6]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+            Sheet_.Cells.Columns.EntireColumn.AutoFit();
+
 
         }
     }

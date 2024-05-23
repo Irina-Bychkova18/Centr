@@ -23,7 +23,7 @@ namespace Centr
             InitializeComponent();
         }
 
-        
+        public int numRows;
 
         private void Выход_button_Click(object sender, EventArgs e)
         {
@@ -66,58 +66,37 @@ namespace Centr
         private const string ConnectionString = "Server=localhost;Port=5433;User Id = postgres; Password=toor;Database=center;";
         private void Распечатать_расписание_button1_Click(object sender, EventArgs e)
         {
-            Document doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream("F:\\output.pdf", FileMode.Create));
-            doc.Open();
+            
 
-            PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
-            for (int i = 0; i < dataGridView1.ColumnCount; i++)
+            Excel.Application Excel_ = new Excel.Application();
+            Excel_.Visible = true;
+            Excel.Workbook Workbook_ = Excel_.Workbooks.Add();
+            Excel.Worksheet Sheet_ = (Excel.Worksheet)Workbook_.Sheets[1];
+
+            Sheet_.Cells[1, 1].Value = "Расписание";
+            Sheet_.Range[Sheet_.Cells[1, 1], Sheet_.Cells[1, 4]].Merge();
+            Sheet_.Cells[1, 1].HorizontalAlignment = 3;
+
+            Sheet_.Cells[2, 1].Value = dataGridView1.Columns["Код расписания"].HeaderText;
+            Sheet_.Cells[2, 2].Value = dataGridView1.Columns["Название курса"].HeaderText;
+            Sheet_.Cells[2, 3].Value = dataGridView1.Columns["Дни работы"].HeaderText;
+            Sheet_.Cells[2, 4].Value = dataGridView1.Columns["Время работы"].HeaderText;
+
+            Sheet_.Range[Sheet_.Cells[2, 1], Sheet_.Cells[2, 3]].HorizontalAlignment = 3;
+
+            int n = 3;
+            for (int i = 0; i < dataGridView1.RowCount; i++)
             {
-                pdfTable.AddCell(new Phrase(dataGridView1.Columns[i].HeaderText));
+                Sheet_.Cells[n, 1].Value = dataGridView1.Rows[i].Cells["Код расписания"].Value;
+                Sheet_.Cells[n, 2].Value = dataGridView1.Rows[i].Cells["Название курса"].Value;
+                Sheet_.Cells[n, 3].Value = dataGridView1.Rows[i].Cells["Дни работы"].Value;
+                Sheet_.Cells[n, 4].Value = dataGridView1.Rows[i].Cells["Время работы"].Value;
+                n++;
             }
-
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    pdfTable.AddCell(new Phrase(cell.Value.ToString(), new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 12, iTextSharp.text.Font.NORMAL)));
-                }
-            }
-
-            doc.Add(pdfTable);
-            doc.Close();
-
-            MessageBox.Show("PDF файл успешно создан.");
-
-            //Excel.Application Excel_ = new Excel.Application();
-            //Excel_.Visible = true;
-            //Excel.Workbook Workbook_ = Excel_.Workbooks.Add();
-            //Excel.Worksheet Sheet_ = (Excel.Worksheet)Workbook_.Sheets[1];
-
-            //Sheet_.Cells[1, 1].Value = "Расписание";
-            //Sheet_.Range[Sheet_.Cells[1, 1], Sheet_.Cells[1, 4]].Merge();
-            //Sheet_.Cells[1, 1].HorizontalAlignment = 3;
-
-            //Sheet_.Cells[2, 1].Value = dataGridView1.Columns["Код расписания"].HeaderText;
-            //Sheet_.Cells[2, 2].Value = dataGridView1.Columns["Название курса"].HeaderText;
-            //Sheet_.Cells[2, 3].Value = dataGridView1.Columns["Дни работы"].HeaderText;
-            //Sheet_.Cells[2, 4].Value = dataGridView1.Columns["Время работы"].HeaderText;
-
-            //Sheet_.Range[Sheet_.Cells[2, 1], Sheet_.Cells[2, 3]].HorizontalAlignment = 3;
-
-            //int n = 3;
-            //for (int i = 0; i < dataGridView1.RowCount; i++)
-            //{
-            //    Sheet_.Cells[n, 1].Value = dataGridView1.Rows[i].Cells["Код расписания"].Value;
-            //    Sheet_.Cells[n, 2].Value = dataGridView1.Rows[i].Cells["Название курса"].Value;
-            //    Sheet_.Cells[n, 3].Value = dataGridView1.Rows[i].Cells["Дни работы"].Value;
-            //    Sheet_.Cells[n, 4].Value = dataGridView1.Rows[i].Cells["Время работы"].Value;
-            //    n++;
-            //}
-            //Sheet_.Range[Sheet_.Cells[3, 1], Sheet_.Cells[3 + dataGridView1.RowCount, 3]].HorizontalAlignment = 3;
-            //Sheet_.Range[Sheet_.Cells[3, 4], Sheet_.Cells[3 + dataGridView1.RowCount, 4]].HorizontalAlignment = 4;
-            //Sheet_.Range[Sheet_.Cells[2, 1], Sheet_.Cells[2 + dataGridView1.RowCount, 4]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous ;
-            //Sheet_.Cells.Columns.EntireColumn.AutoFit();
+            Sheet_.Range[Sheet_.Cells[3, 1], Sheet_.Cells[3 + dataGridView1.RowCount, 3]].HorizontalAlignment = 3;
+            Sheet_.Range[Sheet_.Cells[3, 4], Sheet_.Cells[3 + dataGridView1.RowCount, 4]].HorizontalAlignment = 4;
+            Sheet_.Range[Sheet_.Cells[2, 1], Sheet_.Cells[2 + dataGridView1.RowCount, 4]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+            Sheet_.Cells.Columns.EntireColumn.AutoFit();
         }
 
         private void Показать_button2_Click(object sender, EventArgs e)
@@ -166,7 +145,8 @@ namespace Centr
 
         private void Добавить_занятие_button1_Click(object sender, EventArgs e)
         {
-            Добавить_расписание добавить_расписание = new Добавить_расписание();
+            int numRows = dataGridView1.Rows.Count;
+            Добавить_расписание добавить_расписание = new Добавить_расписание(numRows);
             Form1.tabControl1.Controls.Add(добавить_расписание.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }

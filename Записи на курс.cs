@@ -16,7 +16,7 @@ namespace Centr
         {
             InitializeComponent();
         }
-
+        public int numRows;
         private void Выход_button_Click(object sender, EventArgs e)
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
@@ -82,8 +82,9 @@ namespace Centr
 
         private void Добавить_запись_button1_Click(object sender, EventArgs e)
         {
+            int numRows = dataGridView1.Rows.Count;
             Добавление_записи.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Номер записи"].Value.ToString();
-            Добавление_записи добавление_записи = new Добавление_записи();
+            Добавление_записи добавление_записи = new Добавление_записи(numRows);
             if (Form1.tabControl1.TabCount > 2)
                 Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
             Form1.tabControl1.Controls.Add(добавление_записи.tabControl1.TabPages[0]);

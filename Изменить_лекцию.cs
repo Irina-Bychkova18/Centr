@@ -42,7 +42,7 @@ namespace Centr
         {
             string sql = "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\","
                 + " text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"";
-            Form1.Table_Fill("Все текстовые лекции", sql);
+            Form1.Table_Fill("Текстовая лекция", sql);
 
             int i = 0;
             while (Form1.cdt.Tables["Текстовая лекция"].Rows[i]["Код лекции"].ToString() != n)

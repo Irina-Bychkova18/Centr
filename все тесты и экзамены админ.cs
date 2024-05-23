@@ -17,7 +17,7 @@ namespace Centr
         {
             InitializeComponent();
         }
-
+        public int numRows;
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -98,7 +98,8 @@ namespace Centr
 
         private void Добавить_домашнее_задание_button1_Click(object sender, EventArgs e)
         {
-            добавить_тест_экзамен Добавить_тест_экзамен = new добавить_тест_экзамен();
+            int numRows = dataGridView1.Rows.Count;
+            добавить_тест_экзамен Добавить_тест_экзамен = new добавить_тест_экзамен(numRows);
             Form1.tabControl1.Controls.Add(Добавить_тест_экзамен.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }

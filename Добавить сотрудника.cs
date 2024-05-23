@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class Добавить_сотрудника : Form
     {
-        public Добавить_сотрудника()
+        private int rec;
+        public Добавить_сотрудника(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
         private void Добавить_button2_Click(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace Centr
             string kod_6 = Form1.cdt.Tables["Улица"].DefaultView[Улица_comboBox4.SelectedIndex]["Код улицы"].ToString();
             string kod_7 = Form1.cdt.Tables["Дом"].DefaultView[Дом_comboBox1.SelectedIndex]["Код дома"].ToString();
             string kod_8 = Form1.cdt.Tables["Квартира"].DefaultView[Квартира_comboBox2.SelectedIndex]["Код квартиры"].ToString();
-            string sql = "INSERT INTO sotrudniki (fio, data_r, id_opita, telephon, id_g, id_ul, id_d, id_k, id_dolj, id_kursi, login, parol ) VALUES ('" + ФИО_textBox1.Text + "','" 
+            string sql = "INSERT INTO sotrudniki (id_sot, fio, data_r, id_opita, telephon, id_g, id_ul, id_d, id_k, id_dolj, id_kursi, login, parol ) VALUES (" + rec + ",'" + ФИО_textBox1.Text + "','" 
                 + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "',"  + kod_2 + ",'" + maskedTextBox1.Text + "'," + kod_5 + "," + kod_6 + "," + kod_7 + "," + kod_8 + "," + kod_3 + "," + kod_4 + ",'" + Логин_textBox8.Text + "','" + Пароль_textBox7.Text + "')";
             if (!Form1.Modification_Execute(sql))
                 return;

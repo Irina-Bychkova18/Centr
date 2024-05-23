@@ -12,14 +12,16 @@ namespace Centr
 {
     public partial class Добавить_лекцию : Form
     {
-        public Добавить_лекцию()
+        private int rec;
+        public Добавить_лекцию(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
         private void Добавить_лекцию_button2_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO lekcii (name, text) VALUES ('" + Название_textBox1.Text + "','" + Информация_textBox4.Text + "')";
+            string sql = "INSERT INTO lekcii (id_lek, name, text) VALUES (" + rec + ",'" + Название_textBox1.Text + "','" + Информация_textBox4.Text + "')";
             if (!Form1.Modification_Execute(sql))
                 return;
 

@@ -26,7 +26,7 @@ namespace Centr
         public static string n = null;
         public static string a = null;
         public static string b = null;
-        private string connString = "Server=localhost;Port=5433;User Id = postgres; Password=toor;Database=center;";
+        private string connString = "Server=localhost;Port=5432;Username = postgres; Password=toor;Database=center;";
         private void ret()
         {
             Город_comboBox3.DataSource = Form1.cdt.Tables["Город"].DefaultView;

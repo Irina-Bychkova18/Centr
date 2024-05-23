@@ -25,7 +25,7 @@ namespace Centr
             Form1.tabControl1.TabPages.RemoveAt(0);
             
         }
-
+        public int numRows = 0;
        
 
         private void Записаться_button1_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace Centr
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            Добавить_учащегося добавить_учащегося = new Добавить_учащегося();
+            Добавить_учащегося добавить_учащегося = new Добавить_учащегося(numRows);
 
             Form1.tabControl1.Controls.Add(добавить_учащегося.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;

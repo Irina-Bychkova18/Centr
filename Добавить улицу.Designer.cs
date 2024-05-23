@@ -38,6 +38,7 @@ namespace Centr
             // 
             this.Добавить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.Добавить_button1.Location = new System.Drawing.Point(117, 108);
             this.Добавить_button1.Name = "Добавить_button1";
             this.Добавить_button1.Size = new System.Drawing.Size(135, 29);
@@ -49,18 +50,20 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 17);
+            this.label1.Size = new System.Drawing.Size(169, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Введите улицу:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Название_улицы_textBox1
             // 
+            this.Название_улицы_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.Название_улицы_textBox1.Location = new System.Drawing.Point(127, 48);
             this.Название_улицы_textBox1.Name = "Название_улицы_textBox1";
-            this.Название_улицы_textBox1.Size = new System.Drawing.Size(214, 22);
+            this.Название_улицы_textBox1.Size = new System.Drawing.Size(214, 34);
             this.Название_улицы_textBox1.TabIndex = 2;
             this.Название_улицы_textBox1.TextChanged += new System.EventHandler(this.Название_улицы_textBox1_TextChanged);
             // 
@@ -69,7 +72,7 @@ namespace Centr
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(353, 167);
+            this.ClientSize = new System.Drawing.Size(587, 293);
             this.Controls.Add(this.Название_улицы_textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Добавить_button1);

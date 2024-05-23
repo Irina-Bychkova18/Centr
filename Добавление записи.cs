@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class Добавление_записи : Form
     {
-        public Добавление_записи()
+        private int rec;
+        public Добавление_записи(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
         public static string n = null;
         private void Добавить_button1_Click(object sender, EventArgs e)

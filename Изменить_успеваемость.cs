@@ -25,12 +25,12 @@ namespace Centr
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             ФИО_ученика_comboBox1.DataSource = Form1.cdt.Tables["Ученики"].DefaultView;
-            ФИО_ученика_comboBox1.DisplayMember = "ФИО ученика";
+            ФИО_ученика_comboBox1.DisplayMember = "ФИО";
 
             Название_лекции_comboBox2.DataSource = Form1.cdt.Tables["Все текстовые лекции"].DefaultView;
             Название_лекции_comboBox2.DisplayMember = "Название лекции";
 
-
+            
             string sql = "SELECT id_usp AS \"Номер записи\", uchenik.fio AS \"ФИО\", lekcii.name AS \"Название лекции\","
                    + " proideno_lekcii_fl AS \"Пройдено лекций\", vsego_lekcii_fl AS \"Всего лекций\",  (proideno_lekcii_fl/vsego_lekcii_fl)*100 AS \"Процент успеваемости\" FROM ((uspevaemost inner join uchenik on uchenik.id_uch = uspevaemost.id_uch)"
                    + "left join lekcii on lekcii.id_lek = uspevaemost.id_lek) where uchenik.id_uch = uspevaemost.id_uch and lekcii.id_lek = uspevaemost.id_lek" +

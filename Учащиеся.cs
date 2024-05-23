@@ -16,7 +16,7 @@ namespace Centr
         {
             InitializeComponent();
         }
-
+        public int numRows;
         private void Выход_button_Click(object sender, EventArgs e)
         {
             Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
@@ -86,7 +86,8 @@ namespace Centr
 
         private void Добавить_запись_button1_Click(object sender, EventArgs e)
         {
-            Добавить_учащегося добавить_учащегося = new Добавить_учащегося();
+            int numRows = dataGridView1.Rows.Count;
+            Добавить_учащегося добавить_учащегося = new Добавить_учащегося(numRows);
 
             Form1.tabControl1.Controls.Add(добавить_учащегося.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;

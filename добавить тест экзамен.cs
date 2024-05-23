@@ -12,9 +12,11 @@ namespace Centr
 {
     public partial class добавить_тест_экзамен : Form
     {
-        public добавить_тест_экзамен()
+        private int rec;
+        public добавить_тест_экзамен(int numRows)
         {
             InitializeComponent();
+            rec = numRows + 1;
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace Centr
 
         private void Добавить_лекцию_button2_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO dz (name, text) VALUES ('" + Название_textBox1.Text + "','" + Информация_textBox4.Text + "')";
+            string sql = "INSERT INTO dz (id_dz, name, text) VALUES ("+ rec + ",'" + Название_textBox1.Text + "','" + Информация_textBox4.Text + "')";
             if (!Form1.Modification_Execute(sql))
                 return;
 
