@@ -29,22 +29,19 @@ namespace Centr
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Посещаемость));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.добавить_новую_дату_button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Название_столбца_textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Сохранить_изменения_button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.Выход_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +63,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.добавить_новую_дату_button1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.Название_столбца_textBox1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Сохранить_изменения_button1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.label1);
@@ -77,93 +73,6 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Посещаемость";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridView2.Location = new System.Drawing.Point(267, 94);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(321, 305);
-            this.dataGridView2.TabIndex = 101;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
-            this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged);
-            this.dataGridView2.BindingContextChanged += new System.EventHandler(this.dataGridView2_BindingContextChanged);
-            // 
-            // добавить_новую_дату_button1
-            // 
-            this.добавить_новую_дату_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.добавить_новую_дату_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.добавить_новую_дату_button1.Location = new System.Drawing.Point(594, 200);
-            this.добавить_новую_дату_button1.Name = "добавить_новую_дату_button1";
-            this.добавить_новую_дату_button1.Size = new System.Drawing.Size(188, 33);
-            this.добавить_новую_дату_button1.TabIndex = 100;
-            this.добавить_новую_дату_button1.Text = "Добавить новую дату";
-            this.добавить_новую_дату_button1.UseVisualStyleBackColor = false;
-            this.добавить_новую_дату_button1.Click += new System.EventHandler(this.добавить_новую_дату_button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(594, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 54);
-            this.label2.TabIndex = 98;
-            this.label2.Text = "Введите название столбца\r\n(дату):";
-            // 
-            // Название_столбца_textBox1
-            // 
-            this.Название_столбца_textBox1.Location = new System.Drawing.Point(593, 140);
-            this.Название_столбца_textBox1.Name = "Название_столбца_textBox1";
-            this.Название_столбца_textBox1.Size = new System.Drawing.Size(188, 34);
-            this.Название_столбца_textBox1.TabIndex = 96;
-            this.Название_столбца_textBox1.Enter += new System.EventHandler(this.Название_столбца_textBox1_Enter);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(676, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 95;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Сохранить_изменения_button1
-            // 
-            this.Сохранить_изменения_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Сохранить_изменения_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Сохранить_изменения_button1.Location = new System.Drawing.Point(597, 358);
-            this.Сохранить_изменения_button1.Name = "Сохранить_изменения_button1";
-            this.Сохранить_изменения_button1.Size = new System.Drawing.Size(191, 41);
-            this.Сохранить_изменения_button1.TabIndex = 43;
-            this.Сохранить_изменения_button1.Text = "Изменить данные";
-            this.Сохранить_изменения_button1.UseVisualStyleBackColor = false;
-            this.Сохранить_изменения_button1.Click += new System.EventHandler(this.Сохранить_изменения_button1_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(275, 305);
-            this.dataGridView1.TabIndex = 41;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 27);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Сведения о посещаемости";
             // 
             // Выход_button
             // 
@@ -177,6 +86,83 @@ namespace Centr
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.dataGridView2.Location = new System.Drawing.Point(246, 126);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(461, 462);
+            this.dataGridView2.TabIndex = 101;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
+            this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged);
+            this.dataGridView2.BindingContextChanged += new System.EventHandler(this.dataGridView2_BindingContextChanged);
+            // 
+            // добавить_новую_дату_button1
+            // 
+            this.добавить_новую_дату_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.добавить_новую_дату_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.добавить_новую_дату_button1.Location = new System.Drawing.Point(718, 272);
+            this.добавить_новую_дату_button1.Name = "добавить_новую_дату_button1";
+            this.добавить_новую_дату_button1.Size = new System.Drawing.Size(276, 50);
+            this.добавить_новую_дату_button1.TabIndex = 100;
+            this.добавить_новую_дату_button1.Text = "Добавить новую дату";
+            this.добавить_новую_дату_button1.UseVisualStyleBackColor = false;
+            this.добавить_новую_дату_button1.Click += new System.EventHandler(this.добавить_новую_дату_button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(713, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(281, 54);
+            this.label2.TabIndex = 98;
+            this.label2.Text = "Введите название столбца\r\n(дату):";
+            // 
+            // Название_столбца_textBox1
+            // 
+            this.Название_столбца_textBox1.Location = new System.Drawing.Point(718, 199);
+            this.Название_столбца_textBox1.Name = "Название_столбца_textBox1";
+            this.Название_столбца_textBox1.Size = new System.Drawing.Size(276, 34);
+            this.Название_столбца_textBox1.TabIndex = 96;
+            this.Название_столбца_textBox1.Enter += new System.EventHandler(this.Название_столбца_textBox1_Enter);
+            // 
+            // Сохранить_изменения_button1
+            // 
+            this.Сохранить_изменения_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Сохранить_изменения_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Сохранить_изменения_button1.Location = new System.Drawing.Point(718, 531);
+            this.Сохранить_изменения_button1.Name = "Сохранить_изменения_button1";
+            this.Сохранить_изменения_button1.Size = new System.Drawing.Size(276, 57);
+            this.Сохранить_изменения_button1.TabIndex = 43;
+            this.Сохранить_изменения_button1.Text = "Изменить данные";
+            this.Сохранить_изменения_button1.UseVisualStyleBackColor = false;
+            this.Сохранить_изменения_button1.Click += new System.EventHandler(this.Сохранить_изменения_button1_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 126);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(275, 462);
+            this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 27);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Сведения о посещаемости";
+            // 
             // Посещаемость
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -189,7 +175,6 @@ namespace Centr
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -203,7 +188,6 @@ namespace Centr
         private System.Windows.Forms.Button добавить_новую_дату_button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Название_столбца_textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Сохранить_изменения_button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;

@@ -32,10 +32,10 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(вход_или_регистрация));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Войти_button = new System.Windows.Forms.Button();
             this.Зарегистрироваться_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,24 +65,14 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Вход или регистрация";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(675, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // Войти_button
             // 
             this.Войти_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Войти_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Войти_button.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.Войти_button.Location = new System.Drawing.Point(429, 245);
+            this.Войти_button.Location = new System.Drawing.Point(603, 362);
             this.Войти_button.Name = "Войти_button";
-            this.Войти_button.Size = new System.Drawing.Size(309, 35);
+            this.Войти_button.Size = new System.Drawing.Size(314, 52);
             this.Войти_button.TabIndex = 19;
             this.Войти_button.Text = "Войти";
             this.Войти_button.UseVisualStyleBackColor = false;
@@ -93,9 +83,9 @@ namespace Centr
             this.Зарегистрироваться_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Зарегистрироваться_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Зарегистрироваться_button.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.Зарегистрироваться_button.Location = new System.Drawing.Point(53, 245);
+            this.Зарегистрироваться_button.Location = new System.Drawing.Point(111, 362);
             this.Зарегистрироваться_button.Name = "Зарегистрироваться_button";
-            this.Зарегистрироваться_button.Size = new System.Drawing.Size(284, 35);
+            this.Зарегистрироваться_button.Size = new System.Drawing.Size(314, 52);
             this.Зарегистрироваться_button.TabIndex = 18;
             this.Зарегистрироваться_button.Text = "Зарегистрироваться";
             this.Зарегистрироваться_button.UseVisualStyleBackColor = false;
@@ -106,13 +96,23 @@ namespace Centr
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.AliceBlue;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.label3.Location = new System.Drawing.Point(167, 19);
+            this.label3.Location = new System.Drawing.Point(237, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(552, 135);
             this.label3.TabIndex = 17;
             this.label3.Text = "Теперь попрошу вас выбрать:\r\nявляетесь ли вы зарегистрированным пользователем\r\nил" +
     "и нет.\r\n\r\nЕсли нет, то, пожалуйста, зарегистрируйтесь!";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(849, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 95;
+            this.pictureBox1.TabStop = false;
             // 
             // вход_или_регистрация
             // 

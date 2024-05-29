@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Добавить_успеваемость));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.Всего_лекций_textBox2 = new System.Windows.Forms.TextBox();
             this.Пройдено_лекций_textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace Centr
             this.label1 = new System.Windows.Forms.Label();
             this.Добавить_button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Выход_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +62,7 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Всего_лекций_textBox2);
             this.tabPage1.Controls.Add(this.Пройдено_лекций_textBox1);
@@ -73,7 +74,6 @@ namespace Centr
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Добавить_button2);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 35);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -81,106 +81,6 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавить запись для расписания";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
-            // 
-            // Всего_лекций_textBox2
-            // 
-            this.Всего_лекций_textBox2.Location = new System.Drawing.Point(508, 217);
-            this.Всего_лекций_textBox2.Name = "Всего_лекций_textBox2";
-            this.Всего_лекций_textBox2.Size = new System.Drawing.Size(155, 34);
-            this.Всего_лекций_textBox2.TabIndex = 129;
-            // 
-            // Пройдено_лекций_textBox1
-            // 
-            this.Пройдено_лекций_textBox1.Location = new System.Drawing.Point(228, 217);
-            this.Пройдено_лекций_textBox1.Name = "Пройдено_лекций_textBox1";
-            this.Пройдено_лекций_textBox1.Size = new System.Drawing.Size(157, 34);
-            this.Пройдено_лекций_textBox1.TabIndex = 128;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(402, 220);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 27);
-            this.label2.TabIndex = 127;
-            this.label2.Text = "Всего лекций:";
-            // 
-            // Отменить_добавление_button1
-            // 
-            this.Отменить_добавление_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Отменить_добавление_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Отменить_добавление_button1.Location = new System.Drawing.Point(152, 333);
-            this.Отменить_добавление_button1.Name = "Отменить_добавление_button1";
-            this.Отменить_добавление_button1.Size = new System.Drawing.Size(203, 30);
-            this.Отменить_добавление_button1.TabIndex = 126;
-            this.Отменить_добавление_button1.Text = "Отменить добавление";
-            this.Отменить_добавление_button1.UseVisualStyleBackColor = false;
-            this.Отменить_добавление_button1.Click += new System.EventHandler(this.Отменить_добавление_button1_Click);
-            // 
-            // Название_лекции_comboBox2
-            // 
-            this.Название_лекции_comboBox2.FormattingEnabled = true;
-            this.Название_лекции_comboBox2.Location = new System.Drawing.Point(228, 176);
-            this.Название_лекции_comboBox2.Name = "Название_лекции_comboBox2";
-            this.Название_лекции_comboBox2.Size = new System.Drawing.Size(435, 34);
-            this.Название_лекции_comboBox2.TabIndex = 123;
-            // 
-            // ФИО_ученика_comboBox1
-            // 
-            this.ФИО_ученика_comboBox1.FormattingEnabled = true;
-            this.ФИО_ученика_comboBox1.Location = new System.Drawing.Point(228, 133);
-            this.ФИО_ученика_comboBox1.Name = "ФИО_ученика_comboBox1";
-            this.ФИО_ученика_comboBox1.Size = new System.Drawing.Size(435, 34);
-            this.ФИО_ученика_comboBox1.TabIndex = 122;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(91, 220);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 27);
-            this.label5.TabIndex = 115;
-            this.label5.Text = "Пройдено лекций:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(91, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 27);
-            this.label4.TabIndex = 114;
-            this.label4.Text = "Название лекции:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 134);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 27);
-            this.label1.TabIndex = 111;
-            this.label1.Text = "ФИО ученика:";
-            // 
-            // Добавить_button2
-            // 
-            this.Добавить_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Добавить_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_button2.Location = new System.Drawing.Point(411, 333);
-            this.Добавить_button2.Name = "Добавить_button2";
-            this.Добавить_button2.Size = new System.Drawing.Size(219, 30);
-            this.Добавить_button2.TabIndex = 109;
-            this.Добавить_button2.Text = "Добавить ";
-            this.Добавить_button2.UseVisualStyleBackColor = false;
-            this.Добавить_button2.Click += new System.EventHandler(this.Добавить_button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(675, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 93;
-            this.pictureBox1.TabStop = false;
             // 
             // Выход_button
             // 
@@ -193,6 +93,106 @@ namespace Centr
             this.Выход_button.TabIndex = 130;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            // 
+            // Всего_лекций_textBox2
+            // 
+            this.Всего_лекций_textBox2.Location = new System.Drawing.Point(605, 235);
+            this.Всего_лекций_textBox2.Name = "Всего_лекций_textBox2";
+            this.Всего_лекций_textBox2.Size = new System.Drawing.Size(223, 34);
+            this.Всего_лекций_textBox2.TabIndex = 129;
+            // 
+            // Пройдено_лекций_textBox1
+            // 
+            this.Пройдено_лекций_textBox1.Location = new System.Drawing.Point(228, 235);
+            this.Пройдено_лекций_textBox1.Name = "Пройдено_лекций_textBox1";
+            this.Пройдено_лекций_textBox1.Size = new System.Drawing.Size(208, 34);
+            this.Пройдено_лекций_textBox1.TabIndex = 128;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(442, 242);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 27);
+            this.label2.TabIndex = 127;
+            this.label2.Text = "Всего лекций:";
+            // 
+            // Отменить_добавление_button1
+            // 
+            this.Отменить_добавление_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Отменить_добавление_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Отменить_добавление_button1.Location = new System.Drawing.Point(228, 443);
+            this.Отменить_добавление_button1.Name = "Отменить_добавление_button1";
+            this.Отменить_добавление_button1.Size = new System.Drawing.Size(255, 43);
+            this.Отменить_добавление_button1.TabIndex = 126;
+            this.Отменить_добавление_button1.Text = "Отменить добавление";
+            this.Отменить_добавление_button1.UseVisualStyleBackColor = false;
+            this.Отменить_добавление_button1.Click += new System.EventHandler(this.Отменить_добавление_button1_Click);
+            // 
+            // Название_лекции_comboBox2
+            // 
+            this.Название_лекции_comboBox2.FormattingEnabled = true;
+            this.Название_лекции_comboBox2.Location = new System.Drawing.Point(228, 180);
+            this.Название_лекции_comboBox2.Name = "Название_лекции_comboBox2";
+            this.Название_лекции_comboBox2.Size = new System.Drawing.Size(600, 34);
+            this.Название_лекции_comboBox2.TabIndex = 123;
+            // 
+            // ФИО_ученика_comboBox1
+            // 
+            this.ФИО_ученика_comboBox1.FormattingEnabled = true;
+            this.ФИО_ученика_comboBox1.Location = new System.Drawing.Point(228, 133);
+            this.ФИО_ученика_comboBox1.Name = "ФИО_ученика_comboBox1";
+            this.ФИО_ученика_comboBox1.Size = new System.Drawing.Size(600, 34);
+            this.ФИО_ученика_comboBox1.TabIndex = 122;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 235);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 27);
+            this.label5.TabIndex = 115;
+            this.label5.Text = "Пройдено лекций:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(194, 27);
+            this.label4.TabIndex = 114;
+            this.label4.Text = "Название лекции:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 27);
+            this.label1.TabIndex = 111;
+            this.label1.Text = "ФИО ученика:";
+            // 
+            // Добавить_button2
+            // 
+            this.Добавить_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Добавить_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_button2.Location = new System.Drawing.Point(581, 443);
+            this.Добавить_button2.Name = "Добавить_button2";
+            this.Добавить_button2.Size = new System.Drawing.Size(247, 43);
+            this.Добавить_button2.TabIndex = 109;
+            this.Добавить_button2.Text = "Добавить ";
+            this.Добавить_button2.UseVisualStyleBackColor = false;
+            this.Добавить_button2.Click += new System.EventHandler(this.Добавить_button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(849, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 131;
+            this.pictureBox1.TabStop = false;
             // 
             // Добавить_успеваемость
             // 
@@ -221,10 +221,10 @@ namespace Centr
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Добавить_button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Всего_лекций_textBox2;
         private System.Windows.Forms.TextBox Пройдено_лекций_textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

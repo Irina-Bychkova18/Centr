@@ -37,16 +37,16 @@ namespace Centr
             // Название_улицы_textBox1
             // 
             this.Название_улицы_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.Название_улицы_textBox1.Location = new System.Drawing.Point(127, 39);
+            this.Название_улицы_textBox1.Location = new System.Drawing.Point(207, 87);
             this.Название_улицы_textBox1.Name = "Название_улицы_textBox1";
-            this.Название_улицы_textBox1.Size = new System.Drawing.Size(214, 34);
+            this.Название_улицы_textBox1.Size = new System.Drawing.Size(335, 34);
             this.Название_улицы_textBox1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Location = new System.Drawing.Point(12, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 27);
             this.label1.TabIndex = 4;
@@ -57,9 +57,9 @@ namespace Centr
             this.Добавить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Добавить_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.Добавить_button1.Location = new System.Drawing.Point(117, 99);
+            this.Добавить_button1.Location = new System.Drawing.Point(170, 186);
             this.Добавить_button1.Name = "Добавить_button1";
-            this.Добавить_button1.Size = new System.Drawing.Size(135, 29);
+            this.Добавить_button1.Size = new System.Drawing.Size(265, 51);
             this.Добавить_button1.TabIndex = 3;
             this.Добавить_button1.Text = "Добавить";
             this.Добавить_button1.UseVisualStyleBackColor = false;

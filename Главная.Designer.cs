@@ -32,11 +32,11 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Главная));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Далее_button = new System.Windows.Forms.Button();
             this.Выборка_пользователя_combobox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,24 +69,14 @@ namespace Centr
             this.tabPage1.Text = "Главная";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(885, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            // 
             // Далее_button
             // 
             this.Далее_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Далее_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Далее_button.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Далее_button.Location = new System.Drawing.Point(414, 409);
+            this.Далее_button.Location = new System.Drawing.Point(389, 417);
             this.Далее_button.Name = "Далее_button";
-            this.Далее_button.Size = new System.Drawing.Size(182, 47);
+            this.Далее_button.Size = new System.Drawing.Size(240, 51);
             this.Далее_button.TabIndex = 28;
             this.Далее_button.Text = "Далее";
             this.Далее_button.UseVisualStyleBackColor = false;
@@ -107,7 +97,7 @@ namespace Centr
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.AliceBlue;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(247, 6);
+            this.label3.Location = new System.Drawing.Point(248, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(517, 189);
             this.label3.TabIndex = 26;
@@ -126,6 +116,16 @@ namespace Centr
             this.label2.Size = new System.Drawing.Size(406, 27);
             this.label2.TabIndex = 25;
             this.label2.Text = "Выберите из списка кем вы являетесь:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(850, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 95;
+            this.pictureBox1.TabStop = false;
             // 
             // Главная
             // 
@@ -147,11 +147,11 @@ namespace Centr
 
         #endregion
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Далее_button;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.ComboBox Выборка_пользователя_combobox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

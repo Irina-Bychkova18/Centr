@@ -37,9 +37,9 @@ namespace Centr
             // Название_должности_textBox1
             // 
             this.Название_должности_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.Название_должности_textBox1.Location = new System.Drawing.Point(15, 71);
+            this.Название_должности_textBox1.Location = new System.Drawing.Point(17, 87);
             this.Название_должности_textBox1.Name = "Название_должности_textBox1";
-            this.Название_должности_textBox1.Size = new System.Drawing.Size(326, 34);
+            this.Название_должности_textBox1.Size = new System.Drawing.Size(547, 34);
             this.Название_должности_textBox1.TabIndex = 5;
             // 
             // label1
@@ -57,9 +57,9 @@ namespace Centr
             this.Добавить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Добавить_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.Добавить_button1.Location = new System.Drawing.Point(114, 116);
+            this.Добавить_button1.Location = new System.Drawing.Point(155, 199);
             this.Добавить_button1.Name = "Добавить_button1";
-            this.Добавить_button1.Size = new System.Drawing.Size(135, 29);
+            this.Добавить_button1.Size = new System.Drawing.Size(282, 48);
             this.Добавить_button1.TabIndex = 3;
             this.Добавить_button1.Text = "Добавить";
             this.Добавить_button1.UseVisualStyleBackColor = false;

@@ -32,9 +32,9 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Изменить_курс));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.Цена_textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Информация_textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Изменить_button1 = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@ namespace Centr
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
-            this.Выход_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,10 +63,10 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Цена_textBox1);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.Информация_textBox1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.Изменить_button1);
@@ -84,109 +84,6 @@ namespace Centr
             this.tabPage1.Text = "Изменение_курса";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
-            // Цена_textBox1
-            // 
-            this.Цена_textBox1.Location = new System.Drawing.Point(180, 167);
-            this.Цена_textBox1.Name = "Цена_textBox1";
-            this.Цена_textBox1.Size = new System.Drawing.Size(591, 34);
-            this.Цена_textBox1.TabIndex = 98;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 167);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 54);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Цена за курс:\r\n(4 занятия)";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(662, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 93;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Информация_textBox1
-            // 
-            this.Информация_textBox1.Location = new System.Drawing.Point(180, 217);
-            this.Информация_textBox1.Multiline = true;
-            this.Информация_textBox1.Name = "Информация_textBox1";
-            this.Информация_textBox1.Size = new System.Drawing.Size(591, 126);
-            this.Информация_textBox1.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 27);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Информация о курсе:";
-            // 
-            // Изменить_button1
-            // 
-            this.Изменить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Изменить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Изменить_button1.Location = new System.Drawing.Point(255, 361);
-            this.Изменить_button1.Name = "Изменить_button1";
-            this.Изменить_button1.Size = new System.Drawing.Size(312, 35);
-            this.Изменить_button1.TabIndex = 21;
-            this.Изменить_button1.Text = "Изменить";
-            this.Изменить_button1.UseVisualStyleBackColor = false;
-            this.Изменить_button1.Click += new System.EventHandler(this.Изменить_button1_Click);
-            // 
-            // Всего_мест_textBox3
-            // 
-            this.Всего_мест_textBox3.Location = new System.Drawing.Point(180, 124);
-            this.Всего_мест_textBox3.Name = "Всего_мест_textBox3";
-            this.Всего_мест_textBox3.Size = new System.Drawing.Size(218, 34);
-            this.Всего_мест_textBox3.TabIndex = 20;
-            // 
-            // Оставшиеся_места_textBox2
-            // 
-            this.Оставшиеся_места_textBox2.Location = new System.Drawing.Point(561, 124);
-            this.Оставшиеся_места_textBox2.Name = "Оставшиеся_места_textBox2";
-            this.Оставшиеся_места_textBox2.Size = new System.Drawing.Size(210, 34);
-            this.Оставшиеся_места_textBox2.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(404, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 27);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Оставшиеся места:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 27);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Всего мест:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 27);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Название:";
-            // 
-            // Название_textBox1
-            // 
-            this.Название_textBox1.Location = new System.Drawing.Point(180, 80);
-            this.Название_textBox1.Name = "Название_textBox1";
-            this.Название_textBox1.Size = new System.Drawing.Size(591, 34);
-            this.Название_textBox1.TabIndex = 14;
-            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -198,6 +95,109 @@ namespace Centr
             this.Выход_button.TabIndex = 99;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            // 
+            // Цена_textBox1
+            // 
+            this.Цена_textBox1.Location = new System.Drawing.Point(254, 229);
+            this.Цена_textBox1.Name = "Цена_textBox1";
+            this.Цена_textBox1.Size = new System.Drawing.Size(601, 34);
+            this.Цена_textBox1.TabIndex = 98;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 229);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 54);
+            this.label5.TabIndex = 97;
+            this.label5.Text = "Цена за курс:\r\n(4 занятия)";
+            // 
+            // Информация_textBox1
+            // 
+            this.Информация_textBox1.Location = new System.Drawing.Point(254, 303);
+            this.Информация_textBox1.Multiline = true;
+            this.Информация_textBox1.Name = "Информация_textBox1";
+            this.Информация_textBox1.Size = new System.Drawing.Size(601, 126);
+            this.Информация_textBox1.TabIndex = 24;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 293);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(233, 27);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Информация о курсе:";
+            // 
+            // Изменить_button1
+            // 
+            this.Изменить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Изменить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_button1.Location = new System.Drawing.Point(384, 508);
+            this.Изменить_button1.Name = "Изменить_button1";
+            this.Изменить_button1.Size = new System.Drawing.Size(324, 51);
+            this.Изменить_button1.TabIndex = 21;
+            this.Изменить_button1.Text = "Изменить";
+            this.Изменить_button1.UseVisualStyleBackColor = false;
+            this.Изменить_button1.Click += new System.EventHandler(this.Изменить_button1_Click);
+            // 
+            // Всего_мест_textBox3
+            // 
+            this.Всего_мест_textBox3.Location = new System.Drawing.Point(254, 186);
+            this.Всего_мест_textBox3.Name = "Всего_мест_textBox3";
+            this.Всего_мест_textBox3.Size = new System.Drawing.Size(171, 34);
+            this.Всего_мест_textBox3.TabIndex = 20;
+            // 
+            // Оставшиеся_места_textBox2
+            // 
+            this.Оставшиеся_места_textBox2.Location = new System.Drawing.Point(665, 186);
+            this.Оставшиеся_места_textBox2.Name = "Оставшиеся_места_textBox2";
+            this.Оставшиеся_места_textBox2.Size = new System.Drawing.Size(190, 34);
+            this.Оставшиеся_места_textBox2.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(442, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(208, 27);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Оставшиеся места:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 189);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 27);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Всего мест:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 27);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Название:";
+            // 
+            // Название_textBox1
+            // 
+            this.Название_textBox1.Location = new System.Drawing.Point(254, 136);
+            this.Название_textBox1.Name = "Название_textBox1";
+            this.Название_textBox1.Size = new System.Drawing.Size(601, 34);
+            this.Название_textBox1.TabIndex = 14;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(852, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 100;
+            this.pictureBox1.TabStop = false;
             // 
             // Изменить_курс
             // 
@@ -228,9 +228,9 @@ namespace Centr
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Название_textBox1;
         private System.Windows.Forms.TextBox Информация_textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Цена_textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

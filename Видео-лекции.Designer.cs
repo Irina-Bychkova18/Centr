@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Видео_лекции));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.Ссылка_на_видеоролик_textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,7 +42,6 @@ namespace Centr
             this.Вперед_button1 = new System.Windows.Forms.Button();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Выход_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,99 +78,6 @@ namespace Centr
             this.tabPage1.Text = "Видеоролик";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
-            // Ссылка_на_видеоролик_textBox1
-            // 
-            this.Ссылка_на_видеоролик_textBox1.Location = new System.Drawing.Point(329, 143);
-            this.Ссылка_на_видеоролик_textBox1.Multiline = true;
-            this.Ссылка_на_видеоролик_textBox1.Name = "Ссылка_на_видеоролик_textBox1";
-            this.Ссылка_на_видеоролик_textBox1.Size = new System.Drawing.Size(489, 103);
-            this.Ссылка_на_видеоролик_textBox1.TabIndex = 96;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(8, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 29);
-            this.label2.TabIndex = 95;
-            this.label2.Text = "Ссылка на видеоролик:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(884, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 94;
-            this.pictureBox1.TabStop = false;
-            // 
-            // В_конец_button5
-            // 
-            this.В_конец_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.В_конец_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.В_конец_button5.Location = new System.Drawing.Point(425, 370);
-            this.В_конец_button5.Name = "В_конец_button5";
-            this.В_конец_button5.Size = new System.Drawing.Size(244, 30);
-            this.В_конец_button5.TabIndex = 41;
-            this.В_конец_button5.Text = "В конец";
-            this.В_конец_button5.UseVisualStyleBackColor = false;
-            this.В_конец_button5.Click += new System.EventHandler(this.В_конец_button5_Click);
-            // 
-            // В_начало_button3
-            // 
-            this.В_начало_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.В_начало_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.В_начало_button3.Location = new System.Drawing.Point(84, 370);
-            this.В_начало_button3.Name = "В_начало_button3";
-            this.В_начало_button3.Size = new System.Drawing.Size(244, 30);
-            this.В_начало_button3.TabIndex = 40;
-            this.В_начало_button3.Text = "В начало";
-            this.В_начало_button3.UseVisualStyleBackColor = false;
-            this.В_начало_button3.Click += new System.EventHandler(this.В_начало_button3_Click);
-            // 
-            // Назад_button2
-            // 
-            this.Назад_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Назад_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Назад_button2.Location = new System.Drawing.Point(425, 320);
-            this.Назад_button2.Name = "Назад_button2";
-            this.Назад_button2.Size = new System.Drawing.Size(244, 30);
-            this.Назад_button2.TabIndex = 39;
-            this.Назад_button2.Text = "Назад";
-            this.Назад_button2.UseVisualStyleBackColor = false;
-            this.Назад_button2.Click += new System.EventHandler(this.Назад_button2_Click);
-            // 
-            // Вперед_button1
-            // 
-            this.Вперед_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Вперед_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Вперед_button1.Location = new System.Drawing.Point(84, 320);
-            this.Вперед_button1.Name = "Вперед_button1";
-            this.Вперед_button1.Size = new System.Drawing.Size(244, 30);
-            this.Вперед_button1.TabIndex = 38;
-            this.Вперед_button1.Text = "Вперед";
-            this.Вперед_button1.UseVisualStyleBackColor = false;
-            this.Вперед_button1.Click += new System.EventHandler(this.Вперед_button1_Click);
-            // 
-            // Название_textBox1
-            // 
-            this.Название_textBox1.Location = new System.Drawing.Point(329, 103);
-            this.Название_textBox1.Name = "Название_textBox1";
-            this.Название_textBox1.Size = new System.Drawing.Size(489, 34);
-            this.Название_textBox1.TabIndex = 37;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(8, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 29);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Название видеоролика:";
-            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -182,6 +89,99 @@ namespace Centr
             this.Выход_button.TabIndex = 97;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            // 
+            // Ссылка_на_видеоролик_textBox1
+            // 
+            this.Ссылка_на_видеоролик_textBox1.Location = new System.Drawing.Point(349, 183);
+            this.Ссылка_на_видеоролик_textBox1.Multiline = true;
+            this.Ссылка_на_видеоролик_textBox1.Name = "Ссылка_на_видеоролик_textBox1";
+            this.Ссылка_на_видеоролик_textBox1.Size = new System.Drawing.Size(489, 103);
+            this.Ссылка_на_видеоролик_textBox1.TabIndex = 96;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.label2.Location = new System.Drawing.Point(76, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 27);
+            this.label2.TabIndex = 95;
+            this.label2.Text = "Ссылка на видеоролик:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(849, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 94;
+            this.pictureBox1.TabStop = false;
+            // 
+            // В_конец_button5
+            // 
+            this.В_конец_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.В_конец_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.В_конец_button5.Location = new System.Drawing.Point(630, 408);
+            this.В_конец_button5.Name = "В_конец_button5";
+            this.В_конец_button5.Size = new System.Drawing.Size(208, 54);
+            this.В_конец_button5.TabIndex = 41;
+            this.В_конец_button5.Text = "В конец";
+            this.В_конец_button5.UseVisualStyleBackColor = false;
+            this.В_конец_button5.Click += new System.EventHandler(this.В_конец_button5_Click);
+            // 
+            // В_начало_button3
+            // 
+            this.В_начало_button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.В_начало_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.В_начало_button3.Location = new System.Drawing.Point(349, 410);
+            this.В_начало_button3.Name = "В_начало_button3";
+            this.В_начало_button3.Size = new System.Drawing.Size(208, 52);
+            this.В_начало_button3.TabIndex = 40;
+            this.В_начало_button3.Text = "В начало";
+            this.В_начало_button3.UseVisualStyleBackColor = false;
+            this.В_начало_button3.Click += new System.EventHandler(this.В_начало_button3_Click);
+            // 
+            // Назад_button2
+            // 
+            this.Назад_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Назад_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Назад_button2.Location = new System.Drawing.Point(630, 323);
+            this.Назад_button2.Name = "Назад_button2";
+            this.Назад_button2.Size = new System.Drawing.Size(208, 54);
+            this.Назад_button2.TabIndex = 39;
+            this.Назад_button2.Text = "Назад";
+            this.Назад_button2.UseVisualStyleBackColor = false;
+            this.Назад_button2.Click += new System.EventHandler(this.Назад_button2_Click);
+            // 
+            // Вперед_button1
+            // 
+            this.Вперед_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Вперед_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Вперед_button1.Location = new System.Drawing.Point(349, 323);
+            this.Вперед_button1.Name = "Вперед_button1";
+            this.Вперед_button1.Size = new System.Drawing.Size(208, 52);
+            this.Вперед_button1.TabIndex = 38;
+            this.Вперед_button1.Text = "Вперед";
+            this.Вперед_button1.UseVisualStyleBackColor = false;
+            this.Вперед_button1.Click += new System.EventHandler(this.Вперед_button1_Click);
+            // 
+            // Название_textBox1
+            // 
+            this.Название_textBox1.Location = new System.Drawing.Point(349, 143);
+            this.Название_textBox1.Name = "Название_textBox1";
+            this.Название_textBox1.Size = new System.Drawing.Size(489, 34);
+            this.Название_textBox1.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.label1.Location = new System.Drawing.Point(76, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 27);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Название видеоролика:";
             // 
             // Видео_лекции
             // 

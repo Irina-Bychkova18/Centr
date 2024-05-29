@@ -32,14 +32,14 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Добавить_лекцию));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Выход_button = new System.Windows.Forms.Button();
             this.Информация_textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
             this.Добавить_лекцию_button2 = new System.Windows.Forms.Button();
             this.Отменить_добавление_button1 = new System.Windows.Forms.Button();
-            this.Выход_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,8 +58,8 @@ namespace Centr
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.Выход_button);
             this.tabPage1.Controls.Add(this.Информация_textBox4);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label1);
@@ -73,74 +73,6 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавить лекцию";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(675, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 94;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Информация_textBox4
-            // 
-            this.Информация_textBox4.Location = new System.Drawing.Point(175, 162);
-            this.Информация_textBox4.Multiline = true;
-            this.Информация_textBox4.Name = "Информация_textBox4";
-            this.Информация_textBox4.Size = new System.Drawing.Size(478, 86);
-            this.Информация_textBox4.TabIndex = 41;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 27);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Ссылка на лекцию:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 27);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Название:";
-            // 
-            // Название_textBox1
-            // 
-            this.Название_textBox1.Location = new System.Drawing.Point(175, 87);
-            this.Название_textBox1.Multiline = true;
-            this.Название_textBox1.Name = "Название_textBox1";
-            this.Название_textBox1.Size = new System.Drawing.Size(478, 47);
-            this.Название_textBox1.TabIndex = 38;
-            // 
-            // Добавить_лекцию_button2
-            // 
-            this.Добавить_лекцию_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Добавить_лекцию_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Добавить_лекцию_button2.Location = new System.Drawing.Point(420, 300);
-            this.Добавить_лекцию_button2.Name = "Добавить_лекцию_button2";
-            this.Добавить_лекцию_button2.Size = new System.Drawing.Size(233, 30);
-            this.Добавить_лекцию_button2.TabIndex = 37;
-            this.Добавить_лекцию_button2.Text = "Добавить лекцию";
-            this.Добавить_лекцию_button2.UseVisualStyleBackColor = false;
-            this.Добавить_лекцию_button2.Click += new System.EventHandler(this.Добавить_лекцию_button2_Click);
-            // 
-            // Отменить_добавление_button1
-            // 
-            this.Отменить_добавление_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Отменить_добавление_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Отменить_добавление_button1.Location = new System.Drawing.Point(175, 300);
-            this.Отменить_добавление_button1.Name = "Отменить_добавление_button1";
-            this.Отменить_добавление_button1.Size = new System.Drawing.Size(213, 30);
-            this.Отменить_добавление_button1.TabIndex = 36;
-            this.Отменить_добавление_button1.Text = "Отменить добавление";
-            this.Отменить_добавление_button1.UseVisualStyleBackColor = false;
-            this.Отменить_добавление_button1.Click += new System.EventHandler(this.Отменить_добавление_button1_Click);
-            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -152,6 +84,74 @@ namespace Centr
             this.Выход_button.TabIndex = 98;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            // 
+            // Информация_textBox4
+            // 
+            this.Информация_textBox4.Location = new System.Drawing.Point(334, 202);
+            this.Информация_textBox4.Multiline = true;
+            this.Информация_textBox4.Name = "Информация_textBox4";
+            this.Информация_textBox4.Size = new System.Drawing.Size(478, 103);
+            this.Информация_textBox4.TabIndex = 41;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(86, 202);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(211, 27);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Ссылка на лекцию:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(86, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 27);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Название:";
+            // 
+            // Название_textBox1
+            // 
+            this.Название_textBox1.Location = new System.Drawing.Point(334, 127);
+            this.Название_textBox1.Multiline = true;
+            this.Название_textBox1.Name = "Название_textBox1";
+            this.Название_textBox1.Size = new System.Drawing.Size(478, 47);
+            this.Название_textBox1.TabIndex = 38;
+            // 
+            // Добавить_лекцию_button2
+            // 
+            this.Добавить_лекцию_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Добавить_лекцию_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_лекцию_button2.Location = new System.Drawing.Point(513, 480);
+            this.Добавить_лекцию_button2.Name = "Добавить_лекцию_button2";
+            this.Добавить_лекцию_button2.Size = new System.Drawing.Size(299, 52);
+            this.Добавить_лекцию_button2.TabIndex = 37;
+            this.Добавить_лекцию_button2.Text = "Добавить лекцию";
+            this.Добавить_лекцию_button2.UseVisualStyleBackColor = false;
+            this.Добавить_лекцию_button2.Click += new System.EventHandler(this.Добавить_лекцию_button2_Click);
+            // 
+            // Отменить_добавление_button1
+            // 
+            this.Отменить_добавление_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Отменить_добавление_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Отменить_добавление_button1.Location = new System.Drawing.Point(204, 480);
+            this.Отменить_добавление_button1.Name = "Отменить_добавление_button1";
+            this.Отменить_добавление_button1.Size = new System.Drawing.Size(272, 52);
+            this.Отменить_добавление_button1.TabIndex = 36;
+            this.Отменить_добавление_button1.Text = "Отменить добавление";
+            this.Отменить_добавление_button1.UseVisualStyleBackColor = false;
+            this.Отменить_добавление_button1.Click += new System.EventHandler(this.Отменить_добавление_button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(849, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 99;
+            this.pictureBox1.TabStop = false;
             // 
             // Добавить_лекцию
             // 
@@ -178,8 +178,8 @@ namespace Centr
         private System.Windows.Forms.TextBox Название_textBox1;
         private System.Windows.Forms.Button Добавить_лекцию_button2;
         private System.Windows.Forms.Button Отменить_добавление_button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button Выход_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
