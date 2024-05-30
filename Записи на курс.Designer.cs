@@ -32,17 +32,17 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Записи_на_курс));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Удалить_запись_button5 = new System.Windows.Forms.Button();
             this.Добавить_запись_button1 = new System.Windows.Forms.Button();
             this.Всего_записей_textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -73,6 +73,16 @@ namespace Centr
             this.tabPage1.Text = "Записи на курс";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(851, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 100;
+            this.pictureBox1.TabStop = false;
+            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -84,11 +94,13 @@ namespace Centr
             this.Выход_button.TabIndex = 98;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click_1);
             // 
             // Удалить_запись_button5
             // 
             this.Удалить_запись_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Удалить_запись_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Удалить_запись_button5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Удалить_запись_button5.Location = new System.Drawing.Point(27, 554);
             this.Удалить_запись_button5.Name = "Удалить_запись_button5";
             this.Удалить_запись_button5.Size = new System.Drawing.Size(338, 45);
@@ -101,6 +113,7 @@ namespace Centr
             // 
             this.Добавить_запись_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_запись_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_запись_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Добавить_запись_button1.Location = new System.Drawing.Point(681, 554);
             this.Добавить_запись_button1.Name = "Добавить_запись_button1";
             this.Добавить_запись_button1.Size = new System.Drawing.Size(314, 45);
@@ -111,6 +124,7 @@ namespace Centr
             // 
             // Всего_записей_textBox1
             // 
+            this.Всего_записей_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Всего_записей_textBox1.Location = new System.Drawing.Point(226, 76);
             this.Всего_записей_textBox1.Name = "Всего_записей_textBox1";
             this.Всего_записей_textBox1.Size = new System.Drawing.Size(204, 34);
@@ -119,6 +133,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(22, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 27);
@@ -137,16 +152,6 @@ namespace Centr
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(851, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 100;
-            this.pictureBox1.TabStop = false;
-            // 
             // Записи_на_курс
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,8 +163,8 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

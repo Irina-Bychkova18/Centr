@@ -27,6 +27,10 @@ namespace Centr
         List<Tuple<int, int, bool>> changedBoolData = new List<Tuple<int, int, bool>>(); // Коллекция для хранения измененных данных типа boolean
         private void ret()
         {
+            dataGridView1.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 14);
+            
+
             string sql = "SELECT id_pos AS \"Номер\", uchenik.fio AS \"ФИО ученика\" FROM (poseshaemost inner join uchenik on uchenik.id_uch = poseshaemost.id_uch)"
                + " where uchenik.id_uch = poseshaemost.id_uch" +
                " GROUP BY id_pos, uchenik.fio ORDER BY \"Номер\"";
@@ -42,6 +46,8 @@ namespace Centr
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
 
+            dataGridView2.DefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 14);
+            dataGridView2.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Times New Roman", 14);
             string sql1 = "SELECT * FROM poseshaemost ORDER BY id_pos";
             Form1.Table_Fill("Даты", sql1);
 
@@ -162,6 +168,9 @@ namespace Centr
             }
         }
 
-        
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
     }
 }

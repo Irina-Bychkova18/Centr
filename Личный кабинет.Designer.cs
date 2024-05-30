@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Личный_кабинет));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.Телефон_родителей_textBox1 = new System.Windows.Forms.TextBox();
@@ -59,7 +60,6 @@ namespace Centr
             this.Записаться_button5 = new System.Windows.Forms.Button();
             this.Изменить_данные_button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,6 +114,16 @@ namespace Centr
             this.tabPage1.Text = "Личный кабинет";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(850, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 132;
+            this.pictureBox1.TabStop = false;
+            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -125,10 +135,12 @@ namespace Centr
             this.Выход_button.TabIndex = 131;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click_1);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(107, 411);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 27);
@@ -137,6 +149,7 @@ namespace Centr
             // 
             // Телефон_родителей_textBox1
             // 
+            this.Телефон_родителей_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Телефон_родителей_textBox1.Location = new System.Drawing.Point(284, 346);
             this.Телефон_родителей_textBox1.Name = "Телефон_родителей_textBox1";
             this.Телефон_родителей_textBox1.Size = new System.Drawing.Size(628, 34);
@@ -145,6 +158,7 @@ namespace Centr
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(107, 326);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 54);
@@ -153,6 +167,7 @@ namespace Centr
             // 
             // Квартира_comboBox2
             // 
+            this.Квартира_comboBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Квартира_comboBox2.FormattingEnabled = true;
             this.Квартира_comboBox2.Location = new System.Drawing.Point(719, 283);
             this.Квартира_comboBox2.Name = "Квартира_comboBox2";
@@ -161,6 +176,7 @@ namespace Centr
             // 
             // Дом_comboBox1
             // 
+            this.Дом_comboBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Дом_comboBox1.FormattingEnabled = true;
             this.Дом_comboBox1.Location = new System.Drawing.Point(284, 283);
             this.Дом_comboBox1.Name = "Дом_comboBox1";
@@ -170,6 +186,7 @@ namespace Centr
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(526, 283);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 27);
@@ -179,6 +196,7 @@ namespace Centr
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(107, 283);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 27);
@@ -187,6 +205,7 @@ namespace Centr
             // 
             // Улица_comboBox4
             // 
+            this.Улица_comboBox4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Улица_comboBox4.FormattingEnabled = true;
             this.Улица_comboBox4.Location = new System.Drawing.Point(719, 228);
             this.Улица_comboBox4.Name = "Улица_comboBox4";
@@ -195,6 +214,7 @@ namespace Centr
             // 
             // Город_comboBox3
             // 
+            this.Город_comboBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Город_comboBox3.FormattingEnabled = true;
             this.Город_comboBox3.Location = new System.Drawing.Point(284, 228);
             this.Город_comboBox3.Name = "Город_comboBox3";
@@ -204,6 +224,7 @@ namespace Centr
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.Location = new System.Drawing.Point(526, 231);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(81, 27);
@@ -213,6 +234,7 @@ namespace Centr
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.Location = new System.Drawing.Point(107, 231);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(77, 27);
@@ -221,6 +243,7 @@ namespace Centr
             // 
             // Дата_рождения_dateTimePicker1
             // 
+            this.Дата_рождения_dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Дата_рождения_dateTimePicker1.Location = new System.Drawing.Point(284, 182);
             this.Дата_рождения_dateTimePicker1.Name = "Дата_рождения_dateTimePicker1";
             this.Дата_рождения_dateTimePicker1.Size = new System.Drawing.Size(219, 34);
@@ -229,6 +252,7 @@ namespace Centr
             // Курсы_textBox6
             // 
             this.Курсы_textBox6.Enabled = false;
+            this.Курсы_textBox6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Курсы_textBox6.Location = new System.Drawing.Point(284, 513);
             this.Курсы_textBox6.Name = "Курсы_textBox6";
             this.Курсы_textBox6.Size = new System.Drawing.Size(628, 34);
@@ -236,6 +260,7 @@ namespace Centr
             // 
             // Пароль_textBox5
             // 
+            this.Пароль_textBox5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Пароль_textBox5.Location = new System.Drawing.Point(719, 404);
             this.Пароль_textBox5.Name = "Пароль_textBox5";
             this.Пароль_textBox5.Size = new System.Drawing.Size(193, 34);
@@ -243,6 +268,7 @@ namespace Centr
             // 
             // Логин_textBox4
             // 
+            this.Логин_textBox4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Логин_textBox4.Location = new System.Drawing.Point(284, 404);
             this.Логин_textBox4.Name = "Логин_textBox4";
             this.Логин_textBox4.Size = new System.Drawing.Size(219, 34);
@@ -250,6 +276,7 @@ namespace Centr
             // 
             // Номер_телефона_textBox3
             // 
+            this.Номер_телефона_textBox3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Номер_телефона_textBox3.Location = new System.Drawing.Point(719, 175);
             this.Номер_телефона_textBox3.Name = "Номер_телефона_textBox3";
             this.Номер_телефона_textBox3.Size = new System.Drawing.Size(193, 34);
@@ -258,6 +285,7 @@ namespace Centr
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(107, 513);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 27);
@@ -267,6 +295,7 @@ namespace Centr
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(533, 411);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 27);
@@ -276,6 +305,7 @@ namespace Centr
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(526, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 27);
@@ -285,6 +315,7 @@ namespace Centr
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(107, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 27);
@@ -294,6 +325,7 @@ namespace Centr
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(107, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 27);
@@ -302,6 +334,7 @@ namespace Centr
             // 
             // ФИОtextBox1
             // 
+            this.ФИОtextBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ФИОtextBox1.Location = new System.Drawing.Point(284, 124);
             this.ФИОtextBox1.Name = "ФИОtextBox1";
             this.ФИОtextBox1.Size = new System.Drawing.Size(628, 34);
@@ -311,6 +344,7 @@ namespace Centr
             // 
             this.Завершить_настоящий_курс_button6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Завершить_настоящий_курс_button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Завершить_настоящий_курс_button6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Завершить_настоящий_курс_button6.Location = new System.Drawing.Point(595, 563);
             this.Завершить_настоящий_курс_button6.Name = "Завершить_настоящий_курс_button6";
             this.Завершить_настоящий_курс_button6.Size = new System.Drawing.Size(317, 38);
@@ -323,6 +357,7 @@ namespace Centr
             // 
             this.Записаться_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Записаться_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Записаться_button5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Записаться_button5.Location = new System.Drawing.Point(284, 563);
             this.Записаться_button5.Name = "Записаться_button5";
             this.Записаться_button5.Size = new System.Drawing.Size(290, 38);
@@ -335,6 +370,7 @@ namespace Centr
             // 
             this.Изменить_данные_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_данные_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_данные_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Изменить_данные_button1.Location = new System.Drawing.Point(284, 463);
             this.Изменить_данные_button1.Name = "Изменить_данные_button1";
             this.Изменить_данные_button1.Size = new System.Drawing.Size(628, 41);
@@ -346,21 +382,12 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(402, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 27);
             this.label1.TabIndex = 39;
             this.label1.Text = "Информация обо мне:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(850, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 132;
-            this.pictureBox1.TabStop = false;
             // 
             // Личный_кабинет
             // 

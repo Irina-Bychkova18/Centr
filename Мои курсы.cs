@@ -30,6 +30,8 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             dataGridView1.DataSource = Form1.cdt.Tables["Мои курсы"];
             dataGridView1.Columns["Логин"].Visible = false;
             dataGridView1.Columns["Пароль"].Visible = false;
@@ -46,6 +48,11 @@ namespace Centr
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

@@ -7,32 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Npgsql;
 
 namespace Centr
 {
     public partial class Добавление_записи : Form
     {
         private int rec;
+        
         public Добавление_записи(int numRows)
         {
             InitializeComponent();
             rec = numRows + 1;
         }
         public static string n = null;
+
         private void Добавить_button1_Click(object sender, EventArgs e)
         {
             string kod_1 = Form1.cdt.Tables["Ученики"].DefaultView[ФИО_comboBox1.SelectedIndex]["Код ученика"].ToString();
             string kod_2 = Form1.cdt.Tables["Курсы"].DefaultView[Курс_comboBox2.SelectedIndex]["Код курса"].ToString();
             string kod_3 = Form1.cdt.Tables["Дни"].DefaultView[Дни_посещений_comboBox3.SelectedIndex]["Код дня"].ToString();
             string kod_4 = Form1.cdt.Tables["Время"].DefaultView[Время_занятий_comboBox4.SelectedIndex]["Код времени"].ToString();
+            string connString = "Server=localhost;Port=5432;Username = postgres; Password=toor;Database=center;";
 
-            string sql = "INSERT INTO uchenik_kursi (id_uch, id_kursi, id_dni, id_vrema) VALUES (" + kod_1 + "," + kod_2 + "," + kod_3 + "," + kod_4 + ")";
-            if (!Form1.Modification_Execute(sql))
-                return;
+
+            // Создание объекта подключения
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+                // Создание команды для SQL-запроса
+                string query = "SELECT COUNT(*) FROM uchenik_kursi";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    // Получение количества строк
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    string sql = "INSERT INTO uchenik_kursi (id_uch_kur, id_uch, id_kursi, id_dni, id_vrema) VALUES (" + (count + 1) + "," + kod_1 + "," + kod_2 + "," + kod_3 + "," + kod_4 + ")";
+                    if (!Form1.Modification_Execute(sql))
+                        return;
+
+                }
+                
+                conn.Close();
+            }
+            
 
             MessageBox.Show("Новая запись успешно добавлена!");
-            меню_админ Меню = new меню_админ();
-            Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
 
@@ -43,6 +65,8 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            
+            
             ФИО_comboBox1.DataSource = Form1.cdt.Tables["Ученики"].DefaultView;
             ФИО_comboBox1.DisplayMember = "ФИО";
 
@@ -72,6 +96,11 @@ namespace Centr
 
 
             Form1.cdt.Tables["Запись"].DefaultView.RowFilter = "[Номер записи]=" + n;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

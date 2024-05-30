@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Успеваемость));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Распечатать_расписание_button1 = new System.Windows.Forms.Button();
             this.Удалить_запись_button5 = new System.Windows.Forms.Button();
@@ -39,11 +40,10 @@ namespace Centr
             this.Добавить_запись_button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -75,6 +75,16 @@ namespace Centr
             this.tabPage1.Text = "Успеваемость";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(850, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 105;
+            this.pictureBox1.TabStop = false;
+            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -86,11 +96,13 @@ namespace Centr
             this.Выход_button.TabIndex = 104;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click_1);
             // 
             // Распечатать_расписание_button1
             // 
             this.Распечатать_расписание_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Распечатать_расписание_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Распечатать_расписание_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Распечатать_расписание_button1.Location = new System.Drawing.Point(503, 71);
             this.Распечатать_расписание_button1.Name = "Распечатать_расписание_button1";
             this.Распечатать_расписание_button1.Size = new System.Drawing.Size(331, 36);
@@ -104,6 +116,7 @@ namespace Centr
             this.Удалить_запись_button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Удалить_запись_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Удалить_запись_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Удалить_запись_button5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Удалить_запись_button5.Location = new System.Drawing.Point(702, 556);
             this.Удалить_запись_button5.Name = "Удалить_запись_button5";
             this.Удалить_запись_button5.Size = new System.Drawing.Size(292, 46);
@@ -116,6 +129,7 @@ namespace Centr
             // 
             this.Изменить_запись_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_запись_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_запись_button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Изменить_запись_button2.Location = new System.Drawing.Point(365, 556);
             this.Изменить_запись_button2.Name = "Изменить_запись_button2";
             this.Изменить_запись_button2.Size = new System.Drawing.Size(297, 45);
@@ -128,6 +142,7 @@ namespace Centr
             // 
             this.Добавить_запись_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_запись_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_запись_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Добавить_запись_button1.Location = new System.Drawing.Point(12, 556);
             this.Добавить_запись_button1.Name = "Добавить_запись_button1";
             this.Добавить_запись_button1.Size = new System.Drawing.Size(300, 45);
@@ -151,22 +166,13 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(9, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(288, 27);
             this.label1.TabIndex = 45;
             this.label1.Text = "Сведения об успеваемости";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(850, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 105;
-            this.pictureBox1.TabStop = false;
             // 
             // Успеваемость
             // 
@@ -179,8 +185,8 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

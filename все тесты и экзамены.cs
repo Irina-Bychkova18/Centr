@@ -58,6 +58,8 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             string sql = "SELECT id_dz AS \"Код домашнего задания\", name AS \"Название домашнего задания\","
                 + " text AS \"Ссылка на домашнее задание\" FROM dz" + " ORDER BY \"Код домашнего задания\"";
             Form1.Table_Fill("Все домашнее задание", sql);
@@ -76,6 +78,11 @@ namespace Centr
             Всего_лекций_textBox1.Text = numRows.ToString();
 
             dataGridView1.Columns["Ссылка на домашнее задание"].DefaultCellStyle.ForeColor = Color.Blue;
+        }
+
+        private void Выход_button_Click(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

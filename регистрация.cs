@@ -29,6 +29,8 @@ namespace Centr
         }
         public static int n = 0;
         string data = "";
+        
+        
         private void Выход_button4_Click(object sender, EventArgs e)
         {
             вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация(data);
@@ -45,21 +47,23 @@ namespace Centr
 
         private void Зарегистрироваться_button1_Click(object sender, EventArgs e)
         {
-            
+            if (Должность_comboBox2.Text == "Админ")
+            {
+                MessageBox.Show("Пользователь Админ уже единолично существует в системе!");
+            }
+            else
+            {
+                string kod_1 = Form1.cdt.Tables["Пользователи"].DefaultView[Должность_comboBox2.SelectedIndex]["Код_пользователя"].ToString();
+                string sql = "INSERT INTO new_users (fam, name, otch, id_usera, login, parol) VALUES ('" + Фамилия_textBox1.Text + "','" + Имя_textBox3.Text + "','" + Отчество_textBox2.Text + "'," + kod_1 + ",'" + Логин_textBox4.Text + "','" + Пароль_textBox5.Text + "')";
+                if (!Form1.Modification_Execute(sql))
+                    return;
 
-            Должность_comboBox2.DataSource = Form1.cdt.Tables["Пользователи"].DefaultView;
-            Должность_comboBox2.DisplayMember = "Название_пользователя";
+                MessageBox.Show("Вы успешно зарегистрировались! Добро пожаловать в систему!");
+                меню_админ Меню = new меню_админ();
+                Form1.tabControl1.TabPages.RemoveAt(0);
+                Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
+            }
             
-            string kod_1 = Form1.cdt.Tables["Пользователи"].DefaultView[Должность_comboBox2.SelectedIndex]["Код_пользователя"].ToString();
-            string sql = "INSERT INTO new_users (fam, name, otch, id_usera, login, parol) VALUES ('" + Фамилия_textBox1.Text + "','" + Имя_textBox3.Text + "','" + Отчество_textBox2 + "',"  + kod_1 + ",'" + Логин_textBox4.Text + "','" + Пароль_textBox5.Text + "')";
-            if (!Form1.Modification_Execute(sql))
-                return;
-            //Form1.cdt.Tables["Новые_пользователи"].Rows.Add(new object[] { Фамилия_textBox1.Text, Имя_textBox3.Text, Отчество_textBox2, Центр_comboBox1.Text, Должность_comboBox2.Text, Логин_textBox4.Text, Пароль_textBox5.Text });
-            
-            
-            меню_админ Меню = new меню_админ();
-            Form1.tabControl1.TabPages.RemoveAt(0);
-            Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
             
         }
 
@@ -147,11 +151,10 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            string sql = "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"";
-            Form1.Table_Fill("Пользователи", sql);
+            Form1.Table_Fill("Пользователи", "SELECT id_usera AS \"Код_пользователя\", name AS \"Название_пользователя\" FROM users ORDER BY \"Код_пользователя\"");
             Должность_comboBox2.DataSource = Form1.cdt.Tables["Пользователи"].DefaultView;
             Должность_comboBox2.DisplayMember = "Название_пользователя";
-           
+
         }
 
         private void Выход_button_Click(object sender, EventArgs e)
@@ -159,6 +162,14 @@ namespace Centr
             вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация(data);
             Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Главная главная = new Главная();
+            Form1.tabControl1.Controls.Add(главная.tabControl1.TabPages[0]);
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
     }
 }

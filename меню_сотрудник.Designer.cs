@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(меню_сотрудник));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.курсыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,11 +49,10 @@ namespace Centr
             this.записиНаКурсToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.записиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.записатьУченикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,6 +78,16 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Меню";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(843, 511);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 99;
+            this.pictureBox1.TabStop = false;
+            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -89,11 +99,12 @@ namespace Centr
             this.Выход_button.TabIndex = 98;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click_1);
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.курсыToolStripMenuItem,
@@ -104,14 +115,14 @@ namespace Centr
             this.записиНаКурсToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1013, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1013, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // курсыToolStripMenuItem
             // 
             this.курсыToolStripMenuItem.Name = "курсыToolStripMenuItem";
-            this.курсыToolStripMenuItem.Size = new System.Drawing.Size(91, 31);
+            this.курсыToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.курсыToolStripMenuItem.Text = "Курсы";
             this.курсыToolStripMenuItem.Click += new System.EventHandler(this.курсыToolStripMenuItem_Click);
             // 
@@ -122,27 +133,27 @@ namespace Centr
             this.видеороликиToolStripMenuItem,
             this.тестыИЭкзаменыToolStripMenuItem});
             this.лекцииToolStripMenuItem.Name = "лекцииToolStripMenuItem";
-            this.лекцииToolStripMenuItem.Size = new System.Drawing.Size(104, 31);
+            this.лекцииToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
             this.лекцииToolStripMenuItem.Text = "Лекции";
             // 
             // текстовыеЛекцииToolStripMenuItem
             // 
             this.текстовыеЛекцииToolStripMenuItem.Name = "текстовыеЛекцииToolStripMenuItem";
-            this.текстовыеЛекцииToolStripMenuItem.Size = new System.Drawing.Size(291, 32);
+            this.текстовыеЛекцииToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
             this.текстовыеЛекцииToolStripMenuItem.Text = "Текстовые лекции";
             this.текстовыеЛекцииToolStripMenuItem.Click += new System.EventHandler(this.текстовыеЛекцииToolStripMenuItem_Click);
             // 
             // видеороликиToolStripMenuItem
             // 
             this.видеороликиToolStripMenuItem.Name = "видеороликиToolStripMenuItem";
-            this.видеороликиToolStripMenuItem.Size = new System.Drawing.Size(291, 32);
+            this.видеороликиToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
             this.видеороликиToolStripMenuItem.Text = "Видеоролики";
             this.видеороликиToolStripMenuItem.Click += new System.EventHandler(this.видеороликиToolStripMenuItem_Click);
             // 
             // тестыИЭкзаменыToolStripMenuItem
             // 
             this.тестыИЭкзаменыToolStripMenuItem.Name = "тестыИЭкзаменыToolStripMenuItem";
-            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(291, 32);
+            this.тестыИЭкзаменыToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
             this.тестыИЭкзаменыToolStripMenuItem.Text = "Домашнее задание";
             this.тестыИЭкзаменыToolStripMenuItem.Click += new System.EventHandler(this.тестыИЭкзаменыToolStripMenuItem_Click);
             // 
@@ -151,13 +162,13 @@ namespace Centr
             this.расписаниеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.расписаниеЗанятийToolStripMenuItem});
             this.расписаниеToolStripMenuItem.Name = "расписаниеToolStripMenuItem";
-            this.расписаниеToolStripMenuItem.Size = new System.Drawing.Size(147, 31);
+            this.расписаниеToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
             this.расписаниеToolStripMenuItem.Text = "Расписание";
             // 
             // расписаниеЗанятийToolStripMenuItem
             // 
             this.расписаниеЗанятийToolStripMenuItem.Name = "расписаниеЗанятийToolStripMenuItem";
-            this.расписаниеЗанятийToolStripMenuItem.Size = new System.Drawing.Size(305, 32);
+            this.расписаниеЗанятийToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.расписаниеЗанятийToolStripMenuItem.Text = "Расписание занятий";
             this.расписаниеЗанятийToolStripMenuItem.Click += new System.EventHandler(this.расписаниеЗанятийToolStripMenuItem_Click);
             // 
@@ -167,27 +178,27 @@ namespace Centr
             this.посещаемостьToolStripMenuItem,
             this.успеваемостьToolStripMenuItem1});
             this.успеваемостьToolStripMenuItem.Name = "успеваемостьToolStripMenuItem";
-            this.успеваемостьToolStripMenuItem.Size = new System.Drawing.Size(168, 31);
+            this.успеваемостьToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.успеваемостьToolStripMenuItem.Text = "Успеваемость";
             // 
             // посещаемостьToolStripMenuItem
             // 
             this.посещаемостьToolStripMenuItem.Name = "посещаемостьToolStripMenuItem";
-            this.посещаемостьToolStripMenuItem.Size = new System.Drawing.Size(250, 32);
+            this.посещаемостьToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.посещаемостьToolStripMenuItem.Text = "Посещаемость";
             this.посещаемостьToolStripMenuItem.Click += new System.EventHandler(this.посещаемостьToolStripMenuItem_Click);
             // 
             // успеваемостьToolStripMenuItem1
             // 
             this.успеваемостьToolStripMenuItem1.Name = "успеваемостьToolStripMenuItem1";
-            this.успеваемостьToolStripMenuItem1.Size = new System.Drawing.Size(250, 32);
+            this.успеваемостьToolStripMenuItem1.Size = new System.Drawing.Size(218, 26);
             this.успеваемостьToolStripMenuItem1.Text = "Успеваемость";
             this.успеваемостьToolStripMenuItem1.Click += new System.EventHandler(this.успеваемостьToolStripMenuItem1_Click);
             // 
             // личныйКабинетToolStripMenuItem
             // 
             this.личныйКабинетToolStripMenuItem.Name = "личныйКабинетToolStripMenuItem";
-            this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(197, 31);
+            this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.личныйКабинетToolStripMenuItem.Text = "Личный кабинет";
             this.личныйКабинетToolStripMenuItem.Click += new System.EventHandler(this.личныйКабинетToolStripMenuItem_Click);
             // 
@@ -197,32 +208,22 @@ namespace Centr
             this.записиToolStripMenuItem,
             this.записатьУченикаToolStripMenuItem});
             this.записиНаКурсToolStripMenuItem.Name = "записиНаКурсToolStripMenuItem";
-            this.записиНаКурсToolStripMenuItem.Size = new System.Drawing.Size(182, 31);
+            this.записиНаКурсToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.записиНаКурсToolStripMenuItem.Text = "Записи на курс";
             // 
             // записиToolStripMenuItem
             // 
             this.записиToolStripMenuItem.Name = "записиToolStripMenuItem";
-            this.записиToolStripMenuItem.Size = new System.Drawing.Size(279, 32);
+            this.записиToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.записиToolStripMenuItem.Text = "Записи";
             this.записиToolStripMenuItem.Click += new System.EventHandler(this.записиToolStripMenuItem_Click);
             // 
             // записатьУченикаToolStripMenuItem
             // 
             this.записатьУченикаToolStripMenuItem.Name = "записатьУченикаToolStripMenuItem";
-            this.записатьУченикаToolStripMenuItem.Size = new System.Drawing.Size(279, 32);
+            this.записатьУченикаToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.записатьУченикаToolStripMenuItem.Text = "Записать ученика";
             this.записатьУченикаToolStripMenuItem.Click += new System.EventHandler(this.записатьУченикаToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(843, 511);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 99;
-            this.pictureBox1.TabStop = false;
             // 
             // меню_сотрудник
             // 
@@ -235,9 +236,9 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

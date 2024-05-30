@@ -24,6 +24,8 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             string sql = "SELECT id_lek AS \"Код лекции\", name AS \"Название лекции\","
                 + " text AS \"Текст лекции\" FROM lekcii" + " ORDER BY \"Код лекции\"";
             Form1.Table_Fill("Все текстовые лекции", sql);
@@ -50,6 +52,11 @@ namespace Centr
                 Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
             Form1.tabControl1.Controls.Add(текстовая_Лекция.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

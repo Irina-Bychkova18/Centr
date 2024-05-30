@@ -53,7 +53,7 @@ namespace Centr
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            tabControl1.Size = new Size(1276, 562);
+            tabControl1.Size = new Size(1027, 702);
             this.Controls.Add(tabControl1);
             Главная главная = new Главная();
             tabControl1.Controls.Add(главная.tabControl1.TabPages[0]);

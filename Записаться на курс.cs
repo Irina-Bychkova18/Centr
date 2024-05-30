@@ -38,6 +38,7 @@ namespace Centr
             if (!Form1.Modification_Execute(sql))
                 return;
 
+            MessageBox.Show("Вы подали заявку на курс. Ожидайте ответа!");
             меню_админ Меню = new меню_админ();
             Form1.tabControl1.Controls.Add(Меню.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
@@ -74,6 +75,11 @@ namespace Centr
 
             Form1.tabControl1.Controls.Add(добавить_учащегося.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

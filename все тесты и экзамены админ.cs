@@ -43,6 +43,8 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             string sql = "SELECT id_dz AS \"Код домашнего задания\", name AS \"Название домашнего задания\","
                 + " text AS \"Ссылка на домашнее задание\" FROM dz" + " ORDER BY \"Код домашнего задания\"";
             Form1.Table_Fill("Все домашнее задание", sql);
@@ -131,6 +133,11 @@ namespace Centr
                 Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
             Form1.tabControl1.Controls.Add(изменить_домашнее_задание.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

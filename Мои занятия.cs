@@ -25,7 +25,8 @@ namespace Centr
         }
         public void ret()
         {
-            
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
 
             dataGridView1.DataSource = Form1.cdt.Tables["Ученик_Курс"];
             dataGridView1.Columns["Логин"].Visible = false;
@@ -51,6 +52,11 @@ namespace Centr
         {
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

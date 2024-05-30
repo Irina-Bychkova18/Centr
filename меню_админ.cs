@@ -164,5 +164,13 @@ namespace Centr
             Form1.tabControl1.Controls.Add(записи_на_курс.tabControl1.TabPages[0]);
             Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
         }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Главная главная = new Главная();
+            Form1.tabControl1.Controls.Add(главная.tabControl1.TabPages[0]);
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+        }
     }
 }

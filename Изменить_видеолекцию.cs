@@ -35,6 +35,8 @@ namespace Centr
                 if (!Form1.Modification_Execute(sql))
                     return;
                 MessageBox.Show("Запись успешно изменена!");
+                Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+                Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
             }
         }
 
@@ -52,6 +54,11 @@ namespace Centr
 
 
             Form1.cdt.Tables["Видеоролик"].DefaultView.RowFilter = "[Код видео]=" + n;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

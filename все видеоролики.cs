@@ -32,6 +32,8 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             string sql = "SELECT id_vid AS \"Код видео\", name AS \"Название видеоролика\","
                 + " text AS \"Видеоролик\" FROM video" + " ORDER BY \"Код видео\"";
             Form1.Table_Fill("Все видеоролики", sql);
@@ -79,6 +81,11 @@ namespace Centr
         {
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

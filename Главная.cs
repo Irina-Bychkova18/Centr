@@ -39,7 +39,6 @@ namespace Centr
             string selectedValue = Выборка_пользователя_combobox.Text.ToString();
             // Получение выбранного значения из ComboBox
             вход_или_регистрация вход_Или_Регистрация = new вход_или_регистрация(selectedValue);
-               
                 Form1.tabControl1.TabPages.RemoveAt(0);
                 Form1.tabControl1.Controls.Add(вход_Или_Регистрация.tabControl1.TabPages[0]);
 

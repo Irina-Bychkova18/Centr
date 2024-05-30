@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(вход));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Показать_пароль_checkBox = new System.Windows.Forms.CheckBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace Centr
             this.Пароль_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Логин_textbox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +78,16 @@ namespace Centr
             this.tabPage1.Size = new System.Drawing.Size(1007, 620);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Вход";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(851, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 95;
+            this.pictureBox1.TabStop = false;
             // 
             // Показать_пароль_checkBox
             // 
@@ -132,9 +142,9 @@ namespace Centr
             this.Войти_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Войти_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Войти_button.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Войти_button.Location = new System.Drawing.Point(340, 359);
+            this.Войти_button.Location = new System.Drawing.Point(390, 364);
             this.Войти_button.Name = "Войти_button";
-            this.Войти_button.Size = new System.Drawing.Size(340, 47);
+            this.Войти_button.Size = new System.Drawing.Size(237, 47);
             this.Войти_button.TabIndex = 31;
             this.Войти_button.Text = "Войти";
             this.Войти_button.UseVisualStyleBackColor = false;
@@ -186,16 +196,6 @@ namespace Centr
             this.Логин_textbox.Name = "Логин_textbox";
             this.Логин_textbox.Size = new System.Drawing.Size(258, 34);
             this.Логин_textbox.TabIndex = 26;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(851, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 95;
-            this.pictureBox1.TabStop = false;
             // 
             // вход
             // 

@@ -22,8 +22,11 @@ namespace Centr
         private void Зарегистрироваться_button_Click(object sender, EventArgs e)
         {
             регистрация Регистрация = new регистрация();
-            Form1.tabControl1.TabPages.RemoveAt(0);
             Form1.tabControl1.Controls.Add(Регистрация.tabControl1.TabPages[0]);
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+            Form1.tabControl1.SelectedIndex = Form1.tabControl1.TabCount - 1;
+
+           
         }
 
         private void Войти_button_Click(object sender, EventArgs e)

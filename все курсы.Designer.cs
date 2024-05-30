@@ -30,8 +30,10 @@ namespace Centr
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(все_курсы));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Удалить_курс_button5 = new System.Windows.Forms.Button();
             this.Изменить_курс_button2 = new System.Windows.Forms.Button();
@@ -42,11 +44,10 @@ namespace Centr
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -81,6 +82,16 @@ namespace Centr
             this.tabPage1.Text = "Все курсы";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(852, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 99;
+            this.pictureBox1.TabStop = false;
+            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -92,11 +103,13 @@ namespace Centr
             this.Выход_button.TabIndex = 98;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click_1);
             // 
             // Удалить_курс_button5
             // 
             this.Удалить_курс_button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Удалить_курс_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Удалить_курс_button5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Удалить_курс_button5.Location = new System.Drawing.Point(19, 566);
             this.Удалить_курс_button5.Name = "Удалить_курс_button5";
             this.Удалить_курс_button5.Size = new System.Drawing.Size(296, 43);
@@ -109,6 +122,7 @@ namespace Centr
             // 
             this.Изменить_курс_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_курс_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_курс_button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Изменить_курс_button2.Location = new System.Drawing.Point(369, 566);
             this.Изменить_курс_button2.Name = "Изменить_курс_button2";
             this.Изменить_курс_button2.Size = new System.Drawing.Size(305, 43);
@@ -121,6 +135,7 @@ namespace Centr
             // 
             this.Добавить_курс_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_курс_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_курс_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Добавить_курс_button1.Location = new System.Drawing.Point(721, 566);
             this.Добавить_курс_button1.Name = "Добавить_курс_button1";
             this.Добавить_курс_button1.Size = new System.Drawing.Size(275, 43);
@@ -131,13 +146,15 @@ namespace Centr
             // 
             // Количество_оставшихся_мест_textBox2
             // 
-            this.Количество_оставшихся_мест_textBox2.Location = new System.Drawing.Point(661, 90);
+            this.Количество_оставшихся_мест_textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Количество_оставшихся_мест_textBox2.Location = new System.Drawing.Point(675, 90);
             this.Количество_оставшихся_мест_textBox2.Name = "Количество_оставшихся_мест_textBox2";
-            this.Количество_оставшихся_мест_textBox2.Size = new System.Drawing.Size(173, 34);
+            this.Количество_оставшихся_мест_textBox2.Size = new System.Drawing.Size(159, 34);
             this.Количество_оставшихся_мест_textBox2.TabIndex = 87;
             // 
             // Всего_курсов_textBox1
             // 
+            this.Всего_курсов_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Всего_курсов_textBox1.Location = new System.Drawing.Point(173, 90);
             this.Всего_курсов_textBox1.Name = "Всего_курсов_textBox1";
             this.Всего_курсов_textBox1.Size = new System.Drawing.Size(142, 34);
@@ -147,6 +164,7 @@ namespace Centr
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(337, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(318, 27);
@@ -156,6 +174,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(14, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 27);
@@ -165,6 +184,7 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(14, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 27);
@@ -174,6 +194,14 @@ namespace Centr
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(19, 163);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -183,16 +211,6 @@ namespace Centr
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.BindingContextChanged += new System.EventHandler(this.dataGridView1_BindingContextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(852, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 99;
-            this.pictureBox1.TabStop = false;
             // 
             // все_курсы
             // 
@@ -205,8 +223,8 @@ namespace Centr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

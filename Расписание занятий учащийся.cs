@@ -57,6 +57,8 @@ namespace Centr
         }
         private void ret()
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             string sql = "SELECT id_raspisania AS \"Код расписания\", kursi.name AS \"Название курса\","
                + " dni.name AS \"Дни работы\", vrema.name AS \"Время работы\" FROM (((raspisanie inner join kursi on kursi.id_kursi = raspisanie.id_kursi)"
                + "left join dni on dni.id_dni = raspisanie.id_dni) left join vrema on vrema.id_vrema = raspisanie.id_vrema) where kursi.id_kursi = raspisanie.id_kursi and dni.id_dni = raspisanie.id_dni and vrema.id_vrema = raspisanie.id_vrema" +
@@ -105,6 +107,11 @@ namespace Centr
         {
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

@@ -24,8 +24,9 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
-            
 
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             dataGridView1.DataSource = Form1.cdt.Tables["Успеваемость учащегося"];
             dataGridView1.Columns["Пройдено лекций"].DefaultCellStyle.Format = "N0";
             dataGridView1.Columns["Всего лекций"].DefaultCellStyle.Format = "N0";
@@ -46,6 +47,11 @@ namespace Centr
         {
             dataGridView1.AutoResizeColumns();
             dataGridView1.CurrentCell = null;
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

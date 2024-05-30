@@ -24,6 +24,8 @@ namespace Centr
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             string sql = "SELECT id_zap AS \"Номер записи\", uchenik.fio AS \"ФИО ученика\","
                 + " kursi.name AS \"Название курса\","
                + " dni.name AS \"Дни работы\", vrema.name AS \"Время работы\" FROM ((((zapis inner join kursi on kursi.id_kursi = zapis.id_kursi)"
@@ -85,6 +87,7 @@ namespace Centr
             int numRows = dataGridView1.Rows.Count;
             Добавление_записи.n = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["Номер записи"].Value.ToString();
             Добавление_записи добавление_записи = new Добавление_записи(numRows);
+            
             if (Form1.tabControl1.TabCount > 2)
                 Form1.tabControl1.TabPages.RemoveAt(Form1.tabControl1.TabCount - 1);
             Form1.tabControl1.Controls.Add(добавление_записи.tabControl1.TabPages[0]);
@@ -94,6 +97,11 @@ namespace Centr
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

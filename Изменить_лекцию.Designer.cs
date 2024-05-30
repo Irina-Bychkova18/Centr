@@ -32,13 +32,13 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Изменить_лекцию));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Изменить_button1 = new System.Windows.Forms.Button();
             this.Ссылка_на_лекцию_textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +72,16 @@ namespace Centr
             this.tabPage1.Text = "Изменить текстовую лекцию";
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(849, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 100;
+            this.pictureBox1.TabStop = false;
+            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -83,11 +93,13 @@ namespace Centr
             this.Выход_button.TabIndex = 98;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click_1);
             // 
             // Изменить_button1
             // 
             this.Изменить_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Изменить_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Изменить_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Изменить_button1.Location = new System.Drawing.Point(368, 472);
             this.Изменить_button1.Name = "Изменить_button1";
             this.Изменить_button1.Size = new System.Drawing.Size(338, 50);
@@ -98,6 +110,7 @@ namespace Centr
             // 
             // Ссылка_на_лекцию_textBox1
             // 
+            this.Ссылка_на_лекцию_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Ссылка_на_лекцию_textBox1.Location = new System.Drawing.Point(234, 208);
             this.Ссылка_на_лекцию_textBox1.Multiline = true;
             this.Ссылка_на_лекцию_textBox1.Name = "Ссылка_на_лекцию_textBox1";
@@ -107,6 +120,7 @@ namespace Centr
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(17, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 27);
@@ -115,6 +129,7 @@ namespace Centr
             // 
             // Название_textBox1
             // 
+            this.Название_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Название_textBox1.Location = new System.Drawing.Point(234, 151);
             this.Название_textBox1.Name = "Название_textBox1";
             this.Название_textBox1.Size = new System.Drawing.Size(593, 34);
@@ -123,21 +138,12 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(17, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 27);
             this.label1.TabIndex = 35;
             this.label1.Text = "Название лекции:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(849, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 100;
-            this.pictureBox1.TabStop = false;
             // 
             // Изменить_лекцию
             // 

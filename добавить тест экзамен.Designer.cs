@@ -32,6 +32,7 @@ namespace Centr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(добавить_тест_экзамен));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Выход_button = new System.Windows.Forms.Button();
             this.Информация_textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace Centr
             this.Название_textBox1 = new System.Windows.Forms.TextBox();
             this.Добавить_лекцию_button2 = new System.Windows.Forms.Button();
             this.Отменить_добавление_button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,16 @@ namespace Centr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавить домашнее задание";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(849, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 99;
+            this.pictureBox1.TabStop = false;
+            // 
             // Выход_button
             // 
             this.Выход_button.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -84,9 +94,11 @@ namespace Centr
             this.Выход_button.TabIndex = 98;
             this.Выход_button.Text = "Выход";
             this.Выход_button.UseVisualStyleBackColor = false;
+            this.Выход_button.Click += new System.EventHandler(this.Выход_button_Click_1);
             // 
             // Информация_textBox4
             // 
+            this.Информация_textBox4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Информация_textBox4.Location = new System.Drawing.Point(320, 210);
             this.Информация_textBox4.Multiline = true;
             this.Информация_textBox4.Name = "Информация_textBox4";
@@ -96,6 +108,7 @@ namespace Centr
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(38, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(235, 54);
@@ -105,6 +118,7 @@ namespace Centr
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(38, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 27);
@@ -113,6 +127,7 @@ namespace Centr
             // 
             // Название_textBox1
             // 
+            this.Название_textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Название_textBox1.Location = new System.Drawing.Point(320, 135);
             this.Название_textBox1.Multiline = true;
             this.Название_textBox1.Name = "Название_textBox1";
@@ -123,9 +138,10 @@ namespace Centr
             // 
             this.Добавить_лекцию_button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Добавить_лекцию_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Добавить_лекцию_button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Добавить_лекцию_button2.Location = new System.Drawing.Point(511, 425);
             this.Добавить_лекцию_button2.Name = "Добавить_лекцию_button2";
-            this.Добавить_лекцию_button2.Size = new System.Drawing.Size(287, 45);
+            this.Добавить_лекцию_button2.Size = new System.Drawing.Size(326, 45);
             this.Добавить_лекцию_button2.TabIndex = 37;
             this.Добавить_лекцию_button2.Text = "Добавить домашнее задание";
             this.Добавить_лекцию_button2.UseVisualStyleBackColor = false;
@@ -135,23 +151,14 @@ namespace Centr
             // 
             this.Отменить_добавление_button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Отменить_добавление_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Отменить_добавление_button1.Location = new System.Drawing.Point(196, 425);
+            this.Отменить_добавление_button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Отменить_добавление_button1.Location = new System.Drawing.Point(171, 425);
             this.Отменить_добавление_button1.Name = "Отменить_добавление_button1";
-            this.Отменить_добавление_button1.Size = new System.Drawing.Size(283, 45);
+            this.Отменить_добавление_button1.Size = new System.Drawing.Size(308, 45);
             this.Отменить_добавление_button1.TabIndex = 36;
             this.Отменить_добавление_button1.Text = "Отменить добавление";
             this.Отменить_добавление_button1.UseVisualStyleBackColor = false;
             this.Отменить_добавление_button1.Click += new System.EventHandler(this.Отменить_добавление_button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(849, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 99;
-            this.pictureBox1.TabStop = false;
             // 
             // добавить_тест_экзамен
             // 

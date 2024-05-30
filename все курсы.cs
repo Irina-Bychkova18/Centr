@@ -24,6 +24,8 @@ namespace Centr
         }
         public void ret()
         {
+            dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
             string sql = "SELECT id_kursi AS \"Код курса\", name AS \"Название курса\","
               + " kolvo_mest_vsego AS \"Количество мест всего\", mest_ostav AS \"Количество оставшихся мест\", cena AS \"Стоимость курса (4 занятия)\", " +
               "information AS \"Информация о курсе\" FROM kursi" + " ORDER BY \"Код курса\"";
@@ -133,6 +135,11 @@ namespace Centr
                     dataGridView1.CurrentCell = null;
                     return;
                 }
+        }
+
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
         }
     }
 }

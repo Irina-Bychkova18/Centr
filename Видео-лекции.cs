@@ -99,6 +99,9 @@ namespace Centr
             k = Form1.cdt.Tables["Видеоролик"].Rows.Count;
         }
 
-        
+        private void Выход_button_Click_1(object sender, EventArgs e)
+        {
+            Form1.tabControl1.Controls.Remove(Form1.tabControl1.SelectedTab);
+        }
     }
 }
